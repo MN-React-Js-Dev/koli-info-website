@@ -9,7 +9,8 @@ const ScheduleAnAppointment = () => {
                         <div className='col-sm-6'> </div>
                         <div className='col-sm-6'>
                             <div className='mt-5 mb-5'>
-                                <h2 className='text-white mb-3'>Schedule an appointment</h2>
+                                <h2 className='text-white mb-3 schedule-appointment'>Schedule an appointment</h2>
+                                <div className='hr-cst mb-3'></div>
                                 <form>
                                     <div class="form-group">
                                         <input type="text" class="form-control"  placeholder="Name" />

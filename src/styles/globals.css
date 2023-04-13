@@ -226,6 +226,43 @@
  }
 
 
- .cst-footer-logo{
-  margin-bottom: 100px;
+ .cst-footer-logo {
+   margin-bottom: 100px;
+ }
+
+ .hr-cst {
+   width: 69px;
+   height: 7px;
+   border-radius: 6px;
+   background: #2A64F9;
+ }
+
+
+ .card {
+   background: #FFFFFF;
+   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ .schedule-appointment {
+   font-family: 'Montserrat', sans-serif;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 30px;
+   line-height: 25px;
+   color: #FFFFFF;
+ }
+
+
+ .our-top-blogs {
+   font-family: 'Montserrat', sans-serif;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 45px;
+   line-height: 55px;
+   color: #040404;
+ }
+
+ .navbar {
+  padding: 0px;
+  margin: 0px;
  }

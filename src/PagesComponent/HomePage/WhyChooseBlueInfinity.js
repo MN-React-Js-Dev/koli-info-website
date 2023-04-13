@@ -8,7 +8,9 @@ const WhyChooseBlueInfinity = () => {
                 <div className='container'>
                     <div className='row'>
                         <div className="col-sm-6">
-                            <h1>Why Choose  Blue Infinity Tech </h1>
+                            <h1>Why Choose</h1>
+                            <h1>Blue Infinity Tech </h1>
+
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
                         <div className="col-sm-6">
