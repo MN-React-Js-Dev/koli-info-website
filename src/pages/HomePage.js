@@ -16,19 +16,10 @@ import LeadershipTeam from '@/PagesComponent/Leadership/LeadershipTeam'
 const HomePage = () => {
     return (
         <>
-        {/* --------------Hone screen-------------------------- */}
-            {/* <Header/> */}
-            {/* <HeroSection /> */}
-            {/* <OurProcessSection /> */}
-            {/* <OurServices />  */}
-        {/* --------------Testimonial screen-------------------------- */}
-            {/* <Header/>
-            <TestiHeroSection />
-            <TestimonialOfOurClient/> */}
-        {/* ---------------Leadership------------------------- */}
-            <Header/>
-            <LeadershipHeroSection />
-            <LeadershipTeam/>
+            <Header/>  
+            <HeroSection /> 
+            <OurProcessSection /> 
+            <OurServices />  
         </>
     )
 }
