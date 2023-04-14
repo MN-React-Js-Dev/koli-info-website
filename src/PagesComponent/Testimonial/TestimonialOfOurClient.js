@@ -7,7 +7,7 @@ import Image3 from "../../assets/images/3.png";
 import Image4 from "../../assets/images/4.png";
 import Image5 from "../../assets/images/5.png";
 
-const TestiHeroSection = () => {
+const TestimonialOfOurClient = () => {
   return (
     <>
       <section className="testi-hero-image ">
@@ -124,4 +124,4 @@ const TestiHeroSection = () => {
   );
 };
 
-export default TestiHeroSection;
+export default TestimonialOfOurClient;
