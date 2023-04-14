@@ -10,7 +10,9 @@ const OurPortfolio = () => {
             <section className='our-portfolio '>
                 <div className='main-div-for-portfolio pb-5'>
                 <div class='container'>
-                    <h1 class='text-center pt-5 pb-5'>Our Portfolio</h1>
+                    <h1 class='text-center pt-5'>Our Portfolio</h1>
+                    <div className='cst-hr-for-process mb-5'></div>
+
 
                     <div className='row'>
                         <div className='col-sm-3'>

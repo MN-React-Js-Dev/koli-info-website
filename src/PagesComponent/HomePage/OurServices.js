@@ -16,7 +16,9 @@ const OurServices = () => {
             <section className='our-services'>
                 <div className='wrap-our-service'>
                     <div className='container'>
-                        <h1 className='text-center text-white pt-5 pb-5'>Our Services</h1>
+                        <h1 className='text-center text-white pt-5'>Our Services</h1>
+                    <div className='cst-hr-for-process mb-5'></div>
+
                         <div className='row'>
                             <div className='col-sm-4 mb-4'>
                                 <div className='card p-5 cst-border-cls'>

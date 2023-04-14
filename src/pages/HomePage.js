@@ -8,6 +8,7 @@ import ScheduleAnAppointment from '@/PagesComponent/HomePage/ScheduleAnAppointme
 import WhyChooseBlueInfinity from '@/PagesComponent/HomePage/WhyChooseBlueInfinity'
 import Footer from '@/commonComponent/Footer'
 import Header from '@/commonComponent/Header'
+import OurValuableClients from '@/PagesComponent/HomePage/OurValuableClients'
  
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
             <OurServices />
             <OurPortfolio/>
             <WhyChooseBlueInfinity/>
+            <OurValuableClients/>
             <OurTopBlogs/>
             <ScheduleAnAppointment/>
             <Footer/>
