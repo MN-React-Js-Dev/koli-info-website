@@ -8,6 +8,9 @@ body {
   margin: 0px !important;
 }
 
+.bold-font{
+  font-weight: bold;
+ }
 
 ul li a {
   font-family: 'Poppins', sans-serif;
@@ -300,10 +303,21 @@ input {
 }
 
 
-.card {
-  background: #FFFFFF;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
-}
+ .card {
+   background: #FFFFFF;
+   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+ }
+ @media (max-width:415px){
+  .card-items div{
+    padding: 12px;
+    justify-content: center;
+  }
+ }
+ .apply-now{
+  border-radius:170px;
+  background-color: #012E4D !important;
+  color: #FFFFFF !important;
+ }
 
 .schedule-appointment {
   font-family: 'Montserrat', sans-serif;
