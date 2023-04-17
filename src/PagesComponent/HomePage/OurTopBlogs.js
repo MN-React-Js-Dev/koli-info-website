@@ -8,7 +8,7 @@ const OurTopBlogs = () => {
         <>
             <section>
                 <div className='container'>
-                    <h1 className='text-center mt-5 our-top-blogs'>Our Top Blogs</h1>
+                    <h1 className='text-center mt-5 section-headings'>Our Top Blogs</h1>
                     <div className='cst-hr-for-process mb-5'></div>
 
                     <div className='row'>

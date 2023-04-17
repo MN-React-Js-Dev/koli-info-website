@@ -18,17 +18,14 @@
 
  .contact-us-btn {
    width: 157px;
-   background: #2A64F9;
-   border-radius: 170px;
-
-
+   background: #2A64F9 !important;
+   border-radius: 170px !important;
    font-family: 'Poppins', sans-serif;
    font-style: normal;
    font-weight: 600;
    font-size: 16px;
    line-height: 24px;
-
-   color: #FFFFFF;
+   color: #FFFFFF !important;
  }
 
  .contact-us-btn:hover {
