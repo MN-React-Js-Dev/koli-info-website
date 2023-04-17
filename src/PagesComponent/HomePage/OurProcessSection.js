@@ -3,6 +3,7 @@ import ImageOne from '../../assets/images/circleimage (1).png'
 import ImageTwo from '../../assets/images/circleimage (2).png'
 import ImageThree from '../../assets/images/circleimage (3).png'
 import ImageFoure from '../../assets/images/circleimage (4).png'
+import RightImage from '../../assets/images/OurProcessBg.png'
 import Image from 'next/image'
 const OurProcessSection = () => {
     return (
@@ -11,6 +12,9 @@ const OurProcessSection = () => {
                 <div className='container'>
                     <h2 className='our-process-heading text-center'>Our Process</h2>
                     <div className='cst-hr-for-process mb-5'></div>
+                    <div className='fdfdfdf'>
+                        {/* <Image src={RightImage}/> */}
+                    </div>
                      <ul className='cst-our-process'>
                         <li >
                             <div className='circle first-circle'></div>
