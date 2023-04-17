@@ -456,3 +456,9 @@ input {
   border: 1px dashed #2A64F9;
 
 }
+
+.cst-border-hjohn{
+  border: 2px dashed #2A64F9;
+   border-radius: 100px 0px 100px 0px
+
+}
