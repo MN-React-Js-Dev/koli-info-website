@@ -12,20 +12,23 @@ import TestimonialPage from './Testimonial'
 import TestiHeroSection from '@/PagesComponent/Testimonial/TestiHeroSection'
 import TestimonialOfOurClient from '@/PagesComponent/Testimonial/TestimonialOfOurClient'
 import LeadershipHeroSection from '@/PagesComponent/Leadership/HeroSection'
-import LeadershipPage from './Leadership'
-import LeadershipTeam from '@/PagesComponent/Leadership/LeadershipTeam'
-
+ import LeadershipTeam from '@/PagesComponent/Leadership/LeadershipTeam'
 import OurValuableClients from '@/PagesComponent/HomePage/OurValuableClients'
 
- 
 
 const HomePage = () => {
     return (
         <>
-            <Header/>  
-            <HeroSection /> 
-            <OurProcessSection /> 
-            <OurServices />  
+            <Header />
+            <HeroSection />
+            <OurProcessSection />
+            <OurServices />
+            <OurPortfolio />
+            <WhyChooseBlueInfinity />
+            <OurValuableClients />
+            <OurTopBlogs />
+            <ScheduleAnAppointment />
+            <Footer />
         </>
     )
 }
