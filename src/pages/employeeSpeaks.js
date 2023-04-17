@@ -6,6 +6,7 @@ import ProfileImage from '../assets/images/profile.png'
 
 
 const employeeSpeaks = () => {
+    const arr = [1, 2, 3, 4, 5, 6, 7]
     return (
         <>
             <Header />
@@ -31,17 +32,22 @@ const employeeSpeaks = () => {
             </section>
             <section className='qualities-we-take'>
                 <div className='container'>
-                    <div className='row mb-5 mt-5 cst-border-hjohn pt-5 pb-5'>
-                        <div className='col-md-2 col-4' >
-                            <Image src={ProfileImage}/>
-                        </div>
-                        <div className='col-md-10 col-8'>
-                            <h2>John doe</h2>
-                            <p>Creative Design Head </p>
-                            <p>Total Experience: 15 Years</p>
-                            <p>A team with years of development, design and marketing experience who understand the complexity and needs of your business.</p>
-                        </div>
-                    </div>
+                    {arr.map((iteam, index) => {
+                        return <>
+                            <div className='row mb-5 mt-5 cst-border-hjohn pt-5 pb-5 mx-1' key={index}>
+                                <div className='col-md-2 col-4' >
+                                    <Image src={ProfileImage} className='mx-2'/>
+                                </div>
+                                <div className='col-md-10 col-8'>
+                                    <h2>John doe</h2>
+                                    <p>Creative Design Head </p>
+                                    <p>Total Experience: 15 Years</p>
+                                    <p>A team with years of development, design and marketing experience who understand the complexity and needs of your business.</p>
+                                </div>
+                            </div>
+                        </>
+                    })}
+
                 </div>
             </section>
         </>
