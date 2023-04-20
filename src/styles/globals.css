@@ -64,16 +64,27 @@ ul li a {
   line-height: 98px;
   text-transform: uppercase;
 }
-
-.testimonial {
+.hero-sec-header{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
+  font-size: 50px;
+  line-height: 75px;
+  text-transform: uppercase;
 }
 
 @media (max-width:415px) {
-  .testimonial {
-    font-size: 50px;
+  .hero-sec-header {
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 'bold ';
+  }
+}
+@media (max-width:335px) {
+  .hero-sec-header {
+    font-size: 35px;
+    line-height: 1.1;
+    font-weight: 'bold ';
   }
 }
 
@@ -100,6 +111,15 @@ ul li a {
 
 
 .our-process-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  color: #000000;
+}
+
+.comman-heading{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -162,8 +182,13 @@ li {
   border-radius: 200px 0px 0px 0px;
   background: #012E4D;
 }
-
-
+.special-services{
+  background: #012E4D;
+}
+.b-border{
+  border-bottom:1px solid #3B6989;
+  border: #012E4D;
+}
 .client-image-1 {
   height: 60px;
   width: 60px;
@@ -201,7 +226,6 @@ li {
   }
 }
 
-
 .btn-ai-class {
   width: 65px;
   height: 65px;
@@ -218,13 +242,16 @@ li {
 
 .cst-border-cls {
   border-radius: 0px;
-  border-top: 6px solid #2A64F9;
+  border-bottom: 2px solid #C4C4C4;
 }
 
 .grid-class-cst {
   display: flex;
 }
-
+.list-group li{
+  list-style-type: disc !important;
+  padding-left: 1em;
+}
 
 .main-div-for-portfolio {
   background-color: #EAEAFF;
@@ -290,6 +317,35 @@ input {
   color: #FFFFFF;
 }
 
+.cmt-back{
+  position: absolute;
+  margin-top: 16rem;
+  margin-left: 30rem;
+  background-color: #012E4D;
+  padding: 18px;
+}
+.fev-back{
+  position: absolute;
+  margin-top: 16rem;
+  margin-left: 35rem;
+  background-color: #E83030;
+  padding: 18px;
+}
+
+.img-round-cst{
+  border:5px solid #2A64F9;
+  border-radius: 65px;
+}
+
+.grayDot{
+  position: absolute;
+  margin-top: 20rem;
+  margin-left: 18rem;
+}
+.blueDot{
+  margin-left: 19rem;
+  padding-top: 0rem;
+}
 
 .cst-footer-logo {
   margin-bottom: 100px;
@@ -338,8 +394,6 @@ input {
   color: #040404;
 }
 
-
-
 .cst-hr-for-process {
   width: 69px;
   height: 7px;
@@ -347,7 +401,6 @@ input {
   background: #2A64F9;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .ratangale-one {
@@ -446,8 +499,8 @@ input {
 
 
 .our-process-section {
-  background: url(../assets/images/Ellipse1.png);
-  background-position: 100%;
+  background: url(../assets/images/OurProcessBg.png);
+  /* background-position: 100%; */
   background-repeat: no-repeat;
 }
 
@@ -468,5 +521,49 @@ input {
 
 .cst-boder-para {
   border: 1px dashed #2A64F9;
+}
+.Data-border{
+  padding: 25px;
+  border: 1px dashed #2A64F9;
+}
+.key-clauses{
+  font-weight: 'bold';
+  font-size: large;
+}
+.key-clauses p, li{
+  float: left;
+}
+.data-li li{
+  line-height: 2.5;
+}
 
+.awards{
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+}
+.award-box{
+  background-color: #012E4D;
+  margin: 3px;
+  border-radius: 46px;
+  color:#fff;
+}
+.awards-border{
+  color: #fff;
+  border:1px dashed #fff;
+  border-radius: 10px;
+}
+.award-head-img{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.award-head-img h2{
+  text-align: left;
+}
+.card-btm-text{
+  margin-top: 10px;
+}
+.card-btm-text p{
+  font-weight: bold;
+  font-size: 25px;
 }

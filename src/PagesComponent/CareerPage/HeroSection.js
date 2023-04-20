@@ -11,7 +11,7 @@ const CareerPageHeroSection = () => {
       >
         <div className="container">
           <div className="row" style={{alignItems:'center'}}>
-            <div className="col-lg-6 mt-5">
+            <div className="col-lg-6 mt-5 text-start">
               <h1 className="testimonial">Join Blue Infinity Tech</h1>
               <p className="para-for-hero">
                 We are a company that offers design and develop services for you

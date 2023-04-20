@@ -44,7 +44,8 @@ const LeadershipTeam = () => {
     <>
       <section className="testi-hero-image ">
         <div className="container">
-          <h1 className=" text-center m-5">Meet Our Leadership Team</h1>
+          <h1 className="text-center mt-5 bold-font">Meet Our Leadership Team</h1>
+          <div className="cst-hr-for-process mb-5" />
           {Data.map((item) => (
             <>
               <div className="row  mt-5 mb-5" style={{ alignItems: "center" }}>
