@@ -9,7 +9,7 @@ const OurProcessSection = () => {
     return (
         <>
             <section className='our-process-section mb-5'>
-                <div className='container'>
+                <div className='container '>
                     <h2 className='our-process-heading text-center'>Our Process</h2>
                     <div className='cst-hr-for-process mb-5'></div>
                     <div className='fdfdfdf'>

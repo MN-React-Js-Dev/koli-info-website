@@ -6,10 +6,6 @@ import Design1 from '../../assets/images/design1.png'
 import WebDevelopment1 from '../../assets/images/web-development1.png'
 import Applications1Img from '../../assets/images/applications1.png'
 
-
-
-
-
 const OurServices = () => {
     return (
         <>

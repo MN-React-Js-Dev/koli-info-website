@@ -8,15 +8,41 @@ import Image4 from "../../assets/images/4.png";
 import Image5 from "../../assets/images/5.png";
 
 const TestimonialOfOurClient = () => {
+  const data = [
+    {
+      name: "John Doe",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
+    },
+    {
+      name: "John Doe",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
+    },
+    {
+      name: "John Doe",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
+    },
+    {
+      name: "John Doe",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
+    },
+  ];
+  const Data = data.map((item) => {
+    return item;
+  });
   return (
     <>
       <section className="testi-hero-image ">
         <div className="container">
           <div className="row">
             <div className="mt-5 mb-5">
-              <h1 className="testimonial text-center">
+              <h1 className="text-center mt-5 bold-font">
                 Testimonial Of Our Client
               </h1>
+              <div className="cst-hr-for-process mb-5" />
               <div
                 style={{
                   display: "flex",
@@ -26,7 +52,7 @@ const TestimonialOfOurClient = () => {
               >
                 <Image src={client1} className="client-image-2" />
                 <div>
-                  <Image src={client1} />
+                  <Image src={client1} className="round img-round-cst" />
                   <p className="text-center text-decoration-underline client-name pt-3">
                     John Doe
                   </p>
@@ -40,10 +66,7 @@ const TestimonialOfOurClient = () => {
                   alignItems: "center",
                 }}
               >
-                <Image
-                  src={client1}
-                  className="rounded client-image-3"
-                />
+                <Image src={client1} className="rounded client-image-3" />
                 <p className="text-center review">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -51,72 +74,23 @@ const TestimonialOfOurClient = () => {
                   laboris
                 </p>
                 {/* </div> */}
-                <Image
-                  src={client1}
-                  className="rounded client-image-3"
-                />
+                <Image src={client1} className="rounded client-image-3" />
               </div>
-              <div className="text-center">
-                <Image src={Vector} className="img-fluid " />
-              </div>
-
-              <div className="text-center mt-5 testi-detail-box">
-                <Image src={Image2} />
-                <p className="text-center text-decoration-underline client-name  pt-3">
-                  John Doe
-                </p>
-                <p className="text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris
-                </p>
-                <Image src={Vector} className="img-fluid " />
-              </div>
-
-              <div className="text-center pt-5 testi-detail-box">
-                <Image src={Image3} />
-                <p className="text-center text-decoration-underline client-name pt-3">
-                  John Doe
-                </p>
-                <p className="text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris
-                </p>
-                <Image src={Vector} className="img-fluid " />
-              </div>
-
-              <div className="text-center pt-5 testi-detail-box">
-                <Image src={Image4} />
-                <p className="text-center text-decoration-underline client-name pt-3">
-                  John Doe
-                </p>
-                <p className="text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris
-                </p>
-                <Image src={Vector} className="img-fluid " />
-              </div>
-
-              <div className="text-center pt-5 testi-detail-box">
-                <Image src={Image5} />
-                <p className="text-center text-decoration-underline client-name pt-3">
-                  John Doe
-                </p>
-                <p className="text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris
-                </p>
-                <Image src={Vector} className="img-fluid " />
-              </div>
+              {Data.map((item) => (
+                <>
+                  <div className="text-center mt-5 testi-detail-box">
+                    <Image src={Image2} className="round img-round-cst" />
+                    <p className="text-center text-decoration-underline client-name  pt-3">
+                      {item.name}
+                    </p>
+                    <p className="text-center">
+                      {item.review}
+                    </p>
+                    <Image src={Vector} className="img-fluid " />
+                  </div>
+                </>
+              ))}
             </div>
-            <div></div>
           </div>
         </div>
       </section>
