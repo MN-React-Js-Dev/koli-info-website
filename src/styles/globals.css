@@ -2,6 +2,32 @@ body {
   padding: 0px;
   margin: 0px;
 }
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/font-family/Montserrat-Medium.ttf);
+}
+
+h1 {
+  font-family: Montserrat;
+}
+h2 {
+  font-family: Montserrat;
+}
+h3 {
+  font-family: Montserrat;
+}
+h4 {
+  font-family: Montserrat;
+}
+h5 {
+  font-family: Montserrat;
+}
+span {
+  font-family: Montserrat;
+}
+p {
+  font-family: Montserrat;
+}
 
 .navbar {
   padding: 0px !important;
@@ -36,6 +62,17 @@ ul li a {
   line-height: 24px;
   color: #FFFFFF !important;
 }
+.onDemndbtn{
+  background: #2A64F9 !important;
+  border-radius: 170px !important;
+  font-family: 'Poppins', sans-serif;
+  /* padding: 10px; */
+  /* font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px; */
+  color: #FFFFFF !important;
+}
 
 .contact-us-btn:hover {
   width: 157px;
@@ -67,9 +104,9 @@ ul li a {
 .hero-sec-header{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 730;
   font-size: 50px;
-  line-height: 75px;
+  /* line-height: 75px; */
   text-transform: uppercase;
 }
 
@@ -553,14 +590,20 @@ input {
   border:1px dashed #fff;
   border-radius: 10px;
 }
+
 .award-head-img{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.key-feature-img{
   align-items: center;
   justify-content: space-between;
 }
 .award-head-img h2{
   text-align: left;
 }
+
 .card-btm-text{
   margin-top: 10px;
 }
@@ -569,11 +612,59 @@ input {
   font-size: 25px;
 }
 
-
-
 .cst-border-hjohn{
   border: 2px dashed #2A64F9;
    border-radius: 100px 0px 100px 0px
-
+}
+.WebDev-dashed-border{
+  border:1px dashed #2A64F9;
+  border-radius: 10px;
+}
+.indstry-serve{
+  font-size: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+.hire-btn{
+  background-color: red;
+  border-radius: 140px;
+}
+.hire-btn button{
+  font-size: 20px;
+  font-weight: bold;
+}
+.consultBtn{
+  padding: 15px 55px;
+  font-weight: bold;
+  border-radius: 50px;
+}
+.bold-p p{
+  font-size: 20px;
+  font-weight: bold;
+}
+.arrow-btn button{
+  background-color: #2A64F9;
+  border-radius: 50%;
+}
+.SODimage1{
+ background-color: #fff;
+ padding: 5px;
+ border-radius: 10px;
 }
 
+.input-group{
+  font-family: mo;
+ color: #000000;
+}
+
+.select-field{
+  padding: 16px;
+}
+.calendar{
+  width: 100% !important;
+  border: none !important;
+  padding: 25px;
+}
+/* .time-zone-select{
+  
+} */
