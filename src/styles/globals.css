@@ -537,6 +537,7 @@ input {
   line-height: 2.5;
 }
 
+
 .awards{
   margin-top: 7rem;
   margin-bottom: 3rem;
@@ -569,8 +570,10 @@ input {
 }
 
 
+
 .cst-border-hjohn{
   border: 2px dashed #2A64F9;
    border-radius: 100px 0px 100px 0px
 
 }
+
