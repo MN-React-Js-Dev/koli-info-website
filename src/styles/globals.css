@@ -665,6 +665,6 @@ input {
   border: none !important;
   padding: 25px;
 }
-/* .time-zone-select{
-  
-} */
+.boldP{
+  font-weight: bold;
+}
