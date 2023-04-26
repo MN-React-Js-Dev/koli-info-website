@@ -8,42 +8,8 @@ import android from "../../assets/images/android.png";
 import apple from "../../assets/images/apple.png";
 
 const WebToAppScreen = () => {
-  const data = [
-    {
-      service: "Web Designing",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Web Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Mobile Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Web Designing",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Web Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Mobile Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-  ];
-
-  const Data = data.map((item) => {
-    return item;
-  });
+  
+  
   return (
     <>
       <section>

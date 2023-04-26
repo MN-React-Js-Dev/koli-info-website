@@ -8,7 +8,7 @@ import Image4 from "../../assets/images/4.png";
 import Image5 from "../../assets/images/5.png";
 
 const TestimonialOfOurClient = () => {
-  const data = [
+  const Data = [
     {
       name: "John Doe",
       review:
@@ -30,9 +30,7 @@ const TestimonialOfOurClient = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
     },
   ];
-  const Data = data.map((item) => {
-    return item;
-  });
+ 
   return (
     <>
       <section className="testi-hero-image ">
@@ -76,9 +74,9 @@ const TestimonialOfOurClient = () => {
                 {/* </div> */}
                 <Image src={client1} className="rounded client-image-3" />
               </div>
-              {Data.map((item) => (
+              {Data.map((item,index) => (
                 <>
-                  <div className="text-center mt-5 testi-detail-box">
+                  <div className="text-center mt-5 testi-detail-box" key={index}>
                     <Image src={Image2} className="round img-round-cst" />
                     <p className="text-center text-decoration-underline client-name  pt-3">
                       {item.name}

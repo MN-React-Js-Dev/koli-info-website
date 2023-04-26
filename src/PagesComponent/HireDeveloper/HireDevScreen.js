@@ -14,42 +14,8 @@ import Vector from "../../assets/images/Vector.png";
 import EllipseBlue from "../../assets/images/EllipseBlue.png";
 
 const HireDevScreen = () => {
-  const data = [
-    {
-      service: "Web Designing",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Web Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Mobile Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Web Designing",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Web Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-    {
-      service: "Mobile Development",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
-  ];
-
-  const Data = data.map((item) => {
-    return item;
-  });
+   
+   
   return (
     <>
       <section>

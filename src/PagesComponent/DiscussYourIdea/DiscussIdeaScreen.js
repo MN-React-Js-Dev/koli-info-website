@@ -39,9 +39,7 @@ const DiscussIdeaScreen = () => {
     },
   ];
 
-  const Data = data.map((item) => {
-    return item;
-  });
+ 
   return (
     <>
       <section>

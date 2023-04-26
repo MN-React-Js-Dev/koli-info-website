@@ -35,20 +35,17 @@ const LeadershipTeam = () => {
     },
   ];
 
-  const Data = data.map((item) => {
-    return item;
-  });
-  console.log("item.111..", Data);
-
+ 
+ 
   return (
     <>
       <section className="testi-hero-image ">
         <div className="container">
           <h1 className="text-center mt-5 bold-font">Meet Our Leadership Team</h1>
           <div className="cst-hr-for-process mb-5" />
-          {Data.map((item) => (
+          {data.map((item,index) => (
             <>
-              <div className="row  mt-5 mb-5" style={{ alignItems: "center" }}>
+              <div className="row  mt-5 mb-5" style={{ alignItems: "center" }} key={index}>
                 <div className="col-sm-4 leaderImg">
                   <Image src={LeaderImg} style={{ borderRadius: "50%" }} />
                 </div>

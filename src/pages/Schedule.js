@@ -2922,12 +2922,7 @@ const SchedulePage = () => {
     },
   ];
 
-  useEffect(() => {
-    const Data = options.map((item) => {
-      console.log("time zone-------->", item.name);
-    });
-  }, []);
-
+  
   const datePick = (e) => {
     setDate(e);
     console.log("date....", dare);
@@ -2987,8 +2982,8 @@ const SchedulePage = () => {
                 Select Time
               </h4>
               <select class="form-select form-control p-3 time-zone-select" name="cars" id="cars">
-                {options.map((item) => {
-                  return <option value={item.name}> {item.name} </option>;
+                {options.map((item, index) => {
+                  return <option value={item.name} key={index}> {item.name} </option>;
                 })}
               </select>
             </div>
