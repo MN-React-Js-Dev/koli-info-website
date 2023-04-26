@@ -1,4 +1,6 @@
 import React from 'react'
+import Profile from '../../assets/images/profile.png'
+import Image from 'next/image'
 
 const OurValuableClients = () => {
     return (
@@ -10,7 +12,7 @@ const OurValuableClients = () => {
 
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-3 col-md-3 "><div className='ratangale-one'></div></div>
+                            <div class="col-3 col-md-3 "><div className='ratangale-one'><Image src={Profile}/></div></div>
                             <div class="col-3 col-md-3 "><div className='ratangale-two mt-5'></div></div>
                             <div class="col-3 col-md-3 "><div className='ratangale-three'></div></div>
                             <div class="col-3 col-md-3 "><div className='ratangale-foure mt-5'></div></div>
