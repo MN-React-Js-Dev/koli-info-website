@@ -8,7 +8,7 @@ const HeroSection = () => {
                     <div className='row'>
                         <div className='col-lg-6 mt-5'>
                             {/* <h1 className='ideas-into-reality'>Ideas Into Reality</h1> */}
-                            <h1>Ideas Into Reality</h1>
+                            <h1 className='hero-sec-header'>Ideas Into Reality</h1>
 
                             <p className='para-for-hero'>
                                 We are a company that offers design

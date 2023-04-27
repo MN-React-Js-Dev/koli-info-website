@@ -8,11 +8,6 @@ import ScheduleAnAppointment from '@/PagesComponent/HomePage/ScheduleAnAppointme
 import WhyChooseBlueInfinity from '@/PagesComponent/HomePage/WhyChooseBlueInfinity'
 import Footer from '@/commonComponent/Footer'
 import Header from '@/commonComponent/Header'
-import TestimonialPage from './Testimonial'
-import TestiHeroSection from '@/PagesComponent/Testimonial/TestiHeroSection'
-import TestimonialOfOurClient from '@/PagesComponent/Testimonial/TestimonialOfOurClient'
-import LeadershipHeroSection from '@/PagesComponent/Leadership/HeroSection'
- import LeadershipTeam from '@/PagesComponent/Leadership/LeadershipTeam'
 import OurValuableClients from '@/PagesComponent/HomePage/OurValuableClients'
 
 

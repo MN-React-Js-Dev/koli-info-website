@@ -41,7 +41,7 @@ const LeadershipTeam = () => {
     <>
       <section className="testi-hero-image ">
         <div className="container">
-          <h1 className="text-center mt-5 bold-font">Meet Our Leadership Team</h1>
+          <h1 className="text-center mt-5 comman-heading">Meet Our Leadership Team</h1>
           <div className="cst-hr-for-process mb-5" />
           {data.map((item,index) => (
             <>
@@ -58,20 +58,6 @@ const LeadershipTeam = () => {
                   <p>{item.Position}</p>
                   <div className="text-cener">
                     <p>{item.Descrition}</p>
-                    <BsFacebook
-                      style={{
-                        color: "#2A64F9",
-                        fontSize: "43px",
-                        margin: "3px",
-                      }}
-                    />
-                    <AiFillTwitterCircle
-                      style={{
-                        color: "#2A64F9",
-                        fontSize: "48px",
-                        margin: "3px",
-                      }}
-                    />
                   </div>
                 </div>
               </div>

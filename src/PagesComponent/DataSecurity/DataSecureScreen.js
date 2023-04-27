@@ -8,7 +8,7 @@ const DataSecureScreen = () => {
       <section >
         <div className="container">
           <div className="row"></div>
-          <h1 className=" text-center mt-5 bold-font">
+          <h1 className=" text-center mt-5 comman-heading">
             Data Privacy
           </h1>
           <div className="cst-hr-for-process mb-3" />
@@ -37,7 +37,7 @@ const DataSecureScreen = () => {
               reprehenderit in voluptate velit esse cillum dolore
             </p>
           </div>
-          <h1 className="text-center mt-5 bold-font">
+          <h1 className="text-center mt-5 comman-heading">
             OverView Of Our NDA
           </h1>
           <div className="cst-hr-for-process mb-3" />
@@ -60,7 +60,7 @@ const DataSecureScreen = () => {
           </div>
           <div style={{ display: "flex" }} className="text-center row">
             <div className="col-lg-6 data-li">
-              <p className="key-clauses" style={{ fontWeight: "bold" }}>
+              <p className="key-clauses comman-heading">
                 Key Clauses of an NDA
               </p>
               <ul class="list-group text-start">
@@ -81,7 +81,7 @@ const DataSecureScreen = () => {
               ></Image>
             </div>
           </div>
-          <h1 className="text-center mt-5 bold-font">
+          <h1 className="text-center mt-5 comman-heading">
             How We Keep Your App Idea Safe
           </h1>
           <div className="cst-hr-for-process mb-3" />
@@ -110,7 +110,7 @@ const DataSecureScreen = () => {
               reprehenderit in voluptate velit esse cillum dolore
             </p>
           </div>
-          <h1 className="text-center mt-5 bold-font">
+          <h1 className="text-center mt-5 comman-heading">
             Security Measures to Prevent Data Breach
           </h1>
           <div className="cst-hr-for-process mb-3" />
@@ -155,7 +155,7 @@ const DataSecureScreen = () => {
               </ul>
             </div>
           </div>
-          <h1 className="text-center mt-5 bold-font">
+          <h1 className="text-center mt-5 comman-heading">
           Operational Security
           </h1>
           <div className="cst-hr-for-process mb-3" />

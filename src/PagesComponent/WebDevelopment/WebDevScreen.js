@@ -60,7 +60,7 @@ const WebDevScreen = () => {
               <Image src={webDevimg2} className="img-fluid testi-image" />
             </div>
             <div className="col-lg-6 mt-5">
-              <h1 className=" bold-font">
+              <h1 className="comman-heading">
                 Custom Mobile Application Development Company
               </h1>
               <div className="cst-hr-for-process mb-3" />
@@ -78,7 +78,7 @@ const WebDevScreen = () => {
       </section>
       <section>
         <div className="container">
-          <h1 className="text-center pt-5 mt-5 bold-font">
+          <h1 className="text-center pt-5 mt-5 comman-heading">
             Mobile App Development Services
           </h1>
           <div className="cst-hr-for-process mb-5" />
@@ -173,7 +173,7 @@ const WebDevScreen = () => {
         <div
           className="container mt-5"
           style={{
-            background: "#012E4D",
+            background: "#3F689F",
             color: "#fff",
             borderRadius: "20px",
           }}
@@ -193,7 +193,7 @@ const WebDevScreen = () => {
       </section>
       <section>
         <div className="container">
-          <h1 className="text-center pt-5 mt-5 bold-font">
+          <h1 className="text-center pt-5 mt-5 comman-heading">
             Industries We Serve
           </h1>
           <div className="cst-hr-for-process mb-5" />

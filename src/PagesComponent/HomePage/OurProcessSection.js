@@ -10,11 +10,14 @@ const OurProcessSection = () => {
         <>
             <section className='our-process-section mb-5'>
                 <div className='container '>
-                    <h2 className='our-process-heading text-center'>Our Process</h2>
+
+                  
+                    <h2 className='comman-heading text-center'>Our Process</h2>
                     <div className='cst-hr-for-process mb-5'></div>
-                    <div className='fdfdfdf'>
-                        {/* <Image src={RightImage}/> */}
-                    </div>
+                  <div className='row'>
+                    {/* <div className='fdfdfdf'>
+                        <Image src={RightImage}/>
+                    </div> */}
                      <ul className='cst-our-process'>
                         <li >
                             <div className='circle first-circle'></div>
@@ -45,6 +48,7 @@ const OurProcessSection = () => {
                             <h2 className='text-center mt-3'>Delivery </h2>
                         </li>
                     </ul>
+                    </div>
                 </div>
             </section>
         </>

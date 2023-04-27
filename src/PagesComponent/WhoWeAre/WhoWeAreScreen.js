@@ -17,7 +17,7 @@ const WhoWeAreScreen = () => {
           <div className="p-5" style={{ display: "flex" }}>
             <div className="row" style={{ alignItems: "center" }}>
               <div className="col-lg-6 mt-5">
-                <h1 className="text-center bold-font">
+                <h1 className="text-center comman-heading">
                   About Blue Infinity Tech
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
@@ -44,7 +44,7 @@ const WhoWeAreScreen = () => {
       </section>
       <section className="special-services">
         <div className="container">
-          <h1 className="text-center text-white pt-5 mt-5 bold-font">
+          <h1 className="text-center text-white pt-5 mt-5 comman-heading">
             Services We Specialise In
           </h1>
           <div className="cst-hr-for-process mb-5" />
@@ -58,10 +58,7 @@ const WhoWeAreScreen = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 </p>
-                {/* <div className="dots"> */}
-                  <Image src={blueDot} className="blueDot" />
-                  <Image src={grayDot} className="grayDot" />
-                {/* </div> */}
+               
               </div>
             </div>
             <div className="col-sm-4 mb-4">
@@ -73,8 +70,6 @@ const WhoWeAreScreen = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 </p>
-                <Image src={blueDot} className="blueDot" />
-                  <Image src={grayDot} className="grayDot" />
               </div>
             </div>
             <div className="col-sm-4 mb-4">
@@ -89,8 +84,6 @@ const WhoWeAreScreen = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <Image src={blueDot} className="blueDot" />
-                  <Image src={grayDot} className="grayDot" />
               </div>
             </div>
           </div>
@@ -104,8 +97,6 @@ const WhoWeAreScreen = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 </p>
-                <Image src={blueDot} className="blueDot" />
-                  <Image src={grayDot} className="grayDot" />
               </div>
             </div>
             <div className="col-sm-4 mb-4">
@@ -117,8 +108,6 @@ const WhoWeAreScreen = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 </p>
-                <Image src={blueDot} className="blueDot" />
-                  <Image src={grayDot} className="grayDot" />
               </div>
             </div>
             <div className="col-sm-4 mb-4">
@@ -133,8 +122,6 @@ const WhoWeAreScreen = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <Image src={blueDot} className="blueDot" />
-                  <Image src={grayDot} className="grayDot" />
               </div>
             </div>
           </div>
@@ -142,7 +129,7 @@ const WhoWeAreScreen = () => {
       </section>
       <section>
         <div className="container">
-          <h1 className="text-center pt-5 mt-5 bold-font">
+          <h1 className="text-center pt-5 mt-5 comman-heading">
             Customized Business Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />

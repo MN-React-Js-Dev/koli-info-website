@@ -48,7 +48,19 @@ ul li a {
 }
 
 .cst-nav {
-  background-color: #023455;
+  background-color: #fff;
+}
+.header-links{
+  color: #000000 !important;
+  font-weight: bolder !important;
+}
+.header-ul li{
+  padding: 5px 15px;
+}
+.header-ul li :hover{
+  border-bottom: #000000 !important;
+  background-color: 	#ADD8E6;
+  border-radius: 16px;
 }
 
 .contact-us-btn {
@@ -62,6 +74,10 @@ ul li a {
   line-height: 24px;
   color: #FFFFFF !important;
 }
+
+/* .navbar-toggler-icon{
+  background:scroll;
+} */
 .onDemndbtn{
   background: #2A64F9 !important;
   border-radius: 170px !important;
@@ -102,9 +118,9 @@ ul li a {
   text-transform: uppercase;
 }
 .hero-sec-header{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 730;
+  font-weight: bold;
   font-size: 50px;
   /* line-height: 75px; */
   text-transform: uppercase;
@@ -145,32 +161,60 @@ ul li a {
   font-size: 18px;
   line-height: 30px;
 }
-
-
-.our-process-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 55px;
-  color: #000000;
+.img-slide-box{
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.img-slide-box::-webkit-scrollbar{
+display: none
 }
 
+.img-slide-box .item{
+flex: none;
+}
+
+.buttons button{
+  background-color: transparent;
+  background-color: 	#F5F3F3;
+  border: 0.5px solid #F5F3F3;
+  border-radius: 50%;
+}
+.buttons :hover{
+  background-color: #A7BFFF;
+}
+
+
 .comman-heading{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 700;
-  font-size: 45px;
+  font-weight: bold;
+  font-size: 40px;
   line-height: 55px;
-  color: #000000;
+  /* color: #000000; */
 }
 
 .circle {
   background: #FFFFFF;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.25);
+}
+.slide-img{
+  height: 30vw;
+  width: 32vw;
+}
+.data-card{
+  height: 30vw;
+  width: 32vw;
+}
+
+@media (max-width:350px){
+  .get-consultancy{
+    justify-content: start;
+  }
 }
 
 .first-circle {
@@ -217,14 +261,14 @@ li {
 
 .wrap-our-service {
   border-radius: 200px 0px 0px 0px;
-  background: #012E4D;
+  background: #3F689F;
 }
 .special-services{
-  background: #012E4D;
+  background: #3F689F;
 }
 .b-border{
   border-bottom:1px solid #3B6989;
-  border: #012E4D;
+  border: #3F689F;
 }
 .client-image-1 {
   height: 60px;
@@ -358,7 +402,7 @@ input {
   position: absolute;
   margin-top: 16rem;
   margin-left: 30rem;
-  background-color: #012E4D;
+  background-color: #3F689F;
   padding: 18px;
 }
 .fev-back{
@@ -408,7 +452,7 @@ input {
  }
  .apply-now{
   border-radius:170px;
-  background-color: #012E4D !important;
+  background-color: #3F689F !important;
   color: #FFFFFF !important;
  }
 
@@ -535,9 +579,16 @@ input {
 }
 
 
-.our-process-section {
-  background: url(../assets/images/OurProcessBg.png);
-  /* background-position: 100%; */
+.why-choos{
+  background: url(../assets/images/skyBlueLeft.png);
+  background-repeat: no-repeat;
+}
+/* .our-valuable-clients{
+  background: url(../assets/images/blueRight.png);
+  background-repeat: no-repeat;
+} */
+.top-blogs{
+  background: url(../assets/images/skyBlueLeft.png);
   background-repeat: no-repeat;
 }
 
@@ -580,7 +631,7 @@ input {
   margin-bottom: 3rem;
 }
 .award-box{
-  background-color: #012E4D;
+  background-color: #3F689F;
   margin: 3px;
   border-radius: 46px;
   color:#fff;
@@ -668,3 +719,159 @@ input {
 .boldP{
   font-weight: bold;
 }
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+.cta-100 {
+  margin-top: 100px;
+  padding-left: 8%;
+  padding-top: 7%;
+}
+.col-md-4{
+    padding-bottom:20px;
+}
+
+.white {
+  color: #fff !important;
+}
+.mt{float: left;margin-top: -20px;padding-top: 20px;}
+.bg-blue-ui {
+  background-color: #708198 !important;
+}
+figure img{width:300px;}
+
+#blogCarousel {
+  padding-bottom: 100px;
+}
+
+.blog .carousel-indicators {
+  left: 0;
+  top: -50px;
+  height: 50%;
+}
+
+
+/* The colour of the indicators */
+
+.blog .carousel-indicators li {
+  background: #708198;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.blog .carousel-indicators .active {
+  background: #0fc9af;
+}
+
+
+
+
+.item-carousel-blog-block {
+  outline: medium none;
+  padding: 15px;
+}
+
+.item-box-blog {
+  border: 1px solid #dadada;
+  text-align: center;
+  z-index: 4;
+  padding: 20px;
+}
+
+.item-box-blog-image {
+  position: relative;
+}
+
+.item-box-blog-image figure img {
+  width: 100%;
+  height: auto;
+}
+
+.item-box-blog-date {
+  position: absolute;
+  z-index: 5;
+  padding: 4px 20px;
+  top: -20px;
+  right: 8px;
+  background-color: #41cb52;
+}
+
+.item-box-blog-date span {
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.item-box-blog-date span.mon {
+  font-size: 18px;
+}
+
+.item-box-blog-date span.day {
+  font-size: 16px;
+}
+
+.item-box-blog-body {
+  padding: 10px;
+}
+
+.item-heading-blog a h5 {
+  margin: 0;
+  line-height: 1;
+  text-decoration:none;
+  transition: color 0.3s;
+}
+
+.item-box-blog-heading a {
+    text-decoration: none;
+}
+
+.item-box-blog-data p {
+  font-size: 13px;
+}
+
+.item-box-blog-data p i {
+  font-size: 12px;
+}
+
+.item-box-blog-text {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.mt-10 {
+  float: left;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read {
+  cursor: pointer;
+  padding: 4px 20px;
+  float: left;
+  margin-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read:hover {
+  box-shadow: 0px 5px 15px inset #4d5f77;
+}
+
+/* -------------------------------------------------------------------------------------------- */

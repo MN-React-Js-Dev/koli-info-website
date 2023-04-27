@@ -44,7 +44,7 @@ const CareerScreen = () => {
     <>
       <section className="testi-hero-image ">
         <div className="container">
-          <h1 className=" text-center mt-5 bold-font">Current Openings</h1>
+          <h1 className=" text-center mt-5 comman-heading">Current Openings</h1>
           <div className="cst-hr-for-process mb-5" />
           {data.map((item) => (
             <>

@@ -11,7 +11,6 @@ import userInterface1 from "../../assets/images/userInterface1.png";
 import smartform1 from "../../assets/images/cross-platform1.png";
 import Image2 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
-import EllipseBlue from "../../assets/images/EllipseBlue.png";
 
 const HireDevScreen = () => {
    

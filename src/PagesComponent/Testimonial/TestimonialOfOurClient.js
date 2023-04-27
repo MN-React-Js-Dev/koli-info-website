@@ -37,7 +37,7 @@ const TestimonialOfOurClient = () => {
         <div className="container">
           <div className="row">
             <div className="mt-5 mb-5">
-              <h1 className="text-center mt-5 bold-font">
+              <h1 className="text-center mt-5 comman-heading">
                 Testimonial Of Our Client
               </h1>
               <div className="cst-hr-for-process mb-5" />

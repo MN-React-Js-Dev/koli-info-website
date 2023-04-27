@@ -10,7 +10,7 @@ const ContactUsScreen = () => {
           <div className="row  m-3 d-flex">
             {/* <div className=""> */}
               <div className="col-lg-5 p-3">
-                <h1 className=" pt-5 mt-5 bold-font">Share Your App URL</h1>
+                <h1 className=" pt-5 mt-5 comman-heading">Share Your App URL</h1>
                 <div className="cst-hr-for-process" />
                 <div className=" m-2 mb-3">
                   <input

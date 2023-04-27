@@ -15,15 +15,13 @@ const portfolio = () => {
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
         <div className="container">
-          <div className="row">
-            <div className="col-sm-6">
-              <div className="mt-5">
-                <h1 className="hero-sec-header">Portfolio</h1>
-                <p className="para-for-hero">
-                  We are a company that offers design and develop services for
-                  you from initial sketches to the final construction.
-                </p>
-              </div>
+          <div className="row" style={{ alignItems: "center" }}>
+            <div className="col-sm-6 mt-5">
+              <h1 className="hero-sec-header">Portfolio</h1>
+              <p className="para-for-hero">
+                We are a company that offers design and develop services for you
+                from initial sketches to the final construction.
+              </p>
             </div>
             <div className="col-sm-6">
               <Image src={PortfolioImage} class="img-fluid" />

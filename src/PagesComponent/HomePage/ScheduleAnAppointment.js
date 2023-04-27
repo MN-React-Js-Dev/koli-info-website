@@ -3,7 +3,7 @@ import React from 'react'
 const ScheduleAnAppointment = () => {
     return (
         <>
-            <section className='mt-5 mt-5' style={{ "background": "#023455" }}>
+            <section className='mt-5 mt-5' style={{ "background": "#3F689F" }}>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-sm-6'> </div>
