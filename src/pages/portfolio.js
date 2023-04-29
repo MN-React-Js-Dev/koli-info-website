@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from "react-redux";
 import Header from "@/commonComponent/Header";
 import Image from "next/image";
 import PortfolioImage from "../assets/images/portfolioimage.png";
@@ -8,8 +9,20 @@ import WebDesignImage4 from "../assets/images/webdesign4.png";
 import WebDesignImage5 from "../assets/images/webdesign5.png";
 import WebDesignImage6 from "../assets/images/webdesign6.png";
 import { Link } from "react-router-dom";
+import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
+import { useEffect } from "react";
 
 const portfolio = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllOurProductStart());
+  }, []);
+
+  const data = useSelector((state) => state?.getOurProduct?.ourProduct?.data?.data);
+  
+  console.log("dataaaaaa------------>",data?.rows) 
   return (
     <>
       <Header />
@@ -62,27 +75,35 @@ const portfolio = () => {
           </div>
 
           <div className="row ">
-            <div className="col-sm-4 mb-5">
-              <div className="container">
-                <div
-                  class="card p-3"
-                  style={{
-                    background:
-                      " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)",
-                  }}
-                >
-                  <div class="card-body">
-                    <Image src={WebDesignImage} class="card-img-top" />
+            {
+              data?.rows?.map((data)=>{
+                return(
+                // console.log("data",data?.title)
+                <div className="col-sm-4 mb-5">
+                <div className="container">
+                  <div
+                    class="card p-3"
+                    style={{
+                      background:
+                        " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)",
+                    }}
+                  >
+                    <div class="card-body">
+                      <Image src={WebDesignImage} class="card-img-top" />
+                    </div>
+                  </div>
+                  <div className="card-btm-text">
+                    <h4>{data?.title}</h4>
+                    <p>{data?.description}</p>
                   </div>
                 </div>
-                <div className="card-btm-text">
-                  <h4>Web Design</h4>
-                  <p>Website design</p>
-                </div>
               </div>
-            </div>
+                )
+              })
+            }
+         
 
-            <div className="col-sm-4 mb-5">
+           {/*  <div className="col-sm-4 mb-5">
               <div className="container">
                 <div
                   class="card  p-3"
@@ -100,8 +121,8 @@ const portfolio = () => {
                   <p>Website design</p>
                 </div>
               </div>
-            </div>
-            <div className="col-sm-4 mb-5">
+            </div> */}
+            {/* <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-3" style={{ background: "#012E4D" }}>
                   <div class="card-body">
@@ -113,10 +134,10 @@ const portfolio = () => {
                   <p> Website design</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="row mb-2">
-            <div className="col-sm-4 mb-5">
+       {/*      <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-3" style={{ background: "#313131" }}>
                   <div class="card-body">
@@ -128,9 +149,9 @@ const portfolio = () => {
                   <p>Website design</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-sm-4 mb-5">
+            {/* <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-3" style={{ background: "#6647C0" }}>
                   <div class="card-body">
@@ -142,8 +163,8 @@ const portfolio = () => {
                   <p>Website design</p>
                 </div>
               </div>
-            </div>
-            <div className="col-sm-4 mb-5">
+            </div> */}
+         {/*    <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-3" style={{ background: "#E9A218" }}>
                   <div class="card-body">
@@ -155,7 +176,7 @@ const portfolio = () => {
                   <p> Website design</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
