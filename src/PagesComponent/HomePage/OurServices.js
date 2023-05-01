@@ -13,9 +13,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 const OurServices = () => {
   const dispatch = useDispatch();
+  const [ourService, setOurService] = useState();
   const carousel = useRef(null);
-  const dataSelector = useSelector(
-    (state) => state?.getOurServices?.ourServices?.data?.rows);
+  const dataSelector = useSelector((state) => state?.getOurServices);
 
   const handleLeftClick = (e) => {
     e.preventDefault();
@@ -25,6 +25,12 @@ const OurServices = () => {
     e.preventDefault();
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
+
+  useEffect(() => {
+    if (dataSelector != null) {
+      setOurService(dataSelector?.ourServices?.data?.rows);
+    }
+  }, [dataSelector]);
 
   useEffect(() => {
     dispatch(getAllOurServicesStart());
@@ -41,23 +47,21 @@ const OurServices = () => {
             <div className="cst-hr-for-process mb-5"></div>
 
             <div className="row">
-                {
-                    dataSelector?.map((data) => {
-                        return (
-                            <div className="col-sm-4 mb-4">
-                            <div className="card p-5 cst-border-cls">
-                              <Image src={Design1}  alt={data?.title} className="mb-4 mt-4 img-fluid " />
-                              <h2>{data?.title}</h2>
-                              <p>
-                              {data?.description}
-                              </p>
-                            </div>
-                          </div>
-                        )
-                    }
-                    )
-                    
-                }
+              {ourService?.map((data) => {
+                return (
+                  <div className="col-sm-4 mb-4">
+                    <div className="card p-5 cst-border-cls">
+                      <Image
+                        src={Design1}
+                        alt={data?.title}
+                        className="mb-4 mt-4 img-fluid "
+                      />
+                      <h2>{data?.title}</h2>
+                      <p>{data?.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
               {/* <div className="col-sm-4 mb-4">
                 <div className="card p-5 cst-border-cls">
                   <Image src={Design1} className="mb-4 mt-4 img-fluid " />
@@ -71,7 +75,7 @@ const OurServices = () => {
                   </p>
                 </div>
               </div> */}
-             {/*  <div className="col-sm-4 mb-4">
+              {/*  <div className="col-sm-4 mb-4">
                 <div className="card p-5 cst-border-cls">
                   <Image
                     src={WebDevelopment1}
@@ -87,7 +91,7 @@ const OurServices = () => {
                   </p>
                 </div>
               </div> */}
-            {/*   <div className="col-sm-4 mb-4">
+              {/*   <div className="col-sm-4 mb-4">
                 <div className="card p-5 cst-border-cls">
                   <Image
                     src={Applications1Img}

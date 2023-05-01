@@ -2,8 +2,6 @@ import * as types from "./actionTypes";
 
 export const getAllOurBlogStart = () => ({
   type: types.GETALL_OUR_BLOG_START,
-  // payload: user
-
 });
 
 export const getAllOurBlogSuccess = (Blog) => ({

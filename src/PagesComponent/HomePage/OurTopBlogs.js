@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Mobile1 from "../../assets/images/mobile1.png";
 import Mobile2 from "../../assets/images/mobile2.png";
 import skyBlueLeft from "../../assets/images/skyBlueLeft.png";
@@ -9,14 +9,19 @@ import { useEffect } from "react";
 
 const OurTopBlogs = () => {
   const dispatch = useDispatch();
+  const [ourBlogs, setOurBlogs] = useState()
+  const data = useSelector((state) => state?.getOurBlog);
+
+  useEffect(() => {
+    if (data!= null) {
+      setOurBlogs(data?.ourBlog?.data?.data);
+    }
+  }, [data]);
 
   useEffect(() => {
     dispatch(getAllOurBlogStart());
   }, []);
 
-  const data = useSelector((state) => state?.getOurBlog?.ourBlog?.data?.data);
-
-  console.log("dataaaaaa------------>", data);
   return (
     <>
       <section className="top-blogs">
@@ -24,7 +29,7 @@ const OurTopBlogs = () => {
           <h1 className=" text-center mt-5 bold-font">Our Top Blogs</h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className="row">
-            {data?.rows?.map((data) => {
+            {ourBlogs?.rows?.map((data) => {
               return (
                 <div className="col-sm-6">
                   <div class="card m-3">

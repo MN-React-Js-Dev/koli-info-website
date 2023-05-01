@@ -10,19 +10,23 @@ import WebDesignImage5 from "../assets/images/webdesign5.png";
 import WebDesignImage6 from "../assets/images/webdesign6.png";
 import { Link } from "react-router-dom";
 import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const portfolio = () => {
-
   const dispatch = useDispatch();
+  const [ourProduct, setOurProduct] = useState();
+  const data = useSelector((state) => state?.getOurProduct);
+
+  useEffect(() => {
+    if (data != null) {
+      setOurProduct(data?.ourProduct?.data?.data);
+    }
+  }, [data]);
 
   useEffect(() => {
     dispatch(getAllOurProductStart());
   }, []);
 
-  const data = useSelector((state) => state?.getOurProduct?.ourProduct?.data?.data);
-  
-  console.log("dataaaaaa------------>",data?.rows) 
   return (
     <>
       <Header />
@@ -75,35 +79,31 @@ const portfolio = () => {
           </div>
 
           <div className="row ">
-            {
-              data?.rows?.map((data)=>{
-                return(
-                // console.log("data",data?.title)
+            {ourProduct?.rows?.map((data) => {
+              return (
                 <div className="col-sm-4 mb-5">
-                <div className="container">
-                  <div
-                    class="card p-3"
-                    style={{
-                      background:
-                        " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)",
-                    }}
-                  >
-                    <div class="card-body">
-                      <Image src={WebDesignImage} class="card-img-top" />
+                  <div className="container">
+                    <div
+                      class="card p-3"
+                      style={{
+                        background:
+                          " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)",
+                      }}
+                    >
+                      <div class="card-body">
+                        <Image src={WebDesignImage} class="card-img-top" />
+                      </div>
+                    </div>
+                    <div className="card-btm-text">
+                      <h4>{data?.title}</h4>
+                      <p>{data?.description}</p>
                     </div>
                   </div>
-                  <div className="card-btm-text">
-                    <h4>{data?.title}</h4>
-                    <p>{data?.description}</p>
-                  </div>
                 </div>
-              </div>
-                )
-              })
-            }
-         
+              );
+            })}
 
-           {/*  <div className="col-sm-4 mb-5">
+            {/*  <div className="col-sm-4 mb-5">
               <div className="container">
                 <div
                   class="card  p-3"
@@ -137,7 +137,7 @@ const portfolio = () => {
             </div> */}
           </div>
           <div className="row mb-2">
-       {/*      <div className="col-sm-4 mb-5">
+            {/*      <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-3" style={{ background: "#313131" }}>
                   <div class="card-body">
@@ -164,7 +164,7 @@ const portfolio = () => {
                 </div>
               </div>
             </div> */}
-         {/*    <div className="col-sm-4 mb-5">
+            {/*    <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-3" style={{ background: "#E9A218" }}>
                   <div class="card-body">
