@@ -59,8 +59,8 @@ ul li a {
 }
 .header-ul li :hover{
   border-bottom: #000000 !important;
-  background-color: 	#ADD8E6;
-  border-radius: 16px;
+  background-color: 	#ADD8E6 !important;
+  border-radius: 16px !important;
 }
 
 .contact-us-btn {
@@ -161,6 +161,7 @@ ul li a {
   font-size: 18px;
   line-height: 30px;
 }
+/* ------------------------------ */
 .img-slide-box{
   width: 100%;
   display: flex;
@@ -168,11 +169,11 @@ ul li a {
   scroll-behavior: smooth;
 }
 .img-slide-box::-webkit-scrollbar{
-display: none
+  display: none
 }
 
 .img-slide-box .item{
-flex: none;
+  flex: none;
 }
 
 .buttons button{
@@ -182,8 +183,34 @@ flex: none;
   border-radius: 50%;
 }
 .buttons :hover{
-  background-color: #A7BFFF;
+  background-color: #2A64F9;
+  color: #fff;
+  font-weight: bolder;
+  border: 0.5px solid #2A64F9;
 }
+.slide-img{
+  height: 30vw;
+  width: 32vw;
+}
+
+.card-carousel{
+  /* display: flex; */
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.card-carousel::-webkit-scrollbar{
+  display: none
+}
+/* .card-item .card{
+  height: 24vw;
+  width: 26rem;
+} */
+@media (max-width:415px){
+  .card-item .card{
+    width: 360px;
+  }
+}
+/* ------------------------------ */
 
 
 .comman-heading{
@@ -201,14 +228,6 @@ flex: none;
   width: 170px;
   height: 170px;
   box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.25);
-}
-.slide-img{
-  height: 30vw;
-  width: 32vw;
-}
-.data-card{
-  height: 30vw;
-  width: 32vw;
 }
 
 @media (max-width:350px){

@@ -1,8 +1,6 @@
 import React from 'react'
-import { BsPlus } from "react-icons/bs";
 import BlueLogo from '../assets/Logo/bluelogo.png'
 import Link from 'next/link';
-import Logo from '../assets/Logo/logo.png'
 import Image from 'next/image';
 import SVGlogo from '../assets/Logo/SVGlogo.svg'
 const Header = () => {

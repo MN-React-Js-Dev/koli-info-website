@@ -46,9 +46,9 @@ const CareerScreen = () => {
         <div className="container">
           <h1 className=" text-center mt-5 comman-heading">Current Openings</h1>
           <div className="cst-hr-for-process mb-5" />
-          {data.map((item) => (
+          {data.map((item ,index) => (
             <>
-              <div class="card mt-4 mb-4 pt-2 pb-2 px-3 ">
+              <div class="card mt-4 mb-4 pt-2 pb-2 px-3" key={index}>
                 <div class="card-body">
                   <div
                     className="row card-items"

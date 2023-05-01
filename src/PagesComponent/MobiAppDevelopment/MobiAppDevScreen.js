@@ -17,36 +17,37 @@ import Android from '../../assets/images/android1.png';
 import webDev from '../../assets/images/ux1.png';
 import userInterface1 from '../../assets/images/userInterface1.png';
 import smartform1 from '../../assets/images/cross-platform1.png';
+import { Inder } from "next/font/google";
 
 const MobiAppDevScreen = () => {
   const data = [
     {
-      service: "Web Designing",
+      service: "iPhone App Development",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
-      service: "Web Development",
+      service: "iPad App Development",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
-      service: "Mobile Development",
+      service: "Android App Development",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
-      service: "Web Designing",
+      service: "Web App Developmentg",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
-      service: "Web Development",
+      service: "Mobile App Design",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
-      service: "Mobile Development",
+      service: "Cross-Platform Mobile Apps",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
@@ -127,87 +128,18 @@ const MobiAppDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
-            <div className="col-sm-4 mb-4">
+          {data.map((item,Inder)=><>
+            <div className="col-sm-4 mb-4" key={Inder}>
               <div className="p-5 awards-border">
                 <div className="text-center award-head-img award-head-img">
-                  <h2>iPhone App Development</h2>
-                  <Image src={smartphone} className="mb-4 mt-4 img-fluid " />
+                  <h2>{item.service}</h2>
+                  <Image src={smartphone} alt="img" className="mb-4 mt-4 img-fluid " />
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
+                <p>{item.detail}</p>
               </div>
             </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>iPad App Development</h2>
-                  <Image src={Ipod} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
+          </>)}
             </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Android App Development</h2>
-                  <Image src={Android} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Web App Development</h2>
-                  <Image src={webDev} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Mobile App Design</h2>
-                  <Image src={userInterface1} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Cross-Platform Mobile Apps</h2>
-                  <Image src={smartform1} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <section>

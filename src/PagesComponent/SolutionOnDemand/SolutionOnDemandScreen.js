@@ -16,8 +16,38 @@ import onDemCrsl3 from "../../assets/images/onDemCrsl-3.png";
 // ------------------------------------------------------------------
 
 const SolutionOnDemandScreen = () => {
-  // const handleDragStart = (e) => e.preventDefault();
-  // const [data, setData] = useState([]);
+  const data = [
+    {
+      service: "Booking Module",
+      detail:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    },
+    {
+      service: "In-App Payments",
+      detail:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    },
+    {
+      service: "Ordering on-The-Go",
+      detail:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    },
+    {
+      service: "Scheduling a booking/ order",
+      detail:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    },
+    {
+      service: "Order Tracking",
+      detail:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    },
+    {
+      service: "Real-Time calls and Messages",
+      detail:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    },
+  ];
   const carousel = useRef(null);
 
   const handleLeftClick = (e) => {
@@ -42,20 +72,20 @@ const SolutionOnDemandScreen = () => {
         >
           <div className="row  text-center p-5 m-5">
             <div className="col-lg-4">
-              <div className="whiteBack">
+              <div className="whiteBack m-3">
                 {/* <Image src={whiteBackg} className="whiteBack" /> */}
                 <Image className="SODimage1 img-fluid" src={SODimage1} />
               </div>
               <p>Developed 40+ On-Demand Mobile Apps and Solutions</p>
             </div>
             <div className="col-lg-4">
-              <div className="whiteBack">
+              <div className="whiteBack m-3">
                 <Image className="SODimage1 img-fluid" src={SODimage2} />
               </div>
               <p>A Dedicated Team of On-Demand App Developers</p>
             </div>
             <div className="col-lg-4">
-              <div className="whiteBack">
+              <div className="whiteBack m-3">
                 <Image className="SODimage1 img-fluid" src={SODimage3} />
               </div>
               <p>Developed 40+ On-Demand Mobile Apps and Solutions</p>
@@ -129,68 +159,15 @@ const SolutionOnDemandScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
-            <div className="col-sm-4 mb-4">
+            {data.map((item, index) => <>
+            <div className="col-sm-4 mb-4" key={index}>
               <div className="p-5 bold-p WebDev-dashed-border text-center ">
                 <Image src={bookindMdl} className="mb-4 mt-4 img-fluid " />
-                <p>Booking Module</p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore
-                </span>
+                <p>{item.service}</p>
+                <span>{item.detail}</span>
               </div>
             </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 bold-p WebDev-dashed-border text-center ">
-                <Image src={appPay} className="mb-4 mt-4 img-fluid " />
-                <p>In-App Payments</p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore
-                </span>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 bold-p WebDev-dashed-border text-center ">
-                <Image src={order} className="mb-4 mt-4 img-fluid " />
-                <p>Ordering on-The-Go</p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 bold-p WebDev-dashed-border text-center ">
-                <Image src={schedule} className="mb-4 mt-4 img-fluid " />
-                <p>Scheduling a booking/ order</p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore
-                </span>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 bold-p WebDev-dashed-border text-center ">
-                <Image src={trackOrder} className="mb-4 mt-4 img-fluid " />
-                <p>Order Tracking</p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore
-                </span>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 bold-p WebDev-dashed-border text-center ">
-                <Image src={realTimecall} className="mb-4 mt-4 img-fluid " />
-                <p>Real-Time calls and Messages</p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore
-                </span>
-              </div>
-            </div>
+            </>)}
           </div>
         </div>
       </section>

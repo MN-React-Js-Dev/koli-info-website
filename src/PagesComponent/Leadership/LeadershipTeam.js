@@ -35,15 +35,15 @@ const LeadershipTeam = () => {
     },
   ];
 
- 
- 
+
+
   return (
     <>
       <section className="testi-hero-image ">
         <div className="container">
           <h1 className="text-center mt-5 comman-heading">Meet Our Leadership Team</h1>
           <div className="cst-hr-for-process mb-5" />
-          {data.map((item,index) => (
+          {data.map((item, index) => (
             <>
               <div className="row  mt-5 mb-5" style={{ alignItems: "center" }} key={index}>
                 <div className="col-sm-4 leaderImg">
@@ -51,8 +51,11 @@ const LeadershipTeam = () => {
                 </div>
                 <div className="col-lg-8 " style={{ alignItems: "center" }}>
                   <div>
-                    <div className="bold-font" style={{ fontSize: "20px"}}>
-                      {item.LeaderName}
+                    <div className="d-flex">
+                      <div className="bold-font" style={{ fontSize: "20px" }}>
+                        {item.LeaderName}
+                        <hr style={{ color: 'black' }} />
+                      </div>
                     </div>
                   </div>
                   <p>{item.Position}</p>

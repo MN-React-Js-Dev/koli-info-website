@@ -13,7 +13,39 @@ import Image2 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 
 const HireDevScreen = () => {
-   
+  const CardData = [
+    {
+      img: '../../assets/images/design1.png',
+      heading: 'Hire Full Stack Developers',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/web-development1.png',
+      heading: 'Hire iPhone Developers',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/applications1.png',
+      heading: 'Hire Android Developers',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
+    },
+    {
+      img: '../../assets/images/design1.png',
+      heading: 'Hire PHP Developers',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/web-development1.png',
+      heading: 'Hire Swift Developers',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/applications1.png',
+      heading: 'Hire on-Demand App Developers',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
+    }
+
+  ]
    
   return (
     <>
@@ -55,90 +87,19 @@ const HireDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
+          {CardData.map((item,Inder)=><>
+          
             <div className="col-sm-4 mb-4">
               <div className="p-5 awards-border">
                 <div className="text-center award-head-img award-head-img">
-                  <h2>iPhone App Development</h2>
+                  <h2>{item.heading}</h2>
                   <Image src={smartphone} className="mb-4 mt-4 img-fluid " />
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
+                <p>{item.descpt}</p>
               </div>
             </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>iPad App Development</h2>
-                  <Image src={Ipod} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
+            </>)}
             </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Android App Development</h2>
-                  <Image src={Android} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Web App Development</h2>
-                  <Image src={webDev} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Mobile App Design</h2>
-                  <Image
-                    src={userInterface1}
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img">
-                  <h2>Cross-Platform Mobile Apps</h2>
-                  <Image src={smartform1} className="mb-4 mt-4 img-fluid " />
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <section>

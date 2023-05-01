@@ -5,11 +5,42 @@ import Image2 from "../../assets/images/WhoWeAreImage-2.png";
 import Design1 from "../../assets/images/design1.png";
 import WebDevelopment1 from "../../assets/images/web-development1.png";
 import Applications1Img from "../../assets/images/applications1.png";
-import grayDot from "../../assets/images/grayDot.png";
-import blueDot from "../../assets/images/blueDot.png";
 
 const WhoWeAreScreen = () => {
- 
+  const CardData = [
+    {
+      img: '../../assets/images/design1.png',
+      heading: 'Web Designing',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/web-development1.png',
+      heading: 'Web Development',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/applications1.png',
+      heading: 'Mobile Development',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
+    },
+    {
+      img: '../../assets/images/design1.png',
+      heading: 'Web Designing',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/web-development1.png',
+      heading: 'Web Development',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+    },
+    {
+      img: '../../assets/images/applications1.png',
+      heading: 'Mobile Development',
+      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
+    }
+
+  ]
+
   return (
     <>
       <section>
@@ -48,83 +79,17 @@ const WhoWeAreScreen = () => {
             Services We Specialise In
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row">
-            <div className="col-sm-4 mb-4">
-              <div className="card p-5 cst-border-cls">
-                <Image src={Design1} className="mb-4 mt-4 img-fluid " />
-                <h2>Web Designing</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-               
+            <div className="row">
+          {CardData.map((item,index) => <>
+              <div className="col-sm-4 mb-4" key={index}>
+                <div className="card p-5 cst-border-cls">
+                  <Image src={Design1} alt="img" className="mb-4 mt-4 img-fluid " />
+                  <h2>{item.heading}</h2>
+                  <p>{item.descpt}</p>
+                </div>
               </div>
+              </>)}
             </div>
-            <div className="col-sm-4 mb-4">
-              <div className="card p-5 cst-border-cls">
-                <Image src={WebDevelopment1} className="mb-4 mt-4 img-fluid " />
-                <h2>Web Development</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="card p-5 cst-border-cls">
-                <Image
-                  src={Applications1Img}
-                  className="mb-4 mt-4 img-fluid "
-                />
-                <h2>Mobile Development</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-4 mb-4">
-              <div className="card p-5 cst-border-cls">
-                <Image src={Design1} className="mb-4 mt-4 img-fluid " />
-                <h2>Web Designing</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="card p-5 cst-border-cls">
-                <Image src={WebDevelopment1} className="mb-4 mt-4 img-fluid " />
-                <h2>Web Development</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-4 mb-4">
-              <div className="card p-5 cst-border-cls">
-                <Image
-                  src={Applications1Img}
-                  className="mb-4 mt-4 img-fluid "
-                />
-                <h2>Mobile Development</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <section>
