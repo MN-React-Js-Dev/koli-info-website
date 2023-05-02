@@ -8,7 +8,7 @@ const ScheduleAnAppointment = () => {
                     <div className='row'>
                         <div className='col-sm-6'> </div>
                         <div className='col-sm-6'>
-                            <div className='mt-5 mb-5'>
+                            <div className='mt-5 mb-2'>
                                 <h2 className='text-white mb-3 schedule-appointment'>Schedule an appointment</h2>
                                 <div className='hr-cst mb-3'></div>
                                 <form>
@@ -30,7 +30,9 @@ const ScheduleAnAppointment = () => {
                                     </div>
                                  </form>
                             </div>
-
+                            <a class="btn contact-us-btn mb-5" type="submit">
+                  Send Now
+                </a>
                         </div>
                     </div>
                 </div>

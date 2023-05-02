@@ -17,6 +17,15 @@ const OurServices = () => {
   const carousel = useRef(null);
   const dataSelector = useSelector((state) => state?.getOurServices);
 
+  // const handleLeftClick = (e) => {
+  //   e.preventDefault();
+  //   carousel.current.scrollLeft -= carousel.current.offsetWidth;
+  // };
+  // const handleRightClick = (e) => {
+  //   e.preventDefault();
+  //   carousel.current.scrollLeft += carousel.current.offsetWidth;
+  // };
+
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -25,11 +34,11 @@ const OurServices = () => {
     e.preventDefault();
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
-
   useEffect(() => {
     if (dataSelector != null) {
       setOurService(dataSelector?.ourServices?.data?.rows);
     }
+    console.log("service--------", ourService);
   }, [dataSelector]);
 
   useEffect(() => {
@@ -45,74 +54,30 @@ const OurServices = () => {
               Our Services
             </h1>
             <div className="cst-hr-for-process mb-5"></div>
-
             <div className="row">
-              {ourService?.map((data) => {
-                return (
-                  <div className="col-sm-4 mb-4">
-                    <div className="card p-5 cst-border-cls">
-                      <Image
-                        src={Design1}
-                        alt={data?.title}
-                        className="mb-4 mt-4 img-fluid "
-                      />
-                      <h2>{data?.title}</h2>
-                      <p>{data?.description}</p>
+              <div className="img-slide-box" ref={carousel}>
+                {ourService?.map((data) => {
+                  return (
+                    <div className="col-sm-4 mb-4">
+                      <div className="card p-5 cst-border-cls service-card">
+                        <Image
+                          src={Design1}
+                          alt={data?.title}
+                          className="mb-4 mt-4 img-fluid "
+                        />
+                        <h2>{data?.title}</h2>
+                        <p>{data?.description}</p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-              {/* <div className="col-sm-4 mb-4">
-                <div className="card p-5 cst-border-cls">
-                  <Image src={Design1} className="mb-4 mt-4 img-fluid " />
-                  <h2>{dataSelector?.rows?.title}</h2>
-                  <p>
-                    {" "}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco{" "}
-                  </p>
-                </div>
-              </div> */}
-              {/*  <div className="col-sm-4 mb-4">
-                <div className="card p-5 cst-border-cls">
-                  <Image
-                    src={WebDevelopment1}
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2>Web Development</h2>
-                  <p>
-                    {" "}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco{" "}
-                  </p>
-                </div>
-              </div> */}
-              {/*   <div className="col-sm-4 mb-4">
-                <div className="card p-5 cst-border-cls">
-                  <Image
-                    src={Applications1Img}
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2>Mobile Development</h2>
-                  <p>
-                    {" "}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco{" "}
-                  </p>
-                </div>
-              </div> */}
+                  );
+                })}
+              </div>
             </div>
-            <div className="text-center mt-5 pb-5">
-              <button className="btn btn-ai-class">
+            <div className="buttons m-3 text-center">
+              <button onClick={handleLeftClick} className="m-3 p-3">
                 <AiOutlineLeft />
               </button>
-              <button className="btn btn-ai-class">
+              <button onClick={handleRightClick} className="m-3 p-3">
                 <AiOutlineRight />
               </button>
             </div>

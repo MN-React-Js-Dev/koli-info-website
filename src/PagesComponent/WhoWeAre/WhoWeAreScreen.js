@@ -49,7 +49,7 @@ const WhoWeAreScreen = () => {
             <div className="row" style={{ alignItems: "center" }}>
               <div className="col-lg-6 mt-5">
                 <h1 className="text-center comman-heading">
-                  About Blue Infinity Tech
+                  About KOLI infotech
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
                 <p className="para-for-hero">

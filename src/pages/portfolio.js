@@ -81,7 +81,7 @@ const portfolio = () => {
           <div className="row ">
             {ourProduct?.rows?.map((data) => {
               return (
-                <div className="col-sm-4 mb-5">
+                <div className="col-md-4 mb-5 mt-3">
                   <div className="container">
                     <div
                       class="card p-3"
@@ -102,81 +102,8 @@ const portfolio = () => {
                 </div>
               );
             })}
-
-            {/*  <div className="col-sm-4 mb-5">
-              <div className="container">
-                <div
-                  class="card  p-3"
-                  style={{
-                    background:
-                      " linear-gradient(180deg, #E83030 0%, rgba(116, 13, 13, 0.97) 100%)",
-                  }}
-                >
-                  <div class="card-body">
-                    <Image src={WebDesignImage2} class="card-img-top" />
-                  </div>
-                </div>
-                <div className="card-btm-text">
-                  <h4>Web Design</h4>
-                  <p>Website design</p>
-                </div>
-              </div>
-            </div> */}
-            {/* <div className="col-sm-4 mb-5">
-              <div className="container">
-                <div class="card  p-3" style={{ background: "#012E4D" }}>
-                  <div class="card-body">
-                    <Image src={WebDesignImage3} class="card-img-top" />
-                  </div>
-                </div>
-                <div className="card-btm-text">
-                  <h4>Web Design</h4>
-                  <p> Website design</p>
-                </div>
-              </div>
-            </div> */}
           </div>
           <div className="row mb-2">
-            {/*      <div className="col-sm-4 mb-5">
-              <div className="container">
-                <div class="card  p-3" style={{ background: "#313131" }}>
-                  <div class="card-body">
-                    <Image src={WebDesignImage4} class="card-img-top" />
-                  </div>
-                </div>
-                <div className="card-btm-text">
-                  <h4>Web Design</h4>
-                  <p>Website design</p>
-                </div>
-              </div>
-            </div> */}
-
-            {/* <div className="col-sm-4 mb-5">
-              <div className="container">
-                <div class="card  p-3" style={{ background: "#6647C0" }}>
-                  <div class="card-body">
-                    <Image src={WebDesignImage5} class="card-img-top" />
-                  </div>
-                </div>
-                <div className="card-btm-text">
-                  <h4>Web Design</h4>
-                  <p>Website design</p>
-                </div>
-              </div>
-            </div> */}
-            {/*    <div className="col-sm-4 mb-5">
-              <div className="container">
-                <div class="card  p-3" style={{ background: "#E9A218" }}>
-                  <div class="card-body">
-                    <Image src={WebDesignImage6} class="card-img-top" />
-                  </div>
-                </div>
-                <div className="card-btm-text">
-                  <h4>Web Design</h4>
-                  <p> Website design</p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>

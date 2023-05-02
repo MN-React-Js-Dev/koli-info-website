@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import HomePage from "./homePage";
+import HomePage from "./HomePage";
 import store from "@/Redux/store";
 import { Provider } from "react-redux";
 const inter = Inter({ subsets: ["latin"] });

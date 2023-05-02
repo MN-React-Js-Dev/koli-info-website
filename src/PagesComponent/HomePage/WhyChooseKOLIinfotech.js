@@ -1,7 +1,7 @@
 import React from 'react'
 import TeamofficeImg from '../../assets/images/teamoffice.png'
 import Image from 'next/image'
-const WhyChooseBlueInfinity = () => {
+const WhyChooseKOLIinfotech = () => {
     return (
         <>
             <section className='mb-5 mt-5 why-choos'>
@@ -9,7 +9,7 @@ const WhyChooseBlueInfinity = () => {
                     <div className='row'>
                         <div className="col-sm-6">
                             <h1 className='comman-heading'>Why Choose</h1>
-                            <h1 className='comman-heading'>Blue Infinity Tech </h1>
+                            <h1 className='comman-heading'>KOLI infotech</h1>
                             <div className='hr-cst mb-3'></div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
@@ -24,4 +24,4 @@ const WhyChooseBlueInfinity = () => {
     )
 }
 
-export default WhyChooseBlueInfinity
+export default WhyChooseKOLIinfotech

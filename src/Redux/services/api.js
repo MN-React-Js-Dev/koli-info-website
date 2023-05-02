@@ -9,3 +9,6 @@ export const getAllOurProductAPI = async () =>
 
 export const getAllOurblogAPI = async () =>
   await axios.get(`${baseUrl}` + "ourBlog/getAll-ourBlog");
+
+export const getAllOurAllClientAPI = async () =>
+  await axios.get(`${baseUrl}` + "ourClient/getAll-ourClient");

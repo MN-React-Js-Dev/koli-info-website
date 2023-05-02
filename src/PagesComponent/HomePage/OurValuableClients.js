@@ -1,37 +1,63 @@
-import React from 'react'
-import Profile from '../../assets/images/profile.png'
-import Image from 'next/image'
+import React, { useEffect, useState } from "react";
+import Profile from "../../assets/images/profile.png";
+import Image from "next/image";
 import blueRight from "../../assets/images/blueRight.png";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllOurClientStart } from "@/Redux/module/getOurClientsAction";
+// import Profile from '../../assets/images/profile.png'
 
 const OurValuableClients = () => {
-    return (
-        <>
-            <section className='our-valuable-clients mb-5 mt-5'>
-                <div className='container'>
-                    <h1 className='text-center mt-5 comman-heading'>Our Valuable Clients</h1>
-                    <div className='cst-hr-for-process mb-5'></div>
+  const [clients, setClients] = useState();
+  const dispatch = useDispatch();
+  const dataSelector = useSelector((state) => state?.getOurClients);
+  console.log("get our clients~~~~~>", dataSelector);
+  useEffect(() => {
+    dispatch(getAllOurClientStart());
+  }, []);
 
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-3 col-md-3 "><div className='ratangale-one'></div></div>
-                            <div class="col-3 col-md-3 "><div className='ratangale-two mt-5'></div></div>
-                            <div class="col-3 col-md-3 "><div className='ratangale-three'></div></div>
-                            <div class="col-3 col-md-3 "><div className='ratangale-foure mt-5'></div></div>
-                            {/* <div class="col col-md-2 "><div className='ratangale-five'></div></div> */}
-                        </div>
-                        <div class="row">
-                            <div class="col-3 col-md-3"><div className='ratangale-six'></div></div>
-                            <div class="col-3 col-md-3"><div className='ratangale-seven mt-5'></div></div>
-                            <div class="col-3 col-md-3"><div className='ratangale-eight'></div></div>
-                            <div class="col-3 col-md-3"><div className='ratangale-nine mt-5'></div></div>
-                            {/* <div class="col col-md-3"><div className='ratangale-ten'></div></div> */}
-                        </div>
+  useEffect(() => {
+    if (dataSelector != null) {
+      setClients(dataSelector?.ourClients?.data?.rows);
+    }
+    console.log("service--------", clients);
+  }, [dataSelector]);
+  return (
+    <>
+      <section className="our-valuable-clients mb-5 mt-5">
+        <div className="container">
+          <h1 className="text-center mt-5 comman-heading">
+            Our Valuable Clients
+          </h1>
+          <div className="cst-hr-for-process mb-5"></div>
+          <div class="container-fluid">
+            <div class="row">
+              {clients?.map((item, index) => (
+                <div class="col-md-3" key={index}>
+                  <div className="client-box ratangale-one mt-3">
+                    <div className="text-center">
+                        <Image src={Profile}/>
+                        <span className="t-dark">{item.name}</span>
+                        <span>{item.review}</span>
                     </div>
+                  </div>
                 </div>
-                {/* <Image src={blueRight} style={{ float: 'right' }} /> */}
-            </section>
-        </>
-    )
-}
+              ))}
+              {/* <div class="col-md-3"><div className='client-box ratangale-two mt-5'></div></div>
+                            <div class="col-md-3"><div className='client-box ratangale-three mt-3'></div></div>
+                            <div class="col-md-3"><div className='client-box ratangale-foure mt-5'></div></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"><div className='client-box ratangale-six mt-3'></div></div>
+                            <div class="col-md-3"><div className='client-box ratangale-seven mt-5'></div></div>
+                            <div class="col-md-3"><div className='client-box ratangale-eight mt-3'></div></div>
+                            <div class="col-md-3"><div className='client-box ratangale-nine mt-5'></div></div> */}
+            </div>
+          </div>
+        </div>
+        {/* <Image src={blueRight} style={{ float: 'right' }} /> */}
+      </section>
+    </>
+  );
+};
 
-export default OurValuableClients
+export default OurValuableClients;
