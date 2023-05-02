@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
 import { useEffect, useState } from "react";
 
-const portfolio = () => {
+const Portfolio = () => {
   const dispatch = useDispatch();
   const [ourProduct, setOurProduct] = useState();
   const data = useSelector((state) => state?.getOurProduct);
@@ -79,9 +79,9 @@ const portfolio = () => {
           </div>
 
           <div className="row ">
-            {ourProduct?.rows?.map((data) => {
+            {ourProduct?.rows?.map((data,index) => {
               return (
-                <div className="col-md-4 mb-5 mt-3">
+                <div className="col-md-4 mb-5 mt-3" key={index}>
                   <div className="container">
                     <div
                       class="card p-3"
@@ -111,4 +111,4 @@ const portfolio = () => {
   );
 };
 
-export default portfolio;
+export default Portfolio;

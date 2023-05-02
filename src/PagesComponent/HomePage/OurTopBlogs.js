@@ -41,9 +41,9 @@ const OurTopBlogs = () => {
           <div className="cst-hr-for-process mb-5"></div>
           <div className="row">
             <div className="img-slide-box" ref={carousel}>
-              {ourBlogs?.rows?.map((data) => {
+              {ourBlogs?.rows?.map((data,index) => {
                 return (
-                  <div className="col-sm-6">
+                  <div className="col-sm-6" key={index}>
                     <div class="card m-3 service-card">
                       <div class="date-cst">
                         <span class="day">{data?.created_at}</span>

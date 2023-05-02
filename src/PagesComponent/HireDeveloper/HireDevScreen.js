@@ -15,38 +15,43 @@ import Vector from "../../assets/images/Vector.png";
 const HireDevScreen = () => {
   const CardData = [
     {
-      img: '../../assets/images/design1.png',
-      heading: 'Hire Full Stack Developers',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+      img: "../../assets/images/design1.png",
+      heading: "Hire Full Stack Developers",
+      descpt:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: '../../assets/images/web-development1.png',
-      heading: 'Hire iPhone Developers',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+      img: "../../assets/images/web-development1.png",
+      heading: "Hire iPhone Developers",
+      descpt:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: '../../assets/images/applications1.png',
-      heading: 'Hire Android Developers',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
+      img: "../../assets/images/applications1.png",
+      heading: "Hire Android Developers",
+      descpt:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
-      img: '../../assets/images/design1.png',
-      heading: 'Hire PHP Developers',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+      img: "../../assets/images/design1.png",
+      heading: "Hire PHP Developers",
+      descpt:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: '../../assets/images/web-development1.png',
-      heading: 'Hire Swift Developers',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+      img: "../../assets/images/web-development1.png",
+      heading: "Hire Swift Developers",
+      descpt:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: '../../assets/images/applications1.png',
-      heading: 'Hire on-Demand App Developers',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
-    }
+      img: "../../assets/images/applications1.png",
+      heading: "Hire on-Demand App Developers",
+      descpt:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    },
+  ];
 
-  ]
-   
   return (
     <>
       <section>
@@ -87,26 +92,30 @@ const HireDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
-          {CardData.map((item,Inder)=><>
-          
-            <div className="col-sm-4 mb-4">
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img award-head-img">
-                  <h2>{item.heading}</h2>
-                  <Image src={smartphone} className="mb-4 mt-4 img-fluid " />
+            {CardData.map((item, index) => (
+              <>
+                <div className="col-sm-4 mb-4" key={index}>
+                  <div className="p-5 awards-border">
+                    <div className="text-center award-head-img award-head-img">
+                      <h2>{item.heading}</h2>
+                      <Image
+                        src={smartphone}
+                        className="mb-4 mt-4 img-fluid "
+                      />
+                    </div>
+                    <p>{item.descpt}</p>
+                  </div>
                 </div>
-                <p>{item.descpt}</p>
-              </div>
-            </div>
-            </>)}
-            </div>
+              </>
+            ))}
+          </div>
         </div>
       </section>
       <section>
         <div className="container">
           <div className="row m-5">
             <div className="text-center testi-detail-box">
-              <Image src={Image2} className="round img-round-cst"/>
+              <Image src={Image2} className="round img-round-cst" />
               <p className="text-center text-decoration-underline client-name  pt-3">
                 John Doe
               </p>

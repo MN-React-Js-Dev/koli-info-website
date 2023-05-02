@@ -10,8 +10,7 @@ const OurValuableClients = () => {
   const [clients, setClients] = useState();
   const dispatch = useDispatch();
   const dataSelector = useSelector((state) => state?.getOurClients);
-  console.log("get our clients~~~~~>", dataSelector);
-  useEffect(() => {
+   useEffect(() => {
     dispatch(getAllOurClientStart());
   }, []);
 
@@ -19,8 +18,7 @@ const OurValuableClients = () => {
     if (dataSelector != null) {
       setClients(dataSelector?.ourClients?.data?.rows);
     }
-    console.log("service--------", clients);
-  }, [dataSelector]);
+   }, [dataSelector]);
   return (
     <>
       <section className="our-valuable-clients mb-5 mt-5">
