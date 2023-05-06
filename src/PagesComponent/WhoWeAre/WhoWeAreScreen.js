@@ -1,46 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Image1 from "../../assets/images/WhoWeAreImage-1.png";
 import Image2 from "../../assets/images/WhoWeAreImage-2.png";
 import Design1 from "../../assets/images/design1.png";
 import WebDevelopment1 from "../../assets/images/web-development1.png";
 import Applications1Img from "../../assets/images/applications1.png";
+import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const WhoWeAreScreen = () => {
-  const CardData = [
-    {
-      img: '../../assets/images/design1.png',
-      heading: 'Web Designing',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/web-development1.png',
-      heading: 'Web Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/applications1.png',
-      heading: 'Mobile Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
-    },
-    {
-      img: '../../assets/images/design1.png',
-      heading: 'Web Designing',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/web-development1.png',
-      heading: 'Web Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/applications1.png',
-      heading: 'Mobile Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
+
+  const dispatch = useDispatch();
+  const [ourService, setOurService] = useState();
+  const dataSelector = useSelector((state) => state?.getOurServices);
+
+  useEffect(() => {
+    if (dataSelector != null) {
+      setOurService(dataSelector?.ourServices?.data?.rows);
     }
+  }, [dataSelector]);
+  console.log("ourServiceourServiceourServiceourServiceourService", ourService);
 
-  ]
-
+  useEffect(() => {
+    dispatch(getAllOurServicesStart());
+  }, []);
+  
   return (
     <>
       <section>
@@ -79,17 +63,23 @@ const WhoWeAreScreen = () => {
             Services We Specialise In
           </h1>
           <div className="cst-hr-for-process mb-5" />
-            <div className="row">
-          {CardData.map((item,index) => <>
-              <div className="col-sm-4 mb-4" key={index}>
-                <div className="card p-5 cst-border-cls">
-                  <Image src={Design1} alt="img" className="mb-4 mt-4 img-fluid " />
-                  <h2>{item.heading}</h2>
-                  <p>{item.descpt}</p>
+          <div className="row">
+            {ourService?.map((item, index) => (
+              <>
+                <div className="col-sm-4 mb-4" key={index}>
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={Design1}
+                      alt="img"
+                      className="mb-4 mt-4 img-fluid "
+                    />
+                    <h2>{item.title}</h2>
+                    <p>{item.description}</p>
+                  </div>
                 </div>
-              </div>
-              </>)}
-            </div>
+              </>
+            ))}
+          </div>
         </div>
       </section>
       <section>
@@ -105,9 +95,7 @@ const WhoWeAreScreen = () => {
                 <Image src={Design1} className="mb-4 mt-4 img-fluid " />
                 <h2>Web Designing</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  {}
                 </p>
               </div>
             </div>

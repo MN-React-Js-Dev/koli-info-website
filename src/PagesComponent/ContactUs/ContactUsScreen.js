@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import mapImage from "../../assets/images/map.png";
+import { contactUsStart } from "@/Redux/module/contactUs";
+import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 const ContactUsScreen = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const [data, setData] = useState({
+    yourName: "",
+    email: "",
+    phone: "",
+    description: "",
+  });
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setData({
+      ...data,
+      [e.target.name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    dispatch(contactUsStart(data));
+  };
+
   return (
     <>
       <section>
@@ -17,7 +43,9 @@ const ContactUsScreen = () => {
                   type="text"
                   class="form-control"
                   placeholder="Your Name"
-                  name="Your Name"
+                  name="yourName"
+                  value={data?.yourName}
+                  onChange={handleChange}
                 />
               </div>
               <div className=" m-2 mb-3">
@@ -25,7 +53,9 @@ const ContactUsScreen = () => {
                   type="email"
                   class="form-control"
                   placeholder="Email"
-                  name="Email"
+                  name="email"
+                  value={data?.email}
+                  onChange={handleChange}
                 />
               </div>
               <div className=" m-2 mb-3">
@@ -33,10 +63,26 @@ const ContactUsScreen = () => {
                   type="Number"
                   class="form-control"
                   placeholder="Phone Number"
-                  name="Phone Number"
+                  name="phone"
+                  value={data?.phone}
+                  onChange={handleChange}
                 />
               </div>
-              <a class="btn contact-us-btn m-3" type="submit">
+              <div className=" m-2 mb-3">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  name="description"
+                  value={data?.description}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+              <a
+                class="btn contact-us-btn m-3"
+                type="submit"
+                onClick={() => handleSubmit()}
+              >
                 Send Now
               </a>
               <div className="m-3 mb-4">

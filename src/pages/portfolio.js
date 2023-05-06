@@ -10,12 +10,17 @@ import WebDesignImage5 from "../assets/images/webdesign5.png";
 import WebDesignImage6 from "../assets/images/webdesign6.png";
 import { Link } from "react-router-dom";
 import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
+import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useEffect, useState } from "react";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
   const [ourProduct, setOurProduct] = useState();
+  const [ourService, setOurService] = useState();
+  const [dataID, setDataID] = useState();
+  console.log("data------------------", dataID);
   const data = useSelector((state) => state?.getOurProduct);
+  const serviceData = useSelector((state) => state?.getOurServices);
 
   useEffect(() => {
     if (data != null) {
@@ -24,7 +29,17 @@ const Portfolio = () => {
   }, [data]);
 
   useEffect(() => {
+    if (serviceData != null) {
+      setOurService(serviceData?.ourServices?.data?.rows);
+    }
+  }, [serviceData]);
+
+  useEffect(() => {
     dispatch(getAllOurProductStart());
+  }, []);
+
+  useEffect(() => {
+    dispatch(getAllOurServicesStart());
   }, []);
 
   return (
@@ -51,60 +66,55 @@ const Portfolio = () => {
         <div className="container">
           <h1 className="text-center mt-5 bold-font">Our Portfolio</h1>
 
-          <div class="col-12 mb-5 mt-3 mx-auto">
-            <div class="d-flex justify-content-center">
-              <ul class="nav nav-pills p-3" style={{ background: "#E4ECFF" }}>
-                <li class="nav-item mx-2">
-                  <a class="text-black" href="#">
-                    All Project
-                  </a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="text-black" href="#">
-                    Web Design
-                  </a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="text-black" href="#">
-                    Logo Design
-                  </a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="text-black" href="#">
-                    Mobile App
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="row ">
-            {ourProduct?.rows?.map((data,index) => {
+          <div class="col-12 mb-5 mt-3 mx-auto  d-flex justify-content-center">
+            {ourService?.map((data, index, id) => {
               return (
-                <div className="col-md-4 mb-5 mt-3" key={index}>
-                  <div className="container">
-                    <div
-                      class="card p-3"
-                      style={{
-                        background:
-                          " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)",
-                      }}
+                <ul class="nav nav-pills p-3" style={{ background: "#E4ECFF" }}>
+                  <li class="nav-item mx-2">
+                    <a
+                      class="text-black"
+                      /* href={data?.id} */ /* data-id={data?.id} */
+                      onClick={() => setDataID(data?.id)}
                     >
-                      <div class="card-body">
-                        <Image src={WebDesignImage} class="card-img-top" />
-                      </div>
-                    </div>
-                    <div className="card-btm-text">
-                      <h4>{data?.title}</h4>
-                      <p>{data?.description}</p>
-                    </div>
-                  </div>
-                </div>
+                      {data?.title}
+                    </a>
+                  </li>
+                </ul>
               );
             })}
           </div>
-          <div className="row mb-2">
+
+          <div className="row ">
+            {ourProduct?.rows?.map((data, index, id) => {
+              if (dataID === data?.our_service_id) {
+                return (
+                  <div className="col-md-4 mb-5 mt-3" key={index}>
+                    <div
+                      className="container"
+                      style={{ justifyContent: "space-between" }}
+                    >
+                      <div
+                        class="card p-3"
+                        style={{
+                          background:
+                            " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)",
+                        }}
+                      >
+                        <div class="card-body">
+                          <Image src={WebDesignImage} class="card-img-top" />
+                        </div>
+                      </div>
+                      <div style={{ fontSize: 21, fontWeight: "600" }}>
+                        <h4>{data?.title}</h4>
+                        <p>{data?.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+            })}
           </div>
+          <div className="row mb-2"></div>
         </div>
       </section>
     </>

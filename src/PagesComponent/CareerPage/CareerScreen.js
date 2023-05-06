@@ -1,52 +1,69 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import CircleImg from "../../assets/images/circle.png";
+import { getAllCurrentOpeningsStart } from "@/Redux/module/getAllCurrentOpenings";
+import { useDispatch, useSelector } from "react-redux";
 
 const CareerScreen = () => {
-  const data = [
-    {
-      position: "Sr. PPC Specialist",
-      Experience: "3+ Years",
-      Location: "Ahemdabad",
-    },
-    {
-      position: "QA Manager",
-      Experience: "3+ Years",
-      Location: "Ahemdabad",
-    },
-    {
-      position: "Quality Analyst",
-      Experience: "3+ Years",
-      Location: "Ahemdabad",
-    },
-    {
-      position: "React Native Developer",
-      Experience: "3+ Years",
-      Location: "Ahemdabad",
-    },
-    {
-      position: "Software Developer – Android",
-      Experience: "3+ Years",
-      Location: "Ahemdabad",
-    },
-    {
-      position: "Software Engineer – ReactJs",
-      Experience: "3+ Years",
-      Location: "Ahemdabad",
-    },
-    {
-      position: "Sr. PPC Specialist",
-      Experience: "3+ Years",
-      Location: "Ahemdabad",
-    },
-  ];
+  // const data = [
+  //   {
+  //     position: "Sr. PPC Specialist",
+  //     Experience: "3+ Years",
+  //     Location: "Ahemdabad",
+  //   },
+  //   {
+  //     position: "QA Manager",
+  //     Experience: "3+ Years",
+  //     Location: "Ahemdabad",
+  //   },
+  //   {
+  //     position: "Quality Analyst",
+  //     Experience: "3+ Years",
+  //     Location: "Ahemdabad",
+  //   },
+  //   {
+  //     position: "React Native Developer",
+  //     Experience: "3+ Years",
+  //     Location: "Ahemdabad",
+  //   },
+  //   {
+  //     position: "Software Developer – Android",
+  //     Experience: "3+ Years",
+  //     Location: "Ahemdabad",
+  //   },
+  //   {
+  //     position: "Software Engineer – ReactJs",
+  //     Experience: "3+ Years",
+  //     Location: "Ahemdabad",
+  //   },
+  //   {
+  //     position: "Sr. PPC Specialist",
+  //     Experience: "3+ Years",
+  //     Location: "Ahemdabad",
+  //   },
+  // ];
+  const dispatch = useDispatch();
+  const [data, setData] = useState();
+  const Data = useSelector((state) => state?.getAllCOpenings?.CurrentOpenings);
+
+  useEffect(() => {
+    dispatch(getAllCurrentOpeningsStart());
+  }, []);
+
+  useEffect(() => {
+    if (Data != null) {
+      setData(Data?.data?.data?.rows);
+    }
+  }, [Data]);
+  console.log("Dataaaaaaaaaaaaaaaaaa", data);
+
   return (
     <>
       <section className="testi-hero-image ">
         <div className="container">
           <h1 className=" text-center mt-5 comman-heading">Current Openings</h1>
           <div className="cst-hr-for-process mb-5" />
-          {data.map((item ,index) => (
+          {data?.map((item, index) => (
             <>
               <div class="card mt-4 mb-4 pt-2 pb-2 px-3" key={index}>
                 <div class="card-body">
@@ -65,12 +82,12 @@ const CareerScreen = () => {
                         justifyContent: "center",
                       }}
                     >
-                      <h5 className="bold-font">{item.position}</h5>
+                      <h5 className="bold-font">{item.job_title}</h5>
                       <span className="bold-font"> Experience : </span>
-                      <span>{item.Experience}</span>
+                      <span>{item.experience} Years</span>
                       <br />
                       <span className="bold-font"> Location : </span>
-                      <span>{item.Location}</span>
+                      <span>{item.location}</span>
                     </div>
                     <div className="col-sm-3">
                       <a

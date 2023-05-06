@@ -2,7 +2,7 @@ import React from "react";
 import CareerImage from "../../assets/images/CareerImage.png";
 import Image from "next/image";
 
-const CareerPageHeroSection = () => {
+const   CareerPageHeroSection = () => {
   return (
     <>
       <section

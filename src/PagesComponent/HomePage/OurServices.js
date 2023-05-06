@@ -17,8 +17,6 @@ const OurServices = () => {
   const carousel = useRef(null);
   const dataSelector = useSelector((state) => state?.getOurServices);
 
- 
-
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -31,7 +29,7 @@ const OurServices = () => {
     if (dataSelector != null) {
       setOurService(dataSelector?.ourServices?.data?.rows);
     }
-   }, [dataSelector]);
+  }, [dataSelector]);
 
   useEffect(() => {
     dispatch(getAllOurServicesStart());
@@ -48,7 +46,7 @@ const OurServices = () => {
             <div className="cst-hr-for-process mb-5"></div>
             <div className="row">
               <div className="img-slide-box" ref={carousel}>
-                {ourService?.map((data,index) => {
+                {ourService?.map((data, index) => {
                   return (
                     <div className="col-sm-4 mb-4" key={index}>
                       <div className="card p-5 cst-border-cls service-card">
