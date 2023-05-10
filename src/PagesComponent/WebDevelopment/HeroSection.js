@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import DataSecure1 from "../../assets/images/DataSecure-1.png";
 import webDevimg1 from "../../assets/images/webDevimg-1.png";
 import MobileHero from "../../assets/images/Mobile-hero.png";
@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const WebDevHeroSection = () => {
   return (
-    <>
+    <Fragment>
       <section
         className="testi-hero-image "
         style={{ backgroundColor: "#E3E3FF" }}
@@ -28,7 +28,7 @@ const WebDevHeroSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

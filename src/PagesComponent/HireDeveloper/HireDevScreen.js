@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 import mobiScreen1 from "../../assets/images/Hire1.png";
 import mobiScreen2 from "../../assets/images/Hire2.png";
@@ -11,6 +11,7 @@ import userInterface1 from "../../assets/images/userInterface1.png";
 import smartform1 from "../../assets/images/cross-platform1.png";
 import Image2 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
+import { COMMAN_TEXT } from "../../commonComponent/commanText";
 
 const HireDevScreen = () => {
   const CardData = [
@@ -53,7 +54,7 @@ const HireDevScreen = () => {
   ];
 
   return (
-    <>
+    <Fragment>
       <section>
         <div className="container">
           <h1 className="text-center mt-5 bold-font">
@@ -72,13 +73,7 @@ const HireDevScreen = () => {
             </div>
           </div>
           <div className="text-center m-5">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore
-            </p>
+            <p>{COMMAN_TEXT}</p>
             <a class="btn contact-us-btn m-4 p-2" type="submit">
               Hire Now
             </a>
@@ -92,18 +87,18 @@ const HireDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
-            {CardData.map((item, index) => (
+            {CardData.map(({ heading, descpt }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 awards-border">
                     <div className="text-center award-head-img award-head-img">
-                      <h2>{item.heading}</h2>
+                      <h2>{heading}</h2>
                       <Image
                         src={smartphone}
                         className="mb-4 mt-4 img-fluid "
                       />
                     </div>
-                    <p>{item.descpt}</p>
+                    <p>{descpt}</p>
                   </div>
                 </div>
               </>
@@ -119,17 +114,13 @@ const HireDevScreen = () => {
               <p className="text-center text-decoration-underline client-name  pt-3">
                 John Doe
               </p>
-              <p className="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              </p>
+              <p className="text-center">{COMMAN_TEXT}</p>
               <Image src={Vector} className="img-fluid " />
             </div>
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

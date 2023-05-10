@@ -4,36 +4,38 @@ body {
 }
 
 @font-face {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   src: url(../assets/font-family/Montserrat-Medium.ttf);
 }
 
+@import '../styles/MainCommanTextStyle.css';
+
 h1 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 h2 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 h3 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 h4 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 h5 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 span {
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 p {
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 .navbar {
@@ -62,6 +64,9 @@ ul li a {
   color: #000000 !important;
   font-weight: bolder !important;
 }
+
+.headerColor {
+  color: red }
 
 .header-ul li {
   padding: 5px 15px;

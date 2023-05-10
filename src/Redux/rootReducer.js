@@ -4,7 +4,7 @@ import getAllOurServiceReducer from "./reducer/getOurServiceReducer";
 import getAllOurProductReducer from "./reducer/getOurProductReducer";
 import getAllOurBlogReducer from "./reducer/getAllOurBlogReducer";
 import getAllOurClientReducer from "./reducer/getOurClientReducer";
-import getAllCurrentOpeningsReducer from "./reducer/getAllCOpeningsReducer";
+import getAllCurrentOpeningsReducer from "./reducer/getCurrentOpeningReducer";
 import contactUsReducer from "./reducer/contactUsReducer";
 import getAllEmployeeReducer from "./reducer/getAllEmployeeReducer";
 
@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
   getOurProduct: getAllOurProductReducer,
   getOurBlog: getAllOurBlogReducer,
   getOurClients: getAllOurClientReducer,
-  getAllCOpenings: getAllCurrentOpeningsReducer,
+  currentOpening: getAllCurrentOpeningsReducer,
   contactUs: contactUsReducer,
   employeeData: getAllEmployeeReducer,
 });

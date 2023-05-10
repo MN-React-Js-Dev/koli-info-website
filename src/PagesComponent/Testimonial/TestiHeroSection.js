@@ -1,11 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import TestiHero2 from "../../assets/images/TestiHero-2.png";
 import Image from "next/image";
 
 const TestiHeroSection = () => {
   return (
-    <>
-      <section className="testi-hero-image " style={{backgroundColor:'#E3E3FF'}}>
+    <Fragment>
+      <section
+        className="testi-hero-image "
+        style={{ backgroundColor: "#E3E3FF" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mt-5 text-start">
@@ -16,12 +19,12 @@ const TestiHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-                <Image src={TestiHero2} className="img-fluid testi-image"/>
+              <Image src={TestiHero2} className="img-fluid testi-image" />
             </div>
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

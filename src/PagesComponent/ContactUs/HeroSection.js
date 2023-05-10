@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ContactUs from "../../assets/images/ContactUs.png";
 import Image from "next/image";
 
 const ContactUsHeroSection = () => {
   return (
-    <>
+    <Fragment>
       <section
         className="testi-hero-image text-center"
         style={{ backgroundColor: "#E3E3FF" }}
@@ -24,7 +24,7 @@ const ContactUsHeroSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

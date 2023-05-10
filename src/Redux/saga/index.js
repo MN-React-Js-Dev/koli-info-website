@@ -3,7 +3,7 @@ import serviceSaga from "./getAllOurServicesSaga";
 import productSagas from "./getAllOurProductSaga";
 import blogSaga from "./getAllOurBlogSaga";
 import clientSaga from "./getAllOurClientSaga";
-import CurrentOpeningSagas from "./getAllCOpeningsSaga";
+import CurrentOpeningSagas from "./getCurrentOpeningSaga";
 import contactusSaga from "./contactUsSaga";
 import employeesSaga from "./getAllEmployeeSaga";
 

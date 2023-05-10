@@ -1,10 +1,11 @@
-import React from "react";
-import HireHeroImg from '../../assets/images/HireDevImg-1.png'
-import MobileHero from "../../assets/images/Mobile-hero.png";import Image from "next/image";
+import React, { Fragment } from "react";
+import HireHeroImg from "../../assets/images/HireDevImg-1.png";
+import MobileHero from "../../assets/images/Mobile-hero.png";
+import Image from "next/image";
 
 const HireDevHeroSection = () => {
   return (
-    <>
+    <Fragment>
       <section
         className="testi-hero-image "
         style={{ backgroundColor: "#E3E3FF" }}
@@ -18,8 +19,8 @@ const HireDevHeroSection = () => {
                 from initial sketches to the final construction.
               </p>
               <a class="btn contact-us-btn m-4 p-2" type="submit">
-              Contact Us
-            </a>
+                Contact Us
+              </a>
             </div>
             <div className="col-lg-6 ">
               <Image src={HireHeroImg} className="img-fluid testi-image" />
@@ -27,7 +28,7 @@ const HireDevHeroSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

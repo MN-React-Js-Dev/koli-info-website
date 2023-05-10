@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import Image1 from "../../assets/images/WhoWeAreImage-1.png";
 import Image2 from "../../assets/images/WhoWeAreImage-2.png";
@@ -7,9 +7,9 @@ import WebDevelopment1 from "../../assets/images/web-development1.png";
 import Applications1Img from "../../assets/images/applications1.png";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useDispatch, useSelector } from "react-redux";
+import { ABOUT_KOLI_INFOTECH } from "@/commonComponent/commanText";
 
 const WhoWeAreScreen = () => {
-
   const dispatch = useDispatch();
   const [ourService, setOurService] = useState();
   const dataSelector = useSelector((state) => state?.getOurServices);
@@ -19,14 +19,13 @@ const WhoWeAreScreen = () => {
       setOurService(dataSelector?.ourServices?.data?.rows);
     }
   }, [dataSelector]);
-  console.log("ourServiceourServiceourServiceourServiceourService", ourService);
 
   useEffect(() => {
     dispatch(getAllOurServicesStart());
   }, []);
-  
+
   return (
-    <>
+    <Fragment>
       <section>
         <div className="container">
           <div className="p-5" style={{ display: "flex" }}>
@@ -36,19 +35,7 @@ const WhoWeAreScreen = () => {
                   About KOLI infotech
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
-                <p className="para-for-hero">
-                  Most awesome businesses and ideas are in vain because they
-                  could not overcome the technological barriers that came with
-                  it. Throughout the world, people in different areas have
-                  unequal amount of opportunities with unique skill sets and we
-                  would like to bring that together. We are a diverse team of
-                  professionals from different countries coming together with
-                  that premise in mind and to help people achieve their dreams.
-                  We believe that technology should not be a barrier to starting
-                  a business or turning an idea into reality because it is the
-                  technological age. Let us help you or someone else turn their
-                  dreams into reality by connecting with us!
-                </p>
+                <p className="para-for-hero">{ABOUT_KOLI_INFOTECH}</p>
               </div>
               <div className="col-lg-6 ">
                 <Image src={Image1} className="img-fluid testi-image" />
@@ -64,7 +51,7 @@ const WhoWeAreScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
-            {ourService?.map((item, index) => (
+            {ourService?.map(({ title, description }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="card p-5 cst-border-cls service-card">
@@ -73,8 +60,8 @@ const WhoWeAreScreen = () => {
                       alt="img"
                       className="mb-4 mt-4 img-fluid "
                     />
-                    <h2>{item.title}</h2>
-                    <p>{item.description}</p>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
                   </div>
                 </div>
               </>
@@ -88,15 +75,12 @@ const WhoWeAreScreen = () => {
             Customized Business Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />
-
           <div className="row mb-4">
             <div className="col-sm-4 mb-4">
               <div className=" p-3 cst-border-cls">
                 <Image src={Design1} className="mb-4 mt-4 img-fluid " />
                 <h2>Web Designing</h2>
-                <p>
-                  {}
-                </p>
+                <p>{}</p>
               </div>
             </div>
             <div className="col-sm-4 mb-4">
@@ -132,7 +116,7 @@ const WhoWeAreScreen = () => {
           <Image src={Image2} className="img-fluid" />
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

@@ -45,7 +45,7 @@ const Header = () => {
                         <Link
                           className="nav-link active header-links"
                           aria-current="page"
-                          href="/aboutCompany"
+                          href="/about-company"
                         >
                           Company
                         </Link>
@@ -54,7 +54,7 @@ const Header = () => {
                         <Link
                           className="nav-link active header-links"
                           aria-current="page"
-                          href="/MobiAppDevelopment"
+                          href="/mobile-app-development"
                         >
                           Services
                         </Link>
@@ -63,7 +63,7 @@ const Header = () => {
                         <Link
                           className="nav-link active header-links"
                           aria-current="page"
-                          href="/SolutionOnDemand"
+                          href="/solution-on-demand"
                         >
                           Solutions
                         </Link>
@@ -81,7 +81,7 @@ const Header = () => {
                         <Link
                           className="nav-link active header-links"
                           aria-current="page"
-                          href="/Career"
+                          href="/career"
                         >
                           Career
                         </Link>
@@ -90,7 +90,7 @@ const Header = () => {
                         <Link
                           className="btn contact-us-btn header-links"
                           type="submit"
-                          href="/ContactUs"
+                          href="/contact-us"
                         >
                           Contact Us
                         </Link>

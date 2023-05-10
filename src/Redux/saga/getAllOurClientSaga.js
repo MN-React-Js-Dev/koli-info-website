@@ -1,25 +1,28 @@
 import * as types from "../module/actionTypes";
-import { takeLatest, put, all, fork, call } from "redux-saga/effects";
+import { 
+  takeLatest,
+  put,
+  all,
+  fork,
+  call
+ } from "redux-saga/effects";
 
-import {
-  getAllOurServicesSuccess,
-  getAllOurServicesError,
-} from "../module/getOurServiceAction";
-import { getAllOurClientSuccess,getAllOurClientError } from "../module/getOurClientsAction";
+import { 
+  getAllOurClientSuccess,
+  getAllOurClientError
+ } from "../module/getOurClientsAction";
 
-import { getAllOurServicesAPI } from "../services/api";
+
 import { getAllOurAllClientAPI } from "../services/api";
 
 function* onGetALLClientStartAsync() {
   try {
     const response = yield call(getAllOurAllClientAPI);
     if (response.data.status == 200) {
-      yield put(getAllOurClientSuccess(response.data));
-      console.log('client saga  successsssssss.........')
+      yield put(getAllOurClientSuccess(response.data));  
     }
   } catch (error) {
     yield put(getAllOurClientError(error.response));
-    console.log('client saga  errorrrrr.........')
   }
 }
 

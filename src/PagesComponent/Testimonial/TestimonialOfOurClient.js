@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import client1 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 import Image from "next/image";
@@ -10,28 +10,6 @@ import { getAllOurClientStart } from "@/Redux/module/getOurClientsAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const TestimonialOfOurClient = () => {
-  // const Data = [
-  //   {
-  //     name: "John Doe",
-  //     review:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
-  //   },
-  //   {
-  //     name: "John Doe",
-  //     review:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
-  //   },
-  //   {
-  //     name: "John Doe",
-  //     review:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
-  //   },
-  //   {
-  //     name: "John Doe",
-  //     review:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation llamco laboris",
-  //   },
-  // ];
   const dispatch = useDispatch();
   const [data, setData] = useState();
   const dataSelector = useSelector((state) => state?.getOurClients?.ourClients);
@@ -41,14 +19,13 @@ const TestimonialOfOurClient = () => {
       setData(dataSelector?.data?.rows);
     }
   }, [dataSelector]);
-  console.log("Data is here", data);
 
   useEffect(() => {
     dispatch(getAllOurClientStart());
   }, []);
 
   return (
-    <>
+    <Fragment>
       <section className="testi-hero-image ">
         <div className="container">
           <div className="row">
@@ -67,7 +44,7 @@ const TestimonialOfOurClient = () => {
                 <Image src={client1} className="client-image-2" />
                 <Image src={client1} className="client-image-2" />
               </div>
-              {data.map(({ name, review }, index) => (
+              {data?.map(({ name, review }, index) => (
                 <>
                   <div
                     className="text-center mt-5 testi-detail-box"
@@ -86,7 +63,7 @@ const TestimonialOfOurClient = () => {
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 import CostumMobi from "../../assets/images/costum-mobile.png";
 import trophy from "../../assets/images/trophy.png";
@@ -11,13 +11,14 @@ import WebDesignImage3 from "../../assets/images/webdesign3.png";
 import WebDesignImage4 from "../../assets/images/webdesign4.png";
 import WebDesignImage5 from "../../assets/images/webdesign5.png";
 import WebDesignImage6 from "../../assets/images/webdesign6.png";
-import smartphone from '../../assets/images/smartphone.png';
-import Ipod from '../../assets/images/ipad.png';
-import Android from '../../assets/images/android1.png';
-import webDev from '../../assets/images/ux1.png';
-import userInterface1 from '../../assets/images/userInterface1.png';
-import smartform1 from '../../assets/images/cross-platform1.png';
+import smartphone from "../../assets/images/smartphone.png";
+import Ipod from "../../assets/images/ipad.png";
+import Android from "../../assets/images/android1.png";
+import webDev from "../../assets/images/ux1.png";
+import userInterface1 from "../../assets/images/userInterface1.png";
+import smartform1 from "../../assets/images/cross-platform1.png";
 import { Inder } from "next/font/google";
+import { COMMAN_TEXT } from "@/commonComponent/commanText";
 
 const MobiAppDevScreen = () => {
   const data = [
@@ -53,9 +54,8 @@ const MobiAppDevScreen = () => {
     },
   ];
 
-
   return (
-    <>
+    <Fragment>
       <section>
         <div className="container">
           <div className="awards">
@@ -105,14 +105,7 @@ const MobiAppDevScreen = () => {
                   Custom Mobile Application Development Company
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
-                <p className="para-for-hero">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore
-                </p>
+                <p className="para-for-hero">{COMMAN_TEXT}</p>
               </div>
               <div className="col-lg-5 ">
                 <Image src={CostumMobi} className="img-fluid testi-image" />
@@ -128,18 +121,24 @@ const MobiAppDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
-          {data.map((item,Inder)=><>
-            <div className="col-sm-4 mb-4" key={Inder}>
-              <div className="p-5 awards-border">
-                <div className="text-center award-head-img award-head-img">
-                  <h2>{item.service}</h2>
-                  <Image src={smartphone} alt="img" className="mb-4 mt-4 img-fluid " />
+            {data.map(({ service, detail }, index) => (
+              <>
+                <div className="col-sm-4 mb-4" key={index}>
+                  <div className="p-5 awards-border">
+                    <div className="text-center award-head-img award-head-img">
+                      <h2>{service}</h2>
+                      <Image
+                        src={smartphone}
+                        alt="img"
+                        className="mb-4 mt-4 img-fluid "
+                      />
+                    </div>
+                    <p>{detail}</p>
+                  </div>
                 </div>
-                <p>{item.detail}</p>
-              </div>
-            </div>
-          </>)}
-            </div>
+              </>
+            ))}
+          </div>
         </div>
       </section>
       <section>
@@ -148,7 +147,6 @@ const MobiAppDevScreen = () => {
             Explore Our Mobile App Portfolio
           </h1>
           <div className="cst-hr-for-process mb-5" />
-
           <div className="row ">
             <div className="col-sm-4 mb-5">
               <div className="container">
@@ -156,7 +154,7 @@ const MobiAppDevScreen = () => {
                   class="card p-4"
                   style={{
                     background:
-                      " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)"
+                      " linear-gradient(180deg, #2A64F9 0%, #012E4D 100%)",
                   }}
                 >
                   <div class="card-body">
@@ -217,7 +215,6 @@ const MobiAppDevScreen = () => {
                 </div>
               </div>
             </div>
-
             <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-4" style={{ background: "#6647C0" }}>
@@ -247,7 +244,7 @@ const MobiAppDevScreen = () => {
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 
