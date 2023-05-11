@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import Wireframe1 from "../../assets/images/wireframe1.png";
 import Image from "next/image";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
@@ -17,15 +17,6 @@ const OurServices = () => {
   const carousel = useRef(null);
   const dataSelector = useSelector((state) => state?.getOurServices);
 
-  // const handleLeftClick = (e) => {
-  //   e.preventDefault();
-  //   carousel.current.scrollLeft -= carousel.current.offsetWidth;
-  // };
-  // const handleRightClick = (e) => {
-  //   e.preventDefault();
-  //   carousel.current.scrollLeft += carousel.current.offsetWidth;
-  // };
-
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -38,7 +29,6 @@ const OurServices = () => {
     if (dataSelector != null) {
       setOurService(dataSelector?.ourServices?.data?.rows);
     }
-    console.log("service--------", ourService);
   }, [dataSelector]);
 
   useEffect(() => {
@@ -46,7 +36,7 @@ const OurServices = () => {
   }, []);
 
   return (
-    <>
+    <Fragment>
       <section className="our-services">
         <div className="wrap-our-service">
           <div className="container">
@@ -56,17 +46,17 @@ const OurServices = () => {
             <div className="cst-hr-for-process mb-5"></div>
             <div className="row">
               <div className="img-slide-box" ref={carousel}>
-                {ourService?.map((data) => {
+                {ourService?.map(({ title, description }, index) => {
                   return (
-                    <div className="col-sm-4 mb-4">
+                    <div className="col-sm-4 mb-4" key={index}>
                       <div className="card p-5 cst-border-cls service-card">
                         <Image
                           src={Design1}
-                          alt={data?.title}
+                          alt={title}
                           className="mb-4 mt-4 img-fluid "
                         />
-                        <h2>{data?.title}</h2>
-                        <p>{data?.description}</p>
+                        <h2 className="serviceheadingText">{title}</h2>
+                        <p className="serviceText commanFont">{description}</p>
                       </div>
                     </div>
                   );
@@ -84,7 +74,7 @@ const OurServices = () => {
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

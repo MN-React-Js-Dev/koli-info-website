@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import CareerImage from "../../assets/images/CareerImage.png";
 import Image from "next/image";
 
 const CareerPageHeroSection = () => {
   return (
-    <>
+    <Fragment>
       <section
         className="testi-hero-image "
         style={{ backgroundColor: "#E3E3FF" }}
@@ -19,12 +19,12 @@ const CareerPageHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={CareerImage} className="img-fluid testi-image" />
+              <Image src={CareerImage} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

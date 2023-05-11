@@ -6,4 +6,10 @@ const nextConfig = {
   },
 };
 
+module.exports = {
+  env: {
+    BASEURL: process.env.REACT_APP_BASE_URL,
+  },
+};
+
 module.exports = nextConfig;

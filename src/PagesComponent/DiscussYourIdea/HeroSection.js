@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import DataSecure1 from "../../assets/images/DataSecure-1.png";
 import webDevimg1 from "../../assets/images/webDevimg-1.png";
 import MobileHero from "../../assets/images/Mobile-hero.png";
@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const DiscussIdeaHeroSection = () => {
   return (
-    <>
+    <Fragment>
       <section>
         <h2 style={{ fontWeight: 800 }} className="m-2 p-3">
           Let’s Discuss Your Idea
@@ -95,7 +95,7 @@ const DiscussIdeaHeroSection = () => {
           </form>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

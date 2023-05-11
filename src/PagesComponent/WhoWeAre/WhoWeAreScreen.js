@@ -1,48 +1,31 @@
-import React from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import Image1 from "../../assets/images/WhoWeAreImage-1.png";
 import Image2 from "../../assets/images/WhoWeAreImage-2.png";
 import Design1 from "../../assets/images/design1.png";
 import WebDevelopment1 from "../../assets/images/web-development1.png";
 import Applications1Img from "../../assets/images/applications1.png";
+import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
+import { useDispatch, useSelector } from "react-redux";
+import { ABOUT_KOLI_INFOTECH } from "@/commonComponent/commanText";
 
 const WhoWeAreScreen = () => {
-  const CardData = [
-    {
-      img: '../../assets/images/design1.png',
-      heading: 'Web Designing',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/web-development1.png',
-      heading: 'Web Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/applications1.png',
-      heading: 'Mobile Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
-    },
-    {
-      img: '../../assets/images/design1.png',
-      heading: 'Web Designing',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/web-development1.png',
-      heading: 'Web Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
-    },
-    {
-      img: '../../assets/images/applications1.png',
-      heading: 'Mobile Development',
-      descpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
-    }
+  const dispatch = useDispatch();
+  const [ourService, setOurService] = useState();
+  const dataSelector = useSelector((state) => state?.getOurServices);
 
-  ]
+  useEffect(() => {
+    if (dataSelector != null) {
+      setOurService(dataSelector?.ourServices?.data?.rows);
+    }
+  }, [dataSelector]);
+
+  useEffect(() => {
+    dispatch(getAllOurServicesStart());
+  }, []);
 
   return (
-    <>
+    <Fragment>
       <section>
         <div className="container">
           <div className="p-5" style={{ display: "flex" }}>
@@ -52,22 +35,10 @@ const WhoWeAreScreen = () => {
                   About KOLI infotech
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
-                <p className="para-for-hero">
-                  Most awesome businesses and ideas are in vain because they
-                  could not overcome the technological barriers that came with
-                  it. Throughout the world, people in different areas have
-                  unequal amount of opportunities with unique skill sets and we
-                  would like to bring that together. We are a diverse team of
-                  professionals from different countries coming together with
-                  that premise in mind and to help people achieve their dreams.
-                  We believe that technology should not be a barrier to starting
-                  a business or turning an idea into reality because it is the
-                  technological age. Let us help you or someone else turn their
-                  dreams into reality by connecting with us!
-                </p>
+                <p className="para-for-hero">{ABOUT_KOLI_INFOTECH}</p>
               </div>
               <div className="col-lg-6 ">
-                <Image src={Image1} className="img-fluid testi-image" />
+                <Image src={Image1} alt='Image not found' className="img-fluid testi-image" />
               </div>
             </div>
           </div>
@@ -79,17 +50,23 @@ const WhoWeAreScreen = () => {
             Services We Specialise In
           </h1>
           <div className="cst-hr-for-process mb-5" />
-            <div className="row">
-          {CardData.map((item,index) => <>
-              <div className="col-sm-4 mb-4" key={index}>
-                <div className="card p-5 cst-border-cls">
-                  <Image src={Design1} alt="img" className="mb-4 mt-4 img-fluid " />
-                  <h2>{item.heading}</h2>
-                  <p>{item.descpt}</p>
+          <div className="row">
+            {ourService?.map(({ title, description }, index) => (
+              <>
+                <div className="col-sm-4 mb-4" key={index}>
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={Design1}
+                      alt="img"
+                      className="mb-4 mt-4 img-fluid "
+                    />
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                  </div>
                 </div>
-              </div>
-              </>)}
-            </div>
+              </>
+            ))}
+          </div>
         </div>
       </section>
       <section>
@@ -98,22 +75,17 @@ const WhoWeAreScreen = () => {
             Customized Business Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />
-
           <div className="row mb-4">
             <div className="col-sm-4 mb-4">
               <div className=" p-3 cst-border-cls">
-                <Image src={Design1} className="mb-4 mt-4 img-fluid " />
+                <Image src={Design1} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                 <h2>Web Designing</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
+                <p>{}</p>
               </div>
             </div>
             <div className="col-sm-4 mb-4">
               <div className=" p-3 cst-border-cls">
-                <Image src={WebDevelopment1} className="mb-4 mt-4 img-fluid " />
+                <Image src={WebDevelopment1} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                 <h2>Web Development</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -126,6 +98,7 @@ const WhoWeAreScreen = () => {
               <div className=" p-3 cst-border-cls">
                 <Image
                   src={Applications1Img}
+                  alt='Image not found'
                   className="mb-4 mt-4 img-fluid "
                 />
                 <h2>Mobile Development</h2>
@@ -141,10 +114,10 @@ const WhoWeAreScreen = () => {
       </section>
       <section>
         <div className="row mt-5 mb-5">
-          <Image src={Image2} className="img-fluid" />
+          <Image src={Image2}  alt='Image not found' className="img-fluid" />
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

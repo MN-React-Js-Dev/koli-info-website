@@ -1,71 +1,70 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import LeaderImg from "../../assets/images/leader.png";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
 
 const LeadershipTeam = () => {
-  const data = [
-    {
-      LeaderName: "John Doe",
-      Position: "Founder,Ceo",
-      Descrition:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru exercitation ullamco laboris",
-      imageUrl: "../../assets/images/leader.png",
-    },
-    {
-      LeaderName: "John Doe",
-      Position: "Founder,Ceo",
-      Descrition:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru exercitation ullamco laboris",
-    },
+  const dispatch = useDispatch();
+  const [data, setData] = useState();
+  const Data = useSelector((state) => state?.employeeData?.allemployee);
+  const final = [];
 
-    {
-      LeaderName: "John Doe",
-      Position: "Founder,Ceo",
-      Descrition:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru exercitation ullamco laboris",
-    },
+  useEffect(() => {
+    dispatch(getAllEmployeeStart());
+  }, []);
 
-    {
-      LeaderName: "John Doe",
-      Position: "Founder,Ceo",
-      Descrition:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru exercitation ullamco laboris",
-    },
-  ];
+  useEffect(() => {
+    if (Data != null) {
+      setData(Data?.data?.data?.rows);
+    }
+  }, [Data]);
 
-
+  data?.map((item) => {
+    if (item.position == "T.L " || item.position == "Manager ") {
+      final.push(item);
+    }
+  });
 
   return (
     <>
       <section className="testi-hero-image ">
         <div className="container">
-          <h1 className="text-center mt-5 comman-heading">Meet Our Leadership Team</h1>
+          <h1 className="text-center mt-5 comman-heading">
+            Meet Our Leadership Team
+          </h1>
           <div className="cst-hr-for-process mb-5" />
-          {data.map((item, index) => (
-            <>
-              <div className="row  mt-5 mb-5" style={{ alignItems: "center" }} key={index}>
-                <div className="col-sm-4 leaderImg">
-                  <Image src={LeaderImg} style={{ borderRadius: "50%" }} />
-                </div>
-                <div className="col-lg-8 " style={{ alignItems: "center" }}>
-                  <div>
-                    <div className="d-flex">
-                      <div className="bold-font" style={{ fontSize: "20px" }}>
-                        {item.LeaderName}
-                        <hr style={{ color: 'black' }} />
+          {final?.map(
+            ({ firstName, lastName, position, description }, index) => (
+              <>
+                <div
+                  className="row  mt-5 mb-5"
+                  style={{ alignItems: "center" }}
+                  key={index}
+                >
+                  <div className="col-sm-4 leaderImg">
+                    <Image src={LeaderImg} style={{ borderRadius: "50%" }} />
+                  </div>
+                  <div className="col-lg-8 " style={{ alignItems: "center" }}>
+                    <div>
+                      <div className="d-flex">
+                        <div className="bold-font" style={{ fontSize: "20px" }}>
+                          {firstName} {lastName}
+                          <hr style={{ color: "black" }} />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <p>{item.Position}</p>
-                  <div className="text-cener">
-                    <p>{item.Descrition}</p>
+                    <p>{position}</p>
+                    <div className="text-cener">
+                      <p>{description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </>
-          ))}
+              </>
+            )
+          )}
         </div>
       </section>
     </>

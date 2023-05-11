@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 import conpiesImg from "../../assets/images/compies.png";
 import Image2 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { COMMAN_TEXT } from "../../commonComponent/commanText";
 
 const DiscussIdeaScreen = () => {
   const data = [
@@ -39,9 +40,8 @@ const DiscussIdeaScreen = () => {
     },
   ];
 
- 
   return (
-    <>
+    <Fragment>
       <section>
         <div className="container">
           <div className="row mt-5" style={{ alignItems: "center" }}></div>
@@ -51,8 +51,8 @@ const DiscussIdeaScreen = () => {
         <div className="container">
           <div className="row mt-5 pt-5">
             <div className="col-12 mb-4 text-center">
-                  <Image src={conpiesImg} className="img-fluid " />
-                </div>
+              <Image src={conpiesImg} alt='Image not found' className="img-fluid " />
+            </div>
           </div>
         </div>
       </section>
@@ -64,12 +64,8 @@ const DiscussIdeaScreen = () => {
               <p className="text-center text-decoration-underline client-name  pt-3">
                 John Doe
               </p>
-              <p className="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              </p>
-              <Image src={Vector} className="img-fluid " />
+              <p className="text-center">{COMMAN_TEXT}</p>
+              <Image src={Vector} alt='Image not found' className="img-fluid " />
               <div className="text-center mt-5 pb-5">
                 <button className="btn btn-ai-class">
                   <AiOutlineLeft className="slide-btn" />
@@ -82,7 +78,7 @@ const DiscussIdeaScreen = () => {
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

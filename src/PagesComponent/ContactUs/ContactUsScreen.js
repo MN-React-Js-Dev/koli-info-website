@@ -1,14 +1,39 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import Image from "next/image";
 import mapImage from "../../assets/images/map.png";
+import { contactUsStart } from "@/Redux/module/contactUs";
+import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 const ContactUsScreen = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const [data, setData] = useState({
+    yourName: "",
+    email: "",
+    phone: "",
+    description: "",
+  });
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setData({
+      ...data,
+      [e.target.name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    dispatch(contactUsStart(data));
+  };
+
   return (
-    <>
+    <Fragment>
       <section>
         <div className="container">
           <div className="row  m-3 d-flex">
-            {/* <div className=""> */}
             <div className="col-lg-5 p-3">
               <h1 className=" pt-5 mt-5 comman-heading">Share Your App URL</h1>
               <div className="cst-hr-for-process" />
@@ -17,7 +42,9 @@ const ContactUsScreen = () => {
                   type="text"
                   class="form-control"
                   placeholder="Your Name"
-                  name="Your Name"
+                  name="yourName"
+                  value={data?.yourName}
+                  onChange={handleChange}
                 />
               </div>
               <div className=" m-2 mb-3">
@@ -25,7 +52,9 @@ const ContactUsScreen = () => {
                   type="email"
                   class="form-control"
                   placeholder="Email"
-                  name="Email"
+                  name="email"
+                  value={data?.email}
+                  onChange={handleChange}
                 />
               </div>
               <div className=" m-2 mb-3">
@@ -33,10 +62,26 @@ const ContactUsScreen = () => {
                   type="Number"
                   class="form-control"
                   placeholder="Phone Number"
-                  name="Phone Number"
+                  name="phone"
+                  value={data?.phone}
+                  onChange={handleChange}
                 />
               </div>
-              <a class="btn contact-us-btn m-3" type="submit">
+              <div className=" m-2 mb-3">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  name="description"
+                  value={data?.description}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+              <a
+                class="btn contact-us-btn m-3"
+                type="submit"
+                onClick={() => handleSubmit()}
+              >
                 Send Now
               </a>
               <div className="m-3 mb-4">
@@ -58,9 +103,6 @@ const ContactUsScreen = () => {
               <div className="ratio ratio-1x1">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7442.266399503546!2d72.87774862484953!3d21.147096793737376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051862e39c1e3%3A0xf0b3f8e98ab74dc4!2sKOLI%20Infotech%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1682938315739!5m2!1sen!2sin"
-                  // width="600"
-                  // height="750"
-                  // style="border:0;"
                   style={{ border: 0 }}
                   allowfullscreen=""
                   loading="lazy"
@@ -68,11 +110,10 @@ const ContactUsScreen = () => {
                 ></iframe>
               </div>
             </div>
-            {/* </div> */}
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

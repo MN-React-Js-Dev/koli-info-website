@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 import webDevimg2 from "../../assets/images/webDevimg-2.png";
 import smartphone from "../../assets/images/smartphone.png";
+import { COMMAN_TEXT } from "@/commonComponent/commanText";
 
 const WebDevScreen = () => {
   const data = [
@@ -39,45 +40,39 @@ const WebDevScreen = () => {
 
   const industryWeServe = [
     {
-      industry: 'Healthcare',
+      industry: "Healthcare",
     },
     {
-      industry: 'Retail & eCommerce',
+      industry: "Retail & eCommerce",
     },
     {
-      industry: 'Banking & finance',
+      industry: "Banking & finance",
     },
     {
-      industry: 'Entertainment',
+      industry: "Entertainment",
     },
     {
-      industry: 'Education & e-learning',
+      industry: "Education & e-learning",
     },
     {
-      industry: 'Real estate',
-    }
-  ]
+      industry: "Real estate",
+    },
+  ];
 
   return (
-    <>
+    <Fragment>
       <section>
         <div className="container">
           <div className="row mt-5" style={{ alignItems: "center" }}>
             <div className="col-lg-6 ">
-              <Image src={webDevimg2} className="img-fluid testi-image" />
+              <Image src={webDevimg2} alt='Image not found' className="img-fluid testi-image" />
             </div>
             <div className="col-lg-6 mt-5">
               <h1 className="comman-heading">
                 Top Web Application Development Agency
               </h1>
               <div className="cst-hr-for-process text-start mb-3" />
-              <p className="para-for-hero">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore
-              </p>
+              <p className="para-for-hero">{COMMAN_TEXT}</p>
             </div>
           </div>
         </div>
@@ -89,18 +84,23 @@ const WebDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row">
-            {data.map((item, index) => <>
-
-              <div className="col-sm-4 mb-4" key={index}>
-                <div className="p-5 WebDev-dashed-border">
-                  <div className="text-center award-head-img award-head-img">
-                    <h2>{item.service}</h2>
-                    <Image src={smartphone} className="mb-4 mt-4 img-fluid " />
+            {data.map(({ service, detail }, index) => (
+              <>
+                <div className="col-sm-4 mb-4" key={index}>
+                  <div className="p-5 WebDev-dashed-border">
+                    <div className="text-center award-head-img award-head-img">
+                      <h2>{service}</h2>
+                      <Image
+                        src={smartphone}
+                        alt='Image not found'
+                        className="mb-4 mt-4 img-fluid "
+                      />
+                    </div>
+                    <p>{detail}</p>
                   </div>
-                  <p>{item.detail}</p>
                 </div>
-              </div>
-            </>)}
+              </>
+            ))}
           </div>
         </div>
       </section>
@@ -132,25 +132,27 @@ const WebDevScreen = () => {
             Industries We Serve
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row  text-center indstry-serve" >
-            {industryWeServe.map((item, index) => <>
-              <div className="col-sm-4 mb-5" key={index}>
-                <div className="container">
-                  <div
-                    class="card p-4"
-                    style={{
-                      background: "#C7C7FF",
-                    }}
-                  >
-                    {item.industry}
+          <div className="row  text-center indstry-serve">
+            {industryWeServe.map((item, index) => (
+              <>
+                <div className="col-sm-4 mb-5" key={index}>
+                  <div className="container">
+                    <div
+                      class="card p-4"
+                      style={{
+                        background: "#C7C7FF",
+                      }}
+                    >
+                      {item.industry}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </>)}
+              </>
+            ))}
           </div>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 
