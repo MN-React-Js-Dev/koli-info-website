@@ -67,7 +67,7 @@ const Portfolio = () => {
           <div class="col-12 mb-5 mt-3 mx-auto  d-flex justify-content-center">
             {ourService?.map(({ title, id }, index) => {
               return (
-                <ul class="nav nav-pills p-3" style={{ background: "#E4ECFF" }}>
+                <ul class="nav nav-pills p-3" key={index} style={{ background: "#E4ECFF" }}>
                   <li class="nav-item mx-2">
                     <a class="text-black" onClick={() => setDataID(id)}>
                       {title}
