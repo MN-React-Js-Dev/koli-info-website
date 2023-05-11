@@ -19,7 +19,7 @@ const CareerPageHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={CareerImage} className="img-fluid testi-image" />
+              <Image src={CareerImage} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

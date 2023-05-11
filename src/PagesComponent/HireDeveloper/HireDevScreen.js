@@ -95,6 +95,7 @@ const HireDevScreen = () => {
                       <h2>{heading}</h2>
                       <Image
                         src={smartphone}
+                        alt='Image not found'
                         className="mb-4 mt-4 img-fluid "
                       />
                     </div>
@@ -115,7 +116,7 @@ const HireDevScreen = () => {
                 John Doe
               </p>
               <p className="text-center">{COMMAN_TEXT}</p>
-              <Image src={Vector} className="img-fluid " />
+              <Image src={Vector}  alt='Image not found' className="img-fluid " />
             </div>
           </div>
         </div>

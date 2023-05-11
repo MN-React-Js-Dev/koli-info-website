@@ -26,7 +26,7 @@ const SolutionOnDemandHeroSection = () => {
               </a>
             </div>
             <div className="col-lg-6 ">
-              <Image src={onDmndHeroImg} className="img-fluid testi-image" />
+              <Image src={onDmndHeroImg} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

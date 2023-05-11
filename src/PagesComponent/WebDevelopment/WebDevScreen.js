@@ -65,7 +65,7 @@ const WebDevScreen = () => {
         <div className="container">
           <div className="row mt-5" style={{ alignItems: "center" }}>
             <div className="col-lg-6 ">
-              <Image src={webDevimg2} className="img-fluid testi-image" />
+              <Image src={webDevimg2} alt='Image not found' className="img-fluid testi-image" />
             </div>
             <div className="col-lg-6 mt-5">
               <h1 className="comman-heading">
@@ -92,6 +92,7 @@ const WebDevScreen = () => {
                       <h2>{service}</h2>
                       <Image
                         src={smartphone}
+                        alt='Image not found'
                         className="mb-4 mt-4 img-fluid "
                       />
                     </div>

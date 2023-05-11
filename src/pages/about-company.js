@@ -19,7 +19,7 @@ const aboutCompany = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={CustomerCImage} className="img-fluid" />
+              <Image src={CustomerCImage} alt='Image not found' className="img-fluid" />
             </div>
           </div>
         </div>

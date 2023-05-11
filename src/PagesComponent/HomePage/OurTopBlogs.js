@@ -49,7 +49,7 @@ const OurTopBlogs = () => {
                         <div class="date-cst">
                           <span class="day">{created_at}</span>
                         </div>
-                        <Image src={Mobile1} className="card-img-top" />
+                        <Image src={Mobile1} alt='Image not found' className="card-img-top" />
                         <div class="card-body">
                           <h3>{title}</h3>
                           <p class="card-text">{description}</p>

@@ -16,7 +16,7 @@ const WhyChooseKOLIinfotech = () => {
               <p>{COMMAN_TEXT}</p>
             </div>
             <div className="col-sm-6">
-              <Image src={TeamofficeImg} className="img-fluid" />
+              <Image src={TeamofficeImg}  alt='Image not found' className="img-fluid" />
             </div>
           </div>
         </div>

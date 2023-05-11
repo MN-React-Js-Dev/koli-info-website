@@ -13,7 +13,7 @@ const OurPortfolio = () => {
             <div className="cst-hr-for-process mb-5"></div>
             <div className="row">
               <div className="col-sm-3">
-                <Image src={GridImage1} className="img-fluid" />
+                <Image src={GridImage1} className="img-fluid" alt='Image not found' />
               </div>
               <div className="col-sm-3">
                 <div className="p-3 pt-5">
@@ -25,7 +25,7 @@ const OurPortfolio = () => {
                 </div>
               </div>
               <div className="col-sm-3">
-                <Image src={GridImage1} className="img-fluid" />
+                <Image src={GridImage1} className="img-fluid" alt='Image not found' />
               </div>
               <div className="col-sm-3">
                 <div className="p-3 pt-5">
@@ -48,7 +48,7 @@ const OurPortfolio = () => {
                 </div>
               </div>
               <div className="col-sm-3">
-                <Image src={GridImage1} className="img-fluid" />
+                <Image src={GridImage1} className="img-fluid" alt='Image not found' />
               </div>
               <div className="col-sm-3">
                 <div className="p-3 pt-5">
@@ -60,7 +60,7 @@ const OurPortfolio = () => {
                 </div>
               </div>
               <div className="col-sm-3">
-                <Image src={GridImage1} className="img-fluid" />
+                <Image src={GridImage1} className="img-fluid" alt='Image not found' />
               </div>
             </div>
           </div>

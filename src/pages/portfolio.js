@@ -55,7 +55,7 @@ const Portfolio = () => {
               </p>
             </div>
             <div className="col-sm-6">
-              <Image src={PortfolioImage} class="img-fluid" />
+              <Image src={PortfolioImage} alt='Image not found' class="img-fluid" />
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ const Portfolio = () => {
                           }}
                         >
                           <div class="card-body">
-                            <Image src={WebDesignImage} class="card-img-top" />
+                            <Image src={WebDesignImage} alt='Image not found' class="card-img-top" />
                           </div>
                         </div>
                         <div style={{ fontSize: 21, fontWeight: "600" }}>

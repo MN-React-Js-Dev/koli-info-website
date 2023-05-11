@@ -73,19 +73,19 @@ const SolutionOnDemandScreen = () => {
           <div className="row  text-center p-5 m-5">
             <div className="col-lg-4">
               <div className="whiteBack m-3">
-                <Image className="SODimage1 img-fluid" src={SODimage1} />
+                <Image className="SODimage1 img-fluid" alt='Image not found' src={SODimage1} />
               </div>
               <p>Developed 40+ On-Demand Mobile Apps and Solutions</p>
             </div>
             <div className="col-lg-4">
               <div className="whiteBack m-3">
-                <Image className="SODimage1 img-fluid" src={SODimage2} />
+                <Image className="SODimage1 img-fluid" alt='Image not found' src={SODimage2} />
               </div>
               <p>A Dedicated Team of On-Demand App Developers</p>
             </div>
             <div className="col-lg-4">
               <div className="whiteBack m-3">
-                <Image className="SODimage1 img-fluid" src={SODimage3} />
+                <Image className="SODimage1 img-fluid" alt='Image not found' src={SODimage3} />
               </div>
               <p>Developed 40+ On-Demand Mobile Apps and Solutions</p>
             </div>
@@ -123,7 +123,7 @@ const SolutionOnDemandScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className="row blog text-center">
-            <div className="img-slide-box" ref={carousel}>
+            <div className="img-slide-box" alt='Image not found' ref={carousel}>
               <div className="item">
                 <div className="image">
                   {/* ------------------------------------------------------------------------ */}
@@ -188,7 +188,7 @@ const SolutionOnDemandScreen = () => {
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 bold-p WebDev-dashed-border text-center ">
-                    <Image src={bookindMdl} className="mb-4 mt-4 img-fluid " />
+                    <Image src={bookindMdl} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                     <p>{service}</p>
                     <span>{detail}</span>
                   </div>

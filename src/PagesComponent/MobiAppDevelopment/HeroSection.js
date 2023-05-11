@@ -20,7 +20,7 @@ const MobiAppDevHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={MobileHero} className="img-fluid testi-image" />
+              <Image src={MobileHero} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

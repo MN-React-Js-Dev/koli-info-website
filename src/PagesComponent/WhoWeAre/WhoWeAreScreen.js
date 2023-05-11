@@ -38,7 +38,7 @@ const WhoWeAreScreen = () => {
                 <p className="para-for-hero">{ABOUT_KOLI_INFOTECH}</p>
               </div>
               <div className="col-lg-6 ">
-                <Image src={Image1} className="img-fluid testi-image" />
+                <Image src={Image1} alt='Image not found' className="img-fluid testi-image" />
               </div>
             </div>
           </div>
@@ -78,14 +78,14 @@ const WhoWeAreScreen = () => {
           <div className="row mb-4">
             <div className="col-sm-4 mb-4">
               <div className=" p-3 cst-border-cls">
-                <Image src={Design1} className="mb-4 mt-4 img-fluid " />
+                <Image src={Design1} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                 <h2>Web Designing</h2>
                 <p>{}</p>
               </div>
             </div>
             <div className="col-sm-4 mb-4">
               <div className=" p-3 cst-border-cls">
-                <Image src={WebDevelopment1} className="mb-4 mt-4 img-fluid " />
+                <Image src={WebDevelopment1} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                 <h2>Web Development</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -98,6 +98,7 @@ const WhoWeAreScreen = () => {
               <div className=" p-3 cst-border-cls">
                 <Image
                   src={Applications1Img}
+                  alt='Image not found'
                   className="mb-4 mt-4 img-fluid "
                 />
                 <h2>Mobile Development</h2>
@@ -113,7 +114,7 @@ const WhoWeAreScreen = () => {
       </section>
       <section>
         <div className="row mt-5 mb-5">
-          <Image src={Image2} className="img-fluid" />
+          <Image src={Image2}  alt='Image not found' className="img-fluid" />
         </div>
       </section>
     </Fragment>

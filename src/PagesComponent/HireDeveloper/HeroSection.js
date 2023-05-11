@@ -23,7 +23,7 @@ const HireDevHeroSection = () => {
               </a>
             </div>
             <div className="col-lg-6 ">
-              <Image src={HireHeroImg} className="img-fluid testi-image" />
+              <Image src={HireHeroImg} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

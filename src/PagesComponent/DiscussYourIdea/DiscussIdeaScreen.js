@@ -51,7 +51,7 @@ const DiscussIdeaScreen = () => {
         <div className="container">
           <div className="row mt-5 pt-5">
             <div className="col-12 mb-4 text-center">
-              <Image src={conpiesImg} className="img-fluid " />
+              <Image src={conpiesImg} alt='Image not found' className="img-fluid " />
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ const DiscussIdeaScreen = () => {
                 John Doe
               </p>
               <p className="text-center">{COMMAN_TEXT}</p>
-              <Image src={Vector} className="img-fluid " />
+              <Image src={Vector} alt='Image not found' className="img-fluid " />
               <div className="text-center mt-5 pb-5">
                 <button className="btn btn-ai-class">
                   <AiOutlineLeft className="slide-btn" />

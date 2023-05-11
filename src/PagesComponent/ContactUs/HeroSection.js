@@ -19,7 +19,7 @@ const ContactUsHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={ContactUs} className="img-fluid testi-image" />
+              <Image src={ContactUs} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

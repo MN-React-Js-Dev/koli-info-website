@@ -23,7 +23,7 @@ const WebDevHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={webDevimg1} className="img-fluid testi-image" />
+              <Image src={webDevimg1} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

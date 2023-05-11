@@ -19,7 +19,7 @@ const LeadershipHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={LeadershipImage} className="img-fluid testi-image" />
+              <Image src={LeadershipImage} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

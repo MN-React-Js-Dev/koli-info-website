@@ -50,12 +50,12 @@ const TestimonialOfOurClient = () => {
                     className="text-center mt-5 testi-detail-box"
                     key={index}
                   >
-                    <Image src={Image2} className="round img-round-cst" />
+                    <Image src={Image2}  alt='Image not found' className="round img-round-cst" />
                     <p className="text-center text-decoration-underline client-name  pt-3">
                       {name}
                     </p>
                     <p className="text-center">{review}</p>
-                    <Image src={Vector} className="img-fluid " />
+                    <Image src={Vector} alt='Image not found' className="img-fluid " />
                   </div>
                 </>
               ))}

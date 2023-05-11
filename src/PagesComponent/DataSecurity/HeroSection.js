@@ -20,7 +20,7 @@ const DataSecureHeroSection = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={DataSecure1} className="img-fluid testi-image" />
+              <Image src={DataSecure1} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
         </div>

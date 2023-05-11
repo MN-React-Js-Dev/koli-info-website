@@ -6,7 +6,7 @@ import ProfileImage from "../assets/images/profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
 
-const employeeSpeaks = () => {
+const EmployeeSpeaks = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState();
   const Data = useSelector((state) => state?.employeeData?.allemployee);
@@ -42,7 +42,7 @@ const employeeSpeaks = () => {
               </p>
             </div>
             <div className="col-lg-6">
-              <Image src={EmployeespeakImage} className="img-fluid" />
+              <Image src={EmployeespeakImage} alt='Image not found' className="img-fluid" />
             </div>
           </div>
         </div>
@@ -80,4 +80,4 @@ const employeeSpeaks = () => {
   );
 };
 
-export default employeeSpeaks;
+export default EmployeeSpeaks;

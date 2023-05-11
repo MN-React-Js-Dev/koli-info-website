@@ -62,7 +62,7 @@ const MobiAppDevScreen = () => {
             <div className="row m-5">
               <div className="col-sm-3 mb-3">
                 <div className="p-3 text-center award-box">
-                  <Image src={trophy} className="mb-4 mt-4 img-fluid " />
+                  <Image src={trophy} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -71,7 +71,7 @@ const MobiAppDevScreen = () => {
               </div>
               <div className="col-sm-3 mb-3">
                 <div className="p-3 text-center award-box">
-                  <Image src={like} className="mb-4 mt-4 img-fluid " />
+                  <Image src={like} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -80,7 +80,7 @@ const MobiAppDevScreen = () => {
               </div>
               <div className="col-sm-3 mb-3">
                 <div className="p-3 text-center award-box">
-                  <Image src={rating} className="mb-4 mt-4 img-fluid " />
+                  <Image src={rating} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -89,7 +89,7 @@ const MobiAppDevScreen = () => {
               </div>
               <div className="col-sm-3 mb-3">
                 <div className="p-3 text-center award-box">
-                  <Image src={userInterface} className="mb-4 mt-4 img-fluid " />
+                  <Image src={userInterface}  alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -108,7 +108,7 @@ const MobiAppDevScreen = () => {
                 <p className="para-for-hero">{COMMAN_TEXT}</p>
               </div>
               <div className="col-lg-5 ">
-                <Image src={CostumMobi} className="img-fluid testi-image" />
+                <Image src={CostumMobi} alt='Image not found' className="img-fluid testi-image" />
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ const MobiAppDevScreen = () => {
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 awards-border">
-                    <div className="text-center award-head-img award-head-img">
+                    <div alt='Image not found' className="text-center award-head-img award-head-img">
                       <h2>{service}</h2>
                       <Image
                         src={smartphone}
@@ -158,7 +158,7 @@ const MobiAppDevScreen = () => {
                   }}
                 >
                   <div class="card-body">
-                    <Image src={WebDesignImage} class="card-img-top" />
+                    <Image src={WebDesignImage} alt='Image not found' class="card-img-top" />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -178,7 +178,7 @@ const MobiAppDevScreen = () => {
                   }}
                 >
                   <div class="card-body">
-                    <Image src={WebDesignImage2} class="card-img-top" />
+                    <Image src={WebDesignImage2} alt='Image not found' class="card-img-top" />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -191,7 +191,7 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#012E4D" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage3} class="card-img-top" />
+                    <Image src={WebDesignImage3} alt='Image not found' class="card-img-top" />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -206,7 +206,7 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#313131" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage4} class="card-img-top" />
+                    <Image src={WebDesignImage4} alt='Image not found' class="card-img-top" />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -219,7 +219,7 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#6647C0" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage5} class="card-img-top" />
+                    <Image src={WebDesignImage5} alt='Image not found' class="card-img-top" />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -232,7 +232,7 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#E9A218" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage6} class="card-img-top" />
+                    <Image src={WebDesignImage6}  alt='Image not found' class="card-img-top" />
                   </div>
                 </div>
                 <div className="card-btm-text">
