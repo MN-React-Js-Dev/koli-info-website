@@ -26,7 +26,22 @@ text-align: left;
     font-size: 18px !important;
     line-height: 30px !important;
 }
-
+.comman-heading {
+    font-family: "Montserrat";
+    font-style: normal;
+    /* font-weight: bolder; */
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 55px;
+}
+.carousel-btn {
+    padding:"11px 16px"
+}
+.header-ul li :hover {
+    border-bottom: #000000 !important;
+    background-color: rgb(227, 227, 255) !important;
+    border-radius: 16px !important;
+  }
 /* ------------------------------From here you can changes in proess section ------------------------*/
 
 
@@ -82,4 +97,10 @@ text-align: left;
     line-height: 60px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+/* ----------------------------------------OUR TOP BLOGS STYLE------------------------------ */
+.blog-card-titile {
+    font-weight: bold;
+    font-family: "Montserrat";
 }

@@ -64,10 +64,10 @@ const OurServices = () => {
               </div>
             </div>
             <div className="buttons m-3 text-center">
-              <button onClick={handleLeftClick} className="m-3 p-3">
+              <button onClick={handleLeftClick} className="m-3" style={{padding:"11px 16px"}}>
                 <AiOutlineLeft />
               </button>
-              <button onClick={handleRightClick} className="m-3 p-3">
+              <button onClick={handleRightClick} className="m-3" style={{padding:"11px 16px"}}>
                 <AiOutlineRight />
               </button>
             </div>

@@ -13,6 +13,7 @@ const OurTopBlogs = () => {
   const dispatch = useDispatch();
   const [ourBlogs, setOurBlogs] = useState();
   const data = useSelector((state) => state?.getOurBlog);
+  console.log('our blogs~~>',ourBlogs)
 
   const handleLeftClick = (e) => {
     e.preventDefault();
@@ -37,7 +38,7 @@ const OurTopBlogs = () => {
     <Fragment>
       <section className="top-blogs">
         <div className="container">
-          <h1 className=" text-center mt-5 bold-font">Our Top Blogs</h1>
+          <h1 className=" text-center mt-5 comman-heading">Our Top Blogs</h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className="row">
             <div className="img-slide-box" ref={carousel}>
@@ -47,11 +48,12 @@ const OurTopBlogs = () => {
                     <div className="col-sm-6" key={index}>
                       <div class="card m-3 service-card">
                         <div class="date-cst">
-                          <span class="day">{created_at}</span>
+                          {/* <span class="day">{created_at}</span> */}
+                          <span>{ (new Date(created_at)).toLocaleDateString() }</span>
                         </div>
                         <Image src={Mobile1} alt='Image not found' className="card-img-top" />
                         <div class="card-body">
-                          <h3>{title}</h3>
+                          <h3 className="blog-card-titile">{title}</h3>
                           <p class="card-text">{description}</p>
                         </div>
                       </div>
@@ -62,10 +64,10 @@ const OurTopBlogs = () => {
             </div>
           </div>
           <div className="buttons m-3 text-center">
-            <button onClick={handleLeftClick} className="m-3 p-3">
+            <button onClick={handleLeftClick} className="m-3" style={{padding:"11px 16px"}}>
               <AiOutlineLeft />
             </button>
-            <button onClick={handleRightClick} className="m-3 p-3">
+            <button onClick={handleRightClick} className="m-3" style={{padding:"11px 16px"}}>
               <AiOutlineRight />
             </button>
           </div>

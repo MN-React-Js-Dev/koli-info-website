@@ -3,8 +3,11 @@ import BlueLogo from "../assets/Logo/bluelogo.png";
 import Link from "next/link";
 import Image from "next/image";
 import SVGlogo from "../assets/Logo/SVGlogo.svg";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <Fragment>
       <section>
@@ -12,7 +15,7 @@ const Header = () => {
           <div className="row">
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
               <div className="container-fluid cst-nav p-3 header">
-                <Link href="/" className="nav-link active">
+                <Link href="/" className="nav-link ">
                   <Image src={SVGlogo} alt={BlueLogo} className="img-fluid" />
                 </Link>
                 <button
@@ -33,7 +36,7 @@ const Header = () => {
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
                       <a
-                        className="nav-link active"
+                        className="nav-link "
                         aria-current="page"
                         href="#"
                       ></a>
@@ -41,45 +44,46 @@ const Header = () => {
                   </ul>
                   <form className="d-flex" role="search">
                     <ul className="navbar-nav me-auto  mb-lg-0 header-ul">
-                      <li className="nav-item">
+                      {/* <li className="nav-item " > */}
+                      <li className={router.pathname == "/about-company" ? "nav-item active" : ""}>
                         <Link
-                          className="nav-link active header-links"
+                          className="nav-link  header-links"
                           aria-current="page"
                           href="/about-company"
                         >
                           Company
                         </Link>
                       </li>
-                      <li className="nav-item">
+                      <li className={router.pathname == "/mobile-app-development" ? "nav-item active" : ""}>
                         <Link
-                          className="nav-link active header-links"
+                          className="nav-link  header-links"
                           aria-current="page"
                           href="/mobile-app-development"
                         >
                           Services
                         </Link>
                       </li>
-                      <li className="nav-item">
+                      <li className={router.pathname == "/solution-on-demand" ? "nav-item active" : ""}>
                         <Link
-                          className="nav-link active header-links"
+                          className="nav-link  header-links"
                           aria-current="page"
                           href="/solution-on-demand"
                         >
                           Solutions
                         </Link>
                       </li>
-                      <li className="nav-item">
+                      <li className={router.pathname == "/portfolio" ? "nav-item active" : ""}>
                         <Link
-                          className="nav-link active header-links"
+                          className="nav-link  header-links"
                           aria-current="page"
                           href="/portfolio"
                         >
                           Our Portfolio
                         </Link>
                       </li>
-                      <li className="nav-item">
+                      <li className={router.pathname == "/career" ? "nav-item active" : ""}>
                         <Link
-                          className="nav-link active header-links"
+                          className="nav-link  header-links"
                           aria-current="page"
                           href="/career"
                         >

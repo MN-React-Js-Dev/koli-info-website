@@ -36,11 +36,11 @@ const aboutCompany = () => {
         <div className="container">
           <h1 className="comman-heading">Qualities we take pride in</h1>
           <div className="hr-cst mb-3" />
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
+          <div className="mb-5 d-flex">
+            <div className=" pt-4">
               <span className="number-class"> 01</span>
             </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
+            <div className=" cst-boder-para p-3 w-100" style={{alignItems:'center'}}>
               <p>
                 A team with years of development, design and marketing
                 experience who understand the complexity and needs of your
@@ -48,11 +48,11 @@ const aboutCompany = () => {
               </p>
             </div>
           </div>
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
+          <div className="mb-5 d-flex">
+            <div className="pt-4">
               <span className="number-class"> 02</span>
             </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
+            <div className="cst-boder-para p-3 w-100">
               <p>
                 Our focus is on working closely with customers like you to fully
                 comprehend your needs and build a solution tailormade for you.
@@ -61,11 +61,11 @@ const aboutCompany = () => {
               </p>
             </div>
           </div>
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
+          <div className="mb-5 d-flex">
+            <div className="pt-4">
               <span className="number-class"> 03</span>
             </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
+            <div className="cst-boder-para p-3 w-100">
               <p>
                 We use cutting edge technology, flexibility and scalabilty to
                 help meet your business needs, optimizing delivery time and
@@ -73,11 +73,11 @@ const aboutCompany = () => {
               </p>
             </div>
           </div>
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
+          <div className="mb-5 d-flex">
+            <div className="pt-4">
               <span className="number-class"> 04</span>
             </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
+            <div className="cst-boder-para p-3 w-100">
               <p>
                 We have solved real life business problems just like yours and
                 have therefore the ability to put ourselves in your shoes! We
