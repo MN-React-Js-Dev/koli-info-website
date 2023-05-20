@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import LeaderImg from "../../assets/images/leader.png";
+import leader1 from "../../assets/images/leader1.png";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
@@ -45,7 +46,7 @@ const LeadershipTeam = () => {
                   key={index}
                 >
                   <div className="col-sm-4 leaderImg">
-                    <Image src={LeaderImg} style={{ borderRadius: "50%" }} />
+                    <Image src={leader1} style={{ borderRadius: "50%" }} />
                   </div>
                   <div className="col-lg-8 " style={{ alignItems: "center" }}>
                     <div>

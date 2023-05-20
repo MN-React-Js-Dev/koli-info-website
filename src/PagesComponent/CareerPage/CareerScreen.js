@@ -3,6 +3,7 @@ import Image from "next/image";
 import CircleImg from "../../assets/images/circle.png";
 import { getAllCurrentOpeningsStart } from "@/Redux/module/getAllCurrentOpenings";
 import { useDispatch, useSelector } from "react-redux";
+import Footer from "@/commonComponent/Footer";
 
 const CareerScreen = () => {
   const dispatch = useDispatch();
@@ -66,6 +67,9 @@ const CareerScreen = () => {
             </>
           ))}
         </div>
+      </section>
+      <section>
+        <Footer />
       </section>
     </Fragment>
   );
