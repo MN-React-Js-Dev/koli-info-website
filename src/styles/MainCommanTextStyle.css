@@ -56,7 +56,7 @@ text-align: left;
     text-align: left;
 }
 
-/* ------------------------------- OUR PORTFOLIO HOMEPAGE SETYLE------------------------------ */
+/* ------------------------------- OUR PORTFOLIO HOMEPAGE STYLE------------------------------ */
 
 .mobileHeadText{
     font-size: 24px;
@@ -82,4 +82,22 @@ text-align: left;
     line-height: 60px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+
+/* ------------------------------------------------- Footer Icons ------------------------------------*/
+
+.icons{
+    color: "#2A64F9";
+     font-size: "43px";
+      margin: "3px";
+}
+/* .icon-border{
+    border: 1px solid #2A64F9;
+} */
+.icon:hover{
+    /* background-color: blue; */
+    padding: 5px;
+    border: 1px solid #2A64F9;
+    border-radius: 50%;
 }
