@@ -10,6 +10,8 @@ import onDemCrsl2 from "../../assets/images/onDemCrsl-2.png";
 import onDemCrsl3 from "../../assets/images/onDemCrsl-3.png";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useDispatch, useSelector } from "react-redux";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const OurServices = () => {
   const dispatch = useDispatch();
@@ -35,6 +37,12 @@ const OurServices = () => {
     dispatch(getAllOurServicesStart());
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1000);
+  }, []);
+
   return (
     <Fragment>
       <section className="our-services">
@@ -45,7 +53,11 @@ const OurServices = () => {
             </h1>
             <div className="cst-hr-for-process mb-5"></div>
             <div className="row">
-              <div className="img-slide-box" ref={carousel}>
+              <div
+                className="img-slide-box"
+                ref={carousel}
+                data-aos="fade-down"
+              >
                 {ourService?.map(({ title, description }, index) => {
                   return (
                     <div className="col-sm-4 mb-4" key={index}>

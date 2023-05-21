@@ -5,12 +5,20 @@ import Image from "next/image";
 import ProfileImage from "../assets/images/profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
+import LoaderComponent from "@/commonComponent/loaderComponent";
 
 const EmployeeSpeaks = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState();
+  const [loader, setLoader] = useState(true);
   const Data = useSelector((state) => state?.employeeData?.allemployee);
   const final = [];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     dispatch(getAllEmployeeStart());
@@ -30,6 +38,7 @@ const EmployeeSpeaks = () => {
 
   return (
     <Fragment>
+      {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="employee-speak" style={{ background: "#E3E3FF" }}>
         <div className="container">
@@ -42,7 +51,11 @@ const EmployeeSpeaks = () => {
               </p>
             </div>
             <div className="col-lg-6">
-              <Image src={EmployeespeakImage} alt='Image not found' className="img-fluid" />
+              <Image
+                src={EmployeespeakImage}
+                alt="Image not found"
+                className="img-fluid"
+              />
             </div>
           </div>
         </div>

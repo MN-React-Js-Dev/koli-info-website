@@ -3,6 +3,7 @@ import BlueLogo from "../assets/Logo/bluelogo.png";
 import Link from "next/link";
 import Image from "next/image";
 import SVGlogo from "../assets/Logo/SVGlogo.svg";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
@@ -41,60 +42,120 @@ const Header = () => {
                   </ul>
                   <form className="d-flex" role="search">
                     <ul className="navbar-nav me-auto  mb-lg-0 header-ul">
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link active header-links"
-                          aria-current="page"
-                          href="/about-company"
-                        >
-                          Company
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link active header-links"
-                          aria-current="page"
-                          href="/mobile-app-development"
-                        >
-                          Services
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link active header-links"
-                          aria-current="page"
-                          href="/solution-on-demand"
-                        >
-                          Solutions
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link active header-links"
-                          aria-current="page"
-                          href="/portfolio"
-                        >
-                          Our Portfolio
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="nav-link active header-links"
-                          aria-current="page"
-                          href="/career"
-                        >
-                          Career
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link
-                          className="btn contact-us-btn header-links"
-                          type="submit"
-                          href="/contact-us"
-                        >
-                          Contact Us
-                        </Link>
-                      </li>
+                      <motion.div
+                        className="box"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <li className="nav-item ">
+                          <Link
+                            className="nav-link active header-links"
+                            aria-current="page"
+                            href="/about-company"
+                          >
+                            Company
+                          </Link>
+                        </li>
+                      </motion.div>
+                      <motion.div
+                        className="box"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <li className="nav-item">
+                          <Link
+                            className="nav-link active header-links"
+                            aria-current="page"
+                            href="/mobile-app-development"
+                          >
+                            Services
+                          </Link>
+                        </li>
+                      </motion.div>
+                      <motion.div
+                        className="box"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <li className="nav-item">
+                          <Link
+                            className="nav-link active header-links"
+                            aria-current="page"
+                            href="/solution-on-demand"
+                          >
+                            Solutions
+                          </Link>
+                        </li>
+                      </motion.div>
+                      <motion.div
+                        className="box"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <li className="nav-item">
+                          <Link
+                            className="nav-link active header-links"
+                            aria-current="page"
+                            href="/portfolio"
+                          >
+                            Our Portfolio
+                          </Link>
+                        </li>
+                      </motion.div>
+                      <motion.div
+                        className="box"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <li className="nav-item">
+                          <Link
+                            className="nav-link active header-links"
+                            aria-current="page"
+                            href="/career"
+                          >
+                            Career
+                          </Link>
+                        </li>
+                      </motion.div>
+                      <motion.div
+                        className="box"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <li className="nav-item">
+                          <Link
+                            className="btn contact-us-btn header-links"
+                            type="submit"
+                            href="/contact-us"
+                          >
+                            Contact Us
+                          </Link>
+                        </li>
+                      </motion.div>
                     </ul>
                   </form>
                 </div>

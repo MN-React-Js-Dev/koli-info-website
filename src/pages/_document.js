@@ -11,7 +11,7 @@ export default function Document() {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel = "stylesheet" type = "text/css" href = "./style.css" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
+      <link 
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
         rel="stylesheet"
       />
@@ -44,6 +44,13 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <Script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></Script>
+    <Script>
+        {/* $(function () {
+            $("#loading").load("./fevicon.htm")
+        }); */}
+    </Script>
         <Script
           src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
           integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"

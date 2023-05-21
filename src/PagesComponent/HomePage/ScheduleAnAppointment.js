@@ -1,7 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ScheduleAnAppointment = () => {
-    
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
+  }, []);
+
   return (
     <Fragment>
       <section className="mt-5 mt-5" style={{ background: "#3F689F" }}>
@@ -14,7 +21,7 @@ const ScheduleAnAppointment = () => {
                   Schedule an appointment
                 </h2>
                 <div className="hr-cst mb-3"></div>
-                <form>
+                <form data-aos="zoom-in-left">
                   <div class="form-group">
                     <input
                       type="text"

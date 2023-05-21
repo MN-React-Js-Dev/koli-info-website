@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { Fragment, useEffect, useState } from "react";
+import LoaderComponent from "@/commonComponent/loaderComponent";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,13 @@ const Portfolio = () => {
   const [dataID, setDataID] = useState();
   const data = useSelector((state) => state?.getOurProduct);
   const serviceData = useSelector((state) => state?.getOurServices);
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     if (data != null) {
@@ -43,6 +51,7 @@ const Portfolio = () => {
 
   return (
     <Fragment>
+       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
         <div className="container">

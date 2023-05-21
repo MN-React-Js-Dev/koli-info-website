@@ -7,6 +7,7 @@ import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -29,18 +30,27 @@ const Footer = () => {
                 We are company that offer's all type of services
               </p>
               <div className="d-flex ">
-                <div className="px-3">
-                  <Link
-                    href="https://www.facebook.com/"
-                    className="nav-link active"
-                    target="_blank"
-                  >
-                    <BsFacebook
-                      className="icon"
-                      style={{ color: "#3F689F", fontSize: "30px" }}
-                    />
-                  </Link>
-                </div>
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{
+                    scale: 0.8,
+                    rotate: -90,
+                    borderRadius: "100%",
+                  }}
+                >
+                  <div className="px-3">
+                    <Link
+                      href="https://www.facebook.com/"
+                      className="nav-link active"
+                      target="_blank"
+                    >
+                      <BsFacebook
+                        className="icon"
+                        style={{ color: "#3F689F", fontSize: "30px" }}
+                      />
+                    </Link>
+                  </div>
+                </motion.div>
                 <div className="px-3">
                   <Link
                     href=" https://twitter.com/home?lang=en"
@@ -129,15 +139,19 @@ const Footer = () => {
               >
                 <p>info@koliinfotech.com</p>
               </Link>
-              <p>+91-9773149186 <br/>
-                 +91-8200591443</p>
+              <p>
+                +91-9773149186 <br />
+                +91-8200591443
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <hr className="row ml-4 mr-4"/>
+      <hr className="row ml-4 mr-4" />
       <section>
-        <div style={{ textAlign: "center", marginBottom: "4%", marginTop:'4%' }}>
+        <div
+          style={{ textAlign: "center", marginBottom: "4%", marginTop: "4%" }}
+        >
           <span>&copy;</span>
           <span>2022 KOLI infotech Pvt. Ltd. | All rights reserved.</span>
         </div>
