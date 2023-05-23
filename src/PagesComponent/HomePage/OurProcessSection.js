@@ -5,9 +5,15 @@ import Designing from "../../assets/images/Designing.png";
 import Development from "../../assets/images/Development.png";
 import testing2 from "../../assets/images/testing2.png";
 import delivery from "../../assets/images/delivery.png";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const OurProcessSection = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1000);
+  }, []);
   return (
     <Fragment>
       <section className="our-process-section mb-5">
@@ -17,10 +23,10 @@ const OurProcessSection = () => {
           <div className="row">
             <div>
               <ul className="cst-our-process">
-                <li>
+                <li data-aos="fade-up">
                   {/* <div className="circle first-circle"></div> */}
                   <Image
-                    style={{ height: 200, width:200 }}
+                    style={{ height: 200, width: 200 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     src={ourProcessSection}
@@ -29,10 +35,10 @@ const OurProcessSection = () => {
                     Planning
                   </h2>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                   {/* <div className="circle second-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width:200 }}
+                    style={{ height: 200, width: 200 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}
@@ -41,10 +47,10 @@ const OurProcessSection = () => {
                   />
                   <h2 className="text-center mt-3 processList">Designing</h2>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                   {/* <div className="circle third-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width:200 }}
+                    style={{ height: 200, width: 200 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}
@@ -53,10 +59,10 @@ const OurProcessSection = () => {
                   />
                   <h2 className="text-center mt-3 processList">Development</h2>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                   {/* <div className="circle fourth-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width:200 }}
+                    style={{ height: 200, width: 200 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}
@@ -65,10 +71,10 @@ const OurProcessSection = () => {
                   />
                   <h2 className="text-center mt-3 processList">Testing</h2>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                   {/* <div className="circle fifth-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width:200 }}
+                    style={{ height: 200, width: 200 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}
