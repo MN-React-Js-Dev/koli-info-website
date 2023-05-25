@@ -153,7 +153,7 @@ const Footer = () => {
           style={{ textAlign: "center", marginBottom: "4%", marginTop: "4%" }}
         >
           <span>&copy;</span>
-          <span>2022 KOLI infotech Pvt. Ltd. | All rights reserved.</span>
+          <span>2023 KOLI infotech Pvt. Ltd. | All rights reserved.</span>
         </div>
       </section>
     </Fragment>

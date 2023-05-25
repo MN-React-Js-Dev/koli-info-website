@@ -6,6 +6,8 @@ import { OUR_MISSION_TEXT } from "../commonComponent/commanText";
 import { useState } from "react";
 import { useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const aboutCompany = () => {
   const [loader, setLoader] = useState(true);
@@ -15,13 +17,19 @@ const aboutCompany = () => {
       setLoader(false);
     }, 1000);
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
+  }, []);
   return (
     <Fragment>
        {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
         <div className="container">
-          <div className="row" style={{ alignItems: "center" }}>
+          <div className="row" style={{ alignItems: "center" }} data-aos="flip-up">
             <div className="col-lg-6 mt-5">
               <h1 className="hero-sec-header">About Company</h1>
               <p className="para-for-hero">
@@ -36,7 +44,7 @@ const aboutCompany = () => {
         </div>
       </section>
       <section className="our-mission mt-5 mb-5">
-        <div className="container">
+        <div className="container" data-aos="fade-right">
           <h1 className="comman-heading">Our Mission</h1>
           <div className="hr-cst mb-3" />
           <p>{OUR_MISSION_TEXT}</p>
@@ -44,14 +52,14 @@ const aboutCompany = () => {
       </section>
 
       <section className="qualities-we-take">
-        <div className="container">
+        <div className="container" data-aos="zoom-in-left">
           <h1 className="comman-heading">Qualities we take pride in</h1>
           <div className="hr-cst mb-3" />
           <div className="row mb-5">
             <div className="col-md-1 col-3 pt-4">
               <span className="number-class"> 01</span>
             </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
+            <div className="col-md-11 col-9 cst-boder-para p-3" >
               <p>
                 A team with years of development, design and marketing
                 experience who understand the complexity and needs of your

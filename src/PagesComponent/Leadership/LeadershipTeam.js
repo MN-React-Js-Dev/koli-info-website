@@ -6,6 +6,8 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const LeadershipTeam = () => {
   const dispatch = useDispatch();
@@ -29,14 +31,20 @@ const LeadershipTeam = () => {
     }
   });
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
+  }, []);
+
   return (
     <>
       <section className="testi-hero-image ">
         <div className="container">
-          <h1 className="text-center mt-5 comman-heading">
+          <h1 className="text-center mt-5 comman-heading"  data-aos="fade-down">
             Meet Our Leadership Team
           </h1>
-          <div className="cst-hr-for-process mb-5" />
+          <div className="cst-hr-for-process mb-5"  data-aos="fade-left"/>
           {final?.map(
             ({ firstName, lastName, position, description }, index) => (
               <>
@@ -46,9 +54,9 @@ const LeadershipTeam = () => {
                   key={index}
                 >
                   <div className="col-sm-4 leaderImg">
-                    <Image src={leader1} style={{ borderRadius: "50%" }} />
+                    <Image src={leader1} style={{ borderRadius: "50%" }}  data-aos="fade-down-right"/>
                   </div>
-                  <div className="col-lg-8 " style={{ alignItems: "center" }}>
+                  <div className="col-lg-8 " style={{ alignItems: "center" }}  data-aos="fade-down-left">
                     <div>
                       <div className="d-flex">
                         <div className="bold-font" style={{ fontSize: "20px" }}>

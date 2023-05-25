@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Image from "next/image";
 import CostumMobi from "../../assets/images/costum-mobile.png";
 import trophy from "../../assets/images/trophy.png";
@@ -19,6 +19,8 @@ import userInterface1 from "../../assets/images/userInterface1.png";
 import smartform1 from "../../assets/images/cross-platform1.png";
 import { Inder } from "next/font/google";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const MobiAppDevScreen = () => {
   const data = [
@@ -54,12 +56,18 @@ const MobiAppDevScreen = () => {
     },
   ];
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
+  }, []);
+
   return (
     <Fragment>
       <section>
         <div className="container">
           <div className="awards">
-            <div className="row m-5">
+            <div className="row m-5" data-aos="fade-up">
               <div className="col-sm-3 mb-3">
                 <div className="p-3 text-center award-box">
                   <Image src={trophy} alt='Image not found' className="mb-4 mt-4 img-fluid " />
@@ -100,14 +108,14 @@ const MobiAppDevScreen = () => {
           </div>
           <div className="p-5" style={{ display: "flex" }}>
             <div className="row" style={{ alignItems: "center" }}>
-              <div className="col-lg-7 mt-5">
+              <div className="col-lg-7 mt-5" data-aos="fade-right">
                 <h1 className=" bold-font">
                   Custom Mobile Application Development Company
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
                 <p className="para-for-hero">{COMMAN_TEXT}</p>
               </div>
-              <div className="col-lg-5 ">
+              <div className="col-lg-5 " data-aos="fade-left">
                 <Image src={CostumMobi} alt='Image not found' className="img-fluid testi-image" />
               </div>
             </div>
@@ -120,7 +128,7 @@ const MobiAppDevScreen = () => {
             Mobile App Development Services
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             {data.map(({ service, detail }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
@@ -147,7 +155,7 @@ const MobiAppDevScreen = () => {
             Explore Our Mobile App Portfolio
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row ">
+          <div className="row " data-aos="fade-up">
             <div className="col-sm-4 mb-5">
               <div className="container">
                 <div
@@ -201,7 +209,7 @@ const MobiAppDevScreen = () => {
               </div>
             </div>
           </div>
-          <div className="row mb-2">
+          <div className="row mb-2" data-aos="fade-up">
             <div className="col-sm-4 mb-5">
               <div className="container">
                 <div class="card  p-4" style={{ background: "#313131" }}>

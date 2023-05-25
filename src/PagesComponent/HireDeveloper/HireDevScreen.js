@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Image from "next/image";
 import mobiScreen1 from "../../assets/images/Hire1.png";
 import mobiScreen2 from "../../assets/images/Hire2.png";
@@ -12,6 +12,8 @@ import smartform1 from "../../assets/images/cross-platform1.png";
 import Image2 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 import { COMMAN_TEXT } from "../../commonComponent/commanText";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HireDevScreen = () => {
   const CardData = [
@@ -53,26 +55,32 @@ const HireDevScreen = () => {
     },
   ];
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
+  }, []);
+
   return (
     <Fragment>
       <section>
         <div className="container">
-          <h1 className="text-center mt-5 bold-font">
+          <h1 className="text-center mt-5 bold-font" data-aos="flip-up">
             Hire Dedicated Developers
           </h1>
-          <div className="cst-hr-for-process mb-5" />
+          <div className="cst-hr-for-process mb-5" data-aos="flip-down"/>
           <div className="row m-5 text-center">
             <div className="col-sm-4 mb-4">
-              <Image src={mobiScreen1} className=" img-fluid " />
+              <Image src={mobiScreen1} className=" img-fluid " data-aos="fade-right" />
             </div>
             <div className="col-sm-4 mb-4">
-              <Image src={mobiScreen2} className=" img-fluid " />
+              <Image src={mobiScreen2} className=" img-fluid " data-aos="fade-up"/>
             </div>
             <div className="col-sm-4 mb-4">
-              <Image src={mobiScreen3} className=" img-fluid " />
+              <Image src={mobiScreen3} className=" img-fluid " data-aos="fade-left"/>
             </div>
           </div>
-          <div className="text-center m-5">
+          <div className="text-center m-5" data-aos="fade-down">
             <p>{COMMAN_TEXT}</p>
             <a class="btn contact-us-btn m-4 p-2" type="submit">
               Hire Now
@@ -82,11 +90,11 @@ const HireDevScreen = () => {
       </section>
       <section className="special-services">
         <div className="container">
-          <h1 className="text-center text-white pt-5 mt-5 bold-font">
+          <h1 className="text-center text-white pt-5 mt-5 bold-font" data-aos="flip-down">
             Mobile App Development Services
           </h1>
-          <div className="cst-hr-for-process mb-5" />
-          <div className="row">
+          <div className="cst-hr-for-process mb-5" data-aos="flip-down"/>
+          <div className="row" data-aos="fade-down">
             {CardData.map(({ heading, descpt }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
@@ -108,7 +116,7 @@ const HireDevScreen = () => {
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="container" data-aos="zoom-in">
           <div className="row m-5">
             <div className="text-center testi-detail-box">
               <Image src={Image2} className="round img-round-cst" />

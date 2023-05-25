@@ -1,10 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Image from "next/image";
 import conpiesImg from "../../assets/images/compies.png";
 import Image2 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { COMMAN_TEXT } from "../../commonComponent/commanText";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const DiscussIdeaScreen = () => {
   const data = [
@@ -40,6 +42,12 @@ const DiscussIdeaScreen = () => {
     },
   ];
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
+  }, []);
+
   return (
     <Fragment>
       <section>
@@ -48,7 +56,7 @@ const DiscussIdeaScreen = () => {
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <div className="row mt-5 pt-5">
             <div className="col-12 mb-4 text-center">
               <Image src={conpiesImg} alt='Image not found' className="img-fluid " />
@@ -57,7 +65,7 @@ const DiscussIdeaScreen = () => {
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <div className="row m-5">
             <div className="text-center testi-detail-box">
               <Image src={Image2} className="round img-round-cst" />

@@ -3,16 +3,12 @@ import Header from "@/commonComponent/Header";
 import Image from "next/image";
 import PortfolioImage from "../assets/images/portfolioimage.png";
 import WebDesignImage from "../assets/images/webdesign1.png";
-import WebDesignImage2 from "../assets/images/webdesign2.png";
-import WebDesignImage3 from "../assets/images/webdesign3.png";
-import WebDesignImage4 from "../assets/images/webdesign4.png";
-import WebDesignImage5 from "../assets/images/webdesign5.png";
-import WebDesignImage6 from "../assets/images/webdesign6.png";
-import { Link } from "react-router-dom";
 import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { Fragment, useEffect, useState } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -27,6 +23,12 @@ const Portfolio = () => {
     setTimeout(() => {
       setLoader(false);
     }, 1000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
   }, []);
 
   useEffect(() => {
@@ -54,7 +56,7 @@ const Portfolio = () => {
        {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
-        <div className="container">
+        <div className="container" data-aos="zoom-out">
           <div className="row" style={{ alignItems: "center" }}>
             <div className="col-sm-6 mt-5">
               <h1 className="hero-sec-header">Portfolio</h1>
@@ -71,7 +73,7 @@ const Portfolio = () => {
       </section>
 
       <section className="our-portfolio">
-        <div className="container">
+        <div className="container" data-aos="fade-down">
           <h1 className="text-center mt-5 bold-font">Our Portfolio</h1>
           <div class="col-12 mb-5 mt-3 mx-auto  d-flex justify-content-center">
             {ourService?.map(({ title, id }, index) => {

@@ -6,6 +6,8 @@ import ProfileImage from "../assets/images/profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const EmployeeSpeaks = () => {
   const dispatch = useDispatch();
@@ -18,6 +20,12 @@ const EmployeeSpeaks = () => {
     setTimeout(() => {
       setLoader(false);
     }, 1000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1200);
   }, []);
 
   useEffect(() => {
@@ -41,7 +49,7 @@ const EmployeeSpeaks = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="employee-speak" style={{ background: "#E3E3FF" }}>
-        <div className="container">
+        <div className="container" data-aos="fade-down">
           <div className="row" style={{ alignItems: "center" }}>
             <div className="col-lg-6 mt-5">
               <h1 className="comman-heading">Employee Speak</h1>
@@ -61,7 +69,7 @@ const EmployeeSpeaks = () => {
         </div>
       </section>
       <section className="qualities-we-take">
-        <div className="container">
+        <div className="container" data-aos="fade-down">
           {final?.map(
             (
               { firstName, lastName, position, experience, description },
