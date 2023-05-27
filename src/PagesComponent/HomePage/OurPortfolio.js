@@ -9,7 +9,7 @@ const OurPortfolio = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1000);
+    }, 1200);
   }, []);
 
   return (

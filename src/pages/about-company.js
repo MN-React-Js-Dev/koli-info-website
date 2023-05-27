@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Footer from "@/commonComponent/Footer";
 
 const aboutCompany = () => {
   const [loader, setLoader] = useState(true);
@@ -25,11 +26,15 @@ const aboutCompany = () => {
   }, []);
   return (
     <Fragment>
-       {loader === true ? <LoaderComponent /> : console.log("null")}
+      {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
         <div className="container">
-          <div className="row" style={{ alignItems: "center" }} data-aos="flip-up">
+          <div
+            className="row"
+            style={{ alignItems: "center" }}
+            data-aos="flip-up"
+          >
             <div className="col-lg-6 mt-5">
               <h1 className="hero-sec-header">About Company</h1>
               <p className="para-for-hero">
@@ -38,7 +43,11 @@ const aboutCompany = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={CustomerCImage} alt='Image not found' className="img-fluid" />
+              <Image
+                src={CustomerCImage}
+                alt="Image not found"
+                className="img-fluid"
+              />
             </div>
           </div>
         </div>
@@ -59,7 +68,7 @@ const aboutCompany = () => {
             <div className="col-md-1 col-3 pt-4">
               <span className="number-class"> 01</span>
             </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3" >
+            <div className="col-md-11 col-9 cst-boder-para p-3">
               <p>
                 A team with years of development, design and marketing
                 experience who understand the complexity and needs of your
@@ -106,6 +115,9 @@ const aboutCompany = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <Footer />
       </section>
     </Fragment>
   );

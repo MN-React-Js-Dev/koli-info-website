@@ -37,8 +37,9 @@ const OurTopBlogs = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1000);
+    }, 1200);
   }, []);
+  
   return (
     <Fragment>
       <section className="top-blogs">

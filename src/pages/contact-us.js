@@ -4,6 +4,7 @@ import ContactUsHeroSection from '@/PagesComponent/ContactUs/HeroSection'
 import ContactUsScreen from '@/PagesComponent/ContactUs/ContactUsScreen'
 import React, { Fragment,useState,useEffect } from 'react'
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Footer from '@/commonComponent/Footer'
 
  
 
@@ -21,6 +22,7 @@ const ContactUs = () => {
             <Header/>
             <ContactUsHeroSection/>
             <ContactUsScreen/>
+            <Footer />
         </Fragment>
     )
 }

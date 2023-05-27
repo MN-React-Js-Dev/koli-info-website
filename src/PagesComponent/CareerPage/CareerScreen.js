@@ -76,9 +76,6 @@ const CareerScreen = () => {
           ))}
         </div>
       </section>
-      <section>
-        <Footer />
-      </section>
     </Fragment>
   );
 };

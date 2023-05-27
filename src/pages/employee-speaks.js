@@ -8,6 +8,7 @@ import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Footer from "@/commonComponent/Footer";
 
 const EmployeeSpeaks = () => {
   const dispatch = useDispatch();
@@ -96,6 +97,9 @@ const EmployeeSpeaks = () => {
             }
           )}
         </div>
+      </section>
+      <section>
+        <Footer />
       </section>
     </Fragment>
   );

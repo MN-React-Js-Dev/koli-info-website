@@ -64,7 +64,7 @@ const WebDevScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1300);
+    }, 1200);
   }, []);
 
   return (

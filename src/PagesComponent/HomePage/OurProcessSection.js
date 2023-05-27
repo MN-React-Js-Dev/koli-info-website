@@ -9,11 +9,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const OurProcessSection = () => {
+  
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1000);
+    }, 1200);
   }, []);
+
   return (
     <Fragment>
       <section className="our-process-section mb-5">

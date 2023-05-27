@@ -3,6 +3,7 @@ import Header from "@/commonComponent/Header";
 import SolutionOnDemandHeroSection from "@/PagesComponent/SolutionOnDemand/HeroSection";
 import SolutionOnDemandScreen from "@/PagesComponent/SolutionOnDemand/SolutionOnDemandScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Footer from "@/commonComponent/Footer";
 
 const SolutionOnDemand = () => {
   const [loader, setLoader] = useState(true);
@@ -19,6 +20,7 @@ const SolutionOnDemand = () => {
       <Header />
       <SolutionOnDemandHeroSection />
       <SolutionOnDemandScreen />
+      <Footer />
     </Fragment>
   );
 };
