@@ -9,7 +9,7 @@ const LeadershipHeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (

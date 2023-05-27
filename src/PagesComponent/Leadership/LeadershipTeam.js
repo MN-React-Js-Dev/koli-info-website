@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Image from "next/image";
-import LeaderImg from "../../assets/images/leader.png";
 import leader1 from "../../assets/images/leader1.png";
-import { BsFacebook } from "react-icons/bs";
-import { AiFillTwitterCircle } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
 import Aos from "aos";
@@ -34,11 +31,11 @@ const LeadershipTeam = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (
-    <>
+    <Fragment>
       <section className="testi-hero-image ">
         <div className="container">
           <h1 className="text-center mt-5 comman-heading"  data-aos="fade-down">
@@ -76,7 +73,7 @@ const LeadershipTeam = () => {
           )}
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from "react";
-import DataSecure1 from "../../assets/images/DataSecure-1.png";
 import LeadershipImage from "../../assets/images/leadership-image.png";
 import Image from "next/image";
 import Aos from "aos";
@@ -9,7 +8,7 @@ const WhoWeAreHeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 2000);
   }, []);
 
   return (

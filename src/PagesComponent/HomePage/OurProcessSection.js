@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef } from "react";
+import React, { Fragment, useEffect } from "react";
 import ourProcessSection from "../../assets/images/ourProcessSection.png";
 import Image from "next/image";
 import Designing from "../../assets/images/Designing.png";
@@ -9,11 +9,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const OurProcessSection = () => {
-  
+
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (

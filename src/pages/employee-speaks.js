@@ -26,7 +26,7 @@ const EmployeeSpeaks = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   useEffect(() => {

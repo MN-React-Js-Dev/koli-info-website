@@ -1,6 +1,4 @@
 import React, { Fragment,useEffect } from "react";
-import DataSecure1 from "../../assets/images/DataSecure-1.png";
-import webDevimg1 from "../../assets/images/webDevimg-1.png";
 import onDmndHeroImg from "../../assets/images/onDmndHeroImg.png";
 import Image from "next/image";
 import Aos from "aos";
@@ -11,7 +9,7 @@ const SolutionOnDemandHeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (

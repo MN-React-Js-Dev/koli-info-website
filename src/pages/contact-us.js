@@ -10,12 +10,13 @@ import Footer from '@/commonComponent/Footer'
 
 const ContactUs = () => {
     const [loader, setLoader] = useState(true);
-
+    
     useEffect(() => {
       setTimeout(() => {
         setLoader(false);
       }, 1000);
     }, []);
+
     return (
         <Fragment>
              {loader === true ? <LoaderComponent /> : console.log("null")}

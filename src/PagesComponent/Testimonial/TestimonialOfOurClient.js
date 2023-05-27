@@ -3,9 +3,6 @@ import client1 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 import Image from "next/image";
 import Image2 from "../../assets/images/2.png";
-import Image3 from "../../assets/images/3.png";
-import Image4 from "../../assets/images/4.png";
-import Image5 from "../../assets/images/5.png";
 import { getAllOurClientStart } from "@/Redux/module/getOurClientsAction";
 import { useDispatch, useSelector } from "react-redux";
 import Aos from "aos";
@@ -29,7 +26,7 @@ const TestimonialOfOurClient = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (

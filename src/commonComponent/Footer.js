@@ -14,7 +14,7 @@ const Footer = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (
@@ -36,7 +36,7 @@ const Footer = () => {
                   fontSize: 15,
                 }}
               >
-                We are company that offer's all type of services
+               {`We are company that offer's all type of services` } 
               </p>
               <div className="d-flex ">
                 <motion.div
@@ -70,7 +70,7 @@ const Footer = () => {
                 >
                   <div className="px-3"  data-aos="fade-up">
                     <Link
-                      href=" https://twitter.com/home?lang=en"
+                      href="https://twitter.com/home?lang=en"
                       className="nav-link active"
                       target="_blank"
                     >

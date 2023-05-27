@@ -1,16 +1,14 @@
 import Header from "@/commonComponent/Header";
-import React, { Fragment } from "react";
+import React, { Fragment,useState,useEffect } from "react";
 import CustomerCImage from "../assets/images/cc.png";
 import Image from "next/image";
 import { OUR_MISSION_TEXT } from "../commonComponent/commanText";
-import { useState } from "react";
-import { useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
 
-const aboutCompany = () => {
+const AboutCompany = () => {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
@@ -22,8 +20,9 @@ const aboutCompany = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
+  
   return (
     <Fragment>
       {loader === true ? <LoaderComponent /> : console.log("null")}
@@ -123,4 +122,4 @@ const aboutCompany = () => {
   );
 };
 
-export default aboutCompany;
+export default AboutCompany;

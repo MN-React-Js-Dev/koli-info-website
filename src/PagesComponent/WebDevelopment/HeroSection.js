@@ -1,7 +1,5 @@
 import React, { Fragment,useEffect } from "react";
-import DataSecure1 from "../../assets/images/DataSecure-1.png";
 import webDevimg1 from "../../assets/images/webDevimg-1.png";
-import MobileHero from "../../assets/images/Mobile-hero.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -11,7 +9,7 @@ const WebDevHeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (

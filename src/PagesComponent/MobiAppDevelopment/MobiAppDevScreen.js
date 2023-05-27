@@ -12,11 +12,6 @@ import WebDesignImage4 from "../../assets/images/webdesign4.png";
 import WebDesignImage5 from "../../assets/images/webdesign5.png";
 import WebDesignImage6 from "../../assets/images/webdesign6.png";
 import smartphone from "../../assets/images/smartphone.png";
-import Ipod from "../../assets/images/ipad.png";
-import Android from "../../assets/images/android1.png";
-import webDev from "../../assets/images/ux1.png";
-import userInterface1 from "../../assets/images/userInterface1.png";
-import smartform1 from "../../assets/images/cross-platform1.png";
 import { Inder } from "next/font/google";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
@@ -59,7 +54,7 @@ const MobiAppDevScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (
