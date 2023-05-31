@@ -4,6 +4,7 @@ import Header from "@/commonComponent/Header";
 import WhoWeAreHeroSection from "@/PagesComponent/WhoWeAre/HeroSection";
 import WhoWeAreScreen from "@/PagesComponent/WhoWeAre/WhoWeAreScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Footer from "@/commonComponent/Footer";
 
 const WhoWeAre = () => {
   const [loader, setLoader] = useState(true);
@@ -20,6 +21,7 @@ const WhoWeAre = () => {
       <Header />
       <WhoWeAreHeroSection />
       <WhoWeAreScreen />
+      <Footer />
     </Fragment>
   );
 };

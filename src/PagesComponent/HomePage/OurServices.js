@@ -1,15 +1,9 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
-import Wireframe1 from "../../assets/images/wireframe1.png";
-import Image from "next/image";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import Design1 from "../../assets/images/design1.png";
-import WebDevelopment1 from "../../assets/images/web-development1.png";
-import Applications1Img from "../../assets/images/applications1.png";
-import onDemCrsl1 from "../../assets/images/onDemCrsl-1.png";
-import onDemCrsl2 from "../../assets/images/onDemCrsl-2.png";
-import onDemCrsl3 from "../../assets/images/onDemCrsl-3.png";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useDispatch, useSelector } from "react-redux";
+import Design1 from "../../assets/images/design1.png";
+import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -40,7 +34,7 @@ const OurServices = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1000);
+    }, 1500);
   }, []);
 
   return (

@@ -3,6 +3,7 @@ import DiscussIdeaHeroSection from "@/PagesComponent/DiscussYourIdea/HeroSection
 import DiscussIdeaScreen from "@/PagesComponent/DiscussYourIdea/DiscussIdeaScreen";
 import Header from "@/commonComponent/Header";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Footer from "@/commonComponent/Footer";
 
 
 const DiscussYourIdea = () => {
@@ -20,6 +21,7 @@ const DiscussYourIdea = () => {
       <Header />
       <DiscussIdeaHeroSection />
       <DiscussIdeaScreen />
+      <Footer />
     </Fragment>
   );
 };

@@ -1,12 +1,9 @@
-import React, { Fragment, useState } from "react";
-import Image from "next/image";
-import mapImage from "../../assets/images/map.png";
+import React, { Fragment, useState, useEffect } from "react";
 import { contactUsStart } from "@/Redux/module/contactUs";
 import { useDispatch } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ContactUsScreen = () => {
   const dispatch = useDispatch();
@@ -30,11 +27,17 @@ const ContactUsScreen = () => {
     dispatch(contactUsStart(data));
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
+
   return (
     <Fragment>
       <section>
         <div className="container">
-          <div className="row  m-3 d-flex">
+          <div className="row  m-3 d-flex" data-aos="zoom-in">
             <div className="col-lg-5 p-3">
               <h1 className=" pt-5 mt-5 comman-heading">Share Your App URL</h1>
               <div className="cst-hr-for-process" />

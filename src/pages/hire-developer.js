@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import HireDevHeroSection from "@/PagesComponent/HireDeveloper/HeroSection";
 import HireDevScreen from "@/PagesComponent/HireDeveloper/HireDevScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Footer from "@/commonComponent/Footer";
 
 const HireDeveloper = () => {
   const [loader, setLoader] = useState(true);
@@ -19,6 +20,7 @@ const HireDeveloper = () => {
       <Header />
       <HireDevHeroSection />
       <HireDevScreen />
+      <Footer />
     </Fragment>
   );
 };

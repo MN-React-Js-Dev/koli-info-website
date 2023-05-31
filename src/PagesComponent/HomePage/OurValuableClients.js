@@ -1,9 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Profile from "../../assets/images/profile.png";
-import Image from "next/image";
-import blueRight from "../../assets/images/blueRight.png";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllOurClientStart } from "@/Redux/module/getOurClientsAction";
+import Profile from "../../assets/images/profile.png";
+import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -25,7 +24,7 @@ const OurValuableClients = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (

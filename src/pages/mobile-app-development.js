@@ -4,6 +4,7 @@ import Header from "@/commonComponent/Header";
 import MobiAppDevHeroSection from "@/PagesComponent/MobiAppDevelopment/HeroSection";
 import MobiAppDevScreen from "@/PagesComponent/MobiAppDevelopment/MobiAppDevScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Footer from "@/commonComponent/Footer";
 
 const MobiAppDevelopment = () => {
   const [loader, setLoader] = useState(true);
@@ -20,6 +21,7 @@ const MobiAppDevelopment = () => {
       <Header />
       <MobiAppDevHeroSection />
       <MobiAppDevScreen />
+      <Footer />
     </Fragment>
   );
 };

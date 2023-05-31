@@ -1,13 +1,14 @@
 import Header from "@/commonComponent/Header";
-import React, { Fragment } from "react";
+import React, { Fragment,useState,useEffect } from "react";
 import CustomerCImage from "../assets/images/cc.png";
 import Image from "next/image";
 import { OUR_MISSION_TEXT } from "../commonComponent/commanText";
-import { useState } from "react";
-import { useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Footer from "@/commonComponent/Footer";
 
-const aboutCompany = () => {
+const AboutCompany = () => {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
@@ -15,13 +16,24 @@ const aboutCompany = () => {
       setLoader(false);
     }, 1000);
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
+  
   return (
     <Fragment>
-       {loader === true ? <LoaderComponent /> : console.log("null")}
+      {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
         <div className="container">
-          <div className="row" style={{ alignItems: "center" }}>
+          <div
+            className="row"
+            style={{ alignItems: "center" }}
+            data-aos="flip-up"
+          >
             <div className="col-lg-6 mt-5">
               <h1 className="hero-sec-header">About Company</h1>
               <p className="para-for-hero">
@@ -30,13 +42,17 @@ const aboutCompany = () => {
               </p>
             </div>
             <div className="col-lg-6 ">
-              <Image src={CustomerCImage} alt='Image not found' className="img-fluid" />
+              <Image
+                src={CustomerCImage}
+                alt="Image not found"
+                className="img-fluid"
+              />
             </div>
           </div>
         </div>
       </section>
       <section className="our-mission mt-5 mb-5">
-        <div className="container">
+        <div className="container" data-aos="fade-right">
           <h1 className="comman-heading">Our Mission</h1>
           <div className="hr-cst mb-3" />
           <p>{OUR_MISSION_TEXT}</p>
@@ -44,7 +60,7 @@ const aboutCompany = () => {
       </section>
 
       <section className="qualities-we-take">
-        <div className="container">
+        <div className="container" data-aos="zoom-in-left">
           <h1 className="comman-heading">Qualities we take pride in</h1>
           <div className="hr-cst mb-3" />
           <div className="row mb-5">
@@ -99,8 +115,11 @@ const aboutCompany = () => {
           </div>
         </div>
       </section>
+      <section>
+        <Footer />
+      </section>
     </Fragment>
   );
 };
 
-export default aboutCompany;
+export default AboutCompany;

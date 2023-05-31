@@ -3,6 +3,10 @@ body {
   margin: 0px;
 }
 
+.nav-item .nav-link{
+  font-weight: 200;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url(../assets/font-family/Montserrat-Medium.ttf);

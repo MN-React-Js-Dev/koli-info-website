@@ -3,11 +3,10 @@ import client1 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 import Image from "next/image";
 import Image2 from "../../assets/images/2.png";
-import Image3 from "../../assets/images/3.png";
-import Image4 from "../../assets/images/4.png";
-import Image5 from "../../assets/images/5.png";
 import { getAllOurClientStart } from "@/Redux/module/getOurClientsAction";
 import { useDispatch, useSelector } from "react-redux";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const TestimonialOfOurClient = () => {
   const dispatch = useDispatch();
@@ -24,13 +23,19 @@ const TestimonialOfOurClient = () => {
     dispatch(getAllOurClientStart());
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
+
   return (
     <Fragment>
       <section className="testi-hero-image ">
         <div className="container">
           <div className="row">
             <div className="mt-5 mb-5">
-              <h1 className="text-center mt-5 comman-heading">
+              <h1 className="text-center mt-5 comman-heading" data-aos="flip-down">
                 Testimonial Of Our Client
               </h1>
               <div className="cst-hr-for-process mb-5" />
@@ -40,6 +45,7 @@ const TestimonialOfOurClient = () => {
                   justifyContent: "space-between",
                 }}
                 className="mt-5 align-middle"
+                data-aos="fade-left"
               >
                 <Image src={client1} className="client-image-2" />
                 <Image src={client1} className="client-image-2" />
@@ -49,13 +55,22 @@ const TestimonialOfOurClient = () => {
                   <div
                     className="text-center mt-5 testi-detail-box"
                     key={index}
+                    data-aos="fade-up"
                   >
-                    <Image src={Image2}  alt='Image not found' className="round img-round-cst" />
+                    <Image
+                      src={Image2}
+                      alt="Image not found"
+                      className="round img-round-cst"
+                    />
                     <p className="text-center text-decoration-underline client-name  pt-3">
                       {name}
                     </p>
                     <p className="text-center">{review}</p>
-                    <Image src={Vector} alt='Image not found' className="img-fluid " />
+                    <Image
+                      src={Vector}
+                      alt="Image not found"
+                      className="img-fluid "
+                    />
                   </div>
                 </>
               ))}

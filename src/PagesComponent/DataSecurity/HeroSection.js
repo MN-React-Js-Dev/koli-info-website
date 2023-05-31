@@ -1,8 +1,16 @@
-import React, { Fragment } from "react";
+import React, { Fragment,useEffect } from "react";
 import DataSecure1 from "../../assets/images/DataSecure-1.png";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const DataSecureHeroSection = () => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
   
   return (
     <Fragment>
@@ -12,14 +20,14 @@ const DataSecureHeroSection = () => {
       >
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-6 mt-5 text-start">
+            <div className="col-lg-6 mt-5 text-start" data-aos="fade-right">
               <h1 className="hero-sec-header">Data security</h1>
               <p className="para-for-hero">
                 We are a company that offers design and develop services for you
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-lg-6 ">
+            <div className="col-lg-6 " data-aos="fade-left">
               <Image src={DataSecure1} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>

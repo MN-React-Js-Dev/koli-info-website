@@ -1,5 +1,4 @@
 import React, { Fragment,useEffect } from "react";
-// import "@/styles/globals.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -7,7 +6,7 @@ const HeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1000);
+    }, 1500);
   }, []);
 
   return (

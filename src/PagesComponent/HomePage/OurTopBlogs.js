@@ -1,11 +1,9 @@
-import Image from "next/image";
 import React, { useState, useRef, Fragment, useEffect } from "react";
-import Mobile1 from "../../assets/images/mobile1.png";
-import Mobile2 from "../../assets/images/mobile2.png";
-import skyBlueLeft from "../../assets/images/skyBlueLeft.png";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllOurBlogStart } from "@/Redux/module/getOurBlogAction";
+import Mobile1 from "../../assets/images/mobile1.png";
+import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -37,8 +35,9 @@ const OurTopBlogs = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1000);
+    }, 1500);
   }, []);
+
   return (
     <Fragment>
       <section className="top-blogs">

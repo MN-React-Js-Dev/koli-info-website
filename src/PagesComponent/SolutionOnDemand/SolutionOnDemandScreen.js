@@ -5,15 +5,12 @@ import SODimage1 from "../../assets/images/SODimage1.png";
 import SODimage2 from "../../assets/images/SODimage2.png";
 import SODimage3 from "../../assets/images/SODimage3.png";
 import bookindMdl from "../../assets/images/bookindMdl.png";
-import appPay from "../../assets/images/appPay.png";
-import order from "../../assets/images/order.png";
-import schedule from "../../assets/images/schedule.png";
-import trackOrder from "../../assets/images/track.png";
-import realTimecall from "../../assets/images/realTcall.png";
 import onDemCrsl1 from "../../assets/images/onDemCrsl-1.png";
 import onDemCrsl2 from "../../assets/images/onDemCrsl-2.png";
 import onDemCrsl3 from "../../assets/images/onDemCrsl-3.png";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const SolutionOnDemandScreen = () => {
   const data = [
@@ -59,6 +56,12 @@ const SolutionOnDemandScreen = () => {
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
+
   return (
     <Fragment>
       <section>
@@ -70,22 +73,34 @@ const SolutionOnDemandScreen = () => {
             borderRadius: "20px",
           }}
         >
-          <div className="row  text-center p-5 m-5">
+          <div className="row  text-center p-5 m-5" data-aos="fade-down">
             <div className="col-lg-4">
               <div className="whiteBack m-3">
-                <Image className="SODimage1 img-fluid" alt='Image not found' src={SODimage1} />
+                <Image
+                  className="SODimage1 img-fluid"
+                  alt="Image not found"
+                  src={SODimage1}
+                />
               </div>
               <p>Developed 40+ On-Demand Mobile Apps and Solutions</p>
             </div>
             <div className="col-lg-4">
               <div className="whiteBack m-3">
-                <Image className="SODimage1 img-fluid" alt='Image not found' src={SODimage2} />
+                <Image
+                  className="SODimage1 img-fluid"
+                  alt="Image not found"
+                  src={SODimage2}
+                />
               </div>
               <p>A Dedicated Team of On-Demand App Developers</p>
             </div>
             <div className="col-lg-4">
               <div className="whiteBack m-3">
-                <Image className="SODimage1 img-fluid" alt='Image not found' src={SODimage3} />
+                <Image
+                  className="SODimage1 img-fluid"
+                  alt="Image not found"
+                  src={SODimage3}
+                />
               </div>
               <p>Developed 40+ On-Demand Mobile Apps and Solutions</p>
             </div>
@@ -93,7 +108,7 @@ const SolutionOnDemandScreen = () => {
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <h1 className="text-center pt-5 mt-5 comman-heading">
             Top On Demand App Development Company
           </h1>
@@ -117,13 +132,13 @@ const SolutionOnDemandScreen = () => {
         </div>
       </section>
       <section className="onDemandImageCarousal m-3">
-        <div className="">
+        <div className="" data-aos="zoom-in">
           <h1 className="text-center pt-5 comman-heading">
             Top On-Demand Mobile Apps & Solutions Developed by Us
           </h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className="row blog text-center">
-            <div className="img-slide-box" alt='Image not found' ref={carousel}>
+            <div className="img-slide-box" alt="Image not found" ref={carousel}>
               <div className="item">
                 <div className="image">
                   {/* ------------------------------------------------------------------------ */}
@@ -183,12 +198,16 @@ const SolutionOnDemandScreen = () => {
             Key Features of On-Demand App Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row">
+          <div className="row"data-aos="zoom-out" >
             {data.map(({ service, detail }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 bold-p WebDev-dashed-border text-center ">
-                    <Image src={bookindMdl} alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                    <Image
+                      src={bookindMdl}
+                      alt="Image not found"
+                      className="mb-4 mt-4 img-fluid "
+                    />
                     <p>{service}</p>
                     <span>{detail}</span>
                   </div>

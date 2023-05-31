@@ -2,16 +2,15 @@ import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
 export default function Document() {
- 
   return (
     <Html lang="en">
       <Head />
       <link rel="icon" href="/favicon.ico" />
       {/* fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel = "stylesheet" type = "text/css" href = "./style.css" />
+      <link rel="stylesheet" type="text/css" href="./style.css" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link 
+      <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
         rel="stylesheet"
       />
@@ -44,13 +43,11 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></Script>
-    <Script>
-        {/* $(function () {
-            $("#loading").load("./fevicon.htm")
-        }); */}
-    </Script>
+        <Script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          crossorigin="anonymous"
+        ></Script>
         <Script
           src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
           integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
@@ -67,7 +64,11 @@ export default function Document() {
           crossorigin="anonymous"
         ></Script>
 
-        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></Script>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+          integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+          crossorigin="anonymous"
+        ></Script>
         {/* ----------------------------------------------------------------------- */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

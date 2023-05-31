@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect } from "react";
 import GridImage1 from "../../assets/images/IdesignImage.png";
-import GridImage2 from "../../assets/images/grid2image.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -9,7 +8,7 @@ const OurPortfolio = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1000);
+    }, 1500);
   }, []);
 
   return (

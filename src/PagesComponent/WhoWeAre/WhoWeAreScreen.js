@@ -8,6 +8,8 @@ import Applications1Img from "../../assets/images/applications1.png";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useDispatch, useSelector } from "react-redux";
 import { ABOUT_KOLI_INFOTECH } from "@/commonComponent/commanText";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const WhoWeAreScreen = () => {
   const dispatch = useDispatch();
@@ -24,12 +26,18 @@ const WhoWeAreScreen = () => {
     dispatch(getAllOurServicesStart());
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
+
   return (
     <Fragment>
       <section>
         <div className="container">
           <div className="p-5" style={{ display: "flex" }}>
-            <div className="row" style={{ alignItems: "center" }}>
+            <div className="row" style={{ alignItems: "center" }} data-aos="zoom-in" >
               <div className="col-lg-6 mt-5">
                 <h1 className="text-center comman-heading">
                   About KOLI infotech
@@ -38,7 +46,11 @@ const WhoWeAreScreen = () => {
                 <p className="para-for-hero">{ABOUT_KOLI_INFOTECH}</p>
               </div>
               <div className="col-lg-6 ">
-                <Image src={Image1} alt='Image not found' className="img-fluid testi-image" />
+                <Image
+                  src={Image1}
+                  alt="Image not found"
+                  className="img-fluid testi-image"
+                />
               </div>
             </div>
           </div>
@@ -50,7 +62,7 @@ const WhoWeAreScreen = () => {
             Services We Specialise In
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             {ourService?.map(({ title, description }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
@@ -75,17 +87,29 @@ const WhoWeAreScreen = () => {
             Customized Business Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row mb-4">
+          <div className="row mb-4" data-aos="fade-up">
             <div className="col-sm-4 mb-4">
               <div className=" p-3 cst-border-cls">
-                <Image src={Design1} alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                <Image
+                  src={Design1}
+                  alt="Image not found"
+                  className="mb-4 mt-4 img-fluid "
+                />
                 <h2>Web Designing</h2>
-                <p>{}</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
               </div>
             </div>
             <div className="col-sm-4 mb-4">
               <div className=" p-3 cst-border-cls">
-                <Image src={WebDevelopment1} alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                <Image
+                  src={WebDevelopment1}
+                  alt="Image not found"
+                  className="mb-4 mt-4 img-fluid "
+                />
                 <h2>Web Development</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -98,7 +122,7 @@ const WhoWeAreScreen = () => {
               <div className=" p-3 cst-border-cls">
                 <Image
                   src={Applications1Img}
-                  alt='Image not found'
+                  alt="Image not found"
                   className="mb-4 mt-4 img-fluid "
                 />
                 <h2>Mobile Development</h2>
@@ -114,11 +138,11 @@ const WhoWeAreScreen = () => {
       </section>
       <section>
         <div className="row mt-5 mb-5">
-          <Image src={Image2}  alt='Image not found' className="img-fluid" />
+          <Image src={Image2} alt="Image not found" className="img-fluid" />
         </div>
       </section>
     </Fragment>
   );
-};
+}
 
 export default WhoWeAreScreen;

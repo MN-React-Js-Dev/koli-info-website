@@ -3,16 +3,13 @@ import Header from "@/commonComponent/Header";
 import Image from "next/image";
 import PortfolioImage from "../assets/images/portfolioimage.png";
 import WebDesignImage from "../assets/images/webdesign1.png";
-import WebDesignImage2 from "../assets/images/webdesign2.png";
-import WebDesignImage3 from "../assets/images/webdesign3.png";
-import WebDesignImage4 from "../assets/images/webdesign4.png";
-import WebDesignImage5 from "../assets/images/webdesign5.png";
-import WebDesignImage6 from "../assets/images/webdesign6.png";
-import { Link } from "react-router-dom";
 import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { Fragment, useEffect, useState } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Footer from "@/commonComponent/Footer";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -27,6 +24,12 @@ const Portfolio = () => {
     setTimeout(() => {
       setLoader(false);
     }, 1000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
   }, []);
 
   useEffect(() => {
@@ -51,10 +54,10 @@ const Portfolio = () => {
 
   return (
     <Fragment>
-       {loader === true ? <LoaderComponent /> : console.log("null")}
+      {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
-        <div className="container">
+        <div className="container" data-aos="zoom-out">
           <div className="row" style={{ alignItems: "center" }}>
             <div className="col-sm-6 mt-5">
               <h1 className="hero-sec-header">Portfolio</h1>
@@ -64,19 +67,27 @@ const Portfolio = () => {
               </p>
             </div>
             <div className="col-sm-6">
-              <Image src={PortfolioImage} alt='Image not found' class="img-fluid" />
+              <Image
+                src={PortfolioImage}
+                alt="Image not found"
+                class="img-fluid"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <section className="our-portfolio">
-        <div className="container">
+        <div className="container" data-aos="fade-down">
           <h1 className="text-center mt-5 bold-font">Our Portfolio</h1>
           <div class="col-12 mb-5 mt-3 mx-auto  d-flex justify-content-center">
             {ourService?.map(({ title, id }, index) => {
               return (
-                <ul class="nav nav-pills p-3" key={index} style={{ background: "#E4ECFF" }}>
+                <ul
+                  class="nav nav-pills p-3"
+                  key={index}
+                  style={{ background: "#E4ECFF" }}
+                >
                   <li class="nav-item mx-2">
                     <a class="text-black" onClick={() => setDataID(id)}>
                       {title}
@@ -104,7 +115,11 @@ const Portfolio = () => {
                           }}
                         >
                           <div class="card-body">
-                            <Image src={WebDesignImage} alt='Image not found' class="card-img-top" />
+                            <Image
+                              src={WebDesignImage}
+                              alt="Image not found"
+                              class="card-img-top"
+                            />
                           </div>
                         </div>
                         <div style={{ fontSize: 21, fontWeight: "600" }}>
@@ -120,6 +135,9 @@ const Portfolio = () => {
           </div>
           <div className="row mb-2"></div>
         </div>
+      </section>
+      <section>
+        <Footer />
       </section>
     </Fragment>
   );

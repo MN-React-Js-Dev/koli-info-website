@@ -1,8 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment,useEffect } from "react";
 import Image from "next/image";
 import webDevimg2 from "../../assets/images/webDevimg-2.png";
 import smartphone from "../../assets/images/smartphone.png";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const WebDevScreen = () => {
   const data = [
@@ -59,11 +61,17 @@ const WebDevScreen = () => {
     },
   ];
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
+
   return (
     <Fragment>
       <section>
         <div className="container">
-          <div className="row mt-5" style={{ alignItems: "center" }}>
+          <div className="row mt-5" style={{ alignItems: "center" }} data-aos="zoom-out">
             <div className="col-lg-6 ">
               <Image src={webDevimg2} alt='Image not found' className="img-fluid testi-image" />
             </div>
@@ -83,7 +91,7 @@ const WebDevScreen = () => {
             Custom Mobile Application Development Company
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             {data.map(({ service, detail }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
@@ -112,8 +120,9 @@ const WebDevScreen = () => {
             color: "#fff",
             borderRadius: "20px",
           }}
+          data-aos="fade-up"
         >
-          <div className="row  text-center indstry-serve p-5 pt-5 pb-5">
+          <div className="row  text-center indstry-serve p-5 pt-5 pb-5" >
             <div className="col-lg-6">
               <h2>Looking For a Web </h2>
               <h2>Developer for Hire?</h2>
@@ -132,7 +141,7 @@ const WebDevScreen = () => {
             Industries We Serve
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row  text-center indstry-serve">
+          <div className="row  text-center indstry-serve" data-aos="fade-down">
             {industryWeServe.map((item, index) => (
               <>
                 <div className="col-sm-4 mb-5" key={index}>

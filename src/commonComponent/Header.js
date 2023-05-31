@@ -51,13 +51,13 @@ const Header = () => {
                           damping: 10,
                         }}
                       >
-                        <li className="nav-item ">
+                        <li className="nav-item">
                           <Link
-                            className="nav-link active header-links"
+                            className="nav-link active header-links "
                             aria-current="page"
                             href="/about-company"
                           >
-                            Company
+                            <span>Company</span>
                           </Link>
                         </li>
                       </motion.div>
@@ -76,7 +76,7 @@ const Header = () => {
                             aria-current="page"
                             href="/mobile-app-development"
                           >
-                            Services
+                            <span>Services</span>
                           </Link>
                         </li>
                       </motion.div>
@@ -95,7 +95,7 @@ const Header = () => {
                             aria-current="page"
                             href="/solution-on-demand"
                           >
-                            Solutions
+                            <span> Solutions</span>
                           </Link>
                         </li>
                       </motion.div>
@@ -114,7 +114,7 @@ const Header = () => {
                             aria-current="page"
                             href="/portfolio"
                           >
-                            Our Portfolio
+                            <span> Our Portfolio</span>
                           </Link>
                         </li>
                       </motion.div>
@@ -133,7 +133,7 @@ const Header = () => {
                             aria-current="page"
                             href="/career"
                           >
-                            Career
+                            <span> Career</span>
                           </Link>
                         </li>
                       </motion.div>

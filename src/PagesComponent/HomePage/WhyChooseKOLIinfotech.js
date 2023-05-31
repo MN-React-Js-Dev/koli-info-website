@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from "react";
+import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import TeamofficeImg from "../../assets/images/teamoffice.png";
 import Image from "next/image";
-import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -9,7 +9,7 @@ const WhyChooseKOLIinfotech = () => {
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
-    }, 1200);
+    }, 1500);
   }, []);
 
   return (

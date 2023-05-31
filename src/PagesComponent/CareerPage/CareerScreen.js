@@ -4,6 +4,8 @@ import CircleImg from "../../assets/images/circle.png";
 import { getAllCurrentOpeningsStart } from "@/Redux/module/getAllCurrentOpenings";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "@/commonComponent/Footer";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const CareerScreen = () => {
   const dispatch = useDispatch();
@@ -20,6 +22,12 @@ const CareerScreen = () => {
     }
   }, [Data]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
+
   return (
     <Fragment>
       <section className="testi-hero-image ">
@@ -28,7 +36,7 @@ const CareerScreen = () => {
           <div className="cst-hr-for-process mb-5" />
           {data?.map(({ job_title, experience, location }, index) => (
             <>
-              <div class="card mt-4 mb-4 pt-2 pb-2 px-3" key={index}>
+              <div class="card mt-4 mb-4 pt-2 pb-2 px-3" key={index} data-aos="fade-down">
                 <div class="card-body">
                   <div
                     className="row card-items"
@@ -67,9 +75,6 @@ const CareerScreen = () => {
             </>
           ))}
         </div>
-      </section>
-      <section>
-        <Footer />
       </section>
     </Fragment>
   );
