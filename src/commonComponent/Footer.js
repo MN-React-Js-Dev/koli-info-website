@@ -22,11 +22,10 @@ const Footer = () => {
       <section>
         <hr className="row ml-4 mr-4" />
         <div className="container" data-aos="fade-up">
-          <div className="row col-12  mt-5" >
+          <div className="row col-12  mt-5">
             <div
               className="col-lg-5  cst-footer-logo"
               style={{ bottom: "70px" }}
-
             >
               <Image src={SVGlogo} className="mt-5 cst-footer-logo" />
               <p
@@ -36,7 +35,7 @@ const Footer = () => {
                   fontSize: 15,
                 }}
               >
-               {`We are company that offer's all type of services` } 
+                {`We are company that offer's all type of services`}
               </p>
               <div className="d-flex ">
                 <motion.div
@@ -47,7 +46,7 @@ const Footer = () => {
                     borderRadius: "100%",
                   }}
                 >
-                  <div className="px-3"  data-aos="fade-up">
+                  <div className="px-3" data-aos="fade-up">
                     <Link
                       href="https://www.facebook.com/"
                       className="nav-link active"
@@ -68,7 +67,7 @@ const Footer = () => {
                     borderRadius: "100%",
                   }}
                 >
-                  <div className="px-3"  data-aos="fade-up">
+                  <div className="px-3" data-aos="fade-up">
                     <Link
                       href="https://twitter.com/home?lang=en"
                       className="nav-link active"
@@ -93,7 +92,7 @@ const Footer = () => {
                     borderRadius: "100%",
                   }}
                 >
-                  <div className="px-3"  data-aos="fade-up">
+                  <div className="px-3" data-aos="fade-up">
                     <Link
                       href="https://www.instagram.com/koli_infotech/"
                       className="nav-link active"
@@ -118,7 +117,7 @@ const Footer = () => {
                     borderRadius: "100%",
                   }}
                 >
-                  <div className="px-3"  data-aos="fade-up">
+                  <div className="px-3" data-aos="fade-up">
                     <Link
                       href="https://www.youtube.com/@koliinfotech"
                       className="nav-link active"
@@ -151,7 +150,9 @@ const Footer = () => {
               <Link href="/career" className="nav-link active">
                 <p>Jobs</p>
               </Link>
-              <p>Team</p>
+              <Link href="/leadership" className="nav-link active">
+                <p>Team</p>
+              </Link>
               <Link href="/testimonial" className="nav-link active">
                 <p>Tesimonials</p>
               </Link>

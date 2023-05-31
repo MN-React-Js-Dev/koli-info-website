@@ -143,6 +143,6 @@ const WhoWeAreScreen = () => {
       </section>
     </Fragment>
   );
-};
+}
 
 export default WhoWeAreScreen;
