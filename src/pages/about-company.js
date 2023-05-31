@@ -3,10 +3,21 @@ import React, { Fragment } from "react";
 import CustomerCImage from "../assets/images/cc.png";
 import Image from "next/image";
 import { OUR_MISSION_TEXT } from "../commonComponent/commanText";
+import { useState } from "react";
+import { useEffect } from "react";
+import LoaderComponent from "@/commonComponent/loaderComponent";
 
 const aboutCompany = () => {
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+  }, []);
   return (
     <Fragment>
+       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
         <div className="container">
