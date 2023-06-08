@@ -19,7 +19,7 @@ const WhyChooseKOLIinfotech = () => {
           <div className="row">
             <div className="col-sm-6"  data-aos="fade-right">
               <h1 className="whychooseTxt commanFont">Why Choose</h1>
-              <h1 className="whychooseTxt commanFont">KOLI infotech</h1>
+              <h1 className="whychooseTxt commanFont">KOLI infotech Pvt.Ltd</h1>
               <div className="hr-cst mb-3"></div>
               <p>{COMMAN_TEXT}</p>
             </div>

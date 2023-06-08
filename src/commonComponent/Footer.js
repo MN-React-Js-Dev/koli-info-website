@@ -138,11 +138,14 @@ const Footer = () => {
             </div>
             <div className="col-lg-2">
               <p style={{ fontSize: 20, fontWeight: "bold" }}>Services</p>
-              <p>How it Works</p>
-              <p>Guarantee</p>
+              <p>Web Application Development</p>
+              <p>Mobile Application Development</p>
               <p>Security</p>
-              <p>Report bug</p>
-              <p>Pricing</p>
+              <p>Cloud</p>
+              <p>DevOps</p>
+              <p>Artificial Intelligence & Machine Learning </p>
+              <p>QA & Testing</p>
+              <p>Custom Software Development</p>
             </div>
             <div className="col-lg-2">
               <p style={{ fontSize: 20, fontWeight: "bold" }}>Pages</p>
