@@ -9,7 +9,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const OurProcessSection = () => {
-
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
@@ -28,7 +27,7 @@ const OurProcessSection = () => {
                 <li data-aos="fade-up">
                   {/* <div className="circle first-circle"></div> */}
                   <Image
-                    style={{ height: 200, width: 200 }}
+                    style={{ height: 188, width: 200 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     src={ourProcessSection}
@@ -40,7 +39,7 @@ const OurProcessSection = () => {
                 <li data-aos="fade-up">
                   {/* <div className="circle second-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width: 200 }}
+                    style={{ height: 188, width: 200, marginLeft: 10 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}
@@ -52,7 +51,7 @@ const OurProcessSection = () => {
                 <li data-aos="fade-up">
                   {/* <div className="circle third-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width: 200 }}
+                    style={{ height: 188, width: 200, marginLeft: 10 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}
@@ -64,7 +63,7 @@ const OurProcessSection = () => {
                 <li data-aos="fade-up">
                   {/* <div className="circle fourth-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width: 200 }}
+                    style={{ height: 188, width: 200, marginLeft: 10 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}
@@ -76,7 +75,7 @@ const OurProcessSection = () => {
                 <li data-aos="fade-up">
                   {/* <div className="circle fifth-circle mx-3"></div> */}
                   <Image
-                    style={{ height: 200, width: 200 }}
+                    style={{ height: 188, width: 200, marginLeft: 10 }}
                     alt={"no image found"}
                     // className="img-fluid"
                     // width={'20px'}

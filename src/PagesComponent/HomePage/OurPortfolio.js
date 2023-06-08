@@ -31,8 +31,9 @@ const OurPortfolio = () => {
                   <div className="p-3 pt-5">
                     <h3 className="mobileHeadText commanFont">Mobile App</h3>
                     <p className="subHeadText commanHead2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et{" "}
+                      Our Android app development team leverages the latest
+                      frameworks like Flutter, Kotlin, and React Native to
+                      create high-quality apps with smooth functionality.
                     </p>
                   </div>
                 </div>
@@ -47,8 +48,9 @@ const OurPortfolio = () => {
                   <div className="p-3 pt-5">
                     <h3 className="mobileHeadText commanFont">Mobile App</h3>
                     <p className="subHeadText commanHead2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et{" "}
+                      Our Android app development team leverages the latest
+                      frameworks like Flutter, Kotlin, and React Native to
+                      create high-quality apps with smooth functionality.
                     </p>
                   </div>
                 </div>
@@ -60,8 +62,12 @@ const OurPortfolio = () => {
                       Web Development
                     </h3>
                     <p className="subHeadText commanHead2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et{" "}
+                      Our web design & development company offers end-to-end
+                      services that cover everything from design and development
+                      to maintenance and support, ensuring a seamless and
+                      hassle-free experience. We create elite, responsive and
+                      matchless websites with our excellent technology stacks,
+                      making your dreams into reality.
                     </p>
                   </div>
                 </div>
@@ -74,10 +80,16 @@ const OurPortfolio = () => {
                 </div>
                 <div className="col-sm-3">
                   <div className="p-3 pt-5">
-                    <h3 className="mobileHeadText commanFont">Mobile App</h3>
+                    <h3 className="mobileHeadText commanFont">
+                      Web Development
+                    </h3>
                     <p className="subHeadText commanHead2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et{" "}
+                      Our web design & development company offers end-to-end
+                      services that cover everything from design and development
+                      to maintenance and support, ensuring a seamless and
+                      hassle-free experience. We create elite, responsive and
+                      matchless websites with our excellent technology stacks,
+                      making your dreams into reality.
                     </p>
                   </div>
                 </div>

@@ -6,7 +6,7 @@ body {
 .nav-item .nav-link{
   font-weight: 200;
 }
-
+ 
 @font-face {
   font-family: "Montserrat";
   src: url(../assets/font-family/Montserrat-Medium.ttf);
@@ -237,14 +237,13 @@ ul li a {
 
 /* ------------------------------ */
 
-.comman-heading {
+/* .comman-heading {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 55px;
-  /* color: #000000; */
-}
+} */
 
 .circle {
   background: #ffffff;
@@ -810,8 +809,10 @@ li {
   height: 8px;
 }
 
-.blog .carousel-indicators .active {
-  background: #707070;
+.active{
+/* text-decoration-line: underline; */
+/* text-decoration-color: #3F689F  ;
+text-decoration-thickness: 2.5px; */
 }
 
 /* -------------------------------------------------------------------------------------------- */
@@ -862,9 +863,10 @@ figure img {
   height: 8px;
 }
 
-.blog .carousel-indicators .active {
-  background: #0fc9af;
-}
+/* .navbar-nav .nav-item .nav-link::after {
+  text-decoration: underline;
+  background-color: yellow;
+} */
 
 .item-carousel-blog-block {
   outline: medium none;
@@ -957,8 +959,13 @@ figure img {
 }
 
 /* -------------------------------------------------------------------------------------------- */
-/* loader csssss------------------------------ */
 
+
+
+.nav-link.active{
+   /* text-decoration: underline !important; */
+/* loader csssss------------------------------ */
+}
 .rotation {
   animation: loading 5s infinite;
 }
@@ -987,7 +994,7 @@ figure img {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background-color: rgba(110, 109, 109, 0.5);
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
