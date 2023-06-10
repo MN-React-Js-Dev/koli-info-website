@@ -1,5 +1,8 @@
 import React, { Fragment, useEffect } from "react";
 import SVGlogo from "../assets/Logo/SVGlogo.svg";
+import hiring from "../assets/images/hiring.png"
+import arrow from "../assets/images/up-arrow.png"
+import circleElement from "../assets/images/circleElement.png"
 import Image from "next/image";
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
@@ -138,14 +141,12 @@ const Footer = () => {
             </div>
             <div className="col-lg-2">
               <p style={{ fontSize: 20, fontWeight: "bold" }}>Services</p>
+              <p>Custom Software Development</p>
               <p>Web Application Development</p>
               <p>Mobile Application Development</p>
-              <p>Security</p>
-              <p>Cloud</p>
-              <p>DevOps</p>
-              <p>Artificial Intelligence & Machine Learning </p>
               <p>QA & Testing</p>
-              <p>Custom Software Development</p>
+              <p>Cloud & DevOps</p>
+              <p>Artificial Intelligence & Machine Learning </p>
             </div>
             <div className="col-lg-2">
               <p style={{ fontSize: 20, fontWeight: "bold" }}>Pages</p>
@@ -188,14 +189,52 @@ const Footer = () => {
         </div>
       </section>
       <hr className="row ml-4 mr-4" />
+      <div className="container" data-aos="fade-up">
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '1%',
+          marginTop: '3%',
+          width: '100%',
+        }}>
+          <div style={{ textAlign: 'left' }}>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+              <Image src={circleElement} style={{ position: 'absolute', }} />
+              <p style={{ fontWeight: 'bold', fontSize: 20, margin: 0, marginLeft: 40, }}>WE ARE HIRING!</p>
+              <Image src={hiring} style={{ height: 30, width: 30, marginLeft: 15 }} />
+            </div>
+            <div>
+              <p style={{ fontSize: 20, marginLeft: 40, }}>Join Our Team.</p>
+            </div>
+          </div>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+            <Link href="/Career" className="nav-link active" style={{ display: 'flex', alignItems: 'center' }}>
+              <p style={{ fontWeight: 'bold', color: '#0d6efd', marginRight: 5 }}>Apply Now</p>
+              <Image src={arrow} style={{ height: 40, width: 40, marginBottom: 15, marginRight: 40 }} />
+            </Link>
+          </div>
+        </div>
+      </div>
+      <hr className="row ml-4 mr-4" />
       <section>
         <div
-          style={{ textAlign: "center", marginBottom: "4%", marginTop: "4%" }}
+          style={{ textAlign: "center", marginBottom: "1%", marginTop: "1%" }}
         >
           <span>&copy;</span>
           <span>2023 KOLI infotech Pvt. Ltd. | All rights reserved.</span>
         </div>
       </section>
+
     </Fragment>
   );
 };

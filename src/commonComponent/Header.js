@@ -6,9 +6,10 @@ import SVGlogo from "../assets/Logo/SVGlogo.svg";
 import { motion } from "framer-motion";
 
 const Header = () => {
-  return (
+   
+   return (
     <Fragment>
-      <section>
+      <section> 
         <div className="container">
           <div className="row">
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -41,7 +42,8 @@ const Header = () => {
                     </li>
                   </ul>
                   <form className="d-flex" role="search">
-                    <ul className="navbar-nav me-auto  mb-lg-0 header-ul">
+                    <ul className="navbar-nav me-auto  mb-lg-0 header-ul"
+                    >
                       <motion.div
                         className="box"
                         whileHover={{ scale: 1.1 }}
@@ -114,7 +116,7 @@ const Header = () => {
                             aria-current="page"
                             href="/portfolio"
                           >
-                            <span> Our Portfolio</span>
+                            <span>OurPortfolio</span>
                           </Link>
                         </li>
                       </motion.div>
@@ -131,9 +133,28 @@ const Header = () => {
                           <Link
                             className="nav-link active header-links"
                             aria-current="page"
-                            href="/career"
+                            href="/OurCulture"
                           >
-                            <span> Career</span>
+                            <span>OurCulture</span>
+                          </Link>
+                        </li>
+                      </motion.div>
+                      <motion.div
+                        className="box"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <li className="nav-item">
+                          <Link
+                            className="nav-link active header-links"
+                            aria-current="page"
+                            href="/Career"
+                          >
+                            <span>Career</span>
                           </Link>
                         </li>
                       </motion.div>

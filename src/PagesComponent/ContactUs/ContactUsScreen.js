@@ -77,6 +77,7 @@ const ContactUsScreen = () => {
                   id="exampleFormControlTextarea1"
                   rows="3"
                   name="description"
+                  placeholder="Description"
                   value={data?.description}
                   onChange={handleChange}
                 ></textarea>
