@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import CircleImg from "../../assets/images/circle.png";
+import nodejs from "../../assets/images/nodejs.png";
 import { getAllCurrentOpeningsStart } from "@/Redux/module/getAllCurrentOpenings";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "@/commonComponent/Footer";
@@ -36,17 +37,17 @@ const CareerScreen = () => {
           <div className="cst-hr-for-process mb-5" />
           {data?.map(({ job_title, experience, location }, index) => (
             <>
-              <div class="card mt-4 mb-4 pt-2 pb-2 px-3" key={index} data-aos="fade-down">
+              <div class="card mt-3 mb-4 pt-2 pb-2 px-3" key={index} data-aos="fade-down">
                 <div class="card-body">
                   <div
                     className="row card-items"
                     style={{ alignItems: "center" }}
                   >
-                    <div className="col-sm-2">
-                      <Image className="card-image " src={CircleImg}></Image>
+                    <div className="col-sm-1">
+                      <Image className="card-image " src={nodejs}></Image>
                     </div>
                     <div
-                      className="col-sm-7"
+                      className="col-sm-9"
                       style={{
                         alignItems: "center",
                         paddingLeft: "20px",
@@ -60,7 +61,7 @@ const CareerScreen = () => {
                       <span className="bold-font"> Location : </span>
                       <span>{location}</span>
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-sm-1">
                       <a
                         href="#"
                         class="btn apply-now p-2"

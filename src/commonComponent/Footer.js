@@ -140,9 +140,7 @@ const Footer = () => {
               <p style={{ fontSize: 20, fontWeight: "bold" }}>Services</p>
               <p>Web Application Development</p>
               <p>Mobile Application Development</p>
-              <p>Security</p>
-              <p>Cloud</p>
-              <p>DevOps</p>
+              <p>Cloud & DevOps</p>
               <p>Artificial Intelligence & Machine Learning </p>
               <p>QA & Testing</p>
               <p>Custom Software Development</p>

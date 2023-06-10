@@ -78,7 +78,7 @@ ul li a {
 
 .header-ul li :hover {
   border-bottom: #000000 !important;
-  background-color: #37b2db !important;
+  /* background-color: #37b2db !important; */
   border-radius: 16px !important;
 }
 
@@ -111,7 +111,7 @@ ul li a {
 
 .contact-us-btn:hover {
   width: 157px;
-  background: #37b2db;
+  /* background: #37b2db; */
   border-radius: 170px;
 }
 
@@ -515,6 +515,11 @@ input {
   border-radius: 170px;
   background-color: #3f689f !important;
   color: #ffffff !important;
+}
+.apply-now:hover{
+  width: 157px;
+  background-color:#e83030 !important;
+  border-radius: 170px;
 }
 
 .schedule-appointment {
@@ -1005,4 +1010,10 @@ figure img {
 .apointment{
   margin-top: 5;
   margin-bottom: 2;
+}
+
+/* ----------------------------------------------- why choose Koli Infotech ----------------------- */
+.containerDiv{
+  margin-top: 100px;
+  margin-bottom: 80px;
 }

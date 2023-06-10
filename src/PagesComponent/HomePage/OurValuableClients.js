@@ -30,7 +30,7 @@ const OurValuableClients = () => {
   return (
     <Fragment>
       <section className="our-valuable-clients mb-5 mt-5">
-        <div className="container" >
+        <div className="container">
           <h1 className="text-center mt-5 comman-heading">
             Our Valuable Clients
           </h1>
@@ -39,11 +39,14 @@ const OurValuableClients = () => {
             <div class="row">
               {clients?.map(({ review, name }, index) => (
                 <div class="col-md-3" key={index}>
-                  <div className="client-box ratangale-one mt-3">
+                  <div
+                    className="client-box ratangale-one mt-3" /* style={{height:'300px', width:"280px"}} */
+                  >
                     <div className="text-center">
                       <Image src={Profile} />
                       <span className="t-dark">{name}</span>
-                      <span>{review}</span>
+                      {review?.length > 7 ? review.substring(0, 7) + "..." : ""}
+                      {/* <span>{review}</span> */}
                     </div>
                   </div>
                 </div>
