@@ -144,6 +144,8 @@ const Footer = () => {
               <p>Custom Software Development</p>
               <p>Web Application Development</p>
               <p>Mobile Application Development</p>
+              <p>Cloud & DevOps</p>
+              <p>Artificial Intelligence & Machine Learning </p>
               <p>QA & Testing</p>
               <p>Cloud & DevOps</p>
               <p>Artificial Intelligence & Machine Learning </p>

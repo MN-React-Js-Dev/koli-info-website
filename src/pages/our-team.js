@@ -4,6 +4,7 @@ import Header from "@/commonComponent/Header";
 import React, { Fragment, useState, useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import HeroSection from '@/PagesComponent/OurTeam/HeroSection'
 
 const CareerPage = () => {
   const [loader, setLoader] = useState(true);
@@ -13,13 +14,12 @@ const CareerPage = () => {
       setLoader(false);
     }, 1000);
   }, []);
-  
+
   return (
     <Fragment>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
-      <CareerPageHeroSection />
-      <CareerScreen />
+      <HeroSection/>
       <Footer />
     </Fragment>
   );

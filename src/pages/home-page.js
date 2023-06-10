@@ -1,4 +1,4 @@
-import React, { Fragment,useEffect,useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import HeroSection from "@/PagesComponent/HomePage/HeroSection";
 import OurPortfolio from "@/PagesComponent/HomePage/OurPortfolio";
 import OurProcessSection from "@/PagesComponent/HomePage/OurProcessSection";
@@ -11,29 +11,30 @@ import Header from "@/commonComponent/Header";
 import OurValuableClients from "@/PagesComponent/HomePage/OurValuableClients";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 
-
 const HomePage = () => {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   return (
     <Fragment>
-       {loader === true ? <LoaderComponent /> : console.log("null")}
-      <Header />
-      <HeroSection />
-      <OurProcessSection />
-      <OurServices />
-      <OurPortfolio />
-      <WhyChooseKOLIinfotech />
-      <OurValuableClients />
-      <OurTopBlogs />
-      <ScheduleAnAppointment />
-      <Footer />
+      <div style={{ width: "100%", marginRight: ".5 rem" }}>
+        {loader === true ? <LoaderComponent /> : console.log("null")}
+        <Header />
+        <HeroSection />
+        <OurProcessSection />
+        <OurServices />
+        <OurPortfolio />
+        <WhyChooseKOLIinfotech />
+        <OurValuableClients />
+        <OurTopBlogs />
+        <ScheduleAnAppointment />
+        <Footer />
+      </div>
     </Fragment>
   );
 };

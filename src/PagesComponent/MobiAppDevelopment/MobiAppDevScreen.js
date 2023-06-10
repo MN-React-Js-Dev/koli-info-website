@@ -116,7 +116,7 @@ const MobiAppDevScreen = () => {
       <section className="special-services">
         <div className="container">
           <h1 className="text-center text-white pt-5 mt-5 bold-font">
-            Mobile App Development Services
+            Our Services
           </h1>
           <div className="cst-hr-for-process mb-5" />
           {/* <div className="row" data-aos="fade-up">
@@ -161,7 +161,7 @@ const MobiAppDevScreen = () => {
       <section>
         <div className="container">
           <h1 className="text-center pt-5 mt-5 bold-font">
-            Explore Our Mobile App Portfolio
+            Explore Our Portfolio
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row " data-aos="fade-up">
