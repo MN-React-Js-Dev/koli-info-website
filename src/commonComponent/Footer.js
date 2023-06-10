@@ -147,8 +147,7 @@ const Footer = () => {
               <p>Cloud & DevOps</p>
               <p>Artificial Intelligence & Machine Learning </p>
               <p>QA & Testing</p>
-              <p>Cloud & DevOps</p>
-              <p>Artificial Intelligence & Machine Learning </p>
+               
             </div>
             <div className="col-lg-2">
               <p style={{ fontSize: 20, fontWeight: "bold" }}>Pages</p>
