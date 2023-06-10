@@ -62,11 +62,11 @@ const MissionSection = () => {
                     <h1 className="text-center">Mission and Values</h1>
                     <div className="cst-hr-for-process mb-5" />
                     <p style={{ textAlign: 'center' }}>At KoliInfotech, our mission is to cultivate a vibrant and inclusive work culture that inspires creativity, collaboration, and personal growth. We strive to create an environment where every team member feels valued, motivated, and empowered to achieve their best. By fostering a positive work culture, we aim to drive exceptional results for our clients while promoting employee satisfaction and well-being.</p>
-                    <div className="row" data-aos="zoom-out" >
+                    <div className="row equal-height-row" data-aos="fade-up" >
                         {data.map(({ service, detail, image }, index) => (
                             <>
-                                <div className="col-sm-4 mb-4" key={index}>
-                                    <div className="p-5 bold-p WebDev-dashed-border text-center ">
+                                <div className="col-sm-4 mb-4 d-flex" key={index}>
+                                    <div className="p-5 bold-p WebDev-dashed-border text-center">
                                         <Image
                                             src={image}
                                             alt="Image not found"

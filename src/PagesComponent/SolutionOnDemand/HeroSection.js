@@ -25,8 +25,7 @@ const SolutionOnDemandHeroSection = () => {
                 On-demand App Development Company
               </h1>
               <p className="para-for-hero">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt
+              We specialize in on-demand app development, delivering customized solutions to meet your specific business needs.
               </p>
               <a class="btn onDemndbtn m-4 p-3" type="submit">
                 Click Here to Get Your Free Quote

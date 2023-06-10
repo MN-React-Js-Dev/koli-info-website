@@ -20,35 +20,31 @@ import "aos/dist/aos.css";
 const MobiAppDevScreen = () => {
   const data = [
     {
-      service: "iPhone App Development",
+      service: "Custom Software Development",
       detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+        "We offer custom software development services tailored to meet your specific business needs and requirements.",
     },
     {
-      service: "iPad App Development",
+      service: "Web Application Development",
       detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+        "We specialize in web application development, creating robust and intuitive web-based solutions that empower businesses and enhance user experiences.",
     },
     {
-      service: "Android App Development",
+      service: "Mobile Application Development",
       detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+        "We offer comprehensive mobile application development services, crafting innovative and feature-rich apps for iOS and Android platforms.",
     },
     {
-      service: "Web App Developmentg",
+      service: "QA & Testing",
       detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+        "Our dedicated QA and testing team ensures the highest quality standards for your software applications, performing rigorous testing and bug-fixing to deliver flawless products.",
     },
     {
-      service: "Mobile App Design",
+      service: "Cloud & DevOps",
       detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+        "Our Cloud and DevOps services help businesses leverage the power of cloud computing and streamline their development processes for faster, scalable, and more efficient software deployment.",
     },
-    {
-      service: "Cross-Platform Mobile Apps",
-      detail:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    },
+     
   ];
 
   useEffect(() => {
@@ -92,7 +88,7 @@ const MobiAppDevScreen = () => {
               </div>
               <div className="col-sm-3 mb-3">
                 <div className="p-3 text-center award-box">
-                  <Image src={userInterface}  alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                  <Image src={userInterface} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -123,7 +119,7 @@ const MobiAppDevScreen = () => {
             Mobile App Development Services
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row" data-aos="fade-up">
+          {/* <div className="row" data-aos="fade-up">
             {data.map(({ service, detail }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
@@ -141,7 +137,25 @@ const MobiAppDevScreen = () => {
                 </div>
               </>
             ))}
+          </div> */}
+          <div className="row equal-height-row" data-aos="fade-up">
+            {data.map(({ service, detail }, index) => (
+              <div className="col-sm-4 mb-4 d-flex" key={index}>
+                <div className="p-5 awards-border d-flex flex-column flex-fill">
+                  <div alt='Image not found' className="text-center award-head-img">
+                    <h2>{service}</h2>
+                    <Image
+                      src={smartphone}
+                      alt="img"
+                      className="mb-4 mt-4 img-fluid"
+                    />
+                  </div>
+                  <p>{detail}</p>
+                </div>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
       <section>
@@ -235,7 +249,7 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#E9A218" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage6}  alt='Image not found' class="card-img-top" />
+                    <Image src={WebDesignImage6} alt='Image not found' class="card-img-top" />
                   </div>
                 </div>
                 <div className="card-btm-text">

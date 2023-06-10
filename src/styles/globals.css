@@ -3,10 +3,10 @@ body {
   margin: 0px;
 }
 
-.nav-item .nav-link{
+.nav-item .nav-link {
   font-weight: 200;
 }
- 
+
 @font-face {
   font-family: "Montserrat";
   src: url(../assets/font-family/Montserrat-Medium.ttf);
@@ -70,7 +70,8 @@ ul li a {
 }
 
 .headerColor {
-  color: red }
+  color: red
+}
 
 .header-ul li {
   padding: 5px 15px;
@@ -166,8 +167,8 @@ ul li a {
     width: 300px;
   }
 } */
-@media (max-width:425px){
-  .service-card{
+@media (max-width:425px) {
+  .service-card {
     width: 23rem;
   }
 }
@@ -374,14 +375,15 @@ li {
   border-radius: 0px;
   border-bottom: 2px solid #c4c4c4;
 }
-.service-card{
+
+.service-card {
   max-width: 60vh;
   max-height: 90vh;
   min-height: 25rem;
 
 }
 
-.service-card:hover{
+.service-card:hover {
   background-color: #5379d7;
 
 }
@@ -809,9 +811,9 @@ li {
   height: 8px;
 }
 
-.active{
-/* text-decoration-line: underline; */
-/* text-decoration-color: #3F689F  ;
+.active {
+  /* text-decoration-line: underline; */
+  /* text-decoration-color: #3F689F  ;
 text-decoration-thickness: 2.5px; */
 }
 
@@ -962,10 +964,11 @@ figure img {
 
 
 
-.nav-link.active{
-   /* text-decoration: underline !important; */
-/* loader csssss------------------------------ */
+.nav-link.active {
+  /* text-decoration: underline !important; */
+  /* loader csssss------------------------------ */
 }
+
 .rotation {
   animation: loading 5s infinite;
 }
@@ -987,6 +990,7 @@ figure img {
   align-self: center;
   margin-right: "50%";
 }
+
 .loader-container {
   position: fixed;
   top: 0;
@@ -1002,7 +1006,13 @@ figure img {
 
 /* ----------------------------------- schedule apointment------------------------------- */
 
-.apointment{
+.apointment {
   margin-top: 5;
   margin-bottom: 2;
+}
+
+/* ---------------------------------------Header --------------------------------------------- */
+
+.headerLogo {
+ width: 100;
 }

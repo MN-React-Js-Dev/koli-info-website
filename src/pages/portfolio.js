@@ -15,7 +15,7 @@ const Portfolio = () => {
   const dispatch = useDispatch();
   const [ourProduct, setOurProduct] = useState();
   const [ourService, setOurService] = useState();
-  const [dataID, setDataID] = useState();
+  const [dataID, setDataID] = useState(16);
   const data = useSelector((state) => state?.getOurProduct);
   const serviceData = useSelector((state) => state?.getOurServices);
   const [loader, setLoader] = useState(true);
@@ -89,7 +89,10 @@ const Portfolio = () => {
                   style={{ background: "#E4ECFF" }}
                 >
                   <li class="nav-item mx-2">
-                    <a class="text-black" onClick={() => setDataID(id)}>
+                    <a class="text-black" onClick={() => {
+                      setDataID(id),
+                        console.log("id", id)
+                    }}>
                       {title}
                     </a>
                   </li>
@@ -139,7 +142,7 @@ const Portfolio = () => {
       <section>
         <Footer />
       </section>
-    </Fragment>
+    </Fragment >
   );
 };
 

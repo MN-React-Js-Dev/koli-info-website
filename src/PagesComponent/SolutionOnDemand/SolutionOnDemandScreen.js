@@ -17,32 +17,32 @@ const SolutionOnDemandScreen = () => {
     {
       service: "Booking Module",
       detail:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "Our booking module provides a seamless and user-friendly platform for customers to easily book services or appointments.",
     },
     {
       service: "In-App Payments",
       detail:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "Our in-app payments feature enables secure and convenient transactions directly within the app, providing a seamless user experience.",
     },
     {
       service: "Ordering on-The-Go",
       detail:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "Our ordering on-the-go feature allows users to conveniently place orders and make purchases directly from their mobile devices, anytime and anywhere.",
     },
     {
       service: "Scheduling a booking/ order",
       detail:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "Our scheduling feature enables users to easily schedule/book appointments or orders based on their preferred date, time, and availability.",
     },
     {
       service: "Order Tracking",
       detail:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "Our order tracking system allows users to track the progress and status of their orders in real-time, providing transparency and peace of mind.",
     },
     {
       service: "Real-Time calls and Messages",
       detail:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "Our real-time communication feature enables users to make instant voice and video calls, as well as exchange messages in real-time, fostering seamless and efficient communication.",
     },
   ];
   const carousel = useRef(null);
@@ -198,10 +198,10 @@ const SolutionOnDemandScreen = () => {
             Key Features of On-Demand App Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row"data-aos="zoom-out" >
+          <div className="row" data-aos="zoom-out" >
             {data.map(({ service, detail }, index) => (
               <>
-                <div className="col-sm-4 mb-4" key={index}>
+                <div className="col-sm-4 mb-4 d-flex" key={index}>
                   <div className="p-5 bold-p WebDev-dashed-border text-center ">
                     <Image
                       src={bookindMdl}

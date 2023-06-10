@@ -36,7 +36,7 @@ const CareerScreen = () => {
           <div className="cst-hr-for-process mb-5" />
           {data?.map(({ job_title, experience, location }, index) => (
             <>
-              <div class="card mt-4 mb-4 pt-2 pb-2 px-3" key={index} data-aos="fade-down">
+              <div class="card mt-4 mb-5 pt-2 pb-2 px-3" key={index} data-aos="fade-down">
                 <div class="card-body">
                   <div
                     className="row card-items"
@@ -62,7 +62,7 @@ const CareerScreen = () => {
                     </div>
                     <div className="col-sm-3">
                       <a
-                        href="#"
+                          href="/JobDescription"
                         class="btn apply-now p-2"
                         style={{ borderRadius: "170px" }}
                       >
