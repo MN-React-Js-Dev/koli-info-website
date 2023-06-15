@@ -13,11 +13,10 @@ const CareerPage = () => {
       setLoader(false);
     }, 1000);
   }, []);
-  
+
   return (
     <Fragment>
       {loader === true ? <LoaderComponent /> : console.log("null")}
-      <Header />
       <CareerPageHeroSection />
       <CareerScreen />
       <Footer />

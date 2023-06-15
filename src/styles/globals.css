@@ -518,9 +518,10 @@ input {
   background-color: #3f689f !important;
   color: #ffffff !important;
 }
-.apply-now:hover{
+
+.apply-now:hover {
   width: 157px;
-  background-color:#e83030 !important;
+  background-color: #e83030 !important;
   border-radius: 170px;
 }
 
@@ -1019,9 +1020,33 @@ figure img {
 /* ---------------------------------------Header --------------------------------------------- */
 
 .headerLogo {
- width: 100;}
+  width: 100;
+}
+
 /* ----------------------------------------------- why choose Koli Infotech ----------------------- */
-.containerDiv{
+.containerDiv {
   margin-top: 100px;
   margin-bottom: 80px;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+  height: 70%;
+  border-top: none;
+}
+
+.box li:hover span {
+  color: #3498db;
+}
+
+.footerActivemenu:hover {
+  color: #3498db;
+}
+
+.activemenu {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3498db !important;
 }

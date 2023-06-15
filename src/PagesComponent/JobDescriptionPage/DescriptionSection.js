@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import CostumMobi from "../../assets/images/costum-mobile.png";
 import trophy from "../../assets/images/trophy.png";
@@ -16,17 +16,42 @@ import { Inder } from "next/font/google";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
-
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from 'next/router'
+import { getSingleOpenings } from "@/Redux/module/getSingleOpenings";
+import ReactHtmlParser from 'react-html-parser';
 
 
 const DescriptionSection = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const Id = router.query;
+  const [openingData, setOpeningData] = useState()
+  const data = useSelector((State) => State.SingleOpenings)
+  console.log(" data", openingData);
+
+  useEffect(() => {
+    dispatch(getSingleOpenings(Id))
+  }, [])
+
+  useEffect(() => {
+    setOpeningData(data?.Openings?.data?.ourOpenings)
+  }, [data.loading])
 
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
     }, 1500);
   }, []);
+
+  const handleClick = () => {
+    const ID = Id ;
+    console.log("sdasdasd", ID);
+    router.push({
+      pathname: "/ApplyJob",
+      query: ID
+    });
+  };
 
   return (
     <Fragment>
@@ -35,20 +60,24 @@ const DescriptionSection = () => {
 
           <div className="container">
             <h1 className="text-center  pt-5  bold-font" data-aos="flip-down">
-              ReactNative Developer</h1>
+              {openingData?.job_title}</h1>
             <div className="cst-hr-for-process" data-aos="flip-down" />
 
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: 20 }}>
               <h1 style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
-                2+ Years Experience</h1>
+                {openingData?.experience} YEARS</h1>
               <h1 style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
-                2+ Years Experience</h1>
+                FULL-TIME </h1>
               <h1 style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
-                2+ Years Experience</h1>
+                {openingData?.location.toUpperCase()}</h1>
             </div>
             <div className="mt-5">
-              <p>We are looking for an experienced and passionate ReactNative Developer.</p>
-              <p>Do you consider yourself to be a creative/out-of-the-box thinker in an effort to raise the bar high in development? If yes, you might just be the right member we are looking for. </p>
+              {ReactHtmlParser(openingData?.description)}
+            </div>
+            <div class="d-flex justify-content-center">
+              <a class="btn contact-us-btn m-4 p-2 mb-5" type="submit" onClick={() => handleClick()}>
+                Apply for this job
+              </a>
             </div>
           </div>
         </div>

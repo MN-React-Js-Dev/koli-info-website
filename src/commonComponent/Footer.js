@@ -25,167 +25,198 @@ const Footer = () => {
       <section>
         <hr className="row ml-4 mr-4" />
         <div className="container" data-aos="fade-up">
-          <div className="row col-12  mt-5">
-            <div
-              className="col-lg-5  cst-footer-logo"
-              style={{ bottom: "70px" }}
-            >
-              <Image src={SVGlogo} className="mt-5 cst-footer-logo" />
-              <p
-                style={{
-                  marginBottom: "10px",
-                  // marginLeft: "16px",
-                  fontSize: 15,
-                }}
+          <div style={{ display: 'flex', flexDirection: 'column' }} >
+            <div className="row col-12  mt-5">
+              <div
+                className="col-lg-4  cst-footer-logo"
+                style={{ bottom: "70px" }}
               >
-                {`We are company that offer's all type of services`}
-              </p>
-              <div className="d-flex ">
-                <motion.div
-                  whileHover={{ scale: 1.2, rotate: 360 }}
-                  whileTap={{
-                    scale: 0.8,
-                    rotate: -90,
-                    borderRadius: "100%",
+                <Image src={SVGlogo} className="mt-5 cst-footer-logo" />
+                <p
+                  style={{
+                    marginBottom: "10px",
+                    // marginLeft: "16px",
+                    fontSize: 15,
                   }}
                 >
-                  <div className="px-3" data-aos="fade-up">
+                  {`We are company that offer's all type of services`}
+                </p>
+                <div className="d-flex ">
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    whileTap={{
+                      scale: 0.8,
+                      rotate: -90,
+                      borderRadius: "100%",
+                    }}
+                  >
+                    <div className="px-3" data-aos="fade-up">
+                      <Link
+                        href="https://www.facebook.com/"
+                        className="nav-link active"
+                        target="_blank"
+                      >
+                        <BsFacebook
+                          className="icon"
+                          style={{ color: "#3F689F", fontSize: "30px" }}
+                        />
+                      </Link>
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    whileTap={{
+                      scale: 0.8,
+                      rotate: 90,
+                      borderRadius: "100%",
+                    }}
+                  >
+                    <div className="px-3" data-aos="fade-up">
+                      <Link
+                        href="https://twitter.com/home?lang=en"
+                        className="nav-link active"
+                        target="_blank"
+                      >
+                        <BsTwitter
+                          className="icon"
+                          style={{
+                            color: "#3F689F",
+                            fontSize: "30px",
+                            marginLeft: "2%",
+                          }}
+                        />
+                      </Link>
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 180 }}
+                    whileTap={{
+                      scale: 0.8,
+                      rotate: 90,
+                      borderRadius: "100%",
+                    }}
+                  >
+                    <div className="px-3" data-aos="fade-up">
+                      <Link
+                        href="https://www.instagram.com/koli_infotech/"
+                        className="nav-link active"
+                        target="_blank"
+                      >
+                        <BsInstagram
+                          className="icon"
+                          style={{
+                            color: "#3F689F",
+                            fontSize: "30px",
+                            marginLeft: "2%",
+                          }}
+                        />
+                      </Link>
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    whileTap={{
+                      scale: 0.8,
+                      rotate: 90,
+                      borderRadius: "100%",
+                    }}
+                  >
+                    <div className="px-3" data-aos="fade-up">
+                      <Link
+                        href="https://www.youtube.com/@koliinfotech"
+                        className="nav-link active"
+                        target="_blank"
+                      >
+                        <BsYoutube
+                          className="icon"
+                          style={{
+                            color: "#3F689F",
+                            fontSize: "30px",
+                            marginLeft: "2%",
+                          }}
+                        />
+                      </Link>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", justifyContent: 'center' }}>Services</p>
+                <div style={{ display: "flex", flexDirection: 'row' }}>
+                  <div >
+                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
+                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Web Application Development</p></Link>
+                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Mobile Application Development</p></Link>
+
+                  </div>
+                  <div className="ml-2">
+                    <Link href="/mobile-app-development" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
+                    <Link href="/mobile-app-development" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
+                    <Link href="/mobile-app-development" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", justifyContent: 'center' }}>Pages</p>
+                <div style={{ display: "flex", flexDirection: 'row' }}>
+                  <div className="ml-5">
+                    <p className="footerActivemenu">About </p>
+                    <Link href="/career" className="nav-link active">
+                      <p>Jobs</p>
+                    </Link>
+                    <Link href="/leadership" className="nav-link active">
+                      <p className="footerActivemenu">Team</p>
+                    </Link>
+                  </div>
+                  <div className="ml-5">
+                    <Link href="/testimonial" className="nav-link active">
+                      <p className="footerActivemenu">Tesimonials</p>
+                    </Link>
+                    <p className="footerActivemenu">Blog</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="row col-12  mt-1">
+              <div className="col-lg-4"></div>
+              <div className="col-lg-8">
+                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", justifyContent: 'center', marginRight: 300 }}>Our Address</p>
+                <div style={{ display: "flex", flexDirection: 'row' }}>
+                  <div className="col-lg-4">
+                    <p style={{ fontSize: 17, fontWeight: "bold" }}>
+                      HEAD OFFICE - SURAT
+                    </p>
+                    <p>4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat - 394210</p>
+                  </div>
+                  <div className="col-lg-5">
+                    <p style={{ fontSize: 17, fontWeight: "bold" }}>
+                      BRANCH OFFICE - AHMEDABAD
+                    </p>
+                    <p>A - 501, Sahajanand Complex Shahibaug, Ahmedabad - 380004</p>
                     <Link
-                      href="https://www.facebook.com/"
+                      href="mailto:info@koliinfotech.com"
                       className="nav-link active"
                       target="_blank"
                     >
-                      <BsFacebook
-                        className="icon"
-                        style={{ color: "#3F689F", fontSize: "30px" }}
-                      />
                     </Link>
                   </div>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.2, rotate: 360 }}
-                  whileTap={{
-                    scale: 0.8,
-                    rotate: 90,
-                    borderRadius: "100%",
-                  }}
-                >
-                  <div className="px-3" data-aos="fade-up">
-                    <Link
-                      href="https://twitter.com/home?lang=en"
-                      className="nav-link active"
-                      target="_blank"
-                    >
-                      <BsTwitter
-                        className="icon"
-                        style={{
-                          color: "#3F689F",
-                          fontSize: "30px",
-                          marginLeft: "2%",
-                        }}
-                      />
-                    </Link>
+
+                  <div className="col-lg-1" >
+                    <hr className="vertical-line" />
                   </div>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.2, rotate: 180 }}
-                  whileTap={{
-                    scale: 0.8,
-                    rotate: 90,
-                    borderRadius: "100%",
-                  }}
-                >
-                  <div className="px-3" data-aos="fade-up">
-                    <Link
-                      href="https://www.instagram.com/koli_infotech/"
-                      className="nav-link active"
-                      target="_blank"
-                    >
-                      <BsInstagram
-                        className="icon"
-                        style={{
-                          color: "#3F689F",
-                          fontSize: "30px",
-                          marginLeft: "2%",
-                        }}
-                      />
-                    </Link>
+                  <div className="col-lg-4">
+                    <p>info@koliinfotech.com</p>
+                    <p>
+                      +91-9773149186 <br />
+                      +91-8200591443
+                    </p>
                   </div>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.2, rotate: 360 }}
-                  whileTap={{
-                    scale: 0.8,
-                    rotate: 90,
-                    borderRadius: "100%",
-                  }}
-                >
-                  <div className="px-3" data-aos="fade-up">
-                    <Link
-                      href="https://www.youtube.com/@koliinfotech"
-                      className="nav-link active"
-                      target="_blank"
-                    >
-                      <BsYoutube
-                        className="icon"
-                        style={{
-                          color: "#3F689F",
-                          fontSize: "30px",
-                          marginLeft: "2%",
-                        }}
-                      />
-                    </Link>
-                  </div>
-                </motion.div>
+                </div>
               </div>
             </div>
-            <div className="col-lg-2">
-              <p style={{ fontSize: 20, fontWeight: "bold" }}>Services</p>
-              <p>Custom Software Development</p>
-              <p>Web Application Development</p>
-              <p>Mobile Application Development</p>
-              <p>Cloud & DevOps</p>
-              <p>Artificial Intelligence & Machine Learning </p>
-              <p>QA & Testing</p>
-               
-            </div>
-            <div className="col-lg-2">
-              <p style={{ fontSize: 20, fontWeight: "bold" }}>Pages</p>
-              <p>About Singleton</p>
-              <Link href="/career" className="nav-link active">
-                <p>Jobs</p>
-              </Link>
-              <Link href="/leadership" className="nav-link active">
-                <p>Team</p>
-              </Link>
-              <Link href="/testimonial" className="nav-link active">
-                <p>Tesimonials</p>
-              </Link>
-              <p>Blog</p>
-            </div>
-            <div className="col-lg-3">
-              <p style={{ fontSize: 20, fontWeight: "bold" }}>Our Address</p>
-              <p style={{ fontSize: 17, fontWeight: "bold" }}>
-                HEAD OFFICE - SURAT
-              </p>
-              <p>4087- 4094, Rajmahal mall, Dindoli</p>
-              <p>Surat, Gujarat - 394210</p>
-              <p style={{ fontSize: 17, fontWeight: "bold" }}>
-                BRANCH OFFICE - AHMEDABAD
-              </p>
-              <p>A - 501, Sahajanand Complex Shahibaug, Ahmedabad - 380004</p>
-              <Link
-                href="mailto:info@koliinfotech.com"
-                className="nav-link active"
-                target="_blank"
-              >
-                <p>info@koliinfotech.com</p>
-              </Link>
-              <p>
-                +91-9773149186 <br />
-                +91-8200591443
-              </p>
-            </div>
+
           </div>
         </div>
       </section>

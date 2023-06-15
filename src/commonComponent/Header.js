@@ -4,12 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import SVGlogo from "../assets/Logo/SVGlogo.svg";
 import { motion } from "framer-motion";
-
+import { useRouter } from "next/router";
 const Header = () => {
-   
-   return (
+  const router = useRouter()
+  return (
     <Fragment>
-      <section> 
+      <section>
         <div className="container">
           <div className="row">
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -55,7 +55,7 @@ const Header = () => {
                       >
                         <li className="nav-item">
                           <Link
-                            className="nav-link active header-links "
+                            className={`${router.pathname === "/about-company" ? 'activemenu' : ''}  nav-link active header-links `}
                             aria-current="page"
                             href="/about-company"
                           >
@@ -74,7 +74,7 @@ const Header = () => {
                       >
                         <li className="nav-item">
                           <Link
-                            className="nav-link active header-links"
+                            className={`${router.pathname === "/mobile-app-development" ? 'activemenu' : ''}  nav-link active header-links `}
                             aria-current="page"
                             href="/mobile-app-development"
                           >
@@ -93,7 +93,7 @@ const Header = () => {
                       >
                         <li className="nav-item">
                           <Link
-                            className="nav-link active header-links"
+                            className={`${router.pathname === "/solution-on-demand" ? 'activemenu' : ''}  nav-link active header-links `}
                             aria-current="page"
                             href="/solution-on-demand"
                           >
@@ -112,7 +112,7 @@ const Header = () => {
                       >
                         <li className="nav-item">
                           <Link
-                            className="nav-link active header-links"
+                            className={`${router.pathname === "/portfolio" ? 'activemenu' : ''}  nav-link active header-links `}
                             aria-current="page"
                             href="/portfolio"
                           >
@@ -131,7 +131,7 @@ const Header = () => {
                       >
                         <li className="nav-item">
                           <Link
-                            className="nav-link active header-links"
+                            className={`${router.pathname === "/OurCulture" ? 'activemenu' : ''}  nav-link active header-links `}
                             aria-current="page"
                             href="/OurCulture"
                           >
@@ -150,7 +150,7 @@ const Header = () => {
                       >
                         <li className="nav-item">
                           <Link
-                            className="nav-link active header-links"
+                            className={`${router.pathname === "/Career" ? 'activemenu' : ''}  nav-link active header-links `}
                             aria-current="page"
                             href="/Career"
                           >

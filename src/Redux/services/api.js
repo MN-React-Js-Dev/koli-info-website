@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "http://192.168.1.46:3000/api/";
+const baseUrl = "http://192.168.1.9:3000/api/";
 
 export const getAllOurServicesAPI = async () =>
   await axios.get(`${baseUrl}ourService/getAll-ourService`);
@@ -21,3 +21,9 @@ export const getAllEmployeeAPI = async () =>
 
 export const postContactUsAPI = async (contsactus) =>
   await axios.post(`${baseUrl}contactUs/create`, contsactus);
+
+export const getSingleOpeningsAPI = async (id) =>
+  await axios.get(`${baseUrl}openings/${id}`);
+
+export const createApplyJobAPI = async (data) =>
+  await axios.post(`${baseUrl}/applyjob/create`, data);

@@ -7,10 +7,15 @@ import { useDispatch, useSelector } from "react-redux";
 import Footer from "@/commonComponent/Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Link from 'next/link'
+import { useRouter } from "next/router";
+
 
 const CareerScreen = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
   const [data, setData] = useState();
+  const [openingId, SetOpeningId] = useState();
   const Data = useSelector((state) => state?.currentOpening?.CurrentOpenings);
 
   useEffect(() => {
@@ -29,13 +34,24 @@ const CareerScreen = () => {
     }, 1500);
   }, []);
 
+  const handleClick = (id) => {
+    const Id = { Id: id };
+    console.log(" Id ", Id);
+    router.push({
+      pathname: "/JobDescription",
+      query: Id
+    });
+  };
+
+
   return (
     <Fragment>
       <section className="testi-hero-image ">
         <div className="container">
           <h1 className=" text-center mt-5 comman-heading">Current Openings</h1>
           <div className="cst-hr-for-process mb-5" />
-          {data?.map(({ job_title, experience, location }, index) => (
+          {data?.map(({ job_title, experience, location, id }, index) => (
+
             <>
               <div class="card mt-3 mb-4 pt-2 pb-2 px-3" key={index} data-aos="fade-down">
                 <div class="card-body">
@@ -62,22 +78,22 @@ const CareerScreen = () => {
                       <span>{location}</span>
                     </div>
                     <div className="col-sm-1">
-                      <a
-                          href="/JobDescription"
+                       <span
+                        onClick={() => handleClick(id)}
                         class="btn apply-now p-2"
                         style={{ borderRadius: "170px" }}
                       >
                         Apply Now
-                      </a>
-                    </div>
+                      </span>
+                     </div>
                   </div>
                 </div>
-              </div>
+              </div >
             </>
           ))}
         </div>
       </section>
-    </Fragment>
+    </Fragment >
   );
 };
 

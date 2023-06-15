@@ -6,6 +6,8 @@ import clientSaga from "./getAllOurClientSaga";
 import CurrentOpeningSagas from "./getCurrentOpeningSaga";
 import contactusSaga from "./contactUsSaga";
 import employeesSaga from "./getAllEmployeeSaga";
+import SingleOpeningSaga from "./getSingleOpeningsSaga";
+import createApplyJobSaga from "./createApplyJobSaga";
 
 export default function* rootSaga() {
   yield all([
@@ -16,5 +18,7 @@ export default function* rootSaga() {
     CurrentOpeningSagas(),
     contactusSaga(),
     employeesSaga(),
+    SingleOpeningSaga(),
+    createApplyJobSaga()
   ]);
 }
