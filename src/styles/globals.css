@@ -77,10 +77,10 @@ ul li a {
   padding: 5px 15px;
 }
 
-.header-ul li :hover {
+.header-ul li:hover {
   border-bottom: #000000 !important;
   /* background-color: #37b2db !important; */
-  border-radius: 16px !important;
+  border-radius: 16px !important; 
 }
 
 .contact-us-btn {
@@ -294,6 +294,12 @@ li {
   list-style-type: none;
 }
 
+.client-box {
+  max-height: 100%;
+  min-height: 100%;
+  /* margin-top: 5px; */
+}
+
 @media (max-width: 768) {
   .client-box {
     margin-bottom: 15px !important;
@@ -378,14 +384,23 @@ li {
 
 .service-card {
   max-width: 60vh;
-  max-height: 90vh;
-  min-height: 25rem;
-
+  max-height: 100%;
+  min-height: 100%;
+}
+.topblog-card{
+  max-width: 60vh;
+  max-height: 100%;
+  min-height: 100%;
 }
 
 .service-card:hover {
   background-color: #5379d7;
-
+}
+.service-card p:hover{
+  color: #fff;
+}
+.topblog-card:hover{
+  background-color: #5379d7;
 }
 
 .grid-class-cst {

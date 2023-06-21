@@ -27,6 +27,11 @@ export function* onContactUSAsync({ payload }) {
   } catch (error) {
     const responseer = yield put(contactUsError(error.response));
     console.log(" responsedasdasd error", responseer);
+    yield put(contactUsError(error.response));
+    swal({
+      title: error?.response?.data?.message,
+      icon: "erroro",
+    })
   }
 }
 

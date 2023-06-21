@@ -38,13 +38,17 @@ const OurValuableClients = () => {
           <div class="container-fluid" data-aos="flip-up">
             <div class="row">
               {clients?.map(({ review, name }, index) => (
-                <div class="col-md-3" key={index}>
+                <div class="col-md-3 mb-5" key={index}>
                   <div
                     className="client-box ratangale-one mt-3" /* style={{height:'300px', width:"280px"}} */
                   >
                     <div className="text-center">
+                      <div>
                       <Image src={Profile} />
+                      </div>
+                      <div>
                       <span className="t-dark">{name}</span>
+                      </div>
                       {review?.length > 7 ? review.substring(0, 7) + "..." : ""}
                       {/* <span>{review}</span> */}
                     </div>

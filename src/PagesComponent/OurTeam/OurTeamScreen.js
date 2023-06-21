@@ -1,43 +1,62 @@
-// import React, { Fragment, useEffect } from "react";
-// import ourTeam from "../../assets/images/ourTeam.png";
-// import Image from "next/image";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
+import React, { useState, useRef, Fragment, useEffect } from "react";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllOurBlogStart } from "@/Redux/module/getOurBlogAction";
+import Mobile1 from "../../assets/images/mobile1.png";
+import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-// const CareerPageHeroSection = () => {
-//   useEffect(() => {
-//     setTimeout(() => {
-//       Aos.init();
-//     }, 1500);
-//   }, []);
+const OurTeamScreen = () => {
+  const data = [
+    {
+      Image: Mobile1,
+      Name: "Ajay Koli",
+      Position: "Chief Executive Office",
+      
+      Image: Mobile1,
+      Name: "Ajay Koli",
+      Position: "Chief Executive Office",
+    },
+  ];
 
-//   return (
-//     <Fragment>
-//       <section
-//         className="testi-hero-image "
-//         style={{ backgroundColor: "#E3E3FF" }}
-//       >
-//         <div className="container">
-//           <div className="row" style={{ alignItems: "center" }}>
-//             <div className="col-lg-6 mt-5 text-start" data-aos="zoom-out-right">
-//               <h1 className="hero-sec-header">Join KOLI infotech</h1>
-//               <p className="para-for-hero">
-//                 From sketches to construction, our team brings your vision to
-//                 life with design and development expertise.
-//               </p>
-//             </div>
-//             <div className="col-lg-6 " data-aos="zoom-out-left">
-//               <Image
-//                 src={ourTeam}
-//                 alt="Image not found"
-//                 className="img-fluid testi-image"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </Fragment>
-//   );
-// };
+  useEffect(() => {
+    setTimeout(() => {
+      Aos.init();
+    }, 1500);
+  }, []);
 
-// export default CareerPageHeroSection;
+  return (
+    <Fragment>
+      <section className="top-blogs">
+        <div className="container">
+          <h1 className=" text-center mt-5 bold-font">Our Top Blogs</h1>
+          <div className="cst-hr-for-process mb-5"></div>
+          <div className="row">
+            <div className="img-slide-box" data-aos="flip-up">
+              {data?.map(({ Image, Name, Position }, index) => {
+                return (
+                  <div className="col-sm-6" key={index}>
+                    <div class="card m-3 service-card">
+                      <Image
+                        src={Image}
+                        alt="Image not found"
+                        className="card-img-top"
+                      />
+                      <div class="card-body">
+                        <h3>{Name}</h3>
+                        <p class="card-text">{Position}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    </Fragment>
+  );
+};
+
+export default OurTeamScreen;

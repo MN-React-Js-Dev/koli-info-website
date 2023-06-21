@@ -49,8 +49,8 @@ const OurTopBlogs = () => {
               {ourBlogs?.rows?.map(
                 ({ created_at, title, description }, index) => {
                   return (
-                    <div className="col-sm-6" key={index}>
-                      <div class="card m-3 service-card">
+                    <div className="col-sm-4" key={index}>
+                      <div class="card m-3 topblog-card">
                         <div class="date-cst">
                           <span class="day">{created_at}</span>
                         </div>

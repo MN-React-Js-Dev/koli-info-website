@@ -12,7 +12,7 @@ const LeadershipTeam = () => {
   const Data = useSelector((state) => state?.employeeData?.allemployee);
   const final = [];
 
-  useEffect(() => {
+  useEffect(() => {   
     dispatch(getAllEmployeeStart());
   }, []);
 
