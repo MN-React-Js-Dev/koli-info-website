@@ -17,7 +17,7 @@ const CareerScreen = () => {
   const [data, setData] = useState();
   const [openingId, SetOpeningId] = useState();
   const Data = useSelector((state) => state?.currentOpening?.CurrentOpenings);
-
+  console.log("data~~~~~~~~~~~~~>",data);
   useEffect(() => {
     dispatch(getAllCurrentOpeningsStart());
   }, []);

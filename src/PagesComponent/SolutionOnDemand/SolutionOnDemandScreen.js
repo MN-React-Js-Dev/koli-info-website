@@ -8,6 +8,16 @@ import bookindMdl from "../../assets/images/bookindMdl.png";
 import onDemCrsl1 from "../../assets/images/onDemCrsl-1.png";
 import onDemCrsl2 from "../../assets/images/onDemCrsl-2.png";
 import onDemCrsl3 from "../../assets/images/onDemCrsl-3.png";
+import LeftArrow from '.././../assets/images/leftArrow.png'
+import RightArrow from '.././../assets/images/rightArrow.png'
+// --------------------------------------------------------------------
+import AppDevelopment from '.././../assets/images/mobile-app-development-trends.png'
+// import AppDevelopment from '.././../assets/images/App-development.jpg'
+import mobileApp from '.././../assets/images/vaival-application.png'
+import AppTesting from '.././../assets/images/mobile-app-testing.jpg'
+import AppSecuriry from '.././../assets/images/mobile-application-security.jpg'
+import AppTestingQa from '.././../assets/images/mobile-app-development-testing-QA.png'
+
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -113,81 +123,82 @@ const SolutionOnDemandScreen = () => {
             Top On Demand App Development Company
           </h1>
           <div className="cst-hr-for-process mb-3" />
-          <div className="row m-5">
+          <div className="row m-5 get-consultancy">
             <div className="text-center">
               <p>{COMMAN_TEXT}</p>
-              <a
-                href="#"
-                className="btn btn-danger m-4 get-consultancy"
-                style={{
-                  borderRadius: "50px",
-                  fontWeight: "bold",
-                }}
-                type="submit"
-              >
-                Get Your Free Consultation
-              </a>
+            </div>
+            <div className="text-center">
+            <a
+              href="#"
+              className="btn btn-danger m-4 "
+              
+              type="submit"
+            >
+              Get Your Free Consultation
+            </a>
             </div>
           </div>
         </div>
       </section>
       <section className="onDemandImageCarousal m-3">
-        <div className="" data-aos="zoom-in">
-          <h1 className="text-center pt-5 comman-heading">
-            Top On-Demand Mobile Apps & Solutions Developed by Us
-          </h1>
-          <div className="cst-hr-for-process mb-5"></div>
-          <div className="row blog text-center">
-            <div className="img-slide-box" alt="Image not found" ref={carousel}>
-              <div className="item">
-                <div className="image">
-                  {/* ------------------------------------------------------------------------ */}
-                  <Image
-                    src={onDemCrsl1}
-                    alt="image"
-                    className="slide-img m-2"
-                  />
-                  <Image
-                    src={onDemCrsl2}
-                    alt="image"
-                    className="slide-img m-2"
-                  />
-                  <Image
-                    src={onDemCrsl3}
-                    alt="image"
-                    className="slide-img m-2"
-                  />
-                  <Image
-                    src={onDemCrsl1}
-                    alt="image"
-                    className="slide-img m-2"
-                  />
-                  <Image
-                    src={onDemCrsl2}
-                    alt="image"
-                    className="slide-img m-2"
-                  />
-                  <Image
-                    src={onDemCrsl3}
-                    alt="image"
-                    className="slide-img m-2"
-                  />
-                  <Image
-                    src={onDemCrsl1}
-                    alt="image"
-                    className="slide-img m-2"
-                  />
-                  {/* ------------------------------------------------------------------------ */}
+        <div className="container">
+          <div className="" data-aos="fade-up">
+            <h1 className="text-center pt-5 comman-heading">
+              Top On-Demand Mobile Apps & Solutions Developed by Us
+            </h1>
+            <div className="cst-hr-for-process mb-5"></div>
+            <div className="row blog text-center">
+              <div className="img-slide-box" alt="Image not found" ref={carousel}>
+                <div className="item">
+                  <div className="image">
+                    <Image
+                      src={AppDevelopment}
+                      alt="image"
+                      className="slide-img m-2"
+                    />
+                    <Image
+                      src={mobileApp}
+                      alt="image"
+                      className="slide-img m-2"
+                    />
+                    <Image
+                      src={AppTesting}
+                      alt="image"
+                      className="slide-img m-2"
+                    />
+                    <Image
+                      src={AppSecuriry}
+                      alt="image"
+                      className="slide-img m-2"
+                    />
+                    <Image
+                      src={AppTestingQa}
+                      alt="image"
+                      className="slide-img m-2"
+                    />
+                    <Image
+                      src={AppDevelopment}
+                      alt="image"
+                      className="slide-img m-2"
+                    />
+                    <Image
+                      src={onDemCrsl1}
+                      alt="image"
+                      className="slide-img m-2"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="buttons m-3">
-              <button onClick={handleLeftClick} className="m-3 p-3">
-                <AiOutlineLeft />
+              <div className="buttons m-3">
+              <button onClick={handleLeftClick} className="m-4 p-1">
+                {/* <AiOutlineLeft /> */}
+                <Image style={{borderRadius:'50%', height:'40px',width:'40px'}} src={LeftArrow}></Image>
               </button>
-              <button onClick={handleRightClick} className="m-3 p-3">
-                <AiOutlineRight />
+              <button onClick={handleRightClick} className="m-4 p-1">
+                {/* <AiOutlineRight /> */}
+                <Image style={{borderRadius:'50%', height:'40px',width:'40px'}} src={RightArrow }></Image>
               </button>
+              </div>
             </div>
           </div>
         </div>
@@ -198,7 +209,7 @@ const SolutionOnDemandScreen = () => {
             Key Features of On-Demand App Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row" data-aos="zoom-out" >
+          <div className="row" data-aos="fade-up" >
             {data.map(({ service, detail }, index) => (
               <>
                 <div className="col-sm-4 mb-4 d-flex" key={index}>

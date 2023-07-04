@@ -57,7 +57,7 @@ const ScheduleAnAppointment = () => {
                   Contact Us
                 </h2>
                 <div className="hr-cst mb-3"></div>
-                <form data-aos="zoom-in-left">
+                <form data-aos="zoom-in-down">
                   <div class="form-group">
                     <input
                       type="text"

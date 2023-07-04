@@ -59,7 +59,7 @@ const MobiAppDevScreen = () => {
         <div className="container">
           <div className="awards">
             <div className="row m-5" data-aos="fade-up">
-              <div className="col-sm-3 mb-3">
+              <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
                   <Image src={trophy} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
@@ -68,7 +68,7 @@ const MobiAppDevScreen = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-sm-3 mb-3">
+              <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
                   <Image src={like} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
@@ -77,7 +77,7 @@ const MobiAppDevScreen = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-sm-3 mb-3">
+              <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
                   <Image src={rating} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
@@ -86,7 +86,7 @@ const MobiAppDevScreen = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-sm-3 mb-3">
+              <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
                   <Image src={userInterface} alt='Image not found' className="mb-4 mt-4 img-fluid " />
                   <p>
@@ -99,14 +99,14 @@ const MobiAppDevScreen = () => {
           </div>
           <div className="p-5" style={{ display: "flex" }}>
             <div className="row" style={{ alignItems: "center" }}>
-              <div className="col-lg-7 mt-5" data-aos="fade-right">
+              <div className="col-lg-7 mt-5" data-aos="fade-up">
                 <h1 className=" bold-font">
                   Custom Mobile Application Development Company
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
                 <p className="para-for-hero">{COMMAN_TEXT}</p>
               </div>
-              <div className="col-lg-5 " data-aos="fade-left">
+              <div className="col-lg-5 " data-aos="fade-up">
                 <Image src={CostumMobi} alt='Image not found' className="img-fluid testi-image" />
               </div>
             </div>

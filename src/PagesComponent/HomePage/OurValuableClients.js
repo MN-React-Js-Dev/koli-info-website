@@ -35,7 +35,7 @@ const OurValuableClients = () => {
             Our Valuable Clients
           </h1>
           <div className="cst-hr-for-process mb-5"></div>
-          <div class="container-fluid" data-aos="flip-up">
+          <div class="container-fluid" data-aos="fade-up">
             <div class="row">
               {clients?.map(({ review, name }, index) => (
                 <div class="col-md-3 mb-5" key={index}>
@@ -44,12 +44,12 @@ const OurValuableClients = () => {
                   >
                     <div className="text-center">
                       <div>
-                      <Image src={Profile} />
+                      <Image className="mt-3 mb-3" src={Profile} />
                       </div>
                       <div>
-                      <span className="t-dark">{name}</span>
+                      <span style={{fontWeight:'bold'}}>{name}</span>
                       </div>
-                      {review?.length > 7 ? review.substring(0, 7) + "..." : ""}
+                      {review?.length > 25 ? review.substring(0, 25) + "..." : ""}
                       {/* <span>{review}</span> */}
                     </div>
                   </div>

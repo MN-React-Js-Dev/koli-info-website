@@ -71,7 +71,7 @@ const WebDevScreen = () => {
     <Fragment>
       <section>
         <div className="container">
-          <div className="row mt-5" style={{ alignItems: "center" }} data-aos="zoom-out">
+          <div className="row mt-5" style={{ alignItems: "center" }} data-aos="fade-up">
             <div className="col-lg-6 ">
               <Image src={webDevimg2} alt='Image not found' className="img-fluid testi-image" />
             </div>
@@ -96,12 +96,12 @@ const WebDevScreen = () => {
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 WebDev-dashed-border">
-                    <div className="text-center award-head-img award-head-img">
-                      <h2>{service}</h2>
+                    <div className="text-center award-head-img">
+                      <h4>{service}</h4>
                       <Image
                         src={smartphone}
                         alt='Image not found'
-                        className="mb-4 mt-4 img-fluid "
+                        className="mb-4 mt-4 img-fluid award-Image"
                       />
                     </div>
                     <p>{detail}</p>
@@ -127,11 +127,11 @@ const WebDevScreen = () => {
               <h2>Looking For a Web </h2>
               <h2>Developer for Hire?</h2>
             </div>
-            <div className="col-lg-6  hire-btn">
-              <button className="fw-bold p-3 text-white btn btn">
+            {/* <div className="col-lg-6  hire-btn"> */}
+              <a href="/contact-us" className="fw-bold hire-btn col-lg-6 p-3 text-white btn btn-danger rounded-pill">
                 Hire Web Developers Now
-              </button>
-            </div>
+              </a>
+            {/* </div> */}
           </div>
         </div>
       </section>

@@ -37,10 +37,10 @@ const WhoWeAreScreen = () => {
       <section>
         <div className="container">
           <div className="p-5" style={{ display: "flex" }}>
-            <div className="row" style={{ alignItems: "center" }} data-aos="zoom-in" >
+            <div className="row" style={{ alignItems: "center" }} data-aos="fade-down" >
               <div className="col-lg-6 mt-5">
                 <h1 className="text-center comman-heading">
-                  About KOLI infotech
+                  About <span style={{color:"#3f689f",fontWeight:'bold'}}>KOLI</span> infotech
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
                 <p className="para-for-hero">{ABOUT_KOLI_INFOTECH}</p>
@@ -136,10 +136,10 @@ const WhoWeAreScreen = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className="row mt-5 mb-5">
-          <Image src={Image2} alt="Image not found" className="img-fluid" />
-        </div>
+      <section className="mt-5 mb-5">
+        {/* <div className="row mt-5 mb-5 "> */}
+          <Image src={Image2} alt="Image not found" className="img-fluid"/>
+        {/* </div> */}
       </section>
     </Fragment>
   );

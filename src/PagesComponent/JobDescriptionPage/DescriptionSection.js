@@ -19,6 +19,8 @@ import "aos/dist/aos.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router'
 import { getSingleOpenings } from "@/Redux/module/getSingleOpenings";
+// import ReactHtmlParser from 'react-html-parser';
+// import ReactHtmlParser from 'react-html-parser';
 import ReactHtmlParser from 'react-html-parser';
 
 
@@ -45,7 +47,7 @@ const DescriptionSection = () => {
   }, []);
 
   const handleClick = () => {
-    const ID = Id ;
+    const ID = Id;
     console.log("sdasdasd", ID);
     router.push({
       pathname: "/ApplyJob",
@@ -63,12 +65,12 @@ const DescriptionSection = () => {
               {openingData?.job_title}</h1>
             <div className="cst-hr-for-process" data-aos="flip-down" />
 
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: 20 }}>
-              <h1 style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
+            <div className="col-lg-12 text-center" style={{ display: 'flex', marginTop: 20 }}>
+              <h1 className="col-lg-4" style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
                 {openingData?.experience} YEARS</h1>
-              <h1 style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
+              <h1 className="col-lg-4" style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
                 FULL-TIME </h1>
-              <h1 style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
+              <h1 className="col-lg-4" style={{ color: '#2a64f9', fontSize: 20 }} data-aos="flip-down">
                 {openingData?.location.toUpperCase()}</h1>
             </div>
             <div className="mt-5">

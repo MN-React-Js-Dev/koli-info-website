@@ -4,7 +4,9 @@ import Script from "next/script";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+      </Head>
       <link rel="icon" href="/favicon.ico" />
       {/* fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -77,6 +79,7 @@ export default function Document() {
         ></Script>
         <Script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></Script>
         <Script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></Script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       </body>
     </Html>
   );

@@ -2,7 +2,7 @@ import Header from "@/commonComponent/Header";
 import React, { Fragment,useState,useEffect } from "react";
 import CustomerCImage from "../assets/images/cc.png";
 import Image from "next/image";
-import { OUR_MISSION_TEXT } from "../commonComponent/commanText";
+import { OUR_MISSION_TEXT, OUR_VISSON_TEXT } from "../commonComponent/commanText";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -32,7 +32,7 @@ const AboutCompany = () => {
           <div
             className="row"
             style={{ alignItems: "center" }}
-            data-aos="flip-up"
+            data-aos="fade-up"
           >
             <div className="col-lg-6 mt-5">
               <h1 className="hero-sec-header">About Company</h1>
@@ -52,15 +52,22 @@ const AboutCompany = () => {
         </div>
       </section>
       <section className="our-mission mt-5 mb-5">
-        <div className="container" data-aos="fade-right">
+        <div className="container" data-aos="fade-up">
           <h1 className="comman-heading">Our Mission</h1>
           <div className="hr-cst mb-3" />
           <p>{OUR_MISSION_TEXT}</p>
         </div>
       </section>
+      <section className="our-mission mt-5 mb-5">
+        <div className="container" data-aos="fade-up">
+          <h1 className="comman-heading">Our Vission</h1>
+          <div className="hr-cst mb-3" />
+          <p>{OUR_VISSON_TEXT}</p>
+        </div>
+      </section>
 
       <section className="qualities-we-take">
-        <div className="container" data-aos="zoom-in-left">
+        <div className="container" data-aos="fade-down">
           <h1 className="comman-heading">Qualities we take pride in</h1>
           <div className="hr-cst mb-3" />
           <div className="row mb-5">

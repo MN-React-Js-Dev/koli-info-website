@@ -35,7 +35,6 @@ const Footer = () => {
                 <p
                   style={{
                     marginBottom: "10px",
-                    // marginLeft: "16px",
                     fontSize: 15,
                   }}
                 >
@@ -141,34 +140,39 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", justifyContent: 'center' }}>Services</p>
+                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", }}>Services</p>
                 <div style={{ display: "flex", flexDirection: 'row' }}>
                   <div >
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Web Application Development</p></Link>
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Mobile Application Development</p></Link>
 
-                  </div>
-                  <div className="ml-2">
+                    {/* </div>
+                  <div className="ml-2"> */}
                     <Link href="/mobile-app-development" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
                     <Link href="/mobile-app-development" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
                     <Link href="/mobile-app-development" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
                   </div>
                 </div>
               </div>
+              <div className="col-lg-1" >
+                <hr className="vertical-line" />
+              </div>
               <div className="col-lg-3">
-                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", justifyContent: 'center' }}>Pages</p>
+                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex" }}>Pages</p>
                 <div style={{ display: "flex", flexDirection: 'row' }}>
-                  <div className="ml-5">
-                    <p className="footerActivemenu">About </p>
-                    <Link href="/career" className="nav-link active">
-                      <p>Jobs</p>
+                  <div className="">
+                  <Link href="/" className="nav-link active">
+                      <p className="footerActivemenu">About</p>
+                    </Link>
+                    <Link href="/Career" className="nav-link active">
+                      <p className="footerActivemenu">Jobs</p>
                     </Link>
                     <Link href="/leadership" className="nav-link active">
                       <p className="footerActivemenu">Team</p>
                     </Link>
-                  </div>
-                  <div className="ml-5">
+                    {/* </div>
+                  <div className="ml-5"> */}
                     <Link href="/testimonial" className="nav-link active">
                       <p className="footerActivemenu">Tesimonials</p>
                     </Link>
@@ -176,47 +180,48 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-
             </div>
-
-            <div className="row col-12  mt-1">
-              <div className="col-lg-4"></div>
-              <div className="col-lg-8">
-                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", justifyContent: 'center', marginRight: 300 }}>Our Address</p>
-                <div style={{ display: "flex", flexDirection: 'row' }}>
-                  <div className="col-lg-4">
-                    <p style={{ fontSize: 17, fontWeight: "bold" }}>
-                      HEAD OFFICE - SURAT
-                    </p>
-                    <p>4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat - 394210</p>
-                  </div>
-                  <div className="col-lg-5">
-                    <p style={{ fontSize: 17, fontWeight: "bold" }}>
-                      BRANCH OFFICE - AHMEDABAD
-                    </p>
-                    <p>A - 501, Sahajanand Complex Shahibaug, Ahmedabad - 380004</p>
-                    <Link
-                      href="mailto:info@koliinfotech.com"
-                      className="nav-link active"
-                      target="_blank"
-                    >
-                    </Link>
-                  </div>
-
-                  <div className="col-lg-1" >
-                    <hr className="vertical-line" />
-                  </div>
-                  <div className="col-lg-4">
+            <div >
+              {/* <div >
+                <hr className="horizantol-line" />
+              </div> */}
+              <div style={{ display: "flex", flexDirection: 'row' }}>
+                <div className="row col-lg-12  mt-5">
+                  <div className="col-lg-3 text-center">
+                    <h4>Contacts</h4>
                     <p>info@koliinfotech.com</p>
                     <p>
                       +91-9773149186 <br />
                       +91-8200591443
                     </p>
                   </div>
+                  <div className="col-lg-1" >
+                    <hr className="vertical-line" />
+                  </div>
+                  <div className="row col-lg-8 text-center">
+                    <h4 className="text-center">Our Address</h4>
+                    <div className="col-lg-6">
+                      <p style={{ fontSize: 17, fontWeight: "bold" }}>
+                        HEAD OFFICE - SURAT
+                      </p>
+                      <p>4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat - 394210</p>
+                    </div>
+                    <div className="col-lg-6">
+                      <p style={{ fontSize: 17, fontWeight: "bold" }}>
+                        BRANCH OFFICE - AHMEDABAD
+                      </p>
+                      <p>A - 501, Sahajanand Complex Shahibaug, Ahmedabad - 380004</p>
+                      <Link
+                        href="mailto:info@koliinfotech.com"
+                        className="nav-link active"
+                        target="_blank"
+                      >
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -237,7 +242,7 @@ const Footer = () => {
               flexDirection: 'row',
               alignItems: 'center',
             }}>
-              <Image src={circleElement} style={{ position: 'absolute', }} />
+              {/* <Image src={circleElement} style={{ position: 'absolute', }} /> */}
               <p style={{ fontWeight: 'bold', fontSize: 20, margin: 0, marginLeft: 40, }}>WE ARE HIRING!</p>
               <Image src={hiring} style={{ height: 30, width: 30, marginLeft: 15 }} />
             </div>
@@ -250,7 +255,7 @@ const Footer = () => {
             flexDirection: 'row',
             alignItems: 'center',
           }}>
-            <Link href="/Career" className="nav-link active" style={{ display: 'flex', alignItems: 'center' }}>
+            <Link href="/Career" className="nav-link active c" style={{ display: 'flex', alignItems: 'center' }}>
               <p style={{ fontWeight: 'bold', color: '#0d6efd', marginRight: 5 }}>Apply Now</p>
               <Image src={arrow} style={{ height: 40, width: 40, marginBottom: 15, marginRight: 40 }} />
             </Link>

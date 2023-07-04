@@ -25,240 +25,27 @@ const WhyChooseKOLIinfotech = () => {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <section className="mb-5 mt-5 why-choos">
         <div className="container">
           <div className="row">
-            <div className="col-sm-6" data-aos="fade-right">
-              <h1 className="whychooseTxt commanFont">Why Choose</h1>
-              <h1 className="whychooseTxt commanFont">KOLI infotech Pvt.Ltd</h1>
+            <div className="col-sm-6" >
+              <h1 className="whychooseTxt commanFont ">Why Choose</h1>
+              <h1 className="whychooseTxt commanFont"><span style={{color:"#3f689f"}}>KOLI</span> infotech Pvt. Ltd.</h1>
               <div className="hr-cst mb-3"></div>
               <p>{COMMAN_TEXT}</p>
             </div>
-            <div className="col-sm-6" data-aos="fade-left">
+            <div className="col-sm-6" data-aos="fade-down">
               <Image
+                className="img-fluid img-responsive"
                 src={TeamofficeImg}
                 alt="Image not found"
-                className="img-fluid"
               />
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <div class="container">
-          <div
-            class="row brand-style-1"
-            style={{ marginTop: "100px", marginBottom: "80px" }}
-          >
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={html5}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={css3}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={javascript}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={react}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={nodejs}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={python}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 mt-5 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={angularjs}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 mt-5 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={flutter}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 mt-5 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={php}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 mt-5 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={mysql}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 mt-5 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={android}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 mt-5 text-center"
-              data-Aos="fade-up"
-            >
-              <div class="client-logo">
-                <div
-                  class="client-logo-img wow fadeInUp animated"
-                  data-wow-delay="0.1s"
-                >
-                  <Image
-                    src={java}
-                    alt="Image not found"
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Fragment>
+   </>
   );
 };
 

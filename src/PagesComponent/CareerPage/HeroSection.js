@@ -19,14 +19,14 @@ const CareerPageHeroSection = () => {
       >
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-6 mt-5 text-start" data-aos="zoom-out-right">
-              <h1 className="hero-sec-header">Join KOLI infotech</h1>
+            <div className="col-lg-6 mt-5 text-start" data-aos="fade-up">
+              <h1 className="hero-sec-header">Join <span style={{color:"#3f689f"}}>KOLI</span> infotech</h1>
               <p className="para-for-hero">
                 We are a company that offers design and develop services for you
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-lg-6 " data-aos="zoom-out-left">
+            <div className="col-lg-6 " data-aos="fade-up">
               <Image
                 src={CareerImage}
                 alt="Image not found"

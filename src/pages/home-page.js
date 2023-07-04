@@ -10,7 +10,7 @@ import Footer from "@/commonComponent/Footer";
 import Header from "@/commonComponent/Header";
 import OurValuableClients from "@/PagesComponent/HomePage/OurValuableClients";
 import LoaderComponent from "@/commonComponent/loaderComponent";
-
+ 
 const HomePage = () => {
   const [loader, setLoader] = useState(true);
 
@@ -25,7 +25,7 @@ const HomePage = () => {
       <div style={{ width: "100%", marginRight: ".5 rem" }}>
         {loader === true ? <LoaderComponent /> : console.log("null")}
         <Header />
-        <HeroSection />
+         <HeroSection />
         <OurProcessSection />
         <OurServices />
         <OurPortfolio />

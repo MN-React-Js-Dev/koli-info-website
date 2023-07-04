@@ -45,7 +45,7 @@ const TestimonialOfOurClient = () => {
                   justifyContent: "space-between",
                 }}
                 className="mt-5 align-middle"
-                data-aos="fade-left"
+                data-aos="fade-down"
               >
                 <Image src={client1} className="client-image-2" />
                 <Image src={client1} className="client-image-2" />

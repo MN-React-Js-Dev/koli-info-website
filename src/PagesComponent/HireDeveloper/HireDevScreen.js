@@ -71,13 +71,13 @@ const HireDevScreen = () => {
           <div className="cst-hr-for-process mb-5" data-aos="flip-down"/>
           <div className="row m-5 text-center">
             <div className="col-sm-4 mb-4">
-              <Image src={mobiScreen1} className=" img-fluid " data-aos="fade-right" />
+              <Image src={mobiScreen1} className=" img-fluid " data-aos="fade-up" />
             </div>
             <div className="col-sm-4 mb-4">
               <Image src={mobiScreen2} className=" img-fluid " data-aos="fade-up"/>
             </div>
             <div className="col-sm-4 mb-4">
-              <Image src={mobiScreen3} className=" img-fluid " data-aos="fade-left"/>
+              <Image src={mobiScreen3} className=" img-fluid " data-aos="fade-up"/>
             </div>
           </div>
           <div className="text-center m-5" data-aos="fade-down">

@@ -21,12 +21,12 @@ const OurCultureHeroSection = () => {
             >
                 <div className="container">
                     <div className="row" style={{ alignItems: "center" }}>
-                        <div className="col-lg-6 mt-5 text-start" data-aos="zoom-out-right">
+                        <div className="col-lg-6 mt-5 text-start" data-aos="fade-down">
                             <h1 className="hero-sec-header">Our Culture</h1>
                             <p className="para-for-hero">
                                 Company culture is crucial for fostering a positive and productive work environment.</p>
                         </div>
-                        <div className="col-lg-6 " data-aos="zoom-out-left">
+                        <div className="col-lg-6 " data-aos="fade-down">
                             <Image
                                 src={culture}
                                 alt="Image not found"

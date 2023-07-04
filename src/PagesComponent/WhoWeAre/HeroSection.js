@@ -19,14 +19,14 @@ const WhoWeAreHeroSection = () => {
       >
         <div className="container text-center">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-6 mt-5" data-aos="fade-right">
+            <div className="col-lg-6 mt-5" data-aos="fade-down">
               <h1 className="hero-sec-header">Who We Are</h1>
               <p className="para-for-hero">
                 We are a company that offers design and develop services for you
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-lg-6 " data-aos="fade-left">
+            <div className="col-lg-6 " data-aos="fade-down">
               <Image
                 src={LeadershipImage}
                 alt="Image not found"

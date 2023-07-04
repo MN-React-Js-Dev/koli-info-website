@@ -20,7 +20,7 @@ const WebDevHeroSection = () => {
       >
         <div className="container text-center">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-6 mt-5 text-start" data-aos="slide-right">
+            <div className="col-lg-6 mt-5 text-start" data-aos="fade-up">
               <h1 className="hero-sec-header">
                 Custom Web Application Development Company
               </h1>
@@ -29,7 +29,7 @@ const WebDevHeroSection = () => {
                 eiusmod tempor incididunt
               </p>
             </div>
-            <div className="col-lg-6 " data-aos="slide-left">
+            <div className="col-lg-6 " data-aos="fade-up">
               <Image src={webDevimg1} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>

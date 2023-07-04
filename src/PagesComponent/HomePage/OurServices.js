@@ -3,6 +3,14 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useDispatch, useSelector } from "react-redux";
 import Design1 from "../../assets/images/design1.png";
+import Testing from "../../assets/images/Qatesting.png";
+import AppDevelopment from "../../assets/images/app-develop.png";
+import AIML from "../../assets/images/app-ai.jpg";
+import webDevimg from "../../assets/images/webDevimg-1.png";
+import cloud from "../../assets/images/cloud.png";
+import costumeDev from "../../assets/images/costume-dev.png";
+import LeftArrow from '.././../assets/images/leftArrow.png'
+import RightArrow from '.././../assets/images/rightArrow.png'
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -12,6 +20,8 @@ const OurServices = () => {
   const [ourService, setOurService] = useState();
   const carousel = useRef(null);
   const dataSelector = useSelector((state) => state?.getOurServices);
+
+  console.log('ourService~~~~~~~~~~~~~~.', ourService);
 
   const handleLeftClick = (e) => {
     e.preventDefault();
@@ -52,29 +62,86 @@ const OurServices = () => {
                 ref={carousel}
                 data-aos="fade-down"
               >
-                {ourService?.map(({ title, description }, index) => {
-                  return (
-                    <div className="col-sm-4 mb-4" key={index}>
-                      <div className="card p-5 cst-border-cls service-card">
-                        <Image
-                          src={Design1}
-                          alt={title}
-                          className="mb-4 mt-4 img-fluid "
-                        />
-                        <h2 className="serviceheadingText">{title}</h2>
-                        <p className="serviceText commanFont">{description}</p>
-                      </div>
-                    </div>
-                  );
-                })}
+                {/* {ourService?.map(({ title, description }, index) => {
+                  return ( */}
+                <div className="col-sm-4 mb-4">
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={Testing}
+                      alt='QA & Testing'
+                      className="mb-4 mt-4 service-image"
+                    />
+                    <h2 className="serviceheadingText">QA & Testing</h2>
+                    <p className="serviceText commanFont">A QA Tester is a professional who tests the functionality and usability of new or existing software before it goes live to ensure it is bug-free. They work closely with developers, providing them feedback on what needs improvement in order to produce top-</p>
+                  </div>
+                </div>
+                <div className="col-sm-4 mb-4">
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={AppDevelopment}
+                      alt='App development'
+                      className="mb-4 mt-4 service-image"
+                    />
+                    <h2 className="serviceheadingText">Mobile application development</h2>
+                    <p className="serviceText commanFont">Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.</p>
+                  </div>
+                </div>
+                <div className="col-sm-4 mb-4">
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={AIML}
+                      alt='AI and machine learning'
+                      className="mb-4 mt-4 service-image"
+                    />
+                    <h2 className="serviceheadingText">Artificial Intelligence and Machine learning</h2>
+                    <p className="serviceText commanFont">An “intelligent” computer uses AI to think like a human and perform tasks on its own. Machine learning is how a computer system develops its intelligence. One way to train a computer to mimic human reasoning is to use a neural network.</p>
+                  </div>
+                </div>
+                <div className="col-sm-4 mb-4">
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={webDevimg}
+                      alt='QA & Testing'
+                      className="mb-4 mt-4 service-image"
+                    />
+                    <h2 className="serviceheadingText">Web Application Development</h2>
+                    <p className="serviceText commanFont">Web application development is the creation of application programs that reside on remote servers and are delivered to the user's device over the Internet.</p>
+                  </div>
+                </div>
+                <div className="col-sm-4 mb-4">
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={cloud}
+                      alt='QA & Testing'
+                      className="mb-4 mt-4 service-image"
+                    />
+                    <h2 className="serviceheadingText">Cloud & Devops</h2>
+                    <p className="serviceText commanFont">Cloud Developers are essentially software engineers with a specialization in cloud computing. That means on top of development experience, Cloud Developers must have a solid understanding of cloud systems — not only how they operate, but how to deploy them securely, efficiently, and with little-to-no downtime.</p>
+                  </div>
+                </div>
+                <div className="col-sm-4 mb-4">
+                  <div className="card p-5 cst-border-cls service-card">
+                    <Image
+                      src={costumeDev}
+                      alt='QA & Testing'
+                      className="mb-4 mt-4 service-image"
+                    />
+                    <h2 className="serviceheadingText">Custom software development</h2>
+                    <p className="serviceText commanFont">Custom software development is the process of designing, creating, deploying and maintaining software for a specific set of users, functions or organizations</p>
+                  </div>
+                </div>
+                {/* );
+                })} */}
               </div>
             </div>
             <div className="buttons m-3 text-center">
-              <button onClick={handleLeftClick} className="m-3 p-3">
-                <AiOutlineLeft />
+              <button onClick={handleLeftClick} className="m-4 p-1">
+                {/* <AiOutlineLeft /> */}
+                <Image onClick={handleLeftClick} style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
               </button>
-              <button onClick={handleRightClick} className="m-3 p-3">
-                <AiOutlineRight />
+              <button onClick={handleRightClick} className="m-4 p-1">
+                {/* <AiOutlineRight /> */}
+                <Image onClick={handleRightClick} style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
               </button>
             </div>
           </div>

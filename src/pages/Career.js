@@ -17,6 +17,7 @@ const CareerPage = () => {
   return (
     <Fragment>
       {loader === true ? <LoaderComponent /> : console.log("null")}
+      <Header/>
       <CareerPageHeroSection />
       <CareerScreen />
       <Footer />

@@ -79,33 +79,27 @@ const Portfolio = () => {
 
       <section className="our-portfolio">
         <div className="container" data-aos="fade-down">
-          <h1 className="text-center mt-5 bold-font">Our Portfolio</h1>
-          <div class="col-12 mb-5 mt-3 mx-auto  d-flex justify-content-center">
+          <h1 className="text-center mt-5 bold-font mb-5">Our Portfolio</h1>
+          <div className="row" style={{ background: "#E4ECFF" }}>
             {ourService?.map(({ title, id }, index) => {
               return (
-                <ul
-                  class="nav nav-pills p-3"
-                  key={index}
-                  style={{ background: "#E4ECFF" }}
-                >
-                  <li class="nav-item mx-2">
-                    <a class="text-black" onClick={() => {
-                      setDataID(id),
-                        console.log("id", id)
-                    }}>
-                      {title}
-                    </a>
-                  </li>
-                </ul>
+                <>
+                  <div className="col-sm-4 pt-4 text-center" onClick={() => { setDataID(id) }}>
+                   <p className="pb-4 w-50">{title}</p> 
+                  </div>
+                </>
               );
             })}
+
           </div>
-          <div className="row ">
+
+          <div className="row mb-5 mt-5">
             {ourProduct?.rows?.map(
               ({ id, our_service_id, title, description }, index) => {
                 if (dataID === our_service_id) {
                   return (
                     <div className="col-md-4 mb-5 mt-3" key={index}>
+                      
                       <div
                         className="container"
                         style={{ justifyContent: "space-between" }}
@@ -125,7 +119,10 @@ const Portfolio = () => {
                             />
                           </div>
                         </div>
-                        <div style={{ fontSize: 21, fontWeight: "600" }}>
+                        <div
+                          className="m-3"
+                        // style={{ fontSize: 21, fontWeight: "600" }}
+                        >
                           <h4>{title}</h4>
                           <p>{description}</p>
                         </div>
@@ -142,7 +139,7 @@ const Portfolio = () => {
       <section>
         <Footer />
       </section>
-    </Fragment >
+    </Fragment>
   );
 };
 

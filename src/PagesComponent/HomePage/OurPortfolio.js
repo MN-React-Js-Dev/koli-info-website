@@ -1,7 +1,12 @@
 import React, { Fragment, useEffect } from "react";
 import GridImage1 from "../../assets/images/IdesignImage.png";
+import TTPM from "../../assets/images/ttpm.png";
+import jodiBanao from "../../assets/images/jodiBanao.png";
+import Onfleek from "../../assets/images/onfleek.png";
+import School from "../../assets/images/1467.png";
 import Image from "next/image";
 import Aos from "aos";
+import Link from "next/link";
 import "aos/dist/aos.css";
 
 const OurPortfolio = () => {
@@ -18,18 +23,18 @@ const OurPortfolio = () => {
           <div class="container">
             <h1 class="text-center pt-5 comman-heading">Our Portfolio</h1>
             <div className="cst-hr-for-process mb-5"></div>
-            <div data-aos="zoom-in">
+            <div data-aos="zoom-in portfolio">
               <div className="row">
                 <div className="col-sm-3">
                   <Image
-                    src={GridImage1}
+                    src={TTPM}
                     className="img-fluid"
                     alt="Image not found"
                   />
                 </div>
                 <div className="col-sm-3">
                   <div className="p-3 pt-5">
-                    <h3 className="mobileHeadText commanFont">Mobile App</h3>
+                    <h3 className="mobileHeadText commanFont">TTPM</h3>
                     <p className="subHeadText commanHead2">
                       Our Android app development team leverages the latest
                       frameworks like Flutter, Kotlin, and React Native to
@@ -39,18 +44,16 @@ const OurPortfolio = () => {
                 </div>
                 <div className="col-sm-3">
                   <Image
-                    src={GridImage1}
+                    src={jodiBanao}
                     className="img-fluid"
                     alt="Image not found"
                   />
                 </div>
                 <div className="col-sm-3">
                   <div className="p-3 pt-5">
-                    <h3 className="mobileHeadText commanFont">Mobile App</h3>
+                    <h3 className="mobileHeadText commanFont">Jodi Banao</h3>
                     <p className="subHeadText commanHead2">
-                      Our Android app development team leverages the latest
-                      frameworks like Flutter, Kotlin, and React Native to
-                      create high-quality apps with smooth functionality.
+                      Jodii App is available in 10 languages. Jodii App paid benefits are free for women (up to 10 contacts on govt ID proof verification and profile photo submission)
                     </p>
                   </div>
                 </div>
@@ -59,21 +62,16 @@ const OurPortfolio = () => {
                 <div className="col-sm-3">
                   <div className="p-3 pt-5">
                     <h3 className="mobileHeadText commanFont">
-                      Web Development
+                      onfleek
                     </h3>
                     <p className="subHeadText commanHead2">
-                      Our web design & development company offers end-to-end
-                      services that cover everything from design and development
-                      to maintenance and support, ensuring a seamless and
-                      hassle-free experience. We create elite, responsive and
-                      matchless websites with our excellent technology stacks,
-                      making your dreams into reality.
+                      OnFleek is a passionate start up of humble beginnings established by a duo of dynamic brand consultants with rich experience in Strategic Consultancy in Brand & Digital Marketing.
                     </p>
                   </div>
                 </div>
                 <div className="col-sm-3">
                   <Image
-                    src={GridImage1}
+                    src={Onfleek}
                     className="img-fluid"
                     alt="Image not found"
                   />
@@ -81,26 +79,24 @@ const OurPortfolio = () => {
                 <div className="col-sm-3">
                   <div className="p-3 pt-5">
                     <h3 className="mobileHeadText commanFont">
-                      Web Development
+                      Shivam Vidhyalay
                     </h3>
                     <p className="subHeadText commanHead2">
-                      Our web design & development company offers end-to-end
-                      services that cover everything from design and development
-                      to maintenance and support, ensuring a seamless and
-                      hassle-free experience. We create elite, responsive and
-                      matchless websites with our excellent technology stacks,
-                      making your dreams into reality.
+                      Comming Soon...!
                     </p>
                   </div>
                 </div>
                 <div className="col-sm-3">
                   <Image
-                    src={GridImage1}
-                    className="img-fluid"
+                    src={School}
+                    className="img-fluid img"
                     alt="Image not found"
                   />
                 </div>
               </div>
+            </div>
+            <div className="portfolio-view-more pl-3">
+              <Link href='/portfolio'>View more...</Link>
             </div>
           </div>
         </div>

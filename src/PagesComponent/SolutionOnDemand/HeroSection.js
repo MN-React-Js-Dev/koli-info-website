@@ -18,7 +18,7 @@ const SolutionOnDemandHeroSection = () => {
         className="testi-hero-image "
         style={{ backgroundColor: "#E3E3FF" }}
       >
-        <div className="container text-center" data-aos="zoom-out-left">
+        <div className="container text-center" data-aos="fade-up">
           <div className="row" style={{ alignItems: "center" }}>
             <div className="col-lg-6 mt-5 text-start">
               <h1 className="hero-sec-header">
