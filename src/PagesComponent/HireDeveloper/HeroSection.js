@@ -31,7 +31,7 @@ const HireDevHeroSection = () => {
                 Contact Us
               </a>
             </div>
-            <div className="col-lg-6 " data-aos="fade-up">
+            <div className="col-lg-6 text-center" data-aos="fade-up">
               <Image src={HireHeroImg} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>

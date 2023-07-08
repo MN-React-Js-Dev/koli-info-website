@@ -13,6 +13,9 @@ export const getAllOurblogAPI = async () =>
 export const getAllOurAllClientAPI = async () =>
   await axios.get(`${baseUrl}ourClient/getAll-ourClient`);
 
+export const getSingleClientAPI = async (id) =>
+  await axios.get(`${baseUrl}/ourClient/${id}`);
+
 export const getAllCurrentOpeningAPI = async () =>
   await axios.get(`${baseUrl}openings/getAll-openings`);
 

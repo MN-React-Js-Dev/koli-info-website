@@ -26,7 +26,7 @@ const CareerPageHeroSection = () => {
                 life with design and development expertise.
               </p>
             </div>
-            <div className="col-lg-6 " data-aos="zoom-out-left">
+            <div className="col-lg-6 text-center" data-aos="zoom-out-left">
               <Image
                 src={ourteam1}
                 alt="Image not found"

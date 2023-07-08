@@ -18,7 +18,7 @@ const HeroSection = () => {
       <section className="hero-section mb-2">
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-6 mt-5 text-start"  data-aos="fade-down">
+            <div className="col-lg-6 mt-5 text-start" data-aos="fade-down">
               <h1 className="home-hero-sec-header commanFont">Grow Your Business With The Finest IT Company</h1>
               <p className="para-for-hero subText commanFont">
                 {KOLI_INFOTECH_HOME_PAGE_PARAGRAPH}
@@ -27,7 +27,7 @@ const HeroSection = () => {
                 Contact Us
               </a>
             </div>
-            <div className="col-lg-6 "  data-aos="fade-down home-hero-img">
+            <div className="col-lg-6 text-center"  data-aos="fade-down home-hero-img">
               <Image src={homeHeroImage} alt='Image not found' className="img-fluid " />
             </div>
           </div>

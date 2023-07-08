@@ -14,7 +14,7 @@ const Header = () => {
           <div className="container" >
             <div className="row">
               <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid cst-nav p-3 header">
+                <div className="container-fluid cst-nav header">
                   <Link href="/" className="nav-link active">
                     <Image src={SVGlogo} alt={BlueLogo} className="img-fluid" />
                   </Link>
@@ -56,9 +56,9 @@ const Header = () => {
                           }}
                         >
                           <li class="nav-item dropdown">
-                            <a class="nav-link drop-btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="nav-link drop-btn" aria-expanded="false">
                               Company
-                            </a>
+                            </span>
                             <ul class="dropdown-menu collap-manu">
                               <li><a class="dropdown-item" href="/who-we-are">Who We Are!</a></li>
                               <li><a class="dropdown-item" href="/our-team">Our Team</a></li>
@@ -78,17 +78,17 @@ const Header = () => {
                             damping: 10,
                           }}
                         >
-                        <li class="nav-item dropdown">
-                          <a class="nav-link drop-btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                          </a>
-                          <ul class="dropdown-menu collap-manu">
-                            <li><a class="dropdown-item" href="/web-development">Web Development</a></li>
-                            <li><a class="dropdown-item" href="/mobile-app-development">Mobile App Development</a></li>
-                            <li><a class="dropdown-item" href="/data-security">Data Security</a></li>
-                            <li><a class="dropdown-item" href="/hire-developer">Hire Dedicated Developers</a></li>
-                          </ul>
-                        </li>
+                          <li class="nav-item dropdown">
+                            <span class="nav-link drop-btn" aria-expanded="false">
+                              Services
+                            </span>
+                            <ul class="dropdown-menu collap-manu">
+                              <li><a class="dropdown-item" href="/web-development">Web Development</a></li>
+                              <li><a class="dropdown-item" href="/mobile-app-development">Mobile App Development</a></li>
+                              <li><a class="dropdown-item" href="/data-security">Data Security</a></li>
+                              <li><a class="dropdown-item" href="/hire-developer">Hire Dedicated Developers</a></li>
+                            </ul>
+                          </li>
                         </motion.div>
                         <motion.div
                           className="box"

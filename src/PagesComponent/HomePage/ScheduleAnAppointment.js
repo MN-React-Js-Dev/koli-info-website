@@ -35,7 +35,7 @@ const ScheduleAnAppointment = () => {
 
   return (
     <Fragment>
-      <section className="mt-5 mt-5" style={{ background: "#3F689F" }}>
+      <section className="mt-5" style={{ background: "#3F689F" }}>
         <div className="container">
           <div className="row">
             <div className="col-sm-6">
@@ -95,7 +95,7 @@ const ScheduleAnAppointment = () => {
                     <textarea
                       class="form-control"
                       id="exampleFormControlTextarea1"
-                      rows="3"
+                      rows="7"
                       placeholder="Description"
                       name="description"
                       value={data?.description}

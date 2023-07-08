@@ -1,5 +1,5 @@
 import Header from "@/commonComponent/Header";
-import React, { Fragment,useState,useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import CustomerCImage from "../assets/images/cc.png";
 import Image from "next/image";
 import { OUR_MISSION_TEXT, OUR_VISSON_TEXT } from "../commonComponent/commanText";
@@ -10,6 +10,29 @@ import Footer from "@/commonComponent/Footer";
 
 const AboutCompany = () => {
   const [loader, setLoader] = useState(true);
+
+  const data = [
+    {
+      SrNo: 1,
+      description:
+        "A team with years of development, design and marketing experience who understand the complexity and needs of your business."
+    },
+    {
+      SrNo: 2,
+      description: `
+      "Our focus is on working closely with customers like you to fully comprehend your needs and build a solution tailormade for you. Moreover, we have integrated modern technologies to ensure you get best results for your business."`
+    },
+    {
+      SrNo: 3,
+      description:
+        "We use cutting edge technology, flexibility and scalabilty to help meet your business needs, optimizing delivery time and minimizing cost."
+    },
+    {
+      SrNo: 4,
+      description:
+        "We have solved real life business problems just like yours and have therefore the ability to put ourselves in your shoes! We believe that our clients and our teammates are all partners in our successes."
+    },
+  ]
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,7 +45,7 @@ const AboutCompany = () => {
       Aos.init();
     }, 1500);
   }, []);
-  
+
   return (
     <Fragment>
       {loader === true ? <LoaderComponent /> : console.log("null")}
@@ -41,7 +64,7 @@ const AboutCompany = () => {
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-lg-6 ">
+            <div className="col-lg-6 text-center">
               <Image
                 src={CustomerCImage}
                 alt="Image not found"
@@ -65,61 +88,22 @@ const AboutCompany = () => {
           <p>{OUR_VISSON_TEXT}</p>
         </div>
       </section>
-
       <section className="qualities-we-take">
         <div className="container" data-aos="fade-down">
           <h1 className="comman-heading">Qualities we take pride in</h1>
           <div className="hr-cst mb-3" />
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
-              <span className="number-class"> 01</span>
+          {data.map((item) => (
+            <div className="row mb-5">
+              <>
+                <div className="col-md-1 col-3 pt-4">
+                  <span className="number-class">{item.SrNo}</span>
+                </div>
+                <div className="col-md-11 col-9 cst-boder-para p-3">
+                  <p className="mb-0">{item.description}</p>
+                </div>
+              </>
             </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
-              <p>
-                A team with years of development, design and marketing
-                experience who understand the complexity and needs of your
-                business.
-              </p>
-            </div>
-          </div>
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
-              <span className="number-class"> 02</span>
-            </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
-              <p>
-                Our focus is on working closely with customers like you to fully
-                comprehend your needs and build a solution tailormade for you.
-                Moreover, we have integrated modern technologies to ensure you
-                get best results for your business.
-              </p>
-            </div>
-          </div>
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
-              <span className="number-class"> 03</span>
-            </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
-              <p>
-                We use cutting edge technology, flexibility and scalabilty to
-                help meet your business needs, optimizing delivery time and
-                minimizing cost.
-              </p>
-            </div>
-          </div>
-          <div className="row mb-5">
-            <div className="col-md-1 col-3 pt-4">
-              <span className="number-class"> 04</span>
-            </div>
-            <div className="col-md-11 col-9 cst-boder-para p-3">
-              <p>
-                We have solved real life business problems just like yours and
-                have therefore the ability to put ourselves in your shoes! We
-                believe that our clients and our teammates are all partners in
-                our successes.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
       <section>

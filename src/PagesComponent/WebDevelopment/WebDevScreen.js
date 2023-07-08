@@ -2,6 +2,7 @@ import React, { Fragment,useEffect } from "react";
 import Image from "next/image";
 import webDevimg2 from "../../assets/images/webDevimg-2.png";
 import smartphone from "../../assets/images/smartphone.png";
+import pc from '../../assets/images/ux1.png'
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -9,31 +10,37 @@ import "aos/dist/aos.css";
 const WebDevScreen = () => {
   const data = [
     {
+      image:require('../../assets/images/ux1.png'),
       service: "Custom Web App Development",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
+      image:require('../../assets/images/wireframe3.png'),
       service: "E-commerce Solutions",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
+      image:require('../../assets/images/web-development1.png'),
       service: "Technology Consulting",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
+      image:require('../../assets/images/quality-test.png'),
       service: "Web Portal Development",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
+      image:require('../../assets/images/wireframe4.png'),
       service: "Custom CMS Web Development",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
+      image:require('../../assets/images/Mobile-hero.png'),
       service: "Cross-Platform Apps",
       detail:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco",
@@ -92,16 +99,18 @@ const WebDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" />
           <div className="row" data-aos="fade-up">
-            {data.map(({ service, detail }, index) => (
+            {data.map(({ service, detail,image }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 WebDev-dashed-border">
                     <div className="text-center award-head-img">
                       <h4>{service}</h4>
                       <Image
-                        src={smartphone}
+                        src={image}
+                        width={100}
+                        height={100}
                         alt='Image not found'
-                        className="mb-4 mt-4 img-fluid award-Image"
+                        className="mb-4 mt-4 img-fluid"
                       />
                     </div>
                     <p>{detail}</p>

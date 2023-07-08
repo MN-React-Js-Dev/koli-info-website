@@ -10,6 +10,7 @@ import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -66,7 +67,7 @@ const Portfolio = () => {
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-6 text-center">
               <Image
                 src={PortfolioImage}
                 alt="Image not found"
@@ -84,8 +85,8 @@ const Portfolio = () => {
             {ourService?.map(({ title, id }, index) => {
               return (
                 <>
-                  <div className="col-sm-4 pt-4 text-center" onClick={() => { setDataID(id) }}>
-                   <p className="pb-4 w-50">{title}</p> 
+                  <div className="col-sm-4 pt-4 text-center" style={{display:'flex',justifyContent:'center'}} onClick={() => { setDataID(id) }}>
+                   <p className="pb-4 w-50 portfolio-service">{title}</p> 
                   </div>
                 </>
               );

@@ -177,7 +177,7 @@ const FormSection = () => {
                                 </div>
                                 <div className="col">
                                     <div>
-                                        <select className="form-select select-field p-3" name="gender" value={data.gender} onChange={handleChange}>
+                                        <select className="form-select select-field p-3" name="gender" defaultValue="" value={data.gender} onChange={handleChange}>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                             <option value="other">Other</option>
@@ -210,7 +210,7 @@ const FormSection = () => {
                                             <small className="p-error">Phone number must be 10 digits!</small>))}
                                 </div>
                                 <div className="col">
-                                    <div className="mb-3 row">
+                                    <div className="row">
                                         <div className="col">
                                             <input
                                                 type="Number"
@@ -224,18 +224,6 @@ const FormSection = () => {
                                                 <small className="p-error">Experience years are required!</small>
                                             )}
                                         </div>
-                                        {/* <div className="col">
-                                            <input
-                                                type="Number"
-                                                class="form-control"
-                                                placeholder="Experience Months"
-                                                name="ssss"
-                                                value={dataFle}
-                                            />
-                                            {submitted && dataFle && (
-                                                <small className="p-error">Experience months are required!</small>
-                                            )}
-                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -279,13 +267,13 @@ const FormSection = () => {
                                 ></textarea>
                                 <br />
                             </div>
-                                <span class="p-3">upload Resume</span>
+                                <span class="p-3">upload resume</span>
                             <div class="m-3 Column border border" id="resume-droppable" style={{ borderRadius: 6, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <input type="file" class="mt-3" id="resume-upload" data-field-identifier="resume" container="resumes" name="resume" placeholder="" value={data?.resume} onChange={onFileChange}></input>
-                                {submitted && !data.resume && (
+                                <input type="file" class="mt-3" id="resume-upload"  accept=".pdf" data-field-identifier="resume" container="resumes" name="resume" placeholder="" value={data?.resume} onChange={onFileChange}></input>
+                                {submitted && !selectedFile && (
                                     <small className="p-error">Upload resume is required!</small>
                                 )}
-                                <span class="mb-3">Only pdf and imgae flies rae allowed. 5MB max file size</span>
+                                <span class="mb-3">Only pdf and image files are allowed. 5MB max file size !</span>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <a class="btn contact-us-btn m-4 p-2 mb-5" type="submit" onClick={handleSubmit}>

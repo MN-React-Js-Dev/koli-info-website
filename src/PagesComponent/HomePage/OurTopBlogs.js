@@ -14,7 +14,7 @@ const OurTopBlogs = () => {
   const dispatch = useDispatch();
   const [ourBlogs, setOurBlogs] = useState();
   const data = useSelector((state) => state?.getOurBlog);
-  console.log('getOurBlog~~~~~~>',data);
+  console.log('getOurBlog~~~~~~>',ourBlogs);
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -52,7 +52,7 @@ const OurTopBlogs = () => {
             data-aos="fade-down"
             >
               {ourBlogs?.rows?.map(
-                ({ created_at, title, description }, index) => {
+                ({ created_at, title, description, image }, index) => {
                   return (
                     <div className="col-sm-4" key={index}>
                       <div class="card m-3 topblog-card">
@@ -60,7 +60,9 @@ const OurTopBlogs = () => {
                           <span class="day">{created_at}</span>
                         </div> */}
                         <Image
-                          src={Mobile1}
+                          src={image}
+                          width={100}
+                          height={100}
                           alt="Image not found"
                           className="card-img-top"
                         />

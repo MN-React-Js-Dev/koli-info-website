@@ -27,7 +27,7 @@ const LeadershipHeroSection = () => {
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-lg-6 "  data-aos="fade-up">
+            <div className="col-lg-6 text-center"  data-aos="fade-up">
               <Image src={LeadershipImage} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>

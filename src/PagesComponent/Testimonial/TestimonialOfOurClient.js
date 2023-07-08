@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
-import client1 from "../../assets/images/middle.png";
+// import client1 from "../../assets/images/middle.png";
 import Vector from "../../assets/images/Vector.png";
 import Image from "next/image";
-import Image2 from "../../assets/images/2.png";
+import star from "../../assets/images/star.png";
 import { getAllOurClientStart } from "@/Redux/module/getOurClientsAction";
 import { useDispatch, useSelector } from "react-redux";
 import Aos from "aos";
@@ -12,6 +12,7 @@ const TestimonialOfOurClient = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState();
   const dataSelector = useSelector((state) => state?.getOurClients?.ourClients);
+  console.log('testimonil data~~~~~~>',data);
 
   useEffect(() => {
     if (dataSelector != null) {
@@ -47,10 +48,10 @@ const TestimonialOfOurClient = () => {
                 className="mt-5 align-middle"
                 data-aos="fade-down"
               >
-                <Image src={client1} className="client-image-2" />
-                <Image src={client1} className="client-image-2" />
+                <Image src={star} className="client-image-2" />
+                <Image src={star} className="client-image-2" />
               </div>
-              {data?.map(({ name, review }, index) => (
+              {data?.map(({ name, review, profilePicture }, index) => (
                 <>
                   <div
                     className="text-center mt-5 testi-detail-box"
@@ -58,7 +59,9 @@ const TestimonialOfOurClient = () => {
                     data-aos="fade-up"
                   >
                     <Image
-                      src={Image2}
+                      src={profilePicture}
+                      width={100}
+                      height={100}
                       alt="Image not found"
                       className="round img-round-cst"
                     />

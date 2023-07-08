@@ -26,7 +26,7 @@ const MobiAppDevHeroSection = () => {
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-lg-6 ">
+            <div className="col-lg-6 text-center">
               <Image src={MobileHero} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>

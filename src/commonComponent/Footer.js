@@ -26,9 +26,9 @@ const Footer = () => {
         <hr className="row ml-4 mr-4" />
         <div className="container" data-aos="fade-up">
           <div style={{ display: 'flex', flexDirection: 'column' }} >
-            <div className="row col-12  mt-5">
+            <div className="row col-12 mt-5 text-center">
               <div
-                className="col-lg-4  cst-footer-logo"
+                className="col-lg-3  cst-footer-logo"
                 style={{ bottom: "70px" }}
               >
                 <Image src={SVGlogo} className="mt-5 cst-footer-logo" />
@@ -140,8 +140,10 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex", }}>Services</p>
-                <div style={{ display: "flex", flexDirection: 'row' }}>
+                <p style={{ fontSize: 20, fontWeight: "bold" }}>Services</p>
+                <div 
+                // style={{ display: "flex", flexDirection: 'row' }}
+                >
                   <div >
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Web Application Development</p></Link>
@@ -158,36 +160,34 @@ const Footer = () => {
               <div className="col-lg-1" >
                 <hr className="vertical-line" />
               </div>
-              <div className="col-lg-3">
-                <p style={{ fontSize: 20, fontWeight: "bold", display: "flex" }}>Pages</p>
-                <div style={{ display: "flex", flexDirection: 'row' }}>
+              <div className="col-lg-4">
+                <p 
+                style={{ fontSize: 20, fontWeight: "bold"}}
+                >Pages</p>
+                <div 
+                // style={{ display: "flex", flexDirection: 'row' }}
+                >
                   <div className="">
-                  <Link href="/" className="nav-link active">
+                    <Link href="/" className="nav-link active">
                       <p className="footerActivemenu">About</p>
                     </Link>
                     <Link href="/Career" className="nav-link active">
                       <p className="footerActivemenu">Jobs</p>
                     </Link>
-                    <Link href="/leadership" className="nav-link active">
+                    <Link href="/our-team" className="nav-link active">
                       <p className="footerActivemenu">Team</p>
                     </Link>
-                    {/* </div>
-                  <div className="ml-5"> */}
                     <Link href="/testimonial" className="nav-link active">
-                      <p className="footerActivemenu">Tesimonials</p>
+                      <p className="footerActivemenu">Testimonials</p>
                     </Link>
-                    <p className="footerActivemenu">Blog</p>
                   </div>
                 </div>
               </div>
             </div>
             <div >
-              {/* <div >
-                <hr className="horizantol-line" />
-              </div> */}
               <div style={{ display: "flex", flexDirection: 'row' }}>
                 <div className="row col-lg-12  mt-5">
-                  <div className="col-lg-3 text-center">
+                  <div className="col-lg-2 text-center">
                     <h4>Contacts</h4>
                     <p>info@koliinfotech.com</p>
                     <p>
@@ -200,13 +200,13 @@ const Footer = () => {
                   </div>
                   <div className="row col-lg-8 text-center">
                     <h4 className="text-center">Our Address</h4>
-                    <div className="col-lg-6">
+                    <div className="col-lg-7">
                       <p style={{ fontSize: 17, fontWeight: "bold" }}>
                         HEAD OFFICE - SURAT
                       </p>
                       <p>4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat - 394210</p>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-5">
                       <p style={{ fontSize: 17, fontWeight: "bold" }}>
                         BRANCH OFFICE - AHMEDABAD
                       </p>

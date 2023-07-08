@@ -27,7 +27,7 @@ const DataSecureHeroSection = () => {
                 from initial sketches to the final construction.
               </p>
             </div>
-            <div className="col-lg-6 " data-aos="fade-up">
+            <div className="col-lg-6 text-start" data-aos="fade-up">
               <Image src={DataSecure1} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>

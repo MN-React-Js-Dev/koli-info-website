@@ -31,7 +31,7 @@ const SolutionOnDemandHeroSection = () => {
                 Click Here to Get Your Free Quote
               </a>
             </div>
-            <div className="col-lg-6 ">
+            <div className="col-lg-6 text-center">
               <Image
                 src={onDmndHeroImg}
                 alt="Image not found"

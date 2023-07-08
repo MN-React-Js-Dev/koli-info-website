@@ -3,14 +3,19 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useDispatch, useSelector } from "react-redux";
 import Design1 from "../../assets/images/design1.png";
-import Testing from "../../assets/images/Qatesting.png";
+// import Testing from "../../assets/images/Qatesting.png";
 import AppDevelopment from "../../assets/images/app-develop.png";
 import AIML from "../../assets/images/app-ai.jpg";
-import webDevimg from "../../assets/images/webDevimg-1.png";
+// import webDevimg from "../../assets/images/webDevimg-1.png";
 import cloud from "../../assets/images/cloud.png";
 import costumeDev from "../../assets/images/costume-dev.png";
 import LeftArrow from '.././../assets/images/leftArrow.png'
 import RightArrow from '.././../assets/images/rightArrow.png'
+// ---------------------------------------------------------------
+import Testing from '.././../assets/images/quality-test.png'
+import webDevimg from '.././../assets/images/webDevimg-1.png'
+
+// ---------------------------------------------------------------
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -122,7 +127,7 @@ const OurServices = () => {
                 <div className="col-sm-4 mb-4">
                   <div className="card p-5 cst-border-cls service-card">
                     <Image
-                      src={costumeDev}
+                      src={Design1}
                       alt='QA & Testing'
                       className="mb-4 mt-4 service-image"
                     />

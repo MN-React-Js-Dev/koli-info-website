@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
-import TeamofficeImg from "../../assets/images/teamoffice.png";
+import TeamofficeImg from "../../assets/images/teamoffice2.png";
 import html5 from "../../assets/images/html5.png";
 import css3 from "../../assets/images/css3.png";
 import javascript from "../../assets/images/javascript.png";
@@ -37,7 +37,7 @@ const WhyChooseKOLIinfotech = () => {
             </div>
             <div className="col-sm-6" data-aos="fade-down">
               <Image
-                className="img-fluid img-responsive"
+                className="img-fluid img-responsive rounded"
                 src={TeamofficeImg}
                 alt="Image not found"
               />

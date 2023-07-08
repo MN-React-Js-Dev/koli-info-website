@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 
 const ContactUsScreen = () => {
   const dispatch = useDispatch();
+  const [submitted, setSubmitted] = useState(false)
   const router = useRouter();
   const [data, setData] = useState({
     yourName: "",
@@ -14,6 +15,14 @@ const ContactUsScreen = () => {
     phone: "",
     description: "",
   });
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const validateEmail = (email) => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -24,6 +33,44 @@ const ContactUsScreen = () => {
   };
 
   const handleSubmit = (e) => {
+    // e.preventDefault();
+    setSubmitted(true);
+
+    const errors = {};
+
+    if (!data.yourName) {
+      errors.yourName = "Full name is required!";
+    }
+
+    if (!data.email) {
+      errors.email = "Email is required!";
+    }
+
+    if (data.email) {
+      emailRegex.test(data.email);
+      if (!emailRegex.test(data.email)) {
+        errors.email = "Email is Invalid!";
+      }
+    }
+
+
+    if (!data.phone) {
+      errors.phone = "Phone number is required!";
+    }
+
+    if (data.phone) {
+      if (data.phone.length !== 10) {
+        errors.phone = "Phone number must be 10 digits!";
+      }
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setData((prevData) => ({
+        ...prevData,
+        errors: errors,
+      }));
+      return;
+    }
     dispatch(contactUsStart(data));
   };
 
@@ -39,7 +86,7 @@ const ContactUsScreen = () => {
         <div className="container">
           <div className="row  m-3 d-flex" data-aos="zoom-in">
             <div className="col-lg-5 p-3">
-              <h1 className=" pt-5 mt-5 comman-heading">Share Your App URL</h1>
+              <h1 className=" pt-5 mt-5 comman-heading">Get in Touch With Us</h1>
               <div className="cst-hr-for-process" />
               <div className=" m-2 mb-3">
                 <input
@@ -50,6 +97,9 @@ const ContactUsScreen = () => {
                   value={data?.yourName}
                   onChange={handleChange}
                 />
+                {submitted && !data.yourName && (
+                  <small className="p-error">{data.errors.yourName}</small>
+                )}
               </div>
               <div className=" m-2 mb-3">
                 <input
@@ -60,6 +110,9 @@ const ContactUsScreen = () => {
                   value={data?.email}
                   onChange={handleChange}
                 />
+                {(submitted && !data.email && (
+                  <small className="p-error">{data.errors.email}</small>))&&(<small className="p-error">Email is required</small>) || submitted && !validateEmail(data.email) && (<small className="p-error">Email is invalid</small>)
+                    }
               </div>
               <div className=" m-2 mb-3">
                 <input
@@ -69,7 +122,12 @@ const ContactUsScreen = () => {
                   name="phone"
                   value={data?.phone}
                   onChange={handleChange}
+                  maxLength={10}
+                  minLength={10}
                 />
+                {submitted && !data.phone && (
+                  <small className="p-error">{data.errors.phone}</small>
+                )}
               </div>
               <div className=" m-2 mb-3">
                 <textarea

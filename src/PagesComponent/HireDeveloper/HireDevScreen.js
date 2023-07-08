@@ -18,37 +18,37 @@ import "aos/dist/aos.css";
 const HireDevScreen = () => {
   const CardData = [
     {
-      img: "../../assets/images/design1.png",
+      img: require("../../assets/images/design1.png"),
       heading: "Hire Full Stack Developers",
       descpt:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: "../../assets/images/web-development1.png",
+      img: require("../../assets/images/web-development1.png"),
       heading: "Hire iPhone Developers",
       descpt:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: "../../assets/images/applications1.png",
+      img: require("../../assets/images/applications1.png"),
       heading: "Hire Android Developers",
       descpt:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     },
     {
-      img: "../../assets/images/design1.png",
+      img: require("../../assets/images/design1.png"),
       heading: "Hire PHP Developers",
       descpt:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: "../../assets/images/web-development1.png",
+      img: require("../../assets/images/web-development1.png"),
       heading: "Hire Swift Developers",
       descpt:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
     },
     {
-      img: "../../assets/images/applications1.png",
+      img: require("../../assets/images/applications1.png"),
       heading: "Hire on-Demand App Developers",
       descpt:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
@@ -95,14 +95,14 @@ const HireDevScreen = () => {
           </h1>
           <div className="cst-hr-for-process mb-5" data-aos="flip-down"/>
           <div className="row" data-aos="fade-down">
-            {CardData.map(({ heading, descpt }, index) => (
+            {CardData.map(({ heading, descpt,img }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 awards-border">
                     <div className="text-center award-head-img award-head-img">
                       <h2>{heading}</h2>
                       <Image
-                        src={smartphone}
+                        src={img}
                         alt='Image not found'
                         className="mb-4 mt-4 img-fluid "
                       />

@@ -46,6 +46,13 @@ of experience. We are led by visionaries who have deep-rooted IT
 background with a pathbreaking outlook on Information
 Technology.`;
 
-export const CEO_QUOTES = `"As the CEO of our company, my vision is to drive innovation and transformative change in the technology industry. We are committed to delivering cutting-edge solutions that exceed our clients' expectations and solve real-world challenges. Our team of dedicated professionals is driven by a passion for excellence and a relentless pursuit of innovation. Together, we are shaping the future of technology and empowering businesses to thrive in the digital age. By fostering a culture of collaboration, creativity, and continuous learning, we are poised to lead the industry and make a lasting impact on the world."`
+export const CEO_QUOTES = `"As the CEO of our company, my vision is to drive innovation and transformative change 
+in the technology industry. We are committed to delivering 
+cutting-edge solutions that exceed our clients' expectations 
+and solve real-world challenges. Our team of dedicated professionals
+ is driven by a passion for excellence and a relentless pursuit of innovation.
+ Together, we are shaping the future of technology and empowering businesses to thrive
+  in the digital age. By fostering a culture of collaboration, creativity, and continuous learning, we are poised to lead the industry and make a lasting impact on the world."`
 
-export const CTO_QUOTES = `"As the CTO of our company, my role is to lead technological innovation, drive digital transformation, and ensure our company remains at the forefront of the ever-evolving tech landscape. I empower our team to push boundaries, embrace emerging technologies, and deliver cutting-edge solutions that drive business growth and customer satisfaction. By fostering a culture of collaboration, continuous learning, and strategic partnerships, we harness the power of technology to solve complex challenges and create a positive impact. Together, we are shaping the future, revolutionizing industries, and driving sustainable success for our company and clients."`
+export const CTO_QUOTES = `"As the CTO of our company, my role is to lead technological innovation drive digital transformation, and ensure our company remains at the forefront of the ever-evolving tech landscape. I empower our team to push boundaries, embrace emerging technologies, and deliver cutting-edge solutions that drive business growth and customer satisfaction. By fostering a culture of collaboration, continuous learning, and strategic partnerships, we harness the power of technology to solve complex challenges and create a positive impact. Together, we are shaping the future, revolutionizing industries, and driving sustainable success for our company and clients."`;
+

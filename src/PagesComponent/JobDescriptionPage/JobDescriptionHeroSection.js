@@ -29,7 +29,7 @@ const JobDescriptionHeroSection = () => {
                                 Contact Us
                             </a>
                         </div>
-                        <div className="col-lg-6 " data-aos="fade-left">
+                        <div className="col-lg-6 text-center" data-aos="fade-left">
                             <Image src={JobDescriptionHero} alt='Image not found' className="img-fluid testi-image" />
                         </div>
                     </div>

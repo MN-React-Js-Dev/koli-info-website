@@ -10,31 +10,36 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import "aos/dist/aos.css";
 import { CEO_QUOTES } from "@/commonComponent/commanText";
 import { CTO_QUOTES } from "@/commonComponent/commanText";
+import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
+import { useDispatch, useSelector } from "react-redux";
 
 const OurTeamScreen = () => {
-  const data = [
-    {
-      image: CEOimage,
-      Name: "Ajay Koli",
-      Position: "Chief Executive Office",
-    },
-    {
-      image: CTOimage,
-      Name: "Nihal Koli",
-      Position: "Chief Technician Office",
-    },
-  ];
+  const [data, setData] = useState()
+  const dispatch = useDispatch();
+  const employeeData = useSelector((state) => state?.employeeData?.allemployee)
+
   const carousel = useRef(null);
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
     }, 1500);
   }, []);
+
   const carousel2 = useRef(null);
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
     }, 1500);
+  }, []);
+
+  useEffect(() => {
+    if (employeeData != null) {
+      setData(employeeData?.data?.data?.rows);
+    }
+  }, [employeeData]);
+
+  useEffect(() => {
+    dispatch(getAllEmployeeStart());
   }, []);
 
   const handleLeftClick = (e) => {
@@ -64,29 +69,28 @@ const OurTeamScreen = () => {
                 <Image
                   src={CEOimage}
                   alt='Image not find !'
-                  className="img-fluid"
-                  style={{ height: '300px', width: '260px', borderRadius: '10px' }}
+                  className="lead-image"
+                  // style={{ height: '300px', width: '260px', borderRadius: '10px' }}
                 />
                 <h3 >Ajay Koli</h3>
                 <p className=" commanFont">Chief Executive Officer</p>
               </div>
             </div>
-            <div className="col-sm-8 mb-4">
+            <div className="col-sm-8 mb-4 ourTeam-quotes">
               <p>{CEO_QUOTES}</p>
             </div>
           </div>
-          {/* <div className=" mb-5" /> */}
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col-sm-8 mb-4">
-              <p>{CTO_QUOTES}</p>
+              <p className="text-start ourTeam-quotes">{CTO_QUOTES}</p>
             </div>
             <div className="col-sm-4 mb-4">
               <div className="p-5" style={{ textAlign: 'center' }}>
                 <Image
                   src={CTOimage}
                   alt='Image not find !'
-                  className="img-fluid"
-                  style={{ height: '300px', borderRadius: '10px' }}
+                  className="lead-image"
+                  // style={{ height: '300px', borderRadius: '10px' }}
                 />
                 <h3 >Nihal Koli</h3>
                 <p className="commanFont">Chief Technology Officer</p>
@@ -102,55 +106,33 @@ const OurTeamScreen = () => {
               ref={carousel}
               data-aos="fade-down"
             >
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Leader</h2>
-                </div>
-              </div>
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Leader</h2>
-                </div>
-              </div>
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Leader</h2>
-                </div>
-              </div>
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Leader</h2>
-                </div>
-              </div>
+              {data?.map((item) => {
+                if (item.position == "Team Leader") {
+                  console.log('employeeData~~~~~~~>', item.firstName);
+                  return (
+                    <div className="col-sm-4 mb-3">
+                      <div className="card p-1 team-card" >
+                        <Image
+                          src={item.image}
+                          width={100}
+                          height={100}
+                          alt='team leader image'
+                          className="mb-4 mt-4  team-images"
+                        />
+                        <h2 className="serviceheadingText">{item.firstName + " " + item.lastName}</h2>
+                        <span>{item.position}</span>
+                      </div>
+                    </div>
+                  )
+                }
+              })}
             </div>
           </div>
           <div className="buttons m-3 text-center">
             <button onClick={handleLeftClick} className="m-4 p-1">
-              {/* <AiOutlineLeft /> */}
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
             </button>
             <button onClick={handleRightClick} className="m-4 p-1">
-              {/* <AiOutlineRight /> */}
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
             </button>
           </div>
@@ -163,55 +145,32 @@ const OurTeamScreen = () => {
               ref={carousel2}
               data-aos="fade-down"
             >
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Member</h2>
-                </div>
-              </div>
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Member</h2>
-                </div>
-              </div>
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Member</h2>
-                </div>
-              </div>
-              <div className="col-sm-4 mb-3">
-                <div className="card p-5 cst-border-cls" style={{ alignItems: 'center' }}>
-                  <Image
-                    src={Avtar}
-                    alt='team leader image'
-                    className="mb-4 mt-4 img-fluid "
-                  />
-                  <h2 className="serviceheadingText">Team Member</h2>
-                </div>
-              </div>
+              {data?.map((item) => {
+                if (item.position !== "Team Leader") {
+                  return (
+                    <div className="col-sm-4 mb-3">
+                      <div className="card p-1 pb-2 team-card" style={{ alignItems: 'center', minHeight: '390px' }}>
+                        <Image
+                          src={item.image}
+                          width={100}
+                          height={100}
+                          alt='team leader image'
+                          className="mb-4 mt-4 team-images "
+                        />
+                        <h2 className="serviceheadingText">{item.firstName + " " + item.lastName}</h2>
+                        <span>{item.position}</span>
+                      </div>
+                    </div>
+                  )
+                }
+              })}
             </div>
           </div>
           <div className="buttons m-3 text-center">
             <button onClick={handleLeftClickForTM} className="m-4 p-1">
-              {/* <AiOutlineLeft /> */}
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
             </button>
             <button onClick={handleRightClickForTM} className="m-4 p-1">
-              {/* <AiOutlineRight /> */}
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
             </button>
           </div>

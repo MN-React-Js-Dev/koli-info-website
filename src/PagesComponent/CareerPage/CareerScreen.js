@@ -17,7 +17,7 @@ const CareerScreen = () => {
   const [data, setData] = useState();
   const [openingId, SetOpeningId] = useState();
   const Data = useSelector((state) => state?.currentOpening?.CurrentOpenings);
-  console.log("data~~~~~~~~~~~~~>",data);
+
   useEffect(() => {
     dispatch(getAllCurrentOpeningsStart());
   }, []);
@@ -27,6 +27,7 @@ const CareerScreen = () => {
       setData(Data?.data?.data?.rows);
     }
   }, [Data]);
+  console.log('career page data~~~~~.',data);
 
   useEffect(() => {
     setTimeout(() => {
@@ -50,17 +51,16 @@ const CareerScreen = () => {
         <div className="container">
           <h1 className=" text-center mt-5 comman-heading">Current Openings</h1>
           <div className="cst-hr-for-process mb-5" />
-          {data?.map(({ job_title, experience, location, id }, index) => (
-
+          {data?.map(({ job_title, experience, location, id, image }, index) => (
             <>
-              <div class="card mt-3 mb-4 pt-2 pb-2 px-3" key={index} data-aos="fade-down">
+              <div class="card mt-3 mb-4 pt-2 pb-2 px-3 opening-card" key={index} data-aos="fade-down">
                 <div class="card-body">
                   <div
                     className="row card-items"
-                    style={{ alignItems: "center" }}
+                    style={{ alignItems: 'center' }}
                   >
                     <div className="col-sm-1">
-                      <Image className="card-image " src={nodejs}></Image>
+                      <Image className="card-image img-fluid " src={image} width={100} height={100} />
                     </div>
                     <div
                       className="col-sm-9"
@@ -78,14 +78,14 @@ const CareerScreen = () => {
                       <span>{location}</span>
                     </div>
                     <div className="col-sm-1">
-                       <span
+                      <span
                         onClick={() => handleClick(id)}
                         class="btn apply-now p-2"
                         style={{ borderRadius: "170px" }}
                       >
                         Apply Now
                       </span>
-                     </div>
+                    </div>
                   </div>
                 </div>
               </div >

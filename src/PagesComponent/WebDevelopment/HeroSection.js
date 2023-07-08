@@ -1,5 +1,5 @@
 import React, { Fragment,useEffect } from "react";
-import webDevimg1 from "../../assets/images/webDevimg-1.png";
+import webDevimg1 from "../../assets/images/web-dev.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -29,7 +29,7 @@ const WebDevHeroSection = () => {
                 eiusmod tempor incididunt
               </p>
             </div>
-            <div className="col-lg-6 " data-aos="fade-up">
+            <div className="col-lg-6 text-center" data-aos="fade-up">
               <Image src={webDevimg1} alt='Image not found' className="img-fluid testi-image" />
             </div>
           </div>
