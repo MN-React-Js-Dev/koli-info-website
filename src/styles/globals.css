@@ -1203,14 +1203,14 @@ figure img {
 }
 .dropdown .drop-btn:hover{
   /* font-weight: bold; */
-  color: #2a64f9;
+  color: #3498db;
 }
 .dropdown:hover .dropdown-menu {
   display: block;
   border: none;
  }
  .dropdown-menu a:hover{
-  color: #2a64f9;
+  color: #3498db;
   background-color: #fff;
  }
 
@@ -1223,6 +1223,7 @@ figure img {
   border-left: 1px solid black;
   height: 70%;
   border-top: none;
+  margin-left: 47px;
 }
 
 .box li:hover span {
@@ -1245,5 +1246,5 @@ figure img {
 /* -----------------------------------Arrow Styling ------------------------------- */
 .arrowIcon{
   cursor: pointer;
-  font-size: 55px;
+  font-size: 40px;
 }

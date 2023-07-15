@@ -28,7 +28,7 @@ const Footer = () => {
           <div style={{ display: 'flex', flexDirection: 'column' }} >
             <div className="row col-12 mt-5 text-center">
               <div
-                className="col-lg-3  cst-footer-logo"
+                className="col-lg-4  cst-footer-logo text-center"
                 style={{ bottom: "70px" }}
               >
                 <Image src={SVGlogo} className="mt-5 cst-footer-logo" />
@@ -40,7 +40,7 @@ const Footer = () => {
                 >
                   {`We are company that offer's all type of services`}
                 </p>
-                <div className="d-flex ">
+                <div className="d-flex justify-content-center">
                   <motion.div
                     whileHover={{ scale: 1.2, rotate: 360 }}
                     whileTap={{
@@ -157,9 +157,9 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-1" >
+              {/* <div className="col-lg-1" >
                 <hr className="vertical-line" />
-              </div>
+              </div> */}
               <div className="col-lg-4">
                 <p 
                 style={{ fontSize: 20, fontWeight: "bold"}}
@@ -187,7 +187,7 @@ const Footer = () => {
             <div >
               <div style={{ display: "flex", flexDirection: 'row' }}>
                 <div className="row col-lg-12  mt-5">
-                  <div className="col-lg-2 text-center">
+                  <div className="col-lg-4 text-center">
                     <h4>Contacts</h4>
                     <p>info@koliinfotech.com</p>
                     <p>
@@ -195,18 +195,18 @@ const Footer = () => {
                       +91-8200591443
                     </p>
                   </div>
-                  <div className="col-lg-1" >
+                  {/* <div className="col-lg-1" >
                     <hr className="vertical-line" />
-                  </div>
+                  </div> */}
                   <div className="row col-lg-8 text-center">
                     <h4 className="text-center">Our Address</h4>
-                    <div className="col-lg-7">
+                    <div className="col-lg-6">
                       <p style={{ fontSize: 17, fontWeight: "bold" }}>
                         HEAD OFFICE - SURAT
                       </p>
                       <p>4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat - 394210</p>
                     </div>
-                    <div className="col-lg-5">
+                    <div className="col-lg-6">
                       <p style={{ fontSize: 17, fontWeight: "bold" }}>
                         BRANCH OFFICE - AHMEDABAD
                       </p>

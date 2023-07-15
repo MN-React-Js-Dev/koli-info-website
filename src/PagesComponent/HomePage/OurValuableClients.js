@@ -77,7 +77,7 @@ const OurValuableClients = () => {
                   >
                     <div className="text-center" onClick={() => openModal(id)}>
                       <div>
-                        <Image className="mt-3 mb-3 rounded" src={profilePicture} width={100} height={100} alt="cliet image" />
+                        <Image className="mt-3 mb-3 rounded img-fluid" src={profilePicture} width={100} height={100} alt="cliet image" />
                       </div>
                       <div>
                         <span style={{ fontWeight: 'bold' }}>{name}</span>

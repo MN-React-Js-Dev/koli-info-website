@@ -17,7 +17,7 @@ const Header = () => {
               <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid cst-nav header">
                   <Link href="/" className="nav-link active">
-                    <Image src={SVGlogo} alt={BlueLogo} className="img-fluid" />
+                    <Image src={SVGlogo} alt={BlueLogo} className="img-fluid" style={{marginLeft: "-8px"}}/>
                   </Link>
                   <button
                     className="navbar-toggler"
