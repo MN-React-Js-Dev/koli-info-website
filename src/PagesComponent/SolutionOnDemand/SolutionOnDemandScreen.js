@@ -17,10 +17,12 @@ import mobileApp from '.././../assets/images/vaival-application.png'
 import AppTesting from '.././../assets/images/mobile-app-testing.jpg'
 import AppSecuriry from '.././../assets/images/mobile-application-security.jpg'
 import AppTestingQa from '.././../assets/images/mobile-app-development-testing-QA.png'
+import { motion } from "framer-motion";
 
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const SolutionOnDemandScreen = () => {
   const data = [
@@ -128,14 +130,14 @@ const SolutionOnDemandScreen = () => {
               <p>{COMMAN_TEXT}</p>
             </div>
             <div className="text-center">
-            <a
-              href="#"
-              className="btn btn-danger m-4 "
-              
-              type="submit"
-            >
-              Get Your Free Consultation
-            </a>
+              <a
+                href="#"
+                className="btn btn-danger m-4 "
+
+                type="submit"
+              >
+                Get Your Free Consultation
+              </a>
             </div>
           </div>
         </div>
@@ -189,16 +191,39 @@ const SolutionOnDemandScreen = () => {
                   </div>
                 </div>
               </div>
-              <div className="buttons m-3">
-              <button onClick={handleLeftClick} className="m-4 p-1">
-                {/* <AiOutlineLeft /> */}
-                <Image style={{borderRadius:'50%', height:'40px',width:'40px'}} src={LeftArrow}></Image>
-              </button>
-              <button onClick={handleRightClick} className="m-4 p-1">
-                {/* <AiOutlineRight /> */}
-                <Image style={{borderRadius:'50%', height:'40px',width:'40px'}} src={RightArrow }></Image>
-              </button>
-              </div>
+            {/*   <div className="buttons m-3">
+                <button onClick={handleLeftClick} className="m-4 p-1">
+    
+                  <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
+                </button>
+                <button onClick={handleRightClick} className="m-4 p-1">
+                  <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
+                </button>
+              </div> */}
+                <div className="d-flex justify-content-center">
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
+              <span className="px-3 arrowIcon" ><BsFillArrowLeftCircleFill style={{ color: "black" }} onClick={handleLeftClick} /></span>
+            </motion.div>
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
+             <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
+            </motion.div>
+          </div>
             </div>
           </div>
         </div>

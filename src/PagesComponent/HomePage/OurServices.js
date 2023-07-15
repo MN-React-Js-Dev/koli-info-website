@@ -19,6 +19,9 @@ import webDevimg from '.././../assets/images/webDevimg-1.png'
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { BsArrowLeftCircleFill, BsArrowRightCircle, BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const OurServices = () => {
   const dispatch = useDispatch();
@@ -139,15 +142,29 @@ const OurServices = () => {
                 })} */}
               </div>
             </div>
-            <div className="buttons m-3 text-center">
-              <button onClick={handleLeftClick} className="m-4 p-1">
-                {/* <AiOutlineLeft /> */}
-                <Image onClick={handleLeftClick} style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
-              </button>
-              <button onClick={handleRightClick} className="m-4 p-1">
-                {/* <AiOutlineRight /> */}
-                <Image onClick={handleRightClick} style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
-              </button>
+            <div className="d-flex justify-content-center">
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10,
+                }}
+              >
+                <span className="px-3 arrowIcon"><BsArrowLeftCircleFill style={{ color: "white" }} onClick={handleLeftClick}/></span>
+              </motion.div>
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10,
+                }}
+              >
+                <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "white" }} onClick={handleRightClick}/></span>
+              </motion.div>
             </div>
           </div>
         </div>

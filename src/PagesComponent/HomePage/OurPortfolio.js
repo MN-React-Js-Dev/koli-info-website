@@ -93,7 +93,9 @@ const OurPortfolio = () => {
               </div>
             </div>
             <div className="portfolio-view-more">
-              <Link href='/portfolio'>View more...</Link>
+              <Link href='/portfolio' class="btn contact-us-btn" type="submit">
+                View more...
+              </Link>
             </div>
           </div>
         </div>

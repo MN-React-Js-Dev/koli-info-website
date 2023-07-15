@@ -12,6 +12,9 @@ import { CEO_QUOTES } from "@/commonComponent/commanText";
 import { CTO_QUOTES } from "@/commonComponent/commanText";
 import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
 import { useDispatch, useSelector } from "react-redux";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
+import { motion } from "framer-motion";
+
 
 const OurTeamScreen = () => {
   const [data, setData] = useState()
@@ -128,13 +131,37 @@ const OurTeamScreen = () => {
               })}
             </div>
           </div>
-          <div className="buttons m-3 text-center">
+          {/* <div className="buttons m-3 text-center">
             <button onClick={handleLeftClick} className="m-4 p-1">
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
             </button>
             <button onClick={handleRightClick} className="m-4 p-1">
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
             </button>
+          </div> */}
+            <div className="d-flex justify-content-center">
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
+              <span className="px-3 arrowIcon" ><BsFillArrowLeftCircleFill style={{ color: "black" }} onClick={handleLeftClick} /></span>
+            </motion.div>
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
+             <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
+            </motion.div>
           </div>
           <h1 class="text-center pt-5 comman-heading">Our Team Members</h1>
           <div className="cst-hr-for-process mb-5"></div>
@@ -166,13 +193,37 @@ const OurTeamScreen = () => {
               })}
             </div>
           </div>
-          <div className="buttons m-3 text-center">
+          {/* <div className="buttons m-3 text-center">
             <button onClick={handleLeftClickForTM} className="m-4 p-1">
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
             </button>
             <button onClick={handleRightClickForTM} className="m-4 p-1">
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
             </button>
+          </div> */}
+           <div className="d-flex justify-content-center">
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
+              <span className="px-3 arrowIcon" ><BsFillArrowLeftCircleFill style={{ color: "black" }} onClick={handleLeftClickForTM} /></span>
+            </motion.div>
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
+             <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClickForTM} /></span>
+            </motion.div>
           </div>
         </div>
       </section>
