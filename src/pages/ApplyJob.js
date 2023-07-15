@@ -5,6 +5,7 @@ import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from '@/commonComponent/Footer'
 import JobDescriptionHeroSection from '@/PagesComponent/JobDescriptionPage/JobDescriptionHeroSection';
 import FormSection from '@/PagesComponent/ApplyJobPage/FormSection';
+import Head from "next/head";
 
 
 
@@ -19,6 +20,9 @@ const ApplyJob = () => {
 
     return (
         <Fragment>
+            <Head>
+                <title>Apply Job | KOLI Infotech Pvt. Ltd.</title>
+            </Head>
             {loader === true ? <LoaderComponent /> : console.log("null")}
             <Header />
             <JobDescriptionHeroSection />

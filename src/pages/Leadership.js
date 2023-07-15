@@ -4,7 +4,8 @@ import HeroSection from "@/PagesComponent/Testimonial/TestiHeroSection";
 import Footer from "@/commonComponent/Footer";
 import Header from "@/commonComponent/Header";
 import LoaderComponent from "@/commonComponent/loaderComponent";
-import React, { Fragment, useEffect,useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
 
 const Leadership = () => {
   const [loader, setLoader] = useState(true);
@@ -17,7 +18,10 @@ const Leadership = () => {
 
   return (
     <Fragment>
-       {loader === true ? <LoaderComponent /> : console.log("null")}
+      <Head>
+        <title>Leadership | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
+      {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <LeadershipHeroSection />
       <LeadershipTeam />

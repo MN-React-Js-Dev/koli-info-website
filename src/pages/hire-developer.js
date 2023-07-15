@@ -4,6 +4,7 @@ import HireDevHeroSection from "@/PagesComponent/HireDeveloper/HeroSection";
 import HireDevScreen from "@/PagesComponent/HireDeveloper/HireDevScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const HireDeveloper = () => {
   const [loader, setLoader] = useState(true);
@@ -16,6 +17,9 @@ const HireDeveloper = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Hire Developer | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <HireDevHeroSection />

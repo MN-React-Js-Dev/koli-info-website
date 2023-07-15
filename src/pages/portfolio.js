@@ -11,6 +11,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -55,6 +56,9 @@ const Portfolio = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Our Portfolio | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
@@ -85,8 +89,8 @@ const Portfolio = () => {
             {ourService?.map(({ title, id }, index) => {
               return (
                 <>
-                  <div className="col-sm-4 pt-4 text-center" style={{display:'flex',justifyContent:'center'}} onClick={() => { setDataID(id) }}>
-                   <p className="pb-4 w-50 portfolio-service">{title}</p> 
+                  <div className="col-sm-4 pt-4 text-center" style={{ display: 'flex', justifyContent: 'center' }} onClick={() => { setDataID(id) }}>
+                    <p className="pb-4 w-50 portfolio-service">{title}</p>
                   </div>
                 </>
               );
@@ -100,7 +104,7 @@ const Portfolio = () => {
                 if (dataID === our_service_id) {
                   return (
                     <div className="col-md-4 mb-5 mt-3" key={index}>
-                      
+
                       <div
                         className="container"
                         style={{ justifyContent: "space-between" }}

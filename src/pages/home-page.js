@@ -10,7 +10,8 @@ import Footer from "@/commonComponent/Footer";
 import Header from "@/commonComponent/Header";
 import OurValuableClients from "@/PagesComponent/HomePage/OurValuableClients";
 import LoaderComponent from "@/commonComponent/loaderComponent";
- 
+import Head from "next/head";
+
 const HomePage = () => {
   const [loader, setLoader] = useState(true);
 
@@ -23,9 +24,12 @@ const HomePage = () => {
   return (
     <Fragment>
       <div style={{ width: "100%", marginRight: ".5 rem" }}>
+        <Head>
+          <title>Home | KOLI Infotech Pvt. Ltd.</title>
+        </Head>
         {loader === true ? <LoaderComponent /> : console.log("null")}
         <Header />
-         <HeroSection />
+        <HeroSection />
         <OurProcessSection />
         <OurServices />
         <OurPortfolio />

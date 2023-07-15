@@ -5,6 +5,7 @@ import Image from "next/image";
 import SVGlogo from "../assets/Logo/SVGlogo.svg";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+
 const Header = () => {
   const router = useRouter()
   return (
@@ -35,11 +36,11 @@ const Header = () => {
                   >
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
                           href="#"
-                        ></a>
+                        ></Link>
                       </li>
                     </ul>
 
@@ -60,12 +61,12 @@ const Header = () => {
                               Company
                             </span>
                             <ul class="dropdown-menu collap-manu">
-                              <li><a class="dropdown-item" href="/who-we-are">Who We Are!</a></li>
-                              <li><a class="dropdown-item" href="/our-team">Our Team</a></li>
-                              <li><a class="dropdown-item" href="/testimonial">Testimoial</a></li>
-                              <li><a class="dropdown-item" href="/portfolio">Our Portfolio</a></li>
-                              <li><a class="dropdown-item" href="/about-company">About Us</a></li>
-                              <li><a class="dropdown-item" href="/OurCulture">Our Culture</a></li>
+                              <li><Link class="dropdown-item" href="/who-we-are">Who We Are!</Link></li>
+                              <li><Link class="dropdown-item" href="/our-team">Our Team</Link></li>
+                              <li><Link class="dropdown-item" href="/testimonial">Testimoial</Link></li>
+                              <li><Link class="dropdown-item" href="/portfolio">Our Portfolio</Link></li>
+                              <li><Link class="dropdown-item" href="/about-company">About Us</Link></li>
+                              <li><Link class="dropdown-item" href="/OurCulture">Our Culture</Link></li>
                             </ul>
                           </li>
                         </motion.div>
@@ -83,10 +84,10 @@ const Header = () => {
                               Services
                             </span>
                             <ul class="dropdown-menu collap-manu">
-                              <li><a class="dropdown-item" href="/web-development">Web Development</a></li>
-                              <li><a class="dropdown-item" href="/mobile-app-development">Mobile App Development</a></li>
-                              <li><a class="dropdown-item" href="/data-security">Data Security</a></li>
-                              <li><a class="dropdown-item" href="/hire-developer">Hire Dedicated Developers</a></li>
+                              <li><Link class="dropdown-item" href="/web-development">Web Development</Link></li>
+                              <li><Link class="dropdown-item" href="/mobile-app-development">Mobile App Development</Link></li>
+                              <li><Link class="dropdown-item" href="/data-security">Data Security</Link></li>
+                              <li><Link class="dropdown-item" href="/hire-developer">Hire Dedicated Developers</Link></li>
                             </ul>
                           </li>
                         </motion.div>

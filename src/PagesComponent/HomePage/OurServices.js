@@ -110,7 +110,7 @@ const OurServices = () => {
                       className="mb-4 mt-4 service-image"
                     />
                     <h2 className="serviceheadingText">Web Application Development</h2>
-                    <p className="serviceText commanFont">Web application development is the creation of application programs that reside on remote servers and are delivered to the user's device over the Internet.</p>
+                    <p className="serviceText commanFont">Web application development is the creation of application programs that reside on remote servers and are delivered to the users device over the Internet.</p>
                   </div>
                 </div>
                 <div className="col-sm-4 mb-4">

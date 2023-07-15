@@ -5,6 +5,7 @@ import MobiAppDevHeroSection from "@/PagesComponent/MobiAppDevelopment/HeroSecti
 import MobiAppDevScreen from "@/PagesComponent/MobiAppDevelopment/MobiAppDevScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const MobiAppDevelopment = () => {
   const [loader, setLoader] = useState(true);
@@ -17,6 +18,9 @@ const MobiAppDevelopment = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Mobile App Development | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <MobiAppDevHeroSection />

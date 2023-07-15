@@ -5,6 +5,7 @@ import TestimonialOfOurClient from "@/PagesComponent/Testimonial/TestimonialOfOu
 import Header from "@/commonComponent/Header";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const TestimonialPage = () => {
   const [loader, setLoader] = useState(true);
@@ -17,6 +18,9 @@ const TestimonialPage = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Testimonial | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <TestiHeroSection />

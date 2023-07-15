@@ -79,7 +79,7 @@ export default function Document() {
         ></Script>
         <Script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></Script>
         <Script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></Script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></Script>
       </body>
     </Html>
   );

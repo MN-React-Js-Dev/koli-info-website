@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import HireHeroImg from "../../assets/images/HireDevImg-1.png";
 import MobileHero from "../../assets/images/Mobile-hero.png";
 import Image from "next/image";
+import Link from "next/link";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -27,9 +28,9 @@ const HireDevHeroSection = () => {
                 We are a company that offers design and develop services for you
                 from initial sketches to the final construction.
               </p>
-              <a class="btn contact-us-btn m-4 p-2" href="/contact-us" type="submit">
+              <Link class="btn contact-us-btn m-4 p-2" href="/contact-us" type="submit">
                 Contact Us
-              </a>
+              </Link>
             </div>
             <div className="col-lg-6 text-center" data-aos="fade-up">
               <Image src={HireHeroImg} alt='Image not found' className="img-fluid testi-image" />

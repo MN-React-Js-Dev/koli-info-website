@@ -6,6 +6,7 @@ import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
 import HeroSection from '@/PagesComponent/OurTeam/HeroSection';
 import OurTeamScreen from "@/PagesComponent/OurTeam/OurTeamScreen";
+import Head from "next/head";
 
 const CareerPage = () => {
   const [loader, setLoader] = useState(true);
@@ -18,10 +19,13 @@ const CareerPage = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Our Team | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
-      <HeroSection/>
-      <OurTeamScreen/>
+      <HeroSection />
+      <OurTeamScreen />
       <Footer />
     </Fragment>
   );

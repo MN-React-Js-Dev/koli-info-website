@@ -6,7 +6,7 @@ import OurCultureHeroSection from '@/PagesComponent/OurCulturePage/OurCultureHer
 import MissionSection from '@/PagesComponent/OurCulturePage/MissionSection';
 import FunSection from '@/PagesComponent/OurCulturePage/FunSection';
 import Footer from '@/commonComponent/Footer'
-
+import Head from "next/head";
 
 
 const OurCulture = () => {
@@ -20,11 +20,14 @@ const OurCulture = () => {
 
     return (
         <Fragment>
+            <Head>
+                <title>Our Culture | KOLI Infotech Pvt. Ltd.</title>
+            </Head>
             {loader === true ? <LoaderComponent /> : console.log("null")}
             <Header />
             <OurCultureHeroSection />
             <MissionSection />
-            <FunSection/>
+            <FunSection />
             <Footer />
         </Fragment>
     )

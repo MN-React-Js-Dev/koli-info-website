@@ -4,6 +4,7 @@ import Header from "@/commonComponent/Header";
 import React, { Fragment, useState, useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const CareerPage = () => {
   const [loader, setLoader] = useState(true);
@@ -16,8 +17,11 @@ const CareerPage = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Career | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
-      <Header/>
+      <Header />
       <CareerPageHeroSection />
       <CareerScreen />
       <Footer />

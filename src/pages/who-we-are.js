@@ -5,6 +5,7 @@ import WhoWeAreHeroSection from "@/PagesComponent/WhoWeAre/HeroSection";
 import WhoWeAreScreen from "@/PagesComponent/WhoWeAre/WhoWeAreScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const WhoWeAre = () => {
   const [loader, setLoader] = useState(true);
@@ -17,6 +18,9 @@ const WhoWeAre = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Who We Are | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <WhoWeAreHeroSection />

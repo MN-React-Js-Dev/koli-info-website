@@ -113,7 +113,7 @@ const WhoWeAreScreen = () => {
                 />
                 <h2>Web Development</h2>
                 <p style={{maxHeight:'100px',minHeight:'100px'}}>
-                Web development is the building and maintenance of websites; it's the work that happens behind the scenes to make a website look great
+                Web development is the building and maintenance of websites; it&apos;s the work that happens behind the scenes to make a website look great
                 </p>
               </div>
             </div>

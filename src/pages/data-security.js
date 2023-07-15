@@ -5,6 +5,7 @@ import Header from "@/commonComponent/Header";
 import { useState, useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const DataSecurity = () => {
   const [loader, setLoader] = useState(true);
@@ -17,6 +18,9 @@ const DataSecurity = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Data Security | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <DataSecureHeroSection />

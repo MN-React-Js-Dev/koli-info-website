@@ -111,7 +111,7 @@ p {
 }
 
 .contact-us-btn:hover{
-  background-color: #e83030 !important;
+  background-color: #00308F !important;
 }
 
  
@@ -514,6 +514,7 @@ font-size: 10;
 
 .topblog-card:hover{
   background-color: #5379d7;
+  transform: scale(2);
 }
 
 .grid-class-cst {

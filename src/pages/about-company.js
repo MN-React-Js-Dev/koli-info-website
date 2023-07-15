@@ -7,6 +7,7 @@ import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const AboutCompany = () => {
   const [loader, setLoader] = useState(true);
@@ -48,6 +49,9 @@ const AboutCompany = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>About Us | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="portfolio-section" style={{ background: "#E3E3FF" }}>
@@ -92,8 +96,8 @@ const AboutCompany = () => {
         <div className="container" data-aos="fade-down">
           <h1 className="comman-heading">Qualities we take pride in</h1>
           <div className="hr-cst mb-3" />
-          {data.map((item) => (
-            <div className="row mb-5">
+          {data.map((item, index) => (
+            <div className="row mb-5" key={index}>
               <>
                 <div className="col-md-1 col-3 pt-4">
                   <span className="number-class">{item.SrNo}</span>

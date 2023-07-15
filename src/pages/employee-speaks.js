@@ -9,6 +9,7 @@ import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const EmployeeSpeaks = () => {
   const dispatch = useDispatch();
@@ -47,6 +48,9 @@ const EmployeeSpeaks = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Employee Spseak | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <section className="employee-speak" style={{ background: "#E3E3FF" }}>

@@ -106,11 +106,11 @@ const OurTeamScreen = () => {
               ref={carousel}
               data-aos="fade-down"
             >
-              {data?.map((item) => {
+              {data?.map((item, index) => {
                 if (item.position == "Team Leader") {
                   console.log('employeeData~~~~~~~>', item.firstName);
                   return (
-                    <div className="col-sm-4 mb-3">
+                    <div className="col-sm-4 mb-3" key={index}>
                       <div className="card p-1 team-card" >
                         <Image
                           src={item.image}
@@ -145,10 +145,10 @@ const OurTeamScreen = () => {
               ref={carousel2}
               data-aos="fade-down"
             >
-              {data?.map((item) => {
+              {data?.map((item,index) => {
                 if (item.position !== "Team Leader") {
                   return (
-                    <div className="col-sm-4 mb-3">
+                    <div className="col-sm-4 mb-3" key={index}>
                       <div className="card p-1 pb-2 team-card" style={{ alignItems: 'center', minHeight: '390px' }}>
                         <Image
                           src={item.image}

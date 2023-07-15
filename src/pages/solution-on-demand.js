@@ -4,6 +4,7 @@ import SolutionOnDemandHeroSection from "@/PagesComponent/SolutionOnDemand/HeroS
 import SolutionOnDemandScreen from "@/PagesComponent/SolutionOnDemand/SolutionOnDemandScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
+import Head from "next/head";
 
 const SolutionOnDemand = () => {
   const [loader, setLoader] = useState(true);
@@ -16,6 +17,9 @@ const SolutionOnDemand = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Solution On Demand | KOLI Infotech Pvt. Ltd.</title>
+      </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <SolutionOnDemandHeroSection />

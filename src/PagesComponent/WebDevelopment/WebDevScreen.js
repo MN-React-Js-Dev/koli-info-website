@@ -4,6 +4,7 @@ import webDevimg2 from "../../assets/images/webDevimg-2.png";
 import smartphone from "../../assets/images/smartphone.png";
 import pc from '../../assets/images/ux1.png'
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
+import Link from "next/link";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -137,9 +138,9 @@ const WebDevScreen = () => {
               <h2>Developer for Hire?</h2>
             </div>
             {/* <div className="col-lg-6  hire-btn"> */}
-              <a href="/contact-us" className="fw-bold hire-btn col-lg-6 p-3 text-white btn btn-danger rounded-pill">
+              <Link href="/contact-us" className="fw-bold hire-btn col-lg-6 p-3 text-white btn btn-danger rounded-pill">
                 Hire Web Developers Now
-              </a>
+              </Link>
             {/* </div> */}
           </div>
         </div>
