@@ -216,12 +216,37 @@ p {
     margin: auto;
   }
 }
-@media (max-width:322px) {
+@media (max-width:390px) {
   .service-card {
-    width: 17rem;
+    width: 22rem;
     margin: auto;
   }
 }
+@media (max-width:360px) {
+  .service-card {
+    width: 10rem;
+    margin: auto;
+  }
+}
+@media (max-width:393px) {
+  .service-card {
+    width: 21rem;
+    margin: auto;
+    margin: auto;
+  }
+}
+@media (max-width:322px) {
+  .service-card {
+    width: 18rem;
+    margin: auto;
+  }
+}
+/* @media (max-width:820px) {
+  .service-card {
+    width: 25rem;
+    margin: auto;
+  }
+} */
 @media (max-width:425px) {
   .topblog-card {
     width: 23rem;
@@ -404,6 +429,8 @@ font-size: 10;
   }
 }
 
+
+
 .cst-our-process {
   display: flex;
   justify-content: center;
@@ -485,12 +512,9 @@ font-size: 10;
   min-height: 95%;
 }
 
-/* .service-card:hover {
-  background-color: #87CEEB;@media (min-width: 576px)
-} */
 .service-card:hover {
   background-color: #87CEEB;
-  
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
 }
 .service-card p:hover{
   color: #000;
@@ -508,13 +532,10 @@ font-size: 10;
     /* height: 30px; */
   }
 }
-/* .service-image:hover{
-  box-shadow: #A9A9A9 2px 2px;;
-} */
 
 .topblog-card:hover{
-  background-color: #5379d7;
-  /* transform: scale(2); */
+  /* background-color: #5379d7; */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
 .grid-class-cst {
@@ -642,7 +663,7 @@ input {
 
 .card {
   background: #ffffff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .collap-manu{ 

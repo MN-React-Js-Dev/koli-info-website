@@ -201,13 +201,13 @@ const Footer = () => {
                   <div className="row col-lg-8 text-center">
                     <h4 className="text-center">Our Address</h4>
                     <div className="col-lg-6">
-                      <p style={{ fontSize: 17, fontWeight: "bold" }}>
+                      <p style={{ fontSize: 15, fontWeight: "bold" }}>
                         HEAD OFFICE - SURAT
                       </p>
                       <p>4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat - 394210</p>
                     </div>
                     <div className="col-lg-6">
-                      <p style={{ fontSize: 17, fontWeight: "bold" }}>
+                      <p style={{ fontSize: 15, fontWeight: "bold" }}>
                         BRANCH OFFICE - AHMEDABAD
                       </p>
                       <p>A - 501, Sahajanand Complex Shahibaug, Ahmedabad - 380004</p>

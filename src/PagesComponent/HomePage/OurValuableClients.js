@@ -44,16 +44,29 @@ const OurValuableClients = () => {
       backgroundColor: 'rgba(0, 0, 0, 0.6)'
     },
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      width: "20%",
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      borderRadius: '10px'
+      top: '30%',
+      // left: '50%',
+      // right: 'auto',
+      // bottom: 'auto',
+      // width: "20%",
+      // marginRight: '-50%',
+      // transform: 'translate(-50%, -50%)',
+      borderRadius: '10px',
+      width: '80%', // Adjust the width to your preference
+      maxWidth: '500px', // Set a maximum width if desired
+      margin: '0 auto',
+      maxHeight: '38vh',
     }
   }
+
+  // const ModalStyles = {
+  //   content: {
+  //     width: '80%', // Adjust the width to your preference
+  //     maxWidth: '500px', // Set a maximum width if desired
+  //     margin: '0 auto',
+  //     maxHeight: '80vh', // Set a maximum height if desired
+  //   },
+  // };
 
   const openModal = (id) => {
     dispatch(getSingleClientStart(id));
@@ -89,7 +102,7 @@ const OurValuableClients = () => {
               ))}
             </div>
           </div>
-          <Modal
+          <Modal 
             isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
             <div className="text-center">
               <SlClose className="modal-closs-btn" onClick={() => setIsOpen(false)} alt="close button" />
