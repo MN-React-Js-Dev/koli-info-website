@@ -115,7 +115,7 @@ const OurTeamScreen = () => {
                   return (
                     <div className="col-sm-4 mb-3" key={index}>
                       <div className="card p-1 team-card" >
-                        <Image
+                        <img
                           src={item.image}
                           width={100}
                           height={100}

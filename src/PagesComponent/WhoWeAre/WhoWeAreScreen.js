@@ -68,7 +68,7 @@ const WhoWeAreScreen = () => {
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="card p-5 cst-border-cls service-card">
-                    <Image
+                    <img
                       src={icon}
                       width={100}
                       height={100}

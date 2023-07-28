@@ -60,7 +60,8 @@ const CareerScreen = () => {
                     style={{ alignItems: 'center' }}
                   >
                     <div className="col-sm-1">
-                      <Image className="card-image img-fluid " src={image} width={100} height={100} />
+                      {/* <Image className="card-image img-fluid " src={image} width={100} height={100} /> */}
+                      <img className="card-image img-fluid " src={image} width={100} height={100} />
                     </div>
                     <div
                       className="col-sm-9"

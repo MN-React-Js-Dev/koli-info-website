@@ -61,7 +61,7 @@ const OurTopBlogs = () => {
                         {/* <div class="date-cst">
                           <span class="day">{created_at}</span>
                         </div> */}
-                        <Image
+                        <img
                           src={image}
                           width={100}
                           height={100}

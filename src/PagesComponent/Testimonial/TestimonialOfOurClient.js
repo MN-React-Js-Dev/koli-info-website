@@ -58,7 +58,7 @@ const TestimonialOfOurClient = () => {
                     key={index}
                     data-aos="fade-up"
                   >
-                    <Image
+                    <img
                       src={profilePicture}
                       width={100}
                       height={100}
