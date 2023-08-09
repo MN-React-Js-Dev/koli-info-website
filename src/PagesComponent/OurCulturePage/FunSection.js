@@ -54,6 +54,7 @@ const FunSection = () => {
                     <div className="cst-hr-for-process mb-5" />
                     <div className="row" data-aos="fade-up" >
                         <div className="bold-p text-center ">
+                          
                             <Image
                                 src={opning}
                                 alt="Image not found"

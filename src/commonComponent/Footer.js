@@ -51,7 +51,7 @@ const Footer = () => {
                   >
                     <div className="px-3" data-aos="fade-up">
                       <Link
-                        href="https://www.facebook.com/"
+                        href="https://www.facebook.com/koli.infotech/"
                         className="nav-link active"
                         target="_blank"
                       >
@@ -72,7 +72,7 @@ const Footer = () => {
                   >
                     <div className="px-3" data-aos="fade-up">
                       <Link
-                        href="https://twitter.com/home?lang=en"
+                        href="https://twitter.com/Koli_Infotech/"
                         className="nav-link active"
                         target="_blank"
                       >
@@ -168,7 +168,7 @@ const Footer = () => {
                 // style={{ display: "flex", flexDirection: 'row' }}
                 >
                   <div className="">
-                    <Link href="/" className="nav-link active">
+                    <Link href="/about-company" className="nav-link active">
                       <p className="footerActivemenu">About</p>
                     </Link>
                     <Link href="/Career" className="nav-link active">
@@ -268,7 +268,7 @@ const Footer = () => {
           style={{ textAlign: "center", marginBottom: "1%", marginTop: "1%" }}
         >
           <span>&copy;</span>
-          <span>2023 KOLI infotech Pvt. Ltd. | All rights reserved.</span>
+          <span>2023 KOLI Infotech Pvt. Ltd. | All rights reserved.</span>
         </div>
       </section>
 

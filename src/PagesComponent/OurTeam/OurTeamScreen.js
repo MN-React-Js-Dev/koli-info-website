@@ -68,7 +68,7 @@ const OurTeamScreen = () => {
           <div className=" mb-5" />
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col-sm-4 mb-4">
-              <div className="p-5" style={{ textAlign: 'center' }}>
+              <div className="p-5" style={{ textAlign: 'center' }} data-aos="fade-right" >
                 <Image
                   src={CEOimage}
                   alt='Image not find !'
@@ -88,7 +88,7 @@ const OurTeamScreen = () => {
               <p className="text-start ourTeam-quotes">{CTO_QUOTES}</p>
             </div>
             <div className="col-sm-4 mb-4">
-              <div className="p-5" style={{ textAlign: 'center' }}>
+              <div className="p-5" style={{ textAlign: 'center' }} data-aos="fade-left">
                 <Image
                   src={CTOimage}
                   alt='Image not find !'
@@ -114,7 +114,7 @@ const OurTeamScreen = () => {
                   console.log('employeeData~~~~~~~>', item.firstName);
                   return (
                     <div className="col-sm-4 mb-3" key={index}>
-                      <div className="card p-1 team-card" >
+                      <div className="card p-1 team-card team-image" >
                         <img
                           src={item.image}
                           width={100}
@@ -176,8 +176,8 @@ const OurTeamScreen = () => {
                 if (item.position !== "Team Leader") {
                   return (
                     <div className="col-sm-4 mb-3" key={index}>
-                      <div className="card p-1 pb-2 team-card" style={{ alignItems: 'center', minHeight: '390px' }}>
-                        <Image
+                      <div className="card p-1 pb-2 team-card team-image" style={{ alignItems: 'center', minHeight: '390px' }}>
+                        <img
                           src={item.image}
                           width={100}
                           height={100}
