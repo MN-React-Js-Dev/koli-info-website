@@ -1276,3 +1276,17 @@ figure img {
 .team-image:hover{
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
 }
+
+
+/* =------------------------------------------------- Hiring Class ------------------------------- */
+
+.hiringClass:hover{
+  color: #3498db
+}
+
+
+/* ------------------------------------------------ Hirirng Apply Now Button ----------------------------------- */
+
+.hiringApplyButton:hover{
+  color: #3F689F;
+}

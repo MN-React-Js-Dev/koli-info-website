@@ -15,6 +15,7 @@ const OurCultureHeroSection = () => {
 
     return (
         <Fragment>
+            
             <section
                 className="testi-hero-image "
                 style={{ backgroundColor: "#E3E3FF" }}

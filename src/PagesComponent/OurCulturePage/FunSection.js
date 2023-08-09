@@ -20,11 +20,11 @@ const FunSection = () => {
             image: seminar
         },
         {
-            Topics: "Birthday celebration",
+            Topics: "Birthday Celebration",
             image: brithday
         },
         {
-            Topics: "Festival celebration",
+            Topics: "Festival Celebration",
             image: chris
         },
         {
@@ -32,7 +32,7 @@ const FunSection = () => {
             image: Lunch
         },
         {
-            Topics: "Off Site",
+            Topics: "Outdoor Picnic",
             image: offSite
         },
         {
@@ -50,19 +50,34 @@ const FunSection = () => {
         <Fragment>
             <section className="our-mission mt-5 mb-5">
                 <div className="container" data-aos="fade-up">
-                    <h1 className="text-center">Employee Engagement  Activities</h1>
+                <div style={{justifyContent:'center', alignSelf:'center',alignItems:'center', textAlign:'center'}}>
+                <iframe
+                    // width="853" 
+                    // height="480"
+                    width="100%"
+                    height="580"
+                    src={`https://www.youtube.com/embed/JNxOw9rbX9c`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Embedded youtube"
+                    
+                />
+
+            </div>
+                    <h1 className="text-center mt-5">Employee Engagement  Activities</h1>
                     <div className="cst-hr-for-process mb-5" />
                     <div className="row" data-aos="fade-up" >
                         <div className="bold-p text-center ">
-                          
+
                             <Image
                                 src={opning}
                                 alt="Image not found"
                                 className="img-fluid rounded"
-                                // style={{ borderRadius: 50, height: 600, width: '100%'  }}
+                            // style={{ borderRadius: 50, height: 600, width: '100%'  }}
                             />
                         </div>
-                        <p style={{ fontSize: 25, fontWeight: 'bold' }} className="text-center mb-5">Office Opening</p>
+                        <p style={{ fontSize: 25, fontWeight: 'bold' }} className="text-center mb-5 mt-3">Client Visit</p>
 
                         {data.map(({ Topics, image }, index) => (
                             <>
@@ -75,7 +90,7 @@ const FunSection = () => {
                                             style={{ borderRadius: 25, height: 400, width: 600 }}
                                         />
                                     </div>
-                                    <p style={{ fontSize: 25, fontWeight: 'bold' }} className="text-center mb-5">{Topics}</p>
+                                    <p style={{ fontSize: 25, fontWeight: 'bold' }} className="text-center mb-5 mt-3">{Topics}</p>
                                 </div>
                             </>
                         ))}

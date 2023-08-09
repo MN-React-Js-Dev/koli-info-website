@@ -9,7 +9,7 @@ import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -141,7 +141,7 @@ const Footer = () => {
               </div>
               <div className="col-lg-4">
                 <p style={{ fontSize: 20, fontWeight: "bold" }}>Services</p>
-                <div 
+                <div
                 // style={{ display: "flex", flexDirection: 'row' }}
                 >
                   <div >
@@ -161,10 +161,10 @@ const Footer = () => {
                 <hr className="vertical-line" />
               </div> */}
               <div className="col-lg-4">
-                <p 
-                style={{ fontSize: 20, fontWeight: "bold"}}
+                <p
+                  style={{ fontSize: 20, fontWeight: "bold" }}
                 >Pages</p>
-                <div 
+                <div
                 // style={{ display: "flex", flexDirection: 'row' }}
                 >
                   <div className="">
@@ -226,7 +226,7 @@ const Footer = () => {
         </div>
       </section>
       <hr className="row ml-4 mr-4" />
-      <div className="container" data-aos="fade-up">
+      <div className="container" >
         <div style={{
           display: 'flex',
           flexDirection: 'row',
@@ -241,12 +241,12 @@ const Footer = () => {
               display: 'flex',
               flexDirection: 'row',
               alignItems: 'center',
-            }}>
+            }} className="hiringClass">
               {/* <Image src={circleElement} style={{ position: 'absolute', }} /> */}
-              <p style={{ fontWeight: 'bold', fontSize: 20, margin: 0, marginLeft: 40, }}>WE ARE HIRING!</p>
+              <p style={{ fontWeight: 'bold', fontSize: 20, margin: 0, marginLeft: 40 }}>WE ARE HIRING!</p>
               <Image src={hiring} style={{ height: 30, width: 30, marginLeft: 15 }} />
             </div>
-            <div>
+            <div className="hiringClass">
               <p style={{ fontSize: 20, marginLeft: 40, }}>Join Our Team.</p>
             </div>
           </div>
@@ -255,10 +255,20 @@ const Footer = () => {
             flexDirection: 'row',
             alignItems: 'center',
           }}>
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
             <Link href="/Career" className="nav-link active c" style={{ display: 'flex', alignItems: 'center' }}>
               <p style={{ fontWeight: 'bold', color: '#0d6efd', marginRight: 5 }}>Apply Now</p>
               <Image src={arrow} style={{ height: 40, width: 40, marginBottom: 15, marginRight: 40 }} />
             </Link>
+            </motion.div>
           </div>
         </div>
       </div>
