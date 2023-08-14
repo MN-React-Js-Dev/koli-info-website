@@ -297,8 +297,15 @@ p {
 }
 
 .slide-img {
-  height: 25vw;
-  width: 26.5vw;
+  height: 10vw;
+  width: 12.8vw;
+}
+
+.logos-image {
+  /* width: 15%; */
+  /* aspect-ratio: 4/3; */
+  object-fit: contain;
+  mix-blend-mode: color-burn;
 }
 
 /* @media () {
@@ -1289,4 +1296,12 @@ figure img {
 
 .hiringApplyButton:hover{
   color: #3F689F;
+}
+
+
+/*  ------------------------------------------------------------- solution on demand images styling ------------------------------ */
+
+.solutionImage{
+  height: 100px;
+  width:100px
 }

@@ -40,5 +40,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.10",
     "sweetalert": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4"
   }
 }
