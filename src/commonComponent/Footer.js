@@ -146,13 +146,13 @@ const Footer = () => {
                 >
                   <div >
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
-                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Web Application Development</p></Link>
+                    <Link href="/web-development" className="nav-link"><p className="footerActivemenu">Web Development</p></Link>
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Mobile Application Development</p></Link>
 
                     {/* </div>
                   <div className="ml-2"> */}
-                    <Link href="/mobile-app-development" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
-                    <Link href="/mobile-app-development" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
+                    <Link href="/cloud-services" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
+                    <Link href="/artificial-intelligence-machin-learning" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
                     <Link href="/mobile-app-development" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
                   </div>
                 </div>

@@ -25,11 +25,8 @@ import HDFC from '../../assets/images/HDFC.png'
 import Axis from '../../assets/images/Axis.png'
 import Onfleek from "../../assets/images/onfleek.png";
 import SetFlow from '../../assets/images/SetFlow.png'
-import jodiBanao  from '../../assets/images/jodiBanao.png'
-
-
+import jodiBanao from '../../assets/images/jodiBanao.png'
 import { motion } from "framer-motion";
-
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -175,22 +172,22 @@ const SolutionOnDemandScreen = () => {
                       className="slide-img m-2 p-2 WebDev-dashed-border"
                     />
                     <Image
+                      src={Onfleek}
+                      alt="image"
+                      className="slide-img m-2 p-2 WebDev-dashed-border"
+                    />
+                    <Image
                       src={ByjusLogo1}
                       alt="image"
                       className="slide-img m-2 p-2 WebDev-dashed-border"
                     />
                     <Image
+                      src={jodiBanao}
+                      alt="image"
+                      className="slide-img m-2  p-2 WebDev-dashed-border"
+                    />
+                    <Image
                       src={HDFC}
-                      alt="image"
-                      className="slide-img m-2 p-2 WebDev-dashed-border"
-                    />
-                    <Image
-                      src={Axis}
-                      alt="image"
-                      className="slide-img m-2 p-2 WebDev-dashed-border"
-                    />
-                    <Image
-                      src={Onfleek}
                       alt="image"
                       className="slide-img m-2 p-2 WebDev-dashed-border"
                     />
@@ -200,9 +197,9 @@ const SolutionOnDemandScreen = () => {
                       className="slide-img m-2 p-2 WebDev-dashed-border"
                     />
                     <Image
-                      src={jodiBanao}
+                      src={Axis}
                       alt="image"
-                      className="slide-img m-2  p-2 WebDev-dashed-border"
+                      className="slide-img m-2 p-2 WebDev-dashed-border"
                     />
                   </div>
                 </div>
@@ -274,4 +271,3 @@ const SolutionOnDemandScreen = () => {
 };
 
 export default SolutionOnDemandScreen;
-  

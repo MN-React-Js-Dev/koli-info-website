@@ -151,6 +151,7 @@ p {
 
 .testi-image {
   margin-top: 0;
+  
 }
 
 .ideas-into-reality {
@@ -1304,4 +1305,11 @@ figure img {
 .solutionImage{
   height: 100px;
   width:100px
+}
+
+
+/* -------------------------------------------------------------------- Cloud Hero-Section ----------------------------------------- */
+
+.cloud-services-herose{
+    mix-blend-mode: color-burn;
 }
