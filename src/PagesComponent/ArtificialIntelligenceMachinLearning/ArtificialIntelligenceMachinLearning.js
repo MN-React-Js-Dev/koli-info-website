@@ -20,6 +20,8 @@ import S3Bucket from '../../assets/images/S3Bucket.png'
 import { motion } from "framer-motion";
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 import amazons3 from '../../assets/images/amazons3.png'
+import voice_oc from '../../assets/images/voice_oc.png'
+import VoiceocLogo from '../../assets/images/VoiceocLogo.png'
 
 
 const AiandMlScreen = () => {
@@ -59,7 +61,7 @@ const AiandMlScreen = () => {
                                             className="slide-img m-2 p-2 WebDev-dashed-border"
                                         />
                                         <Image
-                                            src={Onfleek}
+                                            src={VoiceocLogo}
                                             alt="image"
                                             className="slide-img m-2 p-2 WebDev-dashed-border"
                                         />

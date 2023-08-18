@@ -4,6 +4,7 @@ import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import CloudService1 from '../../assets/images/CloudService1.png'
+import clouds from '../../assets/images/clouds.gif'
 
 
 const CloudServiceHeroSection = () => {
@@ -29,7 +30,7 @@ const CloudServiceHeroSection = () => {
                             </p>
                         </div>
                         <div className="col-lg-6 text-start" data-aos="fade-up">
-                            <Image src={CloudService1} alt='Image not found' className="img-fluid" style={{marginLeft:"80px", height:"150%", width:"70%"}} />
+                            <Image src={clouds} alt='Image not found' className="img-fluid" style={{marginLeft:"80px", height:"150%", width:"70%"}} />
                         </div>
                     </div>
                 </div>

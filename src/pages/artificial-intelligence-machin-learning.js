@@ -7,6 +7,7 @@ import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
 import AiMlHeroSection from "@/PagesComponent/ArtificialIntelligenceMachinLearning/HeroSection";
 import AiandMlScreen from "@/PagesComponent/ArtificialIntelligenceMachinLearning/ArtificialIntelligenceMachinLearning";
+import AiMlServices from "@/PagesComponent/ArtificialIntelligenceMachinLearning/Services";
 
 
 const AimlServices = () => {
@@ -21,12 +22,13 @@ const AimlServices = () => {
     return (
         <Fragment>
             <Head>
-                <title>A.I & M.L | KOLI Infotech Pvt. Ltd.</title>
+                <title>A.I/M.L Development | KOLI Infotech Pvt. Ltd.</title>
             </Head>
             {loader === true ? <LoaderComponent /> : console.log("null")}
             <Header />
             <AiMlHeroSection />
             <AiandMlScreen />
+            <AiMlServices />
             <Footer />
         </Fragment>
     );

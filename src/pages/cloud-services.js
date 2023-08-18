@@ -7,6 +7,7 @@ import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
 import CloudScreen from "@/PagesComponent/CloudServices/CloudServices";
 import Cloudservices from "@/PagesComponent/CloudServices/Services";
+import FaqAccordianCloud from "@/PagesComponent/CloudServices/FaqAccordian"
 
 const CloudServices = () => {
   const [loader, setLoader] = useState(true);
@@ -27,6 +28,7 @@ const CloudServices = () => {
       <CloudServiceHeroSection />
       <CloudScreen />
       <Cloudservices />
+      <FaqAccordianCloud />
       <Footer />
     </Fragment>
   );
