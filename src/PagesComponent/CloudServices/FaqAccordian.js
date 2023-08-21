@@ -100,8 +100,9 @@ const FaqAccordianCloud = () => {
                             stiffness: 600,
                             damping: 30,
                         }}
+                        key={index}
                     >
-                        <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
+                            <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
                     </motion.div>
                 ))}
             </div>

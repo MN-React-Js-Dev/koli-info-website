@@ -153,7 +153,7 @@ const Footer = () => {
                   <div className="ml-2"> */}
                     <Link href="/cloud-services" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
                     <Link href="/artificial-intelligence-machin-learning" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
-                    <Link href="/mobile-app-development" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
+                    <Link href="/qa-testing" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
                   </div>
                 </div>
               </div>
