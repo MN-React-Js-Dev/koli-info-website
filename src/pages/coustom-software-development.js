@@ -5,13 +5,13 @@ import CloudServiceHeroSection from "@/PagesComponent/CloudServices/HeroSection"
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
-import QaTestingHeroSection from "@/PagesComponent/QATesting/HeroSection";
-import QaandTestingScreen from '@/PagesComponent/QATesting/LogoScreen'
-import QaAndTestingServices from "@/PagesComponent/QATesting/Services";
+import CoustomSoftwareHeroSection from "@/PagesComponent/CoustomSoftwareDevelopment/HeroSection";
+import CoustomSoftwareScreen from "@/PagesComponent/CoustomSoftwareDevelopment/LogoScreen";
+import CoustomSoftwareDServices from "@/PagesComponent/CoustomSoftwareDevelopment/Services";
 
 
 
-const QaTestingServices = () => {
+const CoustomSoftwareServices = () => {
     const [loader, setLoader] = useState(true);
 
     useEffect(() => {
@@ -23,16 +23,16 @@ const QaTestingServices = () => {
     return (
         <Fragment>
             <Head>
-                <title>Q.A/Testing | KOLI Infotech Pvt. Ltd.</title>
+                <title>Coustom Software | KOLI Infotech Pvt. Ltd.</title>
             </Head>
             {loader === true ? <LoaderComponent /> : console.log("null")}
             <Header />
-            <QaTestingHeroSection />
-            <QaandTestingScreen />
-            <QaAndTestingServices />
+            <CoustomSoftwareHeroSection />
+            <CoustomSoftwareScreen />
+            <CoustomSoftwareDServices />
             <Footer />
         </Fragment>
     );
 };
 
-export default QaTestingServices;
+export default CoustomSoftwareServices;

@@ -145,7 +145,7 @@ const Footer = () => {
                 // style={{ display: "flex", flexDirection: 'row' }}
                 >
                   <div >
-                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
+                    <Link href="/coustom-software-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
                     <Link href="/web-development" className="nav-link"><p className="footerActivemenu">Web Development</p></Link>
                     <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Mobile Application Development</p></Link>
 

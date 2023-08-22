@@ -298,8 +298,8 @@ p {
 }
 
 .slide-img {
-  height: 11vw;
-  width: 12.5vw;
+  height: 8vw;
+  width: 12.6vw;
 }
 
 .logos-image {
@@ -1275,7 +1275,7 @@ figure img {
 /* -----------------------------------Arrow Styling ------------------------------- */
 .arrowIcon{
   cursor: pointer;
-  font-size: 40px;
+  font-size: 22px;
 }
 
 

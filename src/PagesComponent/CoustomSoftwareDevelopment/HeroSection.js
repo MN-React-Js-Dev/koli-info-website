@@ -3,9 +3,11 @@ import DataSecure1 from "../../assets/images/DataSecure-1.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import mainqatesting from  '../../assets/images/mainqatesting.gif'
+import coustomeSoftware from '../../assets/images/coustomeSoftware.gif'
 
-const QaTestingHeroSection = () => {
+
+
+const CoustomSoftwareHeroSection = () => {
 
     useEffect(() => {
         setTimeout(() => {
@@ -22,13 +24,13 @@ const QaTestingHeroSection = () => {
                 <div className="container">
                     <div className="row" style={{ alignItems: "center" }}>
                         <div className="col-lg-6 mt-5 text-start" data-aos="fade-up">
-                            <h1 className="hero-sec-header">Where Excellence Meets Precision - Discover the Future of Testing with Us!</h1>
+                            <h1 className="hero-sec-header">Precision Software Solutions: Building Your Future</h1>
                             <p className="para-for-hero">
-                            From ideation to precision validation, we bring your digital dreams to life through rigorous QA & Testing. Transform your vision into flawless reality
+                                Turning Imagination into Excellence: From Concept to Perfection, We Craft Your Digital Dreams with Meticulous QA & Testing. Let's Elevate Your Vision into a Seamless Reality.
                             </p>
                         </div>
                         <div className="col-lg-6 text-start" data-aos="fade-up">
-                            <Image src={mainqatesting} alt='Image not found' className="img-fluid" style={{ marginLeft: "80px", height: "150%", width: "70%" }} />
+                            <Image src={coustomeSoftware} alt='Image not found' className="img-fluid" style={{ marginLeft: "80px", height: "150%", width: "70%" }} />
                         </div>
                     </div>
                 </div>
@@ -37,4 +39,4 @@ const QaTestingHeroSection = () => {
     );
 };
 
-export default QaTestingHeroSection;
+export default CoustomSoftwareHeroSection;

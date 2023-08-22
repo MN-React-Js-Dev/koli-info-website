@@ -1,10 +1,5 @@
 import React, { Fragment, useEffect, useRef } from "react";
 import Image from "next/image";
-import webDevimg2 from "../../assets/images/webDevimg-2.png";
-import smartphone from "../../assets/images/smartphone.png";
-import pc from '../../assets/images/ux1.png'
-import { COMMAN_TEXT } from "@/commonComponent/commanText";
-import Link from "next/link";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import AmericanExpress from '../../assets/images/AmericanExpress.png'
@@ -15,12 +10,12 @@ import Onfleek from "../../assets/images/onfleek.png";
 import SetFlow from '../../assets/images/SetFlow.png'
 import jodiBanao from '../../assets/images/jodiBanao.png'
 import { motion } from "framer-motion";
-import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
+import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
 
 
 
-const QaandTestingScreen = () => {
-     const carousel = useRef(null);
+const CoustomSoftwareScreen = () => {
+    const carousel = useRef(null);
 
     const handleLeftClick = (e) => {
         e.preventDefault();
@@ -107,7 +102,7 @@ const QaandTestingScreen = () => {
                                         damping: 10,
                                     }}
                                 >
-                                    <span className="px-3 arrowIcon" ><BsFillArrowLeftCircleFill style={{ color: "black" }} onClick={handleLeftClick} /></span>
+                                    <span className="px-3 arrowIcon" ><AiOutlineLeft style={{ color: "black" }} onClick={handleLeftClick} /></span>
                                 </motion.div>
                                 <motion.div
                                     className="box"
@@ -118,16 +113,16 @@ const QaandTestingScreen = () => {
                                         damping: 10,
                                     }}
                                 >
-                                    <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
+                                    <span className="px-3 arrowIcon"><AiOutlineRight style={{ color: "black" }} onClick={handleRightClick} /></span>
                                 </motion.div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
         </Fragment>
     );
 };
 
-export default QaandTestingScreen;
+export default CoustomSoftwareScreen;
