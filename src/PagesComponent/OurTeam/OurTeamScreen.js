@@ -6,7 +6,7 @@ import Image from "next/image";
 import LeftArrow from '.././../assets/images/leftArrow.png'
 import RightArrow from '.././../assets/images/rightArrow.png'
 import Aos from "aos";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import "aos/dist/aos.css";
 import { CEO_QUOTES } from "@/commonComponent/commanText";
 import { CTO_QUOTES } from "@/commonComponent/commanText";
@@ -73,7 +73,7 @@ const OurTeamScreen = () => {
                   src={CEOimage}
                   alt='Image not find !'
                   className="lead-image"
-                  // style={{ height: '300px', width: '260px', borderRadius: '10px' }}
+                // style={{ height: '300px', width: '260px', borderRadius: '10px' }}
                 />
                 <h3 >Ajay Koli</h3>
                 <p className=" commanFont">Chief Executive Officer</p>
@@ -93,7 +93,7 @@ const OurTeamScreen = () => {
                   src={CTOimage}
                   alt='Image not find !'
                   className="lead-image"
-                  // style={{ height: '300px', borderRadius: '10px' }}
+                // style={{ height: '300px', borderRadius: '10px' }}
                 />
                 <h3 >Nihal Koli</h3>
                 <p className="commanFont">Chief Technology Officer</p>
@@ -103,7 +103,10 @@ const OurTeamScreen = () => {
           <h1 class="text-center pt-5 comman-heading">Our Team Leaders</h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className=" mb-5" />
-          <div className="row">
+          <div style={{ display: 'flex' }}>
+            <div >
+              <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '12rem' }} onClick={handleLeftClick} /></span>
+            </div>
             <div
               className="img-slide-box"
               ref={carousel}
@@ -130,6 +133,9 @@ const OurTeamScreen = () => {
                 }
               })}
             </div>
+            <div>
+              <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '12rem' }} onClick={handleRightClick} /></span>
+            </div>
           </div>
           {/* <div className="buttons m-3 text-center">
             <button onClick={handleLeftClick} className="m-4 p-1">
@@ -139,7 +145,7 @@ const OurTeamScreen = () => {
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
             </button>
           </div> */}
-            <div className="d-flex justify-content-center">
+          {/* <div className="d-flex justify-content-center">
             <motion.div
               className="box"
               whileHover={{ scale: 1.1 }}
@@ -160,19 +166,22 @@ const OurTeamScreen = () => {
                 damping: 10,
               }}
             >
-             <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
+              <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
             </motion.div>
-          </div>
+          </div> */}
           <h1 class="text-center pt-5 comman-heading">Our Team Members</h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className=" mb-5" />
-          <div className="row">
+          <div style={{ display: 'flex' }}>
+            <div >
+              <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '12rem' }} onClick={handleLeftClickForTM} /></span>
+            </div>
             <div
               className="img-slide-box"
               ref={carousel2}
               data-aos="fade-down"
             >
-              {data?.map((item,index) => {
+              {data?.map((item, index) => {
                 if (item.position !== "Team Leader") {
                   return (
                     <div className="col-sm-4 mb-3" key={index}>
@@ -192,6 +201,9 @@ const OurTeamScreen = () => {
                 }
               })}
             </div>
+            <div >
+              <span className="px-3 arrowIcon" ><AiOutlineDoubleRight style={{ color: "black", marginTop: '12rem' }} onClick={handleRightClickForTM} /></span>
+            </div>
           </div>
           {/* <div className="buttons m-3 text-center">
             <button onClick={handleLeftClickForTM} className="m-4 p-1">
@@ -201,7 +213,7 @@ const OurTeamScreen = () => {
               <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
             </button>
           </div> */}
-           <div className="d-flex justify-content-center">
+          {/* <div className="d-flex justify-content-center">
             <motion.div
               className="box"
               whileHover={{ scale: 1.1 }}
@@ -222,9 +234,9 @@ const OurTeamScreen = () => {
                 damping: 10,
               }}
             >
-             <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClickForTM} /></span>
+              <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClickForTM} /></span>
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </section>
     </Fragment>

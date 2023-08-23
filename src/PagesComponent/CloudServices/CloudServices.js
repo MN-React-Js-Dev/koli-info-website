@@ -21,6 +21,7 @@ import { motion } from "framer-motion";
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 import amazons3 from '../../assets/images/amazons3.png'
 import { CLOUDS_P1 } from '../../commonComponent/commanText'
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 
 
 const CloudScreen = () => {
@@ -51,7 +52,10 @@ const CloudScreen = () => {
                             Clients that have trusted us over the years
                         </h1>
                         <div className="cst-hr-for-process mb-5"></div>
-                        <div className="row blog text-center">
+                        <div className="text-center" style={{ display: 'flex' }}>
+                            <div>
+                                <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '4.5rem' }} onClick={handleLeftClick} /></span>
+                            </div>
                             <div className="img-slide-box" alt="Image not found" ref={carousel}>
                                 <div className="item">
                                     <div className="logos-image">
@@ -93,6 +97,9 @@ const CloudScreen = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div>
+                                <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '4.5rem' }} onClick={handleRightClick} /></span>
+                            </div>
                             {/*   <div className="buttons m-3">
                 <button onClick={handleLeftClick} className="m-4 p-1">
     
@@ -102,7 +109,7 @@ const CloudScreen = () => {
                   <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
                 </button>
               </div> */}
-                            <div className="d-flex justify-content-center">
+                            {/* <div className="d-flex justify-content-center">
                                 <motion.div
                                     className="box"
                                     whileHover={{ scale: 1.1 }}
@@ -125,7 +132,7 @@ const CloudScreen = () => {
                                 >
                                     <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
                                 </motion.div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { useDispatch, useSelector } from "react-redux";
 import Design1 from "../../assets/images/design1.png";
@@ -64,14 +64,16 @@ const OurServices = () => {
               Our Services
             </h1>
             <div className="cst-hr-for-process mb-5"></div>
-            <div className="row">
+            <div style={{ display: 'flex' }}>
+              <div >
+                
+                <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '16.5rem' }} onClick={handleLeftClick} /></span>
+              </div>
               <div
                 className="img-slide-box"
                 ref={carousel}
                 data-aos="fade-down"
               >
-                {/* {ourService?.map(({ title, description }, index) => {
-                  return ( */}
                 <div className="col-md-4 mb-4">
                   <div className="card p-3 cst-border-cls service-card">
                     <Image
@@ -139,8 +141,11 @@ const OurServices = () => {
                   </div>
                 </div>
               </div>
+              <div>
+                <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '16.5rem' }} onClick={handleRightClick} /></span>
+              </div>
             </div>
-            <div className="d-flex justify-content-center">
+            {/* <div className="d-flex justify-content-center">
               <motion.div
                 className="box mb-3"
                 whileHover={{ scale: 1.1 }}
@@ -163,7 +168,7 @@ const OurServices = () => {
               >
                 <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "white" }} onClick={handleRightClick}/></span>
               </motion.div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

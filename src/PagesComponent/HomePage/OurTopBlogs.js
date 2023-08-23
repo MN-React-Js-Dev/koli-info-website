@@ -1,5 +1,5 @@
 import React, { useState, useRef, Fragment, useEffect } from "react";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllOurBlogStart } from "@/Redux/module/getOurBlogAction";
 import { motion } from "framer-motion";
@@ -48,7 +48,10 @@ const OurTopBlogs = () => {
         <div className="container">
           <h1 className=" text-center mt-5 bold-font">Our Top Blogs</h1>
           <div className="cst-hr-for-process mb-5"></div>
-          <div className="row">
+          <div style={{ display: 'flex' }}>
+            <div >
+              <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '361px' }} onClick={handleLeftClick} /></span>
+            </div>
             <div className="img-slide-box" ref={carousel}
               // data-aos="flip-up"
               data-aos="fade-down"
@@ -78,8 +81,11 @@ const OurTopBlogs = () => {
                 }
               )}
             </div>
+            <div>
+              <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '361px' }} onClick={handleRightClick} /></span>
+            </div>
           </div>
-          <div className="d-flex justify-content-center">
+          {/* <div className="d-flex justify-content-center">
             <motion.div
               className="box"
               whileHover={{ scale: 1.1 }}
@@ -102,7 +108,7 @@ const OurTopBlogs = () => {
             >
              <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </section>
     </Fragment>

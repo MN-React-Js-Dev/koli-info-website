@@ -299,7 +299,7 @@ p {
 
 .slide-img {
   height: 8vw;
-  width: 12.6vw;
+  width: 11.5vw;
 }
 
 .logos-image {
@@ -1278,7 +1278,6 @@ figure img {
   font-size: 22px;
 }
 
-
 /* ------------------------------------------------- Our-team Images --------------------------------- */
 
 .team-image:hover{
@@ -1384,4 +1383,11 @@ figure img {
 .img-class{
   margin-left: 90px;
 
+}
+
+
+/* ------------------------------------------------------------- UPDATED ARROW STYLE ---------------------------------------------------- */
+
+.updatedArrowStyle{
+    margin-top: 67px;
 }
