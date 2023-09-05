@@ -49,6 +49,7 @@ const FormSection = () => {
         current_location: "",
         skills: "",
         gender: '',
+        resume:selectedFile,
     });
 
     const handleChange = (e) => {
@@ -70,36 +71,47 @@ const FormSection = () => {
             setLoading(true)
         } else (setLoading(false))
     }, [isLoading])
-    
-    useEffect(() => {
-        if (isSuccess) {
-            setTostMessage(ApplyResult?.applyData?.data?.message)
-            setSubmitted(false);
-            setSelectedFile(null)
-            setData({
-                opening_ref_id: "",
-                first_name: "",
-                last_name: "",
-                email: "",
-                phone: "",
-                experience: "",
-                in_days: "",
-                current_location: "",
-                skills: "",
-                gender: '',
-            })
-            
-        }
-        else
-            (setTostMessage(ApplyResult?.error?.data?.message))
-            setSubmitted(false);
-    }, [isSuccess])
+
+    const resetForm = () => {
+        setSubmitted(false);
+        setSelectedFile(null);
+        setData({
+            opening_ref_id: "",
+            first_name: "",
+            last_name: "",
+            email: "",
+            phone: "",
+            experience: "",
+            in_days: "",
+            current_location: "",
+            skills: "",
+            gender: '',
+            resume:'',
+        });
+    };
 
     useEffect(() => {
-        if(tostMessage) {
-          toast.info(tostMessage);
+        if (isSuccess) {
+            setTostMessage(ApplyResult?.applyData?.data?.message);
+            resetForm();
+        } else {
+            setTostMessage(ApplyResult?.error?.data?.message);
+            setSubmitted(false);
         }
-      },[tostMessage])
+    }, [isSuccess]);
+
+    setTimeout(() => {
+        if (isSuccess) {
+          setTostMessage(false)
+          console.log('Hello, ToastMessage is desable now~>')
+        }
+      }, 300);
+
+    useEffect(() => {
+        if (tostMessage) {
+            toast.info(tostMessage);
+        }
+    }, [tostMessage])
 
     const onFileChange = (e) => {
         const file = e.target.files[0];
@@ -225,6 +237,7 @@ const FormSection = () => {
                                 <div className="col">
                                     <div>
                                         <select className="form-select select-field p-3" name="gender" defaultValue="" value={data.gender} onChange={handleChange}>
+                                            <option value="" disabled>select gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                             <option value="other">Other</option>
@@ -249,7 +262,6 @@ const FormSection = () => {
                                         name="phone"
                                         value={data?.phone}
                                         onChange={(e) => handleChange(e, 'phone')}
-                                        // minLength={10}
                                         maxLength={10} minLength={10}
                                     />
                                     {(submitted && !data.phone && (

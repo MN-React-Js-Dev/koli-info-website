@@ -29,5 +29,5 @@ export const getSingleOpeningsAPI = async (id) =>
   await axios.get(`${baseUrl}openings/${id}`);
 
 export const createApplyJobAPI = async (data) =>
-  await axios.post(`${baseUrl}/applyjob/create`, data);
+  await axios.post(`${baseUrl}applyjob/create`, data);
   // await axios.post(`${baseUrl}contactUscreate`, contsactus);

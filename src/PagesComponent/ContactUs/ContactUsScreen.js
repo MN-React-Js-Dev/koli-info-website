@@ -26,11 +26,9 @@ const ContactUsScreen = () => {
   const isLoading = contactData?.loading;
   const isSuccess = contactData?.isSuccess;
 
-  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const validateEmail = (email) => {
-    // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailRegex.test((email).toLowerCase());
   };
 
@@ -62,11 +60,6 @@ const ContactUsScreen = () => {
   useEffect(() => {
     if (isSuccess) {
       setTostMessage(contactData?.ContactUs?.data?.message)
-      console.log('contact success~~~~~~>', data)
-      // yourName = "",
-      //   email = "",
-      //   phone = "",
-      //   description = ""
       setData({
         yourName: "",
         email: "",
@@ -78,25 +71,26 @@ const ContactUsScreen = () => {
       (setTostMessage(contactData?.error?.data?.message))
   }, [isSuccess])
 
+  setTimeout(() => {
+    if (isSuccess) {
+      setTostMessage(false)
+      console.log('Hello, ToastMessage is desable now~>')
+    }
+  }, 300);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // toast.info(tostMessage);
     setSubmitted(true);
 
-    const { yourName, email, phone } = data;
+    const { yourName, email, phone,description } = data;
     const errors = {};
 
     if (!yourName) {
       errors.yourName = "Full name is required!";
     }
 
-    // if (!email) {
-    //   errors.email = "Email is required!";
-    // } else if (!emailRegex.test(email)) {
-    //   errors.email = "Email is invalid!";
-    // }
-    if (!email) {
+if (!email) {
       errors.email = "Email is required!";
     } else if (!validateEmail(email)) {
       errors.email = "Email is invalid!";
@@ -107,6 +101,9 @@ const ContactUsScreen = () => {
       errors.phone = "Phone number is required!";
     } else if (phone?.length !== 10) {
       errors.phone = "Phone number must be 10 digits!";
+    }
+    if (!description) {
+      errors.description = "Description is required !";
     }
 
     if (Object.keys(errors)?.length > 0) {
@@ -119,49 +116,6 @@ const ContactUsScreen = () => {
 
     dispatch(contactUsStart(data));
   };
-
-  // const handleSubmit = (e) => {
-  //   // e.preventDefault();
-  //   toast.info(tostMessage)
-  //   setSubmitted(true);
-
-  //   const errors = {};
-
-  //   if (!data.yourName) {
-  //     errors.yourName = "Full name is required!";
-  //   }
-
-  //   if (!data.email) {
-  //     errors.email = "Email is required!";
-  //   }
-
-  //   if (data.email) {
-  //     emailRegex.test(data.email);
-  //     if (!emailRegex.test(data.email)) {
-  //       errors.email = "Email is Invalid!";
-  //     }
-  //   }
-
-
-  //   if (!data.phone) {
-  //     errors.phone = "Phone number is required!";
-  //   }
-
-  //   if (data.phone) {
-  //     if (data.phone.length !== 10) {
-  //       errors.phone = "Phone number must be 10 digits!";
-  //     }
-  //   }
-
-  //   if (Object.keys(errors).length > 0) {
-  //     setData((prevData) => ({
-  //       ...prevData,
-  //       errors: errors,
-  //     }));
-  //     return;
-  //   }
-  //   dispatch(contactUsStart(data));
-  // };
 
   useEffect(() => {
     setTimeout(() => {
@@ -227,7 +181,7 @@ const ContactUsScreen = () => {
                   onChange={handleChange}
                 ></textarea>
                 {(submitted && !data.description && (
-                  <small className="p-error">Description is required !</small>))
+                  <small className="p-error">{data?.errors?.description}</small>))
                 }
               </div>
               {/* <a
