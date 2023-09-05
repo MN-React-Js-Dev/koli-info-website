@@ -70,7 +70,7 @@ const AiMlServices = () => {
                         </div>
                         <div className="col-sm-6" data-aos="fade-left" >
                             <Image
-                                className="img-fluid img-responsive rounded mb-5 img-class"
+                                className="img-responsive rounded img-class"
                                 src={IOT_Development}
                                 alt="Image not found"
                             />

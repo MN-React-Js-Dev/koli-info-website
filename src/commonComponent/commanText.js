@@ -36,15 +36,7 @@ a business or turning an idea into reality because it is the
 technological age. Let us help you or someone else turn their
 dreams into reality by connecting with us!`;
 
-export const KOLI_INFOTECH_HOME_PAGE_PARAGRAPH = ` We are one of the leaders in providing technology solutions in
-Surat for the better part of 7+ years.
- We specialize in all IT
-solutions like software development, Web development, Digital
-marketing, and many more! We have become one of the best IT
-companies in Surat owing to our outstanding work ethic and years
-of experience. We are led by visionaries who have deep-rooted IT
-background with a pathbreaking outlook on Information
-Technology.`;
+export const KOLI_INFOTECH_HOME_PAGE_PARAGRAPH = `With over 7 years of experience, we are a leading technology solutions provider in Surat. Specializing in IT solutions such as software development, web development, and digital marketing, we have earned a reputation as one of the city's top IT companies. Our visionary leaders bring deep IT expertise and a pioneering perspective to the industry.`;
 
 export const CEO_QUOTES = `"As the CEO of our company, my vision is to drive innovation and transformative change 
 in the technology industry. We are committed to delivering 

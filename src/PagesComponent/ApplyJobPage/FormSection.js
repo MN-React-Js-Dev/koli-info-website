@@ -1,28 +1,45 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { createApplyJob } from "@/Redux/module/createApplyJob";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import LoadingButton from "@/commonComponent/LoadingButton";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const FormSection = () => {
     const dispatch = useDispatch();
     const router = useRouter();
     const ID = router.query;
-    const [dataFle, setdataFle] = useState()
 
     const [selectedFile, setSelectedFile] = useState(null);
     const [submitted, setSubmitted] = useState(false)
     const [isphoneValid, setIsphoneValid] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [tostMessage, setTostMessage] = useState(null);
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const ApplyResult = useSelector((state) => state?.createApplyJob)
+    console.log('ApplyResult ~~~~>', ApplyResult)
+    const isLoading = ApplyResult?.loading;
+    const isSuccess = ApplyResult?.isSuccess;
+
 
     const validateEmail = (email) => {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     };
 
+    const validPhone = (phone) => {
+        const phoneRe = /^(([0-9]{10}))$/;
+        return phoneRe.test(String(phone));
+    }
+
     const [data, setData] = useState({
-        opening_ref_id: ID.Id,
+        opening_ref_id: "",
         first_name: "",
         last_name: "",
         email: "",
@@ -48,14 +65,48 @@ const FormSection = () => {
         }));
     };
 
+    useEffect(() => {
+        if (isLoading) {
+            setLoading(true)
+        } else (setLoading(false))
+    }, [isLoading])
+    
+    useEffect(() => {
+        if (isSuccess) {
+            setTostMessage(ApplyResult?.applyData?.data?.message)
+            setSubmitted(false);
+            setSelectedFile(null)
+            setData({
+                opening_ref_id: "",
+                first_name: "",
+                last_name: "",
+                email: "",
+                phone: "",
+                experience: "",
+                in_days: "",
+                current_location: "",
+                skills: "",
+                gender: '',
+            })
+            
+        }
+        else
+            (setTostMessage(ApplyResult?.error?.data?.message))
+            setSubmitted(false);
+    }, [isSuccess])
 
+    useEffect(() => {
+        if(tostMessage) {
+          toast.info(tostMessage);
+        }
+      },[tostMessage])
 
     const onFileChange = (e) => {
         const file = e.target.files[0];
         setSelectedFile(file);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmitted(true);
 
@@ -72,9 +123,6 @@ const FormSection = () => {
         if (!data.email) {
             errors.email = "Email is required!";
         }
-        // if (!data.experience) {
-        //     errors.experience = "Number of experiance is required!"
-        // }
 
         if (data.email) {
             emailRegex.test(data.email);
@@ -103,7 +151,7 @@ const FormSection = () => {
         }
 
         const formData = new FormData();
-        formData.append("opening_ref_id", ID);
+        formData.append("opening_ref_id", ID.Id);
         formData.append("first_name", data?.first_name);
         formData.append("last_name", data?.last_name);
         formData.append("gender", data?.gender);
@@ -118,7 +166,6 @@ const FormSection = () => {
         dispatch(createApplyJob(formData));
     };
 
-    console.log("data", data);
     useEffect(() => {
         setTimeout(() => {
             Aos.init();
@@ -144,7 +191,7 @@ const FormSection = () => {
                                         onChange={handleChange}
                                     />
                                     {submitted && !data.first_name && (
-                                        <small className="p-error">{data.errors.first_name}</small>
+                                        <small className="p-error">{data?.errors?.first_name}</small>
                                     )}
                                 </div>
                                 <div className="col">
@@ -157,7 +204,7 @@ const FormSection = () => {
                                         onChange={handleChange}
                                     />
                                     {submitted && !data.last_name && (
-                                        <small className="p-error">{data.errors.last_name}</small>
+                                        <small className="p-error">{data?.errors?.last_name}</small>
                                     )}
                                 </div>
                             </div>
@@ -172,7 +219,7 @@ const FormSection = () => {
                                         onChange={handleChange}
                                     />
                                     {(submitted && !data.email && (
-                                        <small className="p-error">{data.errors.email}</small>)) || submitted && !validateEmail(data.email) && (
+                                        <small className="p-error">{data?.errors?.email}</small>)) || submitted && !validateEmail(data.email) && (
                                             <small className="p-error">Email is invalid</small>)}
                                 </div>
                                 <div className="col">
@@ -201,13 +248,13 @@ const FormSection = () => {
                                         placeholder="Phone Number"
                                         name="phone"
                                         value={data?.phone}
-                                        onChange={handleChange}
+                                        onChange={(e) => handleChange(e, 'phone')}
                                         // minLength={10}
-                                        maxLength={10}
+                                        maxLength={10} minLength={10}
                                     />
                                     {(submitted && !data.phone && (
-                                        <small className="p-error">{data.errors.phone}</small>)) || (submitted && data.phone.length !== 10 && (
-                                            <small className="p-error">Phone number must be 10 digits!</small>))}
+                                        <small className="p-error">{data?.errors?.phone}</small>)) || (submitted && data.phone.length !== 10 && (
+                                            <small className="p-error">{data?.errors?.phone}</small>)) || (submitted && !validPhone(data.phone && <small>Enter valid contact number!</small>))}
                                 </div>
                                 <div className="col">
                                     <div className="row">
@@ -267,22 +314,36 @@ const FormSection = () => {
                                 ></textarea>
                                 <br />
                             </div>
-                                <span class="p-3">upload resume</span>
+                            <span class="p-3">upload resume</span>
                             <div class="m-3 Column border border" id="resume-droppable" style={{ borderRadius: 6, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <input type="file" class="mt-3" id="resume-upload"  accept=".pdf" data-field-identifier="resume" container="resumes" name="resume" placeholder="" value={data?.resume} onChange={onFileChange}></input>
+                                <input type="file" class="mt-3" id="resume-upload" accept=".pdf" data-field-identifier="resume" container="resumes" name="resume" placeholder="" value={data?.resume} onChange={onFileChange}></input>
                                 {submitted && !selectedFile && (
                                     <small className="p-error">Upload resume is required!</small>
                                 )}
                                 <span class="mb-3">Only pdf and image files are allowed. 5MB max file size !</span>
                             </div>
+
                             <div class="d-flex justify-content-center">
-                                <a class="btn contact-us-btn m-4 p-2 mb-5" type="submit" onClick={handleSubmit}>
-                                    Apply Now
-                                </a>
+                                {!loading && <button onClick={handleSubmit} disabled={loading} className="btn contact-us-btn">Apply now</button>}
+                                {loading && <button onClick={handleSubmit} disabled={loading} className="btn contact-us-btn d-flex justify-content-center"> <LoadingButton /></button>}
                             </div>
+
                         </div>
                     </div>
                 </div>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={1500}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover={false}
+                    theme="light"
+                />
+                <ToastContainer />
             </section>
         </Fragment >
     );

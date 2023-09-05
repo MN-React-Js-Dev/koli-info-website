@@ -17,7 +17,7 @@ const Header = () => {
               <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid cst-nav header">
                   <Link href="/" className="nav-link active">
-                    <Image src={SVGlogo} alt={BlueLogo} className="img-fluid" style={{marginLeft: "-8px"}}/>
+                    <Image src={SVGlogo} alt={BlueLogo} className="img-fluid" style={{ marginLeft: "-8px" }} />
                   </Link>
                   <button
                     className="navbar-toggler"
@@ -84,8 +84,11 @@ const Header = () => {
                               Services
                             </span>
                             <ul class="dropdown-menu collap-manu">
-                              <li><Link class="dropdown-item" href="/web-development">Web Development</Link></li>
-                              <li><Link class="dropdown-item" href="/mobile-app-development">Mobile App Development</Link></li>
+                              <li><Link class="dropdown-item" href="/artificial-intelligence-machin-learning">A.I & M.L</Link></li>
+                              <li><Link class="dropdown-item" href="/mobile-app-development">Mobile Application Development</Link></li>
+                              <li><Link class="dropdown-item" href="/coustom-software-development">Custom Software Development</Link></li>
+                              <li><Link class="dropdown-item" href="/cloud-services">Cloud & DevOps</Link></li>
+                              <li><Link class="dropdown-item" href="/qa-testing">QA & Testing</Link></li>
                               <li><Link class="dropdown-item" href="/data-security">Data Security</Link></li>
                               <li><Link class="dropdown-item" href="/hire-developer">Hire Dedicated Developers</Link></li>
                             </ul>

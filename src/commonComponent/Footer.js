@@ -145,15 +145,15 @@ const Footer = () => {
                 // style={{ display: "flex", flexDirection: 'row' }}
                 >
                   <div >
+                    <Link href="/artificial-intelligence-machin-learning" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
+                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Mobile Application Development</p></Link>
                     <Link href="/coustom-software-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
                     <Link href="/web-development" className="nav-link"><p className="footerActivemenu">Web Development</p></Link>
-                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Mobile Application Development</p></Link>
+                    <Link href="/cloud-services" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
+                    <Link href="/qa-testing" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
 
                     {/* </div>
                   <div className="ml-2"> */}
-                    <Link href="/cloud-services" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
-                    <Link href="/artificial-intelligence-machin-learning" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
-                    <Link href="/qa-testing" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ const Footer = () => {
                     <h4>Contacts</h4>
                     <p>info@koliinfotech.com</p>
                     <p>
-                      +91-9773149186 <br />
+                      +91-6353131771 <br />
                       +91-8200591443
                     </p>
                   </div>

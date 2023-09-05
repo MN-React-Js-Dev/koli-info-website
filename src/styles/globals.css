@@ -108,11 +108,30 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: #ffffff !important;
+  
 }
 
 .contact-us-btn:hover{
   background-color: #00308F !important;
 }
+
+#buttonStyle {
+  width: 157px;
+  background: #2a64f9 !important;
+  border-radius: 170px !important;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff !important;
+  /* backgroundImage: `url('/path-to-loader-image.gif')`, */
+  /* backgroundPosition: 'center', */
+  /* backgroundRepeat: 'no-repeat', */
+  background-image: url('../assets/images/loadingImage.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+};
 
  
 .onDemndbtn {
@@ -1382,7 +1401,20 @@ figure img {
 }
 .img-class{
   margin-left: 90px;
-
+}
+@media (max-width:770px) {
+  .img-class{
+    width: 80%;
+    height: 35%;
+    margin: auto;
+  }
+}
+@media (max-width:425px) {
+  .img-class{
+    width: 60%;
+    height: 90%;
+    margin: auto;
+  }
 }
 
 
@@ -1391,3 +1423,21 @@ figure img {
 .updatedArrowStyle{
     margin-top: 67px;
 }
+
+
+/* ------------------------------------------------------------------------ Coustome Carasoule----------------------------------------- */
+
+/* .hero-section {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+.custom-carousel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* ------------------------------------------------------------------------ IOT image----------------------------------------- */

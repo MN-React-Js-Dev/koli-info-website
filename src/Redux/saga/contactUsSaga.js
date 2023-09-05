@@ -19,19 +19,19 @@ export function* onContactUSAsync({ payload }) {
     console.log(" responsedasdasd", response);
     if (response.data.status == 200) {
       yield put(contactUsSuccess(response));
-      swal({
-        title: response?.data?.message,
-        icon: "success",
-      })
+      // swal({
+      //   title: response?.data?.message,
+      //   icon: "success",
+      // })
     }
   } catch (error) {
     const responseer = yield put(contactUsError(error.response));
     console.log(" responsedasdasd error", responseer);
     yield put(contactUsError(error.response));
-    swal({
-      title: error?.response?.data?.message,
-      icon: "erroro",
-    })
+    // swal({
+    //   title: error?.response?.data?.message,
+    //   icon: "erroro",
+    // })
   }
 }
 

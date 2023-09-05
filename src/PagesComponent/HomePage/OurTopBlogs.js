@@ -50,7 +50,7 @@ const OurTopBlogs = () => {
           <div className="cst-hr-for-process mb-5"></div>
           <div style={{ display: 'flex' }}>
             <div >
-              <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '361px' }} onClick={handleLeftClick} /></span>
+              <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '17rem' }} onClick={handleLeftClick} /></span>
             </div>
             <div className="img-slide-box" ref={carousel}
               // data-aos="flip-up"
@@ -73,7 +73,8 @@ const OurTopBlogs = () => {
                         />
                         <div class="card-body">
                           <h3>{title}</h3>
-                          <p class="card-text">{description}</p>
+                          {/* <p class="card-text">{description}</p> */}
+                          {description?.length > 211 ? description.substring(0, 211) + "..." : ""}
                         </div>
                       </div>
                     </div>
@@ -82,7 +83,7 @@ const OurTopBlogs = () => {
               )}
             </div>
             <div>
-              <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '361px' }} onClick={handleRightClick} /></span>
+              <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '17rem' }} onClick={handleRightClick} /></span>
             </div>
           </div>
           {/* <div className="d-flex justify-content-center">

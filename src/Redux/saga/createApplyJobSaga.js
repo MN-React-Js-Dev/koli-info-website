@@ -14,17 +14,17 @@ export function* createApplyJobAsysn({ payload }) {
     console.log(" saga paylod ", payload);
     try {
         const response = yield call(createApplyJobAPI, payload);
-        console.log(" responsedasdasd", response);
+        console.log(" create appply response ", response?.data);
         if (response.data.status == 200) {
             yield put(createApplyJobSuccess(response));
-            swal({
-                title: response?.data?.message,
-                icon: "success",
-            })
+            // swal({
+            //     title: response?.data?.message,
+            //     icon: "success",
+            // })
         }
     } catch (error) {
         const responseer = yield put(createApplyJobError(error.response));
-        console.log(" responsedasdasd error", responseer);
+        console.log(" response create error", responseer);
     }
 }
 

@@ -69,6 +69,7 @@ const OurServices = () => {
                 
                 <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '16.5rem' }} onClick={handleLeftClick} /></span>
               </div>
+              
               <div
                 className="img-slide-box"
                 ref={carousel}

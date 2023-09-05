@@ -25,7 +25,7 @@ const JobDescriptionHeroSection = () => {
                             <p className="para-for-hero">
                                 Looking to hire a skilled developer to join our team and contribute to our projects.
                             </p>
-                            <a class="btn contact-us-btn m-4 p-2" type="submit">
+                            <a href="/contact-us" class="btn contact-us-btn m-4 p-2" type="submit">
                                 Contact Us
                             </a>
                         </div>
