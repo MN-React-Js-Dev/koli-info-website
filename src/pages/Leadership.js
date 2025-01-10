@@ -20,6 +20,7 @@ const Leadership = () => {
     <Fragment>
       <Head>
         <title>Leadership | KOLI Infotech Pvt. Ltd.</title>
+        {/* <title>Leadership | KOLI Infotech Pvt. Ltd.</title> */}
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
