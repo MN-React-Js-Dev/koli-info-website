@@ -86,9 +86,9 @@ const FaqAccordianCloud = () => {
 
     return (
         <div className="App">
-            <h1 className="text-center pt-5 comman-heading">
+            <h3 className="text-center pt-5 comman-heading fs-1">
                 FAQs
-            </h1>
+            </h3>
 
             <div className="faqs">
                 {faqs.map((faq, index) => (

@@ -75,7 +75,7 @@ const OurTeamScreen = () => {
                   className="lead-image"
                 // style={{ height: '300px', width: '260px', borderRadius: '10px' }}
                 />
-                <h3 >Ajay Koli</h3>
+                <h2 className="fs-4">Ajay Koli</h2>
                 <p className=" commanFont">Chief Executive Officer</p>
               </div>
             </div>
@@ -95,7 +95,7 @@ const OurTeamScreen = () => {
                   className="lead-image"
                 // style={{ height: '300px', borderRadius: '10px' }}
                 />
-                <h3 >Nihal Koli</h3>
+                <h2 className="fs-4">Nihal Koli</h2>
                 <p className="commanFont">Chief Technology Officer</p>
               </div>
             </div>
@@ -169,7 +169,7 @@ const OurTeamScreen = () => {
               <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
             </motion.div>
           </div> */}
-          <h1 class="text-center pt-5 comman-heading">Our Team Members</h1>
+          <h1 class="text-center pt-5 comman-heading fs-1">Our Team Members</h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className=" mb-5" />
           <div style={{ display: 'flex' }}>

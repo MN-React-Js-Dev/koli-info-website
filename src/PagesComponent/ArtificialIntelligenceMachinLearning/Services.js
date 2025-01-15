@@ -24,7 +24,7 @@ const AiMlServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">AI & ML Development</h1>
+                            <h3 className="">AI & ML Development</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{AIML_P1}</p>
                             <p>{AIML_P2}</p>
@@ -50,7 +50,7 @@ const AiMlServices = () => {
                             />
                         </div>
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">Chatbot Development</h1>
+                            <h3 className="">Chatbot Development</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{AIML_P3}</p>
                             <p>{AIML_P4}</p>
@@ -62,8 +62,8 @@ const AiMlServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">IoT Development
-                            </h1>
+                            <h3 className="fs-2">IOT Development
+                            </h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{AIML_P5}</p>
                             <p>{AIML_P6}</p>

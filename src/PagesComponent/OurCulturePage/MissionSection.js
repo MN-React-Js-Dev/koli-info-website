@@ -59,7 +59,7 @@ const MissionSection = () => {
         <Fragment>
             <section className="our-mission mt-5 mb-5">
                 <div className="container" data-aos="fade-up">
-                    <h1 className="text-center">Mission and Values</h1>
+                    <h2 className="text-center">Mission and Values</h2>
                     <div className="cst-hr-for-process mb-5" />
                     <p style={{ textAlign: 'center' }}>At <span style={{color:"#3f689f"}}>Koli</span> Infotech, our mission is to cultivate a vibrant and inclusive work culture that inspires creativity, collaboration, and personal growth. We strive to create an environment where every team member feels valued, motivated, and empowered to achieve their best. By fostering a positive work culture, we aim to drive exceptional results for our clients while promoting employee satisfaction and well-being.</p>
                     <div className="row equal-height-row" data-aos="fade-up" >

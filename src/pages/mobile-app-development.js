@@ -19,7 +19,11 @@ const MobiAppDevelopment = () => {
   return (
     <Fragment>
       <Head>
-        <title>Mobile App Development | KOLI Infotech Pvt. Ltd.</title>
+        <title>Innovative Mobile App Development | Turn Ideas into Reality!</title>
+        <meta
+          name="description"
+          content="Transform your ideas into reality with KOLI Infotech's expert mobile app development. Innovative design and development services to bring your vision to life!"
+        /> 
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

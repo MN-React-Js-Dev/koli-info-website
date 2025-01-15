@@ -59,9 +59,9 @@ const WhoWeAreScreen = () => {
       </section>
       <section className="special-services">
         <div className="container">
-          <h1 className="text-center text-white pt-5 mt-5 comman-heading">
+          <h3 className="text-center text-white pt-5 mt-5 fs-3 comman-heading">
             Services We Specialise In
-          </h1>
+          </h3>
           <div className="cst-hr-for-process mb-5" />
           <div className="row" data-aos="fade-up">
             {ourService?.map(({ title, description,icon }, index) => (
@@ -86,9 +86,9 @@ const WhoWeAreScreen = () => {
       </section>
       <section>
         <div className="container">
-          <h1 className="text-center pt-5 mt-5 comman-heading">
+          <h3 className="text-center pt-5 mt-5 comman-heading">
             Customized Business Solutions
-          </h1>
+          </h3>
           <div className="cst-hr-for-process mb-5" />
           <div className="row mb-4" data-aos="fade-up">
             <div className="col-sm-4 mb-4">
@@ -98,7 +98,7 @@ const WhoWeAreScreen = () => {
                   alt="Image not found"
                   className="mb-4 mt-4 img-fluid "
                 />
-                <h2>Web Designing</h2>
+                <h3>Web Designing</h3>
                  <p style={{maxHeight:'100px',minHeight:'100px'}}>
                 Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development rather than software development.
                 </p>
@@ -111,7 +111,7 @@ const WhoWeAreScreen = () => {
                   alt="Image not found"
                   className="mb-4 mt-4 img-fluid "
                 />
-                <h2>Web Development</h2>
+                <h3>Web Development</h3>
                 <p style={{maxHeight:'100px',minHeight:'100px'}}>
                 Web development is the building and maintenance of websites; it&apos;s the work that happens behind the scenes to make a website look great
                 </p>
@@ -124,7 +124,7 @@ const WhoWeAreScreen = () => {
                   alt="Image not found"
                   className="mb-4 mt-4 img-fluid "
                 />
-                <h2>Mobile Development</h2>
+                <h3>Mobile Development</h3>
                 <p style={{maxHeight:'100px',minHeight:'100px'}}>
                 Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.
                 </p>

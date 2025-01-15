@@ -19,7 +19,11 @@ const DataSecurity = () => {
   return (
     <Fragment>
       <Head>
-        <title>Data Security | KOLI Infotech Pvt. Ltd.</title>
+        <title>Powerful Data Security | Your Trusted Solution</title>
+        <meta
+          name="description"
+          content="Discover powerful data security solutions tailored for your design and development needs. Your projects deserve the Best Started for Today!"
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

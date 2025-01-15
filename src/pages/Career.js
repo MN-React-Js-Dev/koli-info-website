@@ -18,7 +18,11 @@ const CareerPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Career | KOLI Infotech Pvt. Ltd.</title>
+        <title>Careers at KOLI Infotech| Build Your Future in Innovacation!</title>
+        <meta
+          name="description"
+          content="Discover exciting career opportunities at KOLI Infotech. Join our dynamic team and shape to the future of technology with software and IT solutions.Apply today!"
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

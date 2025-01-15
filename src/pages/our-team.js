@@ -20,7 +20,11 @@ const CareerPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Our Team | KOLI Infotech Pvt. Ltd.</title>
+        <title>Meet Our Team | Experts in Designing Development Excellence!</title>
+        <meta
+          name="description"
+          content="Meet the talented team at KOLI Infotech. We combine creativity and expertise to deliver exceptional design and development that bring your vision to reality!"
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

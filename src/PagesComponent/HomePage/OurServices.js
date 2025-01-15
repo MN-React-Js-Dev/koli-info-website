@@ -19,7 +19,6 @@ import webDevimg from '.././../assets/images/webDevimg-1.png'
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { BsArrowLeftCircleFill, BsArrowRightCircle, BsFillArrowRightCircleFill } from "react-icons/bs";
 

@@ -188,7 +188,7 @@ const Footer = () => {
               <div style={{ display: "flex", flexDirection: 'row' }}>
                 <div className="row col-lg-12  mt-5">
                   <div className="col-lg-4 text-center">
-                    <h4>Contacts</h4>
+                    <h2 className="fs-4">Contacts</h2>
                     <p>info@koliinfotech.com</p>
                     <p>
                       +91-6353131771 <br />
@@ -199,7 +199,7 @@ const Footer = () => {
                     <hr className="vertical-line" />
                   </div> */}
                   <div className="row col-lg-8 text-center">
-                    <h4 className="text-center">Our Address</h4>
+                    <h2 className="text-center fs-4">Our Address</h2>
                     <div className="col-lg-6">
                       <p style={{ fontSize: 15, fontWeight: "bold" }}>
                         HEAD OFFICE - SURAT

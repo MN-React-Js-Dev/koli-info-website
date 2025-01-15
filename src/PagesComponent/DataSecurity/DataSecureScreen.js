@@ -18,7 +18,7 @@ const DataSecureScreen = () => {
       <section>
         <div className="container">
           <div className="row"></div>
-          <h1 className=" text-center mt-5 comman-heading" data-aos="fade-down">Data Privacy</h1>
+          <h3 className=" text-center mt-5 comman-heading fs-2" data-aos="fade-down">Data Privacy</h3>
           <div className="cst-hr-for-process mb-3" data-aos="fade-up"/>
           <div className="Data-border" data-aos="fade-up">
             <p>{COMMAN_TEXT}</p>
@@ -27,9 +27,9 @@ const DataSecureScreen = () => {
             <br />
             <p>{COMMAN_TEXT}</p>
           </div>
-          <h1 className="text-center mt-5 comman-heading"  data-aos="fade-down">
+          <h3 className="text-center mt-5 comman-heading fs-2"  data-aos="fade-down">
             OverView Of Our NDA
-          </h1>
+          </h3>
           <div className="cst-hr-for-process mb-3"  data-aos="fade-up" />
           <div className="p-3"  data-aos="fade-down">
             <p>{COMMAN_TEXT}</p>
@@ -59,9 +59,9 @@ const DataSecureScreen = () => {
               ></Image>
             </div>
           </div>
-          <h1 className="text-center mt-5 comman-heading"  data-aos="flip-down">
+          <h3 className="text-center mt-5 comman-heading fs-2"  data-aos="flip-down">
             How We Keep Your App Idea Safe
-          </h1>
+          </h3>
           <div className="cst-hr-for-process mb-3" />
           <div className="Data-border" data-aos="fade-up">
             <p>{COMMAN_TEXT}</p>
@@ -70,9 +70,9 @@ const DataSecureScreen = () => {
             <br />
             <p>{COMMAN_TEXT}</p>
           </div>
-          <h1 className="text-center mt-5 comman-heading"data-aos="flip-up">
+          <h3 className="text-center mt-5 comman-heading fs-2"data-aos="flip-up">
             Security Measures to Prevent Data Breach
-          </h1>
+          </h3>
           <div className="cst-hr-for-process mb-3" />
           <div className="Data-border" data-aos="fade-down">
             <p>{COMMAN_TEXT}</p>
@@ -109,9 +109,9 @@ const DataSecureScreen = () => {
               </ul>
             </div>
           </div>
-          <h1 className="text-center mt-5 comman-heading" data-aos="fade-down">
+          <h3 className="text-center mt-5 comman-heading fs-2" data-aos="fade-down">
             Operational Security
-          </h1>
+          </h3>
           <div className="cst-hr-for-process mb-3" />
           <div className="Data-border mb-5" data-aos="fade-up">
             <p>{COMMAN_TEXT}</p>

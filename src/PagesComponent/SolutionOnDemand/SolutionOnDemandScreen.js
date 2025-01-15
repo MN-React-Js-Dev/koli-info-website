@@ -135,9 +135,9 @@ const SolutionOnDemandScreen = () => {
       </section>
       <section>
         <div className="container" data-aos="fade-up">
-          <h1 className="text-center pt-5 mt-5 comman-heading">
+          <h2 className="text-center pt-5 mt-5 comman-heading">
             Top On Demand App Development Company
-          </h1>
+          </h2>
           <div className="cst-hr-for-process mb-3" />
           <div className="row m-5 get-consultancy">
             <div className="text-center">
@@ -158,9 +158,9 @@ const SolutionOnDemandScreen = () => {
       <section className="onDemandImageCarousal m-3">
         <div className="container">
           <div className="" data-aos="fade-up">
-            <h1 className="text-center pt-5 comman-heading">
+            <h2 className="text-center pt-5 comman-heading">
               Top On-Demand Solutions Developed by Us
-            </h1>
+            </h2>
             <div className="cst-hr-for-process mb-5"></div>
             <div className="row blog text-center">
               <div className="img-slide-box" alt="Image not found" ref={carousel}>
@@ -243,7 +243,7 @@ const SolutionOnDemandScreen = () => {
       </section>
       <section>
         <div className="container">
-          <h1 className="text-center pt-5 comman-heading">
+          <h1 className="text-center pt-5 comman-heading fs-2">
             Key Features of On-Demand App Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />

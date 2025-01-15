@@ -5,8 +5,9 @@ import { SlClose } from "react-icons/sl";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Modal from 'react-modal';
 
-import Modal from 'react-modal'
+
 
 const OurValuableClients = () => {
   const [clients, setClients] = useState();

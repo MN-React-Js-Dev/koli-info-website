@@ -57,7 +57,11 @@ const Portfolio = () => {
   return (
     <Fragment>
       <Head>
-        <title>Our Portfolio | KOLI Infotech Pvt. Ltd.</title>
+        <title>Our Portfolio|Creative Design & Expert Development Services.</title>
+        <meta
+          name="description"
+          content=" Explore KOLI Infotech’s portfolio showcasing innovative design and expert development services. We turn creative concepts into impactful solutions for clients."
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
@@ -84,7 +88,7 @@ const Portfolio = () => {
 
       <section className="our-portfolio">
         <div className="container" data-aos="fade-down">
-          <h1 className="text-center mt-5 bold-font mb-5">Our Portfolio</h1>
+          <h2 className="text-center mt-5 bold-font mb-5 fs-2">Our Portfolio</h2>
           <div className="row" style={{ background: "#E4ECFF" }}>
             {ourService?.map(({ title, id }, index) => {
               return (
@@ -128,7 +132,7 @@ const Portfolio = () => {
                           className="m-3"
                         // style={{ fontSize: 21, fontWeight: "600" }}
                         >
-                          <h4>{title}</h4>
+                          <h3>{title}</h3>
                           <p>{description}</p>
                         </div>
                       </div>

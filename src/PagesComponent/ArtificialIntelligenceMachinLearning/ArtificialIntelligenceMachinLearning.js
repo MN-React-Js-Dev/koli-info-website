@@ -48,9 +48,9 @@ const AiandMlScreen = () => {
             <section className="onDemandImageCarousal m-3">
                 <div className="container">
                     <div className="" data-aos="fade-up">
-                        <h1 className="text-center pt-5 comman-heading">
+                        <h3 className="text-center pt-5 comman-heading">
                             Clients that have trusted us over the years
-                        </h1>
+                        </h3>
                         <div className="cst-hr-for-process mb-5"></div>
                         <div className="text-center" style={{ display: 'flex' }}>
                             <div >

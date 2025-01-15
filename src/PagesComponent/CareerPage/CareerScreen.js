@@ -49,7 +49,7 @@ const CareerScreen = () => {
     <Fragment>
       <section className="testi-hero-image ">
         <div className="container">
-          <h1 className=" text-center mt-5 comman-heading">Current Openings</h1>
+          <h2 className=" text-center mt-5 comman-heading">Current Openings</h2>
           <div className="cst-hr-for-process mb-5" />
           {data?.map(({ job_title, experience, location, id, image }, index) => (
             <>
@@ -71,7 +71,7 @@ const CareerScreen = () => {
                         justifyContent: "center",
                       }}
                     >
-                      <h5 className="bold-font">{job_title}</h5>
+                      <h4 className="bold-font">{job_title}</h4>
                       <span className="bold-font"> Experience : </span>
                       <span>{experience} Years</span>
                       <br />

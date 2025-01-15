@@ -100,9 +100,9 @@ const MobiAppDevScreen = () => {
           <div className="p-5" style={{ display: "flex" }}>
             <div className="row" style={{ alignItems: "center" }}>
               <div className="col-lg-7 mt-5" data-aos="fade-up">
-                <h1 className=" bold-font">
+                <h3 className=" bold-font fs-2">
                   Custom Mobile Application Development Company
-                </h1>
+                </h3>
                 <div className="cst-hr-for-process mb-3" />
                 <p className="para-for-hero">{COMMAN_TEXT}</p>
               </div>
@@ -115,9 +115,9 @@ const MobiAppDevScreen = () => {
       </section>
       <section className="special-services">
         <div className="container">
-          <h1 className="text-center text-white pt-5 mt-5 bold-font">
+          <h3 className="text-center text-white pt-5 mt-5 bold-font fs-1">
             Our Services
-          </h1>
+          </h3>
           <div className="cst-hr-for-process mb-5" />
           {/* <div className="row" data-aos="fade-up">
             {data.map(({ service, detail }, index) => (
@@ -143,7 +143,7 @@ const MobiAppDevScreen = () => {
               <div className="col-sm-4 mb-4 d-flex" key={index}>
                 <div className="p-5 awards-border d-flex flex-column flex-fill">
                   <div alt='Image not found' className="text-center award-head-img">
-                    <h2>{service}</h2>
+                    <h3>{service}</h3>
                     <Image
                       src={smartphone}
                       alt="img"
@@ -179,7 +179,7 @@ const MobiAppDevScreen = () => {
                   </div>
                 </div>
                 <div className="card-btm-text">
-                  <h4>Web Design</h4>
+                  <h3 className="fs-3">Web Design</h3>
                   <p>Website design</p>
                 </div>
               </div>
@@ -199,7 +199,7 @@ const MobiAppDevScreen = () => {
                   </div>
                 </div>
                 <div className="card-btm-text">
-                  <h4>Web Design</h4>
+                  <h3 className="fs-3">Web Design</h3>
                   <p>Website design</p>
                 </div>
               </div>
@@ -212,7 +212,7 @@ const MobiAppDevScreen = () => {
                   </div>
                 </div>
                 <div className="card-btm-text">
-                  <h4>Web Design</h4>
+                  <h3 className="fs-3">Web Design</h3>
                   <p>Website design</p>
                 </div>
               </div>
@@ -227,7 +227,7 @@ const MobiAppDevScreen = () => {
                   </div>
                 </div>
                 <div className="card-btm-text">
-                  <h4>Web Design</h4>
+                  <h3 className="fs-3">Web Design</h3>
                   <p>Website design</p>
                 </div>
               </div>
@@ -240,7 +240,7 @@ const MobiAppDevScreen = () => {
                   </div>
                 </div>
                 <div className="card-btm-text">
-                  <h4>Web Design</h4>
+                  <h3 className="fs-3">Web Design</h3>
                   <p>Website design</p>
                 </div>
               </div>
@@ -253,7 +253,7 @@ const MobiAppDevScreen = () => {
                   </div>
                 </div>
                 <div className="card-btm-text">
-                  <h4>Web Design</h4>
+                  <h3 className="fs-3">Web Design</h3>
                   <p>Website design</p>
                 </div>
               </div>

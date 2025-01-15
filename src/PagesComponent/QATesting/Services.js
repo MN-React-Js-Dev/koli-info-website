@@ -24,8 +24,8 @@ const QaAndTestingServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">
-                                Automation Testing</h1>
+                            <h3 className="whychooseTxt commanFont">
+                                Automation Testing</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{QATEST_P1}</p>
                             <p>{QATEST_P2}</p>
@@ -51,7 +51,7 @@ const QaAndTestingServices = () => {
                             />
                         </div>
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">Manual Testing</h1>
+                            <h2 className="whychooseTxt commanFont">Manual Testing</h2>
                             <div className="hr-cst mb-3"></div>
                             <p>{QATEST_P3}</p>
                             <p>{QATEST_P4}</p>
@@ -63,7 +63,7 @@ const QaAndTestingServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">Security Software Testing</h1>
+                            <h3 className="whychooseTxt commanFont">Security Software Testing</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{AIML_P5}</p>
                             <p>{AIML_P6}</p>
@@ -89,7 +89,7 @@ const QaAndTestingServices = () => {
                             />
                         </div>
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">Performance Testing</h1>
+                            <h3 className="whychooseTxt commanFont">Performance Testing</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{QATEST_P7}</p>
                             {/* <p>{QATEST_P4}</p> */}
@@ -101,7 +101,7 @@ const QaAndTestingServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">API Testing</h1>
+                            <h3 className="whychooseTxt commanFont">API Testing</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{QATEST_P8}</p>
                         </div>

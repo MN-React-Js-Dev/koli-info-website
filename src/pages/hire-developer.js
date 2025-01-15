@@ -18,7 +18,11 @@ const HireDeveloper = () => {
   return (
     <Fragment>
       <Head>
-        <title>Hire Developer | KOLI Infotech Pvt. Ltd.</title>
+        <title> Hire Dedicated Developers | Guaranteed Great Design Services</title>
+        <meta
+          name="description"
+          content="Hire dedicated developers for exceptional design and development services. From sketches to final construction, we deliver quality with every project."
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

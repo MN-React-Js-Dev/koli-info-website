@@ -90,9 +90,9 @@ const HireDevScreen = () => {
       </section>
       <section className="special-services">
         <div className="container">
-          <h1 className="text-center text-white pt-5 mt-5 bold-font" data-aos="flip-down">
+          <h2 className="text-center text-white pt-5 mt-5 bold-font fs-2" data-aos="flip-down">
             Mobile App Development Services
-          </h1>
+          </h2>
           <div className="cst-hr-for-process mb-5" data-aos="flip-down"/>
           <div className="row" data-aos="fade-down">
             {CardData.map(({ heading, descpt,img }, index) => (
@@ -100,7 +100,7 @@ const HireDevScreen = () => {
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="p-5 awards-border">
                     <div className="text-center award-head-img award-head-img">
-                      <h2>{heading}</h2>
+                      <h3>{heading}</h3>
                       <Image
                         src={img}
                         alt='Image not found'

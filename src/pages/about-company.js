@@ -50,7 +50,11 @@ const AboutCompany = () => {
   return (
     <Fragment>
       <Head>
-        <title>About Us | KOLI Infotech Pvt. Ltd.</title>
+        <title>KOLI Infotech | Remarkable Software Development & Solutions!</title>
+        <meta
+          name="description"
+          content="Experience our remarkable development expertise, designed to delight clients. We create stunning designs and reliable services that exceed expectations!"
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
@@ -80,21 +84,21 @@ const AboutCompany = () => {
       </section>
       <section className="our-mission mt-5 mb-5">
         <div className="container" data-aos="fade-up">
-          <h1 className="comman-heading">Our Mission</h1>
+          <h2 className="comman-heading">Our Mission</h2>
           <div className="hr-cst mb-3" />
           <p>{OUR_MISSION_TEXT}</p>
         </div>
       </section>
       <section className="our-mission mt-5 mb-5">
         <div className="container" data-aos="fade-up">
-          <h1 className="comman-heading">Our Vission</h1>
+          <h2 className="comman-heading">Our Vission</h2>
           <div className="hr-cst mb-3" />
           <p>{OUR_VISSON_TEXT}</p>
         </div>
       </section>
       <section className="qualities-we-take">
         <div className="container" data-aos="fade-down">
-          <h1 className="comman-heading">Qualities we take pride in</h1>
+          <h2 className="comman-heading">Qualities we take pride in</h2>
           <div className="hr-cst mb-3" />
           {data.map((item, index) => (
             <div className="row mb-5" key={index}>

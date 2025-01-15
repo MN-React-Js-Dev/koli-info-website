@@ -65,7 +65,7 @@ const FunSection = () => {
                 />
 
             </div>
-                    <h1 className="text-center mt-5">Employee Engagement  Activities</h1>
+                    <h2 className="text-center mt-5">Employee Engagement  Activities</h2>
                     <div className="cst-hr-for-process mb-5" />
                     <div className="row" data-aos="fade-up" >
                         <div className="bold-p text-center ">

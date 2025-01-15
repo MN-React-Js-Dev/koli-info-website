@@ -43,7 +43,7 @@ const QaandTestingScreen = () => {
             <section className="onDemandImageCarousal m-3">
                 <div className="container">
                     <div className="" data-aos="fade-up">
-                        <h1 className="text-center pt-5 comman-heading">
+                        <h1 className="text-center pt-5 comman-heading fs-2">
                             Clients that have trusted us over the years
                         </h1>
                         <div className="cst-hr-for-process mb-5"></div>

@@ -19,7 +19,11 @@ const WhoWeAre = () => {
   return (
     <Fragment>
       <Head>
-        <title>Who We Are | KOLI Infotech Pvt. Ltd.</title>
+      <title>KOLI Infotech |Leading Software Development & Tech Solutions</title>
+        <meta
+          name="description"
+          content=" Discover unique design solutions that energize your projects from initial sketches to stunning constructions. Start your journey with us today!"
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

@@ -18,7 +18,11 @@ const SolutionOnDemand = () => {
   return (
     <Fragment>
       <Head>
-        <title>Solution On Demand | KOLI Infotech Pvt. Ltd.</title>
+        <title>On-Demand App Services | Transform Ideas with KOLI Infotech!</title>
+        <meta
+          name="description"
+          content="Transform your ideas with our on-demand app development services. Get tailored solutions to meet your unique needs. Start your custom app project today!"
+        />
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

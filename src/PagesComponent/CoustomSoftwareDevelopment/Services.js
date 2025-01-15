@@ -22,8 +22,8 @@ const CoustomSoftwareDServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">
-                                Digital Transformation</h1>
+                            <h3 className="whychooseTxt commanFont">
+                                Digital Transformation</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{CSD_P1}</p>
                             <p>{CSD_P2}</p>
@@ -49,7 +49,7 @@ const CoustomSoftwareDServices = () => {
                             />
                         </div>
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">Product Engineering</h1>
+                            <h3 className="whychooseTxt commanFont">Product Engineering</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{CSD_P3}</p>
                             <p>{CSD_P4}</p>
@@ -61,7 +61,7 @@ const CoustomSoftwareDServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">Enterprise Applications</h1>
+                            <h3 className="whychooseTxt commanFont">Enterprise Applications</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{CSD_P5}</p>
                             <p>{CSD_P6}</p>
@@ -87,7 +87,7 @@ const CoustomSoftwareDServices = () => {
                             />
                         </div>
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">Integration Services</h1>
+                            <h3 className="whychooseTxt commanFont">Integration Services</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{CSD_P7}</p>
                             <p>{CSD_P8}</p>

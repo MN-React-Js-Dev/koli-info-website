@@ -7,7 +7,7 @@ import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
 import CloudScreen from "@/PagesComponent/CloudServices/CloudServices";
 import Cloudservices from "@/PagesComponent/CloudServices/Services";
-import FaqAccordianCloud from "@/PagesComponent/CloudServices/FaqAccordian"
+import FaqAccordianCloud from "@/PagesComponent/CloudServices/FaqAccordian";
 
 const CloudServices = () => {
   const [loader, setLoader] = useState(true);
@@ -21,7 +21,11 @@ const CloudServices = () => {
   return (
     <Fragment>
       <Head>
-        <title>Cloud | KOLI Infotech Pvt. Ltd.</title>
+        <title>Cloud Development Solutions | Delivering Exceptional Results</title>
+        <meta
+          name="description"
+          content="Elevate business with KOLI Infotech's cloud development.From concept to implementation,we deliver innovative,high-quality results that bring your ideas to life."
+        ></meta>
       </Head>
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />

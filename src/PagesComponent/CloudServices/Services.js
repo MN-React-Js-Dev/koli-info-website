@@ -21,7 +21,7 @@ const Cloudservices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h1 className="whychooseTxt commanFont">AWS Services</h1>
+                            <h3 className="whychooseTxt commanFont">AWS Services</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{CLOUDS_P1}</p>
                             <p>{CLOUDS_P2}</p>
@@ -48,7 +48,7 @@ const Cloudservices = () => {
                             />
                         </div>
                         <div className="col-sm-6" data-aos="fade-left">
-                            <h1 className="whychooseTxt commanFont">GCP Services</h1>
+                            <h3 className="whychooseTxt commanFont">GCP Services</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{CLOUDS_P4}</p>
                             <p>{CLOUDS_P5}</p>
@@ -61,7 +61,7 @@ const Cloudservices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right">
-                            <h1 className="whychooseTxt commanFont">Jenkins Services</h1>
+                            <h3 className="whychooseTxt commanFont">Jenkins Services</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{CLOUDS_P7}</p>
                             <p>{CLOUDS_P8}</p>
@@ -88,7 +88,7 @@ const Cloudservices = () => {
                             />
                         </div>
                         <div className="col-sm-6" data-aos="fade-left">
-                            <h1 className="whychooseTxt commanFont">Docker/Kubernetes Services</h1>
+                            <h2 className="whychooseTxt commanFont">Docker/Kubernetes Services</h2>
                             <div className="hr-cst mb-3"></div>
                             <p>{CLOUDS_P10}</p>
                             <p>{CLOUDS_P11}</p>
