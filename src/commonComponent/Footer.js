@@ -177,7 +177,7 @@ const Footer = () => {
                     <Link href="/our-team" className="nav-link active">
                       <p className="footerActivemenu">Team</p>
                     </Link>
-                    <Link href="/testimonial" className="nav-link active">
+                    <Link href="/Testimonial" className="nav-link active">
                       <p className="footerActivemenu">Testimonials</p>
                     </Link>
                   </div>
@@ -278,7 +278,7 @@ const Footer = () => {
           style={{ textAlign: "center", marginBottom: "1%", marginTop: "1%" }}
         >
           <span>&copy;</span>
-          <span>2023 KOLI Infotech Pvt. Ltd. | All rights reserved.</span>
+          <span>2025 KOLI Infotech Pvt. Ltd. | All rights reserved.</span>
         </div>
       </section>
 

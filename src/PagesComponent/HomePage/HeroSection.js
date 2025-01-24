@@ -6,21 +6,15 @@ import Image from "next/image";
 // import homeHeroImage1 from '../../assets/images/homeHeroImage1.gif';
 // import mainherosection1 from '../../assets/images/mainherosection1.gif';
 // import mainherosection2 from '../../assets/images/mainherosection2.gif'
-import maingif1 from '../../assets/images/maingif1.gif';
-import maingif2 from '../../assets/images/maingif2.gif';
-import maingif3 from '../../assets/images/maingif3.gif';
-import maingif4 from '../../assets/images/maingif4.gif';
-import maingif5 from '../../assets/images/maingif5.gif';
+import maingif1 from "../../assets/images/maingif1.gif";
+import maingif2 from "../../assets/images/maingif2.gif";
+import maingif3 from "../../assets/images/maingif3.gif";
+import maingif4 from "../../assets/images/maingif4.gif";
+import maingif5 from "../../assets/images/maingif5.gif";
 import { KOLI_INFOTECH_HOME_PAGE_PARAGRAPH } from "@/commonComponent/commanText/";
 
 const HeroSection = () => {
-  const gifs = [
-    maingif1,
-    maingif2,
-    maingif3,
-    maingif4,
-    maingif5
-  ];
+  const gifs = [maingif1, maingif2, maingif3, maingif4, maingif5];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -45,8 +39,14 @@ const HeroSection = () => {
       <section className="hero-section mb-2">
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-6 mt-5 text-start" data-aos="fade-down" style={{bottom:15}}>
-              <h1 className="home-hero-sec-header commanFont">Grow Your Business With The Finest IT Company</h1>
+            <div
+              className="col-lg-6 mt-5 text-start"
+              data-aos="fade-down"
+              style={{ bottom: 15 }}
+            >
+              <h1 className="home-hero-sec-header commanFont">
+                Grow Your Business With The Finest IT Company
+              </h1>
               <p className="para-for-hero subText commanFont">
                 {KOLI_INFOTECH_HOME_PAGE_PARAGRAPH}
               </p>
@@ -54,9 +54,17 @@ const HeroSection = () => {
                 Contact Us
               </a>
             </div>
-            <div className="col-lg-6 text-center" data-aos="fade-down home-hero-img">
-              <div className="custom-carousel" style={{ height: 400, width: 500, marginLeft: 100 }}>
-                <Image src={gifs[currentSlide]} alt={`GIF ${currentSlide + 1}`} style={{marginTop:72}} />
+            <div
+              className="col-lg-6 text-center"
+              data-aos="fade-down home-hero-img"
+            >
+              <div className="custom-carousel d-flex justify-content-center">
+                <Image
+                  src={gifs[currentSlide]}
+                  alt={`GIF ${currentSlide + 1}`}
+                  className="img-fluid"
+                  style={{ marginTop: 72, maxWidth: "100%", height: "auto" }}
+                />
               </div>
               {/* <p>Current Slide: {currentSlide + 1}</p> */}
             </div>

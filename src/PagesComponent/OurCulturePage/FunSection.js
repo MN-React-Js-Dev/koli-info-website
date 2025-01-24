@@ -87,7 +87,7 @@ const FunSection = () => {
                                             src={image}
                                             alt="Image not found"
                                             className="img-fluid"
-                                            style={{ borderRadius: 25, height: 400, width: 600 }}
+                                            style={{ borderRadius: 25 }}
                                         />
                                     </div>
                                     <p style={{ fontSize: 25, fontWeight: 'bold' }} className="text-center mb-5 mt-3">{Topics}</p>

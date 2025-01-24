@@ -1,13 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
-import DataSecureScreen from "@/PagesComponent/DataSecurity/DataSecureScreen";
 import Header from "@/commonComponent/Header";
-import CloudServiceHeroSection from "@/PagesComponent/CloudServices/HeroSection";
 import LoaderComponent from "@/commonComponent/loaderComponent";
-import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
+import Footer from "@/commonComponent/Footer";
 import QaTestingHeroSection from "@/PagesComponent/QATesting/HeroSection";
-import QaandTestingScreen from "@/PagesComponent/QATesting/LogoScreen";
 import QaAndTestingServices from "@/PagesComponent/QATesting/Services";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const QaTestingServices = () => {
   const [loader, setLoader] = useState(true);
@@ -30,7 +28,8 @@ const QaTestingServices = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <QaTestingHeroSection />
-      <QaandTestingScreen />
+      {/* <QaandTestingScreen /> */}
+      <ClientWeServe/>
       <QaAndTestingServices />
       <Footer />
     </Fragment>

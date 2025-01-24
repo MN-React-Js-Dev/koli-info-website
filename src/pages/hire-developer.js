@@ -5,6 +5,7 @@ import HireDevScreen from "@/PagesComponent/HireDeveloper/HireDevScreen";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const HireDeveloper = () => {
   const [loader, setLoader] = useState(true);
@@ -27,6 +28,7 @@ const HireDeveloper = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <HireDevHeroSection />
+      <ClientWeServe/>
       <HireDevScreen />
       <Footer />
     </Fragment>

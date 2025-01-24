@@ -50,7 +50,7 @@ const WhoWeAreScreen = () => {
                 <Image
                   src={Image1}
                   alt="Image not found"
-                  className="img-fluid testi-image"
+                  className="img-fluid"
                 />
               </div>
             </div>
@@ -99,8 +99,8 @@ const WhoWeAreScreen = () => {
                   className="mb-4 mt-4 img-fluid "
                 />
                 <h3>Web Designing</h3>
-                 <p style={{maxHeight:'100px',minHeight:'100px'}}>
-                Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development rather than software development.
+                 <p style={{maxHeight:'130px',minHeight:'130px'}}>
+                Web design refers to the design of websites that are displayed on the internet.It usually refers to the user experience aspects of website development rather than software development.
                 </p>
               </div>
             </div>
@@ -112,8 +112,8 @@ const WhoWeAreScreen = () => {
                   className="mb-4 mt-4 img-fluid "
                 />
                 <h3>Web Development</h3>
-                <p style={{maxHeight:'100px',minHeight:'100px'}}>
-                Web development is the building and maintenance of websites; it&apos;s the work that happens behind the scenes to make a website look great
+                <p style={{maxHeight:'120px',minHeight:'120px'}}>
+                Web development involves building and maintaining websites, ensuring a seamless behind-the-scenes process to make websites visually appealing and fully functional.
                 </p>
               </div>
             </div>
@@ -125,8 +125,8 @@ const WhoWeAreScreen = () => {
                   className="mb-4 mt-4 img-fluid "
                 />
                 <h3>Mobile Development</h3>
-                <p style={{maxHeight:'100px',minHeight:'100px'}}>
-                Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.
+                <p style={{maxHeight:'120px',minHeight:'120px'}}>
+                Mobile app development involves creating software for mobile devices, typically using a network connection to interact with remote computing resources for functionality.
                 </p>
               </div>
             </div>
@@ -134,9 +134,11 @@ const WhoWeAreScreen = () => {
         </div>
       </section>
       <section className="mt-5 mb-5">
+        
         {/* <div className="row mt-5 mb-5 "> */}
-          <Image src={Image2} alt="Image not found" className="img-fluid" style={{width:'100%'}}/>
+          <Image src={Image2} alt="Image not found" className="img-fluid whoweareimag" style={{width:'100%',height:'auto'}}/>
         {/* </div> */}
+       
       </section>
     </Fragment>
   );

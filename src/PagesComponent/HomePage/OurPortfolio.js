@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from "react";
-import GridImage1 from "../../assets/images/IdesignImage.png";
 import TTPM from "../../assets/images/ttpm.png";
 import jodiBanao from "../../assets/images/jodiBanao.png";
 import Onfleek from "../../assets/images/onfleek.png";

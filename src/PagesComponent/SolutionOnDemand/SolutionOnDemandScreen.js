@@ -142,7 +142,7 @@ const SolutionOnDemandScreen = () => {
           <div className="row m-5 get-consultancy">
             <div className="text-center">
               <p>{COMMAN_TEXT}</p>
-            </div>
+            </div> 
             <div className="text-center">
               <a
                 href="#"
@@ -155,7 +155,7 @@ const SolutionOnDemandScreen = () => {
           </div>
         </div>
       </section>
-      <section className="onDemandImageCarousal m-3">
+      {/* <section className="onDemandImageCarousal m-3">
         <div className="container">
           <div className="" data-aos="fade-up">
             <h2 className="text-center pt-5 comman-heading">
@@ -204,15 +204,6 @@ const SolutionOnDemandScreen = () => {
                   </div>
                 </div>
               </div>
-              {/*   <div className="buttons m-3">
-                <button onClick={handleLeftClick} className="m-4 p-1">
-    
-                  <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={LeftArrow}></Image>
-                </button>
-                <button onClick={handleRightClick} className="m-4 p-1">
-                  <Image style={{ borderRadius: '50%', height: '40px', width: '40px' }} src={RightArrow}></Image>
-                </button>
-              </div> */}
               <div className="d-flex justify-content-center">
                 <motion.div
                   className="box"
@@ -240,7 +231,8 @@ const SolutionOnDemandScreen = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
       <section>
         <div className="container">
           <h1 className="text-center pt-5 comman-heading fs-2">

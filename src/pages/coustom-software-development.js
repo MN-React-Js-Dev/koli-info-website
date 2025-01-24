@@ -1,13 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
-import DataSecureScreen from "@/PagesComponent/DataSecurity/DataSecureScreen";
 import Header from "@/commonComponent/Header";
-import CloudServiceHeroSection from "@/PagesComponent/CloudServices/HeroSection";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
 import CoustomSoftwareHeroSection from "@/PagesComponent/CoustomSoftwareDevelopment/HeroSection";
-import CoustomSoftwareScreen from "@/PagesComponent/CoustomSoftwareDevelopment/LogoScreen";
 import CoustomSoftwareDServices from "@/PagesComponent/CoustomSoftwareDevelopment/Services";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const CoustomSoftwareServices = () => {
   const [loader, setLoader] = useState(true);
@@ -32,7 +30,8 @@ const CoustomSoftwareServices = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <CoustomSoftwareHeroSection />
-      <CoustomSoftwareScreen />
+      <ClientWeServe />
+      {/* <CoustomSoftwareScreen /> */}
       <CoustomSoftwareDServices />
       <Footer />
     </Fragment>

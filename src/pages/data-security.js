@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const DataSecurity = () => {
   const [loader, setLoader] = useState(true);
@@ -28,6 +29,7 @@ const DataSecurity = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <DataSecureHeroSection />
+      <ClientWeServe/>
       <DataSecureScreen />
       <Footer />
     </Fragment>

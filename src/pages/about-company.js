@@ -8,6 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const AboutCompany = () => {
   const [loader, setLoader] = useState(true);
@@ -82,6 +83,7 @@ const AboutCompany = () => {
           </div>
         </div>
       </section>
+      <ClientWeServe/>
       <section className="our-mission mt-5 mb-5">
         <div className="container" data-aos="fade-up">
           <h2 className="comman-heading">Our Mission</h2>

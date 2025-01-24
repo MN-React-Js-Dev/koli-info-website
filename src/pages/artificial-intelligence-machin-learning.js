@@ -1,13 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
-import DataSecureScreen from "@/PagesComponent/DataSecurity/DataSecureScreen";
 import Header from "@/commonComponent/Header";
-import CloudServiceHeroSection from "@/PagesComponent/CloudServices/HeroSection";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
 import AiMlHeroSection from "@/PagesComponent/ArtificialIntelligenceMachinLearning/HeroSection";
-import AiandMlScreen from "@/PagesComponent/ArtificialIntelligenceMachinLearning/ArtificialIntelligenceMachinLearning";
 import AiMlServices from "@/PagesComponent/ArtificialIntelligenceMachinLearning/Services";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const AimlServices = () => {
   const [loader, setLoader] = useState(true);
@@ -32,7 +30,7 @@ const AimlServices = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <AiMlHeroSection />
-      <AiandMlScreen />
+      <ClientWeServe/>
       <AiMlServices />
       <Footer />
     </Fragment>

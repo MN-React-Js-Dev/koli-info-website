@@ -12,7 +12,7 @@ const TestimonialOfOurClient = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState();
   const dataSelector = useSelector((state) => state?.getOurClients?.ourClients);
-  console.log('testimonil data~~~~~~>',data);
+
 
   useEffect(() => {
     if (dataSelector != null) {
@@ -37,7 +37,7 @@ const TestimonialOfOurClient = () => {
           <div className="row">
             <div className="mt-5 mb-5">
               <h1 className="text-center mt-5 comman-heading" data-aos="flip-down">
-                Testimonial Of Our Client
+              Stories of Success
               </h1>
               <div className="cst-hr-for-process mb-5" />
               <div

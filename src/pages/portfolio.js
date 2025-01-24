@@ -10,8 +10,8 @@ import LoaderComponent from "@/commonComponent/loaderComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
-import { motion } from "framer-motion";
 import Head from "next/head";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -85,7 +85,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
+      <ClientWeServe/>
       <section className="our-portfolio">
         <div className="container" data-aos="fade-down">
           <h2 className="text-center mt-5 bold-font mb-5 fs-2">Our Portfolio</h2>

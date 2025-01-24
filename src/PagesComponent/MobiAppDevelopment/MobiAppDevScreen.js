@@ -12,10 +12,10 @@ import WebDesignImage4 from "../../assets/images/webdesign4.png";
 import WebDesignImage5 from "../../assets/images/webdesign5.png";
 import WebDesignImage6 from "../../assets/images/webdesign6.png";
 import smartphone from "../../assets/images/smartphone.png";
-import { Inder } from "next/font/google";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const MobiAppDevScreen = () => {
   const data = [
@@ -44,7 +44,6 @@ const MobiAppDevScreen = () => {
       detail:
         "Our Cloud and DevOps services help businesses leverage the power of cloud computing and streamline their development processes for faster, scalable, and more efficient software deployment.",
     },
-     
   ];
 
   useEffect(() => {
@@ -61,7 +60,11 @@ const MobiAppDevScreen = () => {
             <div className="row m-5" data-aos="fade-up">
               <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
-                  <Image src={trophy} alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                  <Image
+                    src={trophy}
+                    alt="Image not found"
+                    className="mb-4 mt-4 img-fluid "
+                  />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -70,7 +73,11 @@ const MobiAppDevScreen = () => {
               </div>
               <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
-                  <Image src={like} alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                  <Image
+                    src={like}
+                    alt="Image not found"
+                    className="mb-4 mt-4 img-fluid "
+                  />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -79,7 +86,11 @@ const MobiAppDevScreen = () => {
               </div>
               <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
-                  <Image src={rating} alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                  <Image
+                    src={rating}
+                    alt="Image not found"
+                    className="mb-4 mt-4 img-fluid "
+                  />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -88,7 +99,11 @@ const MobiAppDevScreen = () => {
               </div>
               <div className="col-sm-3 mb-3 award-card">
                 <div className="p-3 text-center award-box">
-                  <Image src={userInterface} alt='Image not found' className="mb-4 mt-4 img-fluid " />
+                  <Image
+                    src={userInterface}
+                    alt="Image not found"
+                    className="mb-4 mt-4 img-fluid "
+                  />
                   <p>
                     Awarded as the Best Mobile Application Development Company
                     by GESIA
@@ -97,7 +112,8 @@ const MobiAppDevScreen = () => {
               </div>
             </div>
           </div>
-          <div className="p-5" style={{ display: "flex" }}>
+          <ClientWeServe />
+          <div className="p-5 mt-5" style={{ display: "flex" }}>
             <div className="row" style={{ alignItems: "center" }}>
               <div className="col-lg-7 mt-5" data-aos="fade-up">
                 <h3 className=" bold-font fs-2">
@@ -107,7 +123,11 @@ const MobiAppDevScreen = () => {
                 <p className="para-for-hero">{COMMAN_TEXT}</p>
               </div>
               <div className="col-lg-5 " data-aos="fade-up">
-                <Image src={CostumMobi} alt='Image not found' className="img-fluid testi-image" />
+                <Image
+                  src={CostumMobi}
+                  alt="Image not found"
+                  className="img-fluid testi-image"
+                />
               </div>
             </div>
           </div>
@@ -142,7 +162,10 @@ const MobiAppDevScreen = () => {
             {data.map(({ service, detail }, index) => (
               <div className="col-sm-4 mb-4 d-flex" key={index}>
                 <div className="p-5 awards-border d-flex flex-column flex-fill">
-                  <div alt='Image not found' className="text-center award-head-img">
+                  <div
+                    alt="Image not found"
+                    className="text-center award-head-img"
+                  >
                     <h3>{service}</h3>
                     <Image
                       src={smartphone}
@@ -155,7 +178,6 @@ const MobiAppDevScreen = () => {
               </div>
             ))}
           </div>
-
         </div>
       </section>
       <section>
@@ -175,7 +197,11 @@ const MobiAppDevScreen = () => {
                   }}
                 >
                   <div class="card-body">
-                    <Image src={WebDesignImage} alt='Image not found' class="card-img-top" />
+                    <Image
+                      src={WebDesignImage}
+                      alt="Image not found"
+                      class="card-img-top"
+                    />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -195,7 +221,11 @@ const MobiAppDevScreen = () => {
                   }}
                 >
                   <div class="card-body">
-                    <Image src={WebDesignImage2} alt='Image not found' class="card-img-top" />
+                    <Image
+                      src={WebDesignImage2}
+                      alt="Image not found"
+                      class="card-img-top"
+                    />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -208,7 +238,11 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#012E4D" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage3} alt='Image not found' class="card-img-top" />
+                    <Image
+                      src={WebDesignImage3}
+                      alt="Image not found"
+                      class="card-img-top"
+                    />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -223,7 +257,11 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#313131" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage4} alt='Image not found' class="card-img-top" />
+                    <Image
+                      src={WebDesignImage4}
+                      alt="Image not found"
+                      class="card-img-top"
+                    />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -236,7 +274,11 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#6647C0" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage5} alt='Image not found' class="card-img-top" />
+                    <Image
+                      src={WebDesignImage5}
+                      alt="Image not found"
+                      class="card-img-top"
+                    />
                   </div>
                 </div>
                 <div className="card-btm-text">
@@ -249,7 +291,11 @@ const MobiAppDevScreen = () => {
               <div className="container">
                 <div class="card  p-4" style={{ background: "#E9A218" }}>
                   <div class="card-body">
-                    <Image src={WebDesignImage6} alt='Image not found' class="card-img-top" />
+                    <Image
+                      src={WebDesignImage6}
+                      alt="Image not found"
+                      class="card-img-top"
+                    />
                   </div>
                 </div>
                 <div className="card-btm-text">

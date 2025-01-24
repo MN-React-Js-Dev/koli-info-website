@@ -39,10 +39,13 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.2.3",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.10",
+    "styled-components": "^5.3.11",
     "sweetalert": "^2.1.2"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4"
+    "@types/aos": "^3.0.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17"
   }
 }

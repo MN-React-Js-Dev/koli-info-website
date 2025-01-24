@@ -5,6 +5,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import LoaderComponent from "@/commonComponent/loaderComponent";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const CareerPage = () => {
   const [loader, setLoader] = useState(true);
@@ -27,6 +28,7 @@ const CareerPage = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <CareerPageHeroSection />
+      <ClientWeServe/>
       <CareerScreen />
       <Footer />
     </Fragment>

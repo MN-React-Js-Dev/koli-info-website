@@ -24,7 +24,7 @@ const CloudServiceHeroSection = () => {
                 <div className="container">
                     <div className="row" style={{ alignItems: "center" }}>
                         <div className="col-lg-6 mt-5 text-start" data-aos="fade-up">
-                            <h1 className="hero-sec-header">Cloud Development</h1>
+                            <h1 className="">Cloud Development</h1>
                             <p className="para-for-hero">
                             Elevate your concepts with our end-to-end cloud development. From idea to implementation, we bring your visions to the cloud.
                             </p>

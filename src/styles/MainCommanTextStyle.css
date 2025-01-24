@@ -1,103 +1,378 @@
-.commanFont{
-    font-family: "Montserrat";
-    /* color: brown; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.commanFont {
+  font-family: "Montserrat";
+  /* color: brown; */
 }
 
-.commanHead2{
-    font-family: "Poppins";
+.commanHead2 {
+  font-family: "Poppins";
 }
 
-.heroSectionHeader{
-    font-weight: 700 !important;
-    font-size: 80px !important;
-    line-height: 97.52px !important;
+.heroSectionHeader {
+  font-weight: 700 !important;
+  font-size: 80px !important;
+  line-height: 97.52px !important;
 }
-.whychooseTxt{
-    font-family: Montserrat;
-font-size: 45px;
-font-weight: 700;
-line-height: 60px;
-letter-spacing: 0em;
-text-align: left;
-
+.whychooseTxt {
+  font-family: Montserrat;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
 }
-.subText{
-    font-weight: 500 !important;
-    font-size: 18px !important;
-    line-height: 30px !important;
+.subText {
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 30px !important;
 }
 
 /* ------------------------------From here you can changes in proess section ------------------------*/
 
-
-.processList{
-    font-weight: 600 !important;
-    font-size: 24px !important;
-    line-height: 30px !important;
+.processList {
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  line-height: 30px !important;
 }
 
 /* ---------------------------------------OUR SERVICES STYLING ----------------------- */
 
-.serviceText{
-    font-family: "Poppins";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: left; 
-    color:#656565;  
+.serviceText {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #656565;
 }
 
-.serviceheadingText{
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
+.serviceheadingText {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 /* ------------------------------- OUR PORTFOLIO HOMEPAGE STYLE------------------------------ */
 
-.mobileHeadText{
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
+.mobileHeadText {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.subHeadText{
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: left;
+.subHeadText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 /* ----------------------------------------WHY CHOOSE KOLIINFOTECH HOME-PAGE STYLE------------------------------ */
 
-.whychooseTxt{
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 60px;
-    letter-spacing: 0em;
-    text-align: left;
+.whychooseTxt {
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
+/* ------------------------------------------------- Footer Icons and Caraousal Slide image  ------------------------------------*/
 
-/* ------------------------------------------------- Footer Icons ------------------------------------*/
-
-.icons{
-    color: "#2A64F9";
-     font-size: "43px";
-      margin: "3px";
+.icons {
+  color: "#2A64F9";
+  font-size: "43px";
+  margin: "3px";
 }
-/* .icon-border{
-    border: 1px solid #2A64F9;
-} */
-.icon:hover{
-    /* background-color: blue; */
-    padding: 5px;
-    border: 1px solid #2A64F9;
-    border-radius: 50%;
+.icon:hover {
+  padding: 5px;
+  border: 1px solid #2a64f9;
+  border-radius: 50%;
+}
+
+.leftarrow {
+  margin-top: 80px;
+}
+.rightarrow {
+  margin-top: 80px;
+}
+.img-slide-box {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding-left: 5px;
+}
+.img-slide-box::-webkit-scrollbar {
+  display: none;
+}
+
+.img-slide-box .item {
+  flex: none;
+}
+
+.slide-img {
+  width: 250px !important;
+  height: 100px !important;
+  object-fit: contain !important;
+}
+
+.slick-slider {
+  overflow: hidden !important;
+}
+
+.slick-dots {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Accomplishment Section css  */
+.accomplishments-bg {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.svg-bubbles {
+  position: absolute;
+  z-index: -1;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+}
+
+.accomplishments-container {
+  background-color: #ecf5ff;
+  margin-bottom: 150px;
+  margin-top: 40px;
+  padding: 30px 10px;
+}
+
+.accomplishment-item {
+  border-radius: 10px;
+  padding: 30px;
+  margin: 15px 0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.accomplishment-item h3 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.accomplishment-item p {
+  font-size: 1.25rem;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.accomplishment-item:hover {
+  background-color: #f0f8ff;
+  border-color: #007bff;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.badge {
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 1400px) {
+  .leftarrow {
+    margin-top: 50px !important;
+  }
+  .rightarrow {
+    margin-top: 50px !important;
+  }
+  .slide-img {
+    width: 150px !important;
+    height: 120px !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .leftarrow {
+    margin-top: 40px !important;
+  }
+  .rightarrow {
+    margin-top: 40px !important;
+  }
+  .slide-img {
+    width: 280px !important;
+    height: 140px !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 992px) {
+  .leftarrow {
+    margin-top: 28px !important;
+  }
+  .rightarrow {
+    margin-top: 28px !important;
+  }
+  .slide-img {
+    width: 280px !important;
+    height: 120px !important;
+    object-fit: contain;
+  }
+  .client-we-serve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+     transition: 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .whychooseTxt {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .leftarrow {
+    margin-top: 28px !important;
+  }
+  .rightarrow {
+    margin-top: 28px !important;
+  }
+  .slide-img {
+    width: 270px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+  }
+  .client-we-serve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 576px) {
+  .whychooseTxt {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center !important;
+  }
+
+  .whoweareimag {
+    margin: 0 auto !important;
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    padding: 10px;
+  }
+
+  .hr-cst {
+    position: relative;
+    left: 35%;
+  }
+  .comman-heading {
+    text-align: center !important;
+  }
+  .leftarrow {
+    margin-top: 25px !important;
+  }
+  .rightarrow {
+    margin-top: 25px !important;
+  }
+  .slide-img {
+    width: 130px !important;
+    height: 90px !important;
+    object-fit: contain !important;
+  }
+  .client-we-serve {
+    width: 300px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    transition: 0.3s ease-in-out;
+  }
+  .client-icon-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #ecf2f7;
+    padding: 10px;
+    width: 380px !important;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 320px) {
+  .slide-img {
+    width: 120px !important;
+    height: 90px !important;
+    object-fit: contain !important;
+  }
+  .comman-heading{
+    padding: 10px;
+  }
+  .client-we-serve {
+    width: 200px !important;
+    display: flex !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    transition: 0.5s ease-in-out;
+  }
+  .client-icon-section {
+    background-color: #ecf2f7;
+    padding: 10px !important;
+    width: 290px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 }

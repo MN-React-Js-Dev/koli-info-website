@@ -20,7 +20,7 @@ const QaAndTestingServices = () => {
 
     return (
         <Fragment>
-            <section className="mb-5 mt-5 why-choos">
+            <section className="mb-5 why-choos" style={{marginTop:'120px'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >

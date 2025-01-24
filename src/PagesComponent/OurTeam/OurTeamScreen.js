@@ -1,9 +1,7 @@
 import React, { useState, useRef, Fragment, useEffect } from "react";
 import CEOimage from '../../assets/images/ajay-koli.jpeg'
 import CTOimage from '../../assets/images/Nihal-koli.jpg'
-import Avtar from '../../assets/images/middle.png'
 import Image from "next/image";
-import LeftArrow from '.././../assets/images/leftArrow.png'
 import RightArrow from '.././../assets/images/rightArrow.png'
 import Aos from "aos";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
@@ -12,8 +10,6 @@ import { CEO_QUOTES } from "@/commonComponent/commanText";
 import { CTO_QUOTES } from "@/commonComponent/commanText";
 import { getAllEmployeeStart } from "@/Redux/module/getAllEmployee";
 import { useDispatch, useSelector } from "react-redux";
-import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
-import { motion } from "framer-motion";
 
 
 const OurTeamScreen = () => {
@@ -72,7 +68,7 @@ const OurTeamScreen = () => {
                 <Image
                   src={CEOimage}
                   alt='Image not find !'
-                  className="lead-image"
+                  className="lead-image img-fluid"
                 // style={{ height: '300px', width: '260px', borderRadius: '10px' }}
                 />
                 <h2 className="fs-4">Ajay Koli</h2>
@@ -92,7 +88,7 @@ const OurTeamScreen = () => {
                 <Image
                   src={CTOimage}
                   alt='Image not find !'
-                  className="lead-image"
+                  className="lead-image img-fluid"
                 // style={{ height: '300px', borderRadius: '10px' }}
                 />
                 <h2 className="fs-4">Nihal Koli</h2>

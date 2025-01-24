@@ -63,7 +63,7 @@ const Header = () => {
                             <ul class="dropdown-menu collap-manu">
                               <li><Link class="dropdown-item" href="/who-we-are">Who We Are!</Link></li>
                               <li><Link class="dropdown-item" href="/our-team">Our Team</Link></li>
-                              <li><Link class="dropdown-item" href="/testimonial">Testimoial</Link></li>
+                              <li><Link class="dropdown-item" href="/Testimonial">Testimoial</Link></li>
                               <li><Link class="dropdown-item" href="/portfolio">Our Portfolio</Link></li>
                               <li><Link class="dropdown-item" href="/about-company">About Us</Link></li>
                               <li><Link class="dropdown-item" href="/OurCulture">Our Culture</Link></li>

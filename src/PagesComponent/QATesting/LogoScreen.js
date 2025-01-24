@@ -22,6 +22,7 @@ import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 
 const QaandTestingScreen = () => {
     const carousel = useRef(null);
+    const imageWidth = useRef(0);
 
     const handleLeftClick = (e) => {
         e.preventDefault();
@@ -33,10 +34,34 @@ const QaandTestingScreen = () => {
     };
 
     useEffect(() => {
-        setTimeout(() => {
-            Aos.init();
-        }, 1500);
-    }, []);
+        Aos.init();
+    
+        const autoScroll = setInterval(() => {
+          if (carousel.current) {
+            const maxScrollLeft =
+              carousel.current.scrollWidth - carousel.current.clientWidth;
+    
+            if (carousel.current.scrollLeft >= maxScrollLeft) {
+              carousel.current.scrollTo({
+                left: 0,
+                behavior: "smooth",
+              });
+            } else {
+              carousel.current.scrollTo({
+                left: carousel.current.scrollLeft + imageWidth.current,
+                behavior: "smooth",
+              });
+            }
+          }
+        }, 2000);
+    
+        const firstImage = carousel.current.querySelector(".slide-img");
+        if (firstImage) {
+          imageWidth.current = firstImage.offsetWidth + 16;
+        }
+    
+        return () => clearInterval(autoScroll);
+      }, []);
 
     return (
         <Fragment>
@@ -49,7 +74,7 @@ const QaandTestingScreen = () => {
                         <div className="cst-hr-for-process mb-5"></div>
                         <div className="text-center" style={{ display: 'flex' }}>
                             <div >
-                                <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '4.5rem' }} onClick={handleLeftClick} /></span>
+                                <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black"}} onClick={handleLeftClick} className="leftarrow" /></span>
                             </div>
                             <div className="img-slide-box" alt="Image not found" ref={carousel}>
                                 <div className="item">
@@ -93,7 +118,7 @@ const QaandTestingScreen = () => {
                                 </div>
                             </div>
                             <div>
-                                <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '4.5rem' }} onClick={handleRightClick} /></span>
+                                <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black"}} onClick={handleRightClick} className="rightarrow" /></span>
                             </div>
                             {/*   <div className="buttons m-3">
                 <button onClick={handleLeftClick} className="m-4 p-1">
