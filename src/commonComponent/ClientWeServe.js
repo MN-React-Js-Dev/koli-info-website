@@ -19,7 +19,7 @@ const ClientWeServe = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -27,6 +27,7 @@ const ClientWeServe = () => {
     cssEase: "linear",
     pauseOnHover: false,
     lazyLoad: "ondemand",
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -38,7 +39,7 @@ const ClientWeServe = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -53,6 +54,13 @@ const ClientWeServe = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },

@@ -119,6 +119,7 @@
 
 .img-slide-box .item {
   flex: none;
+
 }
 
 .slide-img {
@@ -237,8 +238,8 @@ hr {
     margin-top: 40px !important;
   }
   .slide-img {
-    width: 280px !important;
-    height: 140px !important;
+    width: 250px !important;
+    height: 100px !important;
     object-fit: contain;
   }
 }
@@ -348,8 +349,8 @@ hr {
 
 @media (max-width: 320px) {
   .slide-img {
-    width: 120px !important;
-    height: 90px !important;
+    width: 180px !important;
+    height: 100px !important;
     object-fit: contain !important;
   }
   .comman-heading{
