@@ -93,8 +93,8 @@ const Technologywework = () => {
       <h2 className="text-center mb-4">Technologies We Work</h2>
       <div className="cst-hr-for-process mb-5"></div>
       <p className="text-center">
-        We have worked with <strong>1500+ clients</strong> in the past
-        <strong>19 years</strong> across various industries resolving
+        We have worked with <strong> 50+ clients </strong> in the past
+        <strong> 7 years </strong> across various industries resolving
         complexities and differentiating them with optimum software solutions
         suitable to their business proposition.
       </p>

@@ -39,7 +39,7 @@ const HeroSection = () => {
 
   return (
     <Fragment>
-      <section className="hero-section mb-2">
+      <section className="hero-section mt-5 mb-5">
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
             <div

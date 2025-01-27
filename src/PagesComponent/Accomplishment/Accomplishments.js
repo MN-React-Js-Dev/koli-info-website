@@ -9,7 +9,7 @@ const Accomplishments = () => {
 
   useEffect(() => {
     const startCounts = {
-      experience: 10,
+      experience: 7,
       projects: 100,
       clients: 50,
       customers: 150,

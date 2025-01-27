@@ -55,7 +55,7 @@ const OurServices = () => {
             <div className="cst-hr-for-process mb-5"></div>
             <div className="service-carousel">
               <button className="arrow-button" onClick={handleLeftClick}>
-                <AiOutlineDoubleLeft />
+                <AiOutlineDoubleLeft style={{ color: "whitesmoke" }} />
               </button>
               <div
                 className="img-slide-box"
@@ -132,7 +132,7 @@ const OurServices = () => {
                 </div>
               </div>
               <button className="arrow-button" onClick={handleRightClick}>
-                <AiOutlineDoubleRight />
+                <AiOutlineDoubleRight style={{ color: "whitesmoke" }} />
               </button>
             </div>
           </div>
@@ -151,7 +151,7 @@ const OurServices = () => {
         .arrow-button {
           background: none;
           border: none;
-          font-size: 2rem;
+          font-size: 1.5rem;
           cursor: pointer;
           color: #333;
           z-index: 10;
@@ -159,17 +159,14 @@ const OurServices = () => {
 
         .img-slide-box {
           display: flex;
-          gap: 1.5rem;
+          gap: 1rem;
           overflow-x: auto;
           scroll-behavior: smooth;
           width: 100%;
-          padding: 20px;
+          padding: 40px;
         }
-
         .service-card {
-          min-width: 280px;
-          max-width: 280px;
-          flex-shrink: 0;
+          flex: 0 0 calc(26% - 0.9rem);
           text-align: center;
           background: #fff;
           padding: 2rem;
@@ -188,11 +185,11 @@ const OurServices = () => {
           width: 100%;
           height: auto;
           margin-bottom: 1rem;
-          border-radius: 8px;
+          border-radius: 10px;
         }
 
         .service-card h2 {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           color: #333;
           margin-bottom: 0.5rem;
         }
@@ -203,28 +200,61 @@ const OurServices = () => {
           line-height: 1.5;
         }
 
-        @media (min-width: 1024px) {
-          .img-slide-box {
-            gap: 2rem;
-          }
-
-          .service-card {
-            min-width: 300px;
-            max-width: 300px;
-            flex-shrink: 0;
-          }
-        }
-
         @media (max-width: 1024px) {
           .service-card {
-            min-width: 230px;
-            max-width: 230px;
-          }
-
-          .img-slide-box {
-            gap: 1rem;
+            flex: 0 0 calc(40% - 3.2rem);
           }
         }
+
+        @media (max-width: 768px) {
+          .service-card {
+            flex: 0 0 calc(45% - 4rem);
+            padding: 1.5rem;
+            width: -webkit-fill-available;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid red;
+          }
+          .service-image {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+          }
+          .service-card h2 {
+            font-size: 1.2rem;
+          }
+
+          .service-card p {
+            font-size: 0.85rem;
+          }
+        }
+
+        @media (max-width: 320px) {
+          .service-card {
+            flex: 0 0 100%;
+            padding: 1.25rem;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eaeaea;
+          }
+
+          .service-image {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+          }
+
+          .service-card h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .service-card p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+          }
+        }
+
         .img-slide-box::-webkit-scrollbar {
           height: 8px;
         }
