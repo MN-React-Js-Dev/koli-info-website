@@ -1,8 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import SVGlogo from "../assets/Logo/SVGlogo.svg";
-import hiring from "../assets/images/hiring.png"
-import arrow from "../assets/images/up-arrow.png"
-import circleElement from "../assets/images/circleElement.png"
+import hiring from "../assets/images/hiring.png";
+import arrow from "../assets/images/up-arrow.png";
 import Image from "next/image";
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
@@ -14,6 +13,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
@@ -25,7 +25,7 @@ const Footer = () => {
       <section>
         <hr className="row ml-4 mr-4" />
         <div className="container" data-aos="fade-up">
-          <div style={{ display: 'flex', flexDirection: 'column' }} >
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <div className="row col-12 mt-5 text-center">
               <div
                 className="col-lg-4  cst-footer-logo text-center"
@@ -141,16 +141,39 @@ const Footer = () => {
               </div>
               <div className="col-lg-4">
                 <p style={{ fontSize: 20, fontWeight: "bold" }}>Services</p>
-                <div
-                // style={{ display: "flex", flexDirection: 'row' }}
-                >
-                  <div >
-                    <Link href="/artificial-intelligence-machin-learning" className="nav-link active"><p className="footerActivemenu">Artificial Intelligence & Machine Learning </p></Link>
-                    <Link href="/mobile-app-development" className="nav-link"><p className="footerActivemenu">Mobile Application Development</p></Link>
-                    <Link href="/coustom-software-development" className="nav-link"><p className="footerActivemenu">Custom Software Development</p></Link>
-                    <Link href="/web-development" className="nav-link"><p className="footerActivemenu">Web Development</p></Link>
-                    <Link href="/cloud-services" className="nav-link active"> <p className="footerActivemenu">Cloud & DevOps</p></Link>
-                    <Link href="/qa-testing" className="nav-link active"><p className="footerActivemenu">QA & Testing</p></Link>
+                <div>
+                  <div>
+                    <Link
+                      href="/artificial-intelligence-machin-learning"
+                      className="nav-link active"
+                    >
+                      <p className="footerActivemenu">
+                        Artificial Intelligence & Machine Learning{" "}
+                      </p>
+                    </Link>
+                    <Link href="/mobile-app-development" className="nav-link">
+                      <p className="footerActivemenu">
+                        Mobile Application Development
+                      </p>
+                    </Link>
+                    <Link
+                      href="/coustom-software-development"
+                      className="nav-link"
+                    >
+                      <p className="footerActivemenu">
+                        Custom Software Development
+                      </p>
+                    </Link>
+                    <Link href="/web-development" className="nav-link">
+                      <p className="footerActivemenu">Web Development</p>
+                    </Link>
+                    <Link href="/cloud-services" className="nav-link active">
+                      {" "}
+                      <p className="footerActivemenu">Cloud & DevOps</p>
+                    </Link>
+                    <Link href="/qa-testing" className="nav-link active">
+                      <p className="footerActivemenu">QA & Testing</p>
+                    </Link>
 
                     {/* </div>
                   <div className="ml-2"> */}
@@ -161,9 +184,7 @@ const Footer = () => {
                 <hr className="vertical-line" />
               </div> */}
               <div className="col-lg-4">
-                <p
-                  style={{ fontSize: 20, fontWeight: "bold" }}
-                >Pages</p>
+                <p style={{ fontSize: 20, fontWeight: "bold" }}>Pages</p>
                 <div
                 // style={{ display: "flex", flexDirection: 'row' }}
                 >
@@ -184,39 +205,38 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div >
-              <div style={{ display: "flex", flexDirection: 'row' }}>
+            <div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
                 <div className="row col-lg-12  mt-5">
                   <div className="col-lg-4 text-center">
                     <h2 className="fs-4">Contacts</h2>
                     <p>info@koliinfotech.com</p>
-                    <p>
-                      +91-6353131771 <br />
-                      +91-8200591443
-                    </p>
+                    <p>+91-6353131771</p>
                   </div>
-                  {/* <div className="col-lg-1" >
-                    <hr className="vertical-line" />
-                  </div> */}
                   <div className="row col-lg-8 text-center">
                     <h2 className="text-center fs-4">Our Address</h2>
                     <div className="col-lg-6">
                       <p style={{ fontSize: 15, fontWeight: "bold" }}>
                         HEAD OFFICE - SURAT
                       </p>
-                      <p>4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat - 394210</p>
+                      <p>
+                        4087- 4094, Rajmahal mall, Dindoli Surat, Gujarat -
+                        394210
+                      </p>
                     </div>
                     <div className="col-lg-6">
                       <p style={{ fontSize: 15, fontWeight: "bold" }}>
                         BRANCH OFFICE - AHMEDABAD
                       </p>
-                      <p>A - 501, Sahajanand Complex Shahibaug, Ahmedabad - 380004</p>
+                      <p>
+                        A - 501, Sahajanand Complex Shahibaug, Ahmedabad -
+                        380004
+                      </p>
                       <Link
                         href="mailto:info@koliinfotech.com"
                         className="nav-link active"
                         target="_blank"
-                      >
-                      </Link>
+                      ></Link>
                     </div>
                   </div>
                 </div>
@@ -226,35 +246,53 @@ const Footer = () => {
         </div>
       </section>
       <hr className="row ml-4 mr-4" />
-      <div className="container" >
-        <div style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginBottom: '1%',
-          marginTop: '3%',
-          width: '100%',
-        }}>
-          <div style={{ textAlign: 'left' }}>
-            <div style={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-            }} className="hiringClass">
-              {/* <Image src={circleElement} style={{ position: 'absolute', }} /> */}
-              <p style={{ fontWeight: 'bold', fontSize: 20, margin: 0, marginLeft: 40 }}>WE ARE HIRING!</p>
-              <Image src={hiring} style={{ height: 30, width: 30, marginLeft: 15 }} />
+      <div className="container">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "1%",
+            marginTop: "3%",
+            width: "100%",
+          }}
+        >
+          <div style={{ textAlign: "left" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+              className="hiringClass"
+            >
+              <p
+                style={{
+                  fontWeight: "bold",
+                  fontSize: 20,
+                  margin: 0,
+                  marginLeft: 40,
+                }}
+              >
+                WE ARE HIRING!
+              </p>
+              <Image
+                src={hiring}
+                style={{ height: 30, width: 30, marginLeft: 15 }}
+              />
             </div>
             <div className="hiringClass">
-              <p style={{ fontSize: 20, marginLeft: 40, }}>Join Our Team.</p>
+              <p style={{ fontSize: 20, marginLeft: 40 }}>Join Our Team.</p>
             </div>
           </div>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
             <motion.div
               className="box"
               whileHover={{ scale: 1.1 }}
@@ -264,10 +302,30 @@ const Footer = () => {
                 damping: 10,
               }}
             >
-            <Link href="/Career" className="nav-link active c" style={{ display: 'flex', alignItems: 'center' }}>
-              <p style={{ fontWeight: 'bold', color: '#0d6efd', marginRight: 5 }}>Apply Now</p>
-              <Image src={arrow} style={{ height: 40, width: 40, marginBottom: 15, marginRight: 40 }} />
-            </Link>
+              <Link
+                href="/Career"
+                className="nav-link active c"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    color: "#0d6efd",
+                    marginRight: 5,
+                  }}
+                >
+                  Apply Now
+                </p>
+                <Image
+                  src={arrow}
+                  style={{
+                    height: 40,
+                    width: 40,
+                    marginBottom: 15,
+                    marginRight: 40,
+                  }}
+                />
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -278,10 +336,9 @@ const Footer = () => {
           style={{ textAlign: "center", marginBottom: "1%", marginTop: "1%" }}
         >
           <span>&copy;</span>
-          <span>2025 KOLI Infotech Pvt. Ltd. | All rights reserved.</span>
+          <span>{year} KOLI Infotech Pvt. Ltd. | All rights reserved.</span>
         </div>
       </section>
-
     </Fragment>
   );
 };

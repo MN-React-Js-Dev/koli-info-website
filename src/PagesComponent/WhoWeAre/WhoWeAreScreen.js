@@ -15,7 +15,6 @@ const WhoWeAreScreen = () => {
   const dispatch = useDispatch();
   const [ourService, setOurService] = useState();
   const dataSelector = useSelector((state) => state?.getOurServices);
-  console.log('ourService~~~~~~~~>',ourService);
 
   useEffect(() => {
     if (dataSelector != null) {

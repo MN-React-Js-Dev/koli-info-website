@@ -1,0 +1,25 @@
+{
+    "steps": [
+      {
+        "title": "Planning",
+        "gif": "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+      },
+      {
+        "title": "Designing",
+        "gif": "https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
+      },
+      {
+        "title": "Development",
+        "gif": "https://media.giphy.com/media/l3vR3z8jzvUWAxJFe/giphy.gif"
+      },
+      {
+        "title": "Testing",
+        "gif": "https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif"
+      },
+      {
+        "title": "Delivery",
+        "gif": "https://media.giphy.com/media/l3q2wJsC23ikJg9xe/giphy.gif"
+      }
+    ]
+  }
+  

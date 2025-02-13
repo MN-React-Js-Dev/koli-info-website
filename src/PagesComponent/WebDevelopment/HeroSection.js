@@ -3,6 +3,8 @@ import webDevimg1 from "../../assets/images/web-dev.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Technologywework from "@/commonComponent/Technologywework";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const WebDevHeroSection = () => {
 
@@ -35,6 +37,7 @@ const WebDevHeroSection = () => {
           </div>
         </div>
       </section>
+      <ClientWeServe/>
     </Fragment>
   );
 };

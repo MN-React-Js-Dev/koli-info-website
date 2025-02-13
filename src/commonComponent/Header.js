@@ -7,17 +7,22 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 const Header = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Fragment>
       <section>
         <div className="header-wrap">
-          <div className="container" >
+          <div className="container">
             <div className="row">
               <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid cst-nav header">
                   <Link href="/" className="nav-link active">
-                    <Image src={SVGlogo} alt={BlueLogo} className="img-fluid" style={{ marginLeft: "-8px" }} />
+                    <Image
+                      src={SVGlogo}
+                      alt={BlueLogo}
+                      className="img-fluid"
+                      style={{ marginLeft: "-8px" }}
+                    />
                   </Link>
                   <button
                     className="navbar-toggler"
@@ -45,8 +50,7 @@ const Header = () => {
                     </ul>
 
                     <form className="d-flex" role="search">
-                      <ul className="navbar-nav me-auto  mb-lg-0 header-ul"
-                      >
+                      <ul className="navbar-nav me-auto  mb-lg-0 header-ul">
                         <motion.div
                           className="box"
                           whileHover={{ scale: 1.1 }}
@@ -57,16 +61,46 @@ const Header = () => {
                           }}
                         >
                           <li class="nav-item dropdown">
-                            <span class="nav-link drop-btn" aria-expanded="false">
+                            <span
+                              class="nav-link drop-btn"
+                              aria-expanded="false"
+                            >
                               Company
                             </span>
                             <ul class="dropdown-menu collap-manu">
-                              <li><Link class="dropdown-item" href="/who-we-are">Who We Are!</Link></li>
-                              <li><Link class="dropdown-item" href="/our-team">Our Team</Link></li>
-                              <li><Link class="dropdown-item" href="/Testimonial">Testimoial</Link></li>
-                              <li><Link class="dropdown-item" href="/portfolio">Our Portfolio</Link></li>
-                              <li><Link class="dropdown-item" href="/about-company">About Us</Link></li>
-                              <li><Link class="dropdown-item" href="/OurCulture">Our Culture</Link></li>
+                              <li>
+                                <Link class="dropdown-item" href="/who-we-are">
+                                  Who We Are!
+                                </Link>
+                              </li>
+                              <li>
+                                <Link class="dropdown-item" href="/our-team">
+                                  Our Team
+                                </Link>
+                              </li>
+                              <li>
+                                <Link class="dropdown-item" href="/Testimonial">
+                                  Testimoial
+                                </Link>
+                              </li>
+                              <li>
+                                <Link class="dropdown-item" href="/portfolio">
+                                  Our Portfolio
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  class="dropdown-item"
+                                  href="/about-company"
+                                >
+                                  About Us
+                                </Link>
+                              </li>
+                              <li>
+                                <Link class="dropdown-item" href="/OurCulture">
+                                  Our Culture
+                                </Link>
+                              </li>
                             </ul>
                           </li>
                         </motion.div>
@@ -80,17 +114,66 @@ const Header = () => {
                           }}
                         >
                           <li class="nav-item dropdown">
-                            <span class="nav-link drop-btn" aria-expanded="false">
+                            <span
+                              class="nav-link drop-btn"
+                              aria-expanded="false"
+                            >
                               Services
                             </span>
                             <ul class="dropdown-menu collap-manu">
-                              <li><Link class="dropdown-item" href="/artificial-intelligence-machin-learning">A.I & M.L</Link></li>
-                              <li><Link class="dropdown-item" href="/mobile-app-development">Mobile Application Development</Link></li>
-                              <li><Link class="dropdown-item" href="/coustom-software-development">Custom Software Development</Link></li>
-                              <li><Link class="dropdown-item" href="/cloud-services">Cloud & DevOps</Link></li>
-                              <li><Link class="dropdown-item" href="/qa-testing">QA & Testing</Link></li>
-                              <li><Link class="dropdown-item" href="/data-security">Data Security</Link></li>
-                              <li><Link class="dropdown-item" href="/hire-developer">Hire Dedicated Developers</Link></li>
+                              <li>
+                                <Link
+                                  class="dropdown-item"
+                                  href="/artificial-intelligence-machin-learning"
+                                >
+                                  A.I & M.L
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  class="dropdown-item"
+                                  href="/mobile-app-development"
+                                >
+                                  Mobile Application Development
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  class="dropdown-item"
+                                  href="/coustom-software-development"
+                                >
+                                  Custom Software Development
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  class="dropdown-item"
+                                  href="/cloud-services"
+                                >
+                                  Cloud & DevOps
+                                </Link>
+                              </li>
+                              <li>
+                                <Link class="dropdown-item" href="/qa-testing">
+                                  QA & Testing
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  class="dropdown-item"
+                                  href="/data-security"
+                                >
+                                  Data Security
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  class="dropdown-item"
+                                  href="/hire-developer"
+                                >
+                                  Hire Dedicated Developers
+                                </Link>
+                              </li>
                             </ul>
                           </li>
                         </motion.div>
@@ -105,7 +188,11 @@ const Header = () => {
                         >
                           <li className="nav-item">
                             <Link
-                              className={`${router.pathname === "/solution-on-demand" ? 'activemenu' : ''}  nav-link active header-links `}
+                              className={`${
+                                router.pathname === "/solution-on-demand"
+                                  ? "activemenu"
+                                  : ""
+                              }  nav-link active header-links `}
                               aria-current="page"
                               href="/solution-on-demand"
                             >
@@ -124,7 +211,11 @@ const Header = () => {
                         >
                           <li className="nav-item">
                             <Link
-                              className={`${router.pathname === "/Career" ? 'activemenu' : ''}  nav-link active header-links `}
+                              className={`${
+                                router.pathname === "/Career"
+                                  ? "activemenu"
+                                  : ""
+                              }  nav-link active header-links `}
                               aria-current="page"
                               href="/Career"
                             >
@@ -132,6 +223,7 @@ const Header = () => {
                             </Link>
                           </li>
                         </motion.div>
+
                         <motion.div
                           className="box"
                           whileHover={{ scale: 1.1 }}
@@ -142,13 +234,23 @@ const Header = () => {
                           }}
                         >
                           <li className="nav-item">
-                            <Link
-                              className="btn contact-us-btn header-links"
-                              type="submit"
-                              href="/contact-us"
-                            >
-                              Contact Us
-                            </Link>
+                            {router.pathname === "/contact-us" ? (
+                              <Link
+                                className="btn contact-us-btn header-links"
+                                type="button"
+                                href="/"
+                              >
+                                Home
+                              </Link>
+                            ) : (
+                              <Link
+                                className="btn contact-us-btn header-links"
+                                type="button"
+                                href="/contact-us"
+                              >
+                                Contact Us
+                              </Link>
+                            )}
                           </li>
                         </motion.div>
                       </ul>

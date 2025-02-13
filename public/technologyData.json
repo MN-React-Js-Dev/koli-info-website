@@ -1,0 +1,73 @@
+[
+    {
+      "name": "Frontend",
+      "icon": "fas fa-code",
+      "clients": [
+        { "image": "React.webp", "name": "React", "url": "https://react.dev/" },
+        { "image": "angularjs.png", "name": "Angular", "url": "https://angular.io/" },
+        { "image": "Vuejs.png", "name": "Vue.js", "url": "https://vuejs.org/guide/introduction.html" },
+        { "image": "nextjs.png", "name": "Next.js", "url": "https://nextjs.org/" }
+      ]
+    },
+    {
+      "name": "Backend",
+      "icon": "fas fa-server",
+      "clients": [
+        { "image": "nodejs.png", "name": "Node.js", "url": "https://nodejs.org/" },
+        { "image": "python.png", "name": "Python", "url": "https://www.python.org/" },
+        { "image": "laravel.png", "name": "Laravel", "url": "https://laravel.com/" },
+        { "image": "Ruby_on_Rails-Logo.png", "name": "Ruby on Rails", "url": "https://rubyonrails.org/" }
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "icon": "fas fa-mobile-alt",
+      "clients": [
+        { "image": "React.webp", "name": "React Native", "url": "https://reactnative.dev/" },
+        { "image": "flutter.png", "name": "Flutter", "url": "https://flutter.dev/" },
+        { "image": "android.png", "name": "Android", "url": "https://developer.android.com/" },
+        { "image": "apple.png", "name": "iOS", "url": "https://developer.apple.com/ios/" }
+      ]
+    },
+    {
+      "name": "Database",
+      "icon": "fas fa-database",
+      "clients": [
+        { "image": "mongodb.png", "name": "MongoDB", "url": "https://www.mongodb.com/" },
+        { "image": "postgreashsql.png", "name": "PostgreSQL", "url": "https://www.postgresql.org/" },
+        { "image": "firebase.png", "name": "Firebase", "url": "https://firebase.google.com/" },
+        { "image": "mysqlnew.png", "name": "MySQL", "url": "https://www.mysql.com/" }
+      ]
+    },
+    {
+      "name": "DevOps and Cloud",
+      "icon": "fas fa-cogs",
+      "clients": [
+        { "image": "aws.png", "name": "AWS", "url": "https://aws.amazon.com/" },
+        { "image": "dockernew1.png", "name": "Docker", "url": "https://www.docker.com/" },
+        { "image": "kubernets.png", "name": "Kubernetes", "url": "https://kubernetes.io/" },
+        { "image": "cicd.png", "name": "CI/CD", "url": "https://about.gitlab.com/topics/ci-cd/" }
+      ]
+    },
+    {
+      "name": "Project Management",
+      "icon": "fas fa-clipboard-list",
+      "clients": [
+        { "image": "asana.png", "name": "Asana", "url": "https://asana.com/" },
+        { "image": "jira.png", "name": "Jira", "url": "https://www.atlassian.com/software/jira" },
+        { "image": "trello.png", "name": "Trello", "url": "https://trello.com/" },
+        { "image": "clickup.png", "name": "ClickUp", "url": "https://clickup.com/" }
+      ]
+    },
+    {
+      "name": "Communication",
+      "icon": "fas fa-comments",
+      "clients": [
+        { "image": "microsoftteam.png", "name": "Microsoft Teams", "url": "https://www.microsoft.com/en-us/microsoft-teams" },
+        { "image": "slack.png", "name": "Slack", "url": "https://slack.com/" },
+        { "image": "googal chat_logo.png", "name": "Google Chat", "url": "https://chat.google.com/" },
+        { "image": "Zoom.png", "name": "Zoom", "url": "https://zoom.us/" }
+      ]
+    }
+  ]
+  

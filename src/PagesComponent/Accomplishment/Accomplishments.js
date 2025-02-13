@@ -9,10 +9,10 @@ const Accomplishments = () => {
 
   useEffect(() => {
     const startCounts = {
-      experience: 7,
-      projects: 100,
-      clients: 50,
-      customers: 150,
+      experience: 10,
+      projects: 160,
+      clients: 150,
+      our_expert: 100,
     };
     const interval = 50;
     const totalDuration = 2000;
@@ -38,7 +38,7 @@ const Accomplishments = () => {
       </h3>
       <div className="cst-hr-for-process mb-5"></div>
       <div className="accomplishments-container">
-        <div className="container ">
+        <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-3 accomplishment-item">
               <h3>{counts.experience}+</h3>
@@ -53,8 +53,8 @@ const Accomplishments = () => {
               <p>Certified Clients</p>
             </div>
             <div className="col-md-3 accomplishment-item">
-              <h3>{counts.customers}+</h3>
-              <p>Happy Customers</p>
+              <h3>{counts.our_expert}+</h3>
+              <p>Our Experts</p>
             </div>
           </div>
           <svg

@@ -122,7 +122,7 @@ const WebDevScreen = () => {
           </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <div
           className="container mt-5"
           style={{
@@ -137,15 +137,13 @@ const WebDevScreen = () => {
               <h2>Looking For a Web </h2>
               <h2>Developer for Hire?</h2>
             </div>
-            {/* <div className="col-lg-6  hire-btn"> */}
               <Link href="/contact-us" className="fw-bold hire-btn col-lg-6 p-3 text-white btn btn-danger rounded-pill">
                 Hire Web Developers Now
               </Link>
-            {/* </div> */}
           </div>
         </div>
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <div className="container">
           <h1 className="text-center pt-5 mt-5 comman-heading">
             Industries We Serve
@@ -170,7 +168,7 @@ const WebDevScreen = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </Fragment>
   );
 };

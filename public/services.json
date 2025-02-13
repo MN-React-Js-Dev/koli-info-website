@@ -1,0 +1,38 @@
+[
+  {
+    "image": "webDevimg-1.png",
+    "title": "Web Application Development",
+    "description": "Web application development involves creating apps delivered to users' devices over the Internet.ensuring accessibility and seamless user experience.",
+    "link": "/web-development"
+  },
+  {
+    "image": "app-develop.png",
+    "title": "Mobile Application Development",
+    "description": "Mobile application development involves creating software applications for mobile devices.optimizing performance and user experience across various platforms.",
+    "link": "/mobile-app-development"
+  },
+  {
+    "image": "app-ai.jpg",
+    "title": "AI & Machine Learning",
+    "description": "AI enables computers to think like humans, while machine learning helps computers develop intelligence.intelligence by learning from data and improving over time.",
+    "link": "/artificial-intelligence-machin-learning"
+  },
+  {
+    "image": "cloud.png",
+    "title": "Cloud & DevOps",
+    "description": "Cloud Developers specialize in creating, deploying, and managing cloud-based systems securely and efficiently.optimizing performance and scalability.",
+    "link": "/cloud-services"
+  },
+  {
+    "image": "design1.png",
+    "title": "Custom Software Development",
+    "description": "Custom software development is the process of creating and maintaining software tailored for specific users. ensuring scalability and high performance.",
+    "link": "/coustom-software-development"
+  },
+  {
+    "image": "quality-test.png",
+    "title": "QA & Testing",
+    "description": "A QA Tester tests the functionality and usability of new or existing software before it goes live.ensuring quality, performance, and bug-free operation.",
+    "link": "/qa-testing"
+  }
+]

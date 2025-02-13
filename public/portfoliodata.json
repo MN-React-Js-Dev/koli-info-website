@@ -1,0 +1,34 @@
+[
+  
+    {
+      "image": "HDFC.png",
+      "title": "HDFC Bank",
+      "description":"HDFC Bank is one of India's largest private sector banks providing financial services like loans, credit cards, and online banking."
+    },
+    {
+      "image": "astrosadhna_new.png",
+      "title": "Astrosadhna App",
+      "description":"Astrosadhna is an astrology-based application that offers horoscope readings, kundali matching, and personalized astrological insights."
+    },
+    {
+      "image": "ByjusLogo_new.png",
+      "title": "Byju's Learning App",
+      "description":"Byju's is an e-learning platform offering interactive educational content for students, covering school subjects,competitive exams, and skill development."
+    },
+    {
+      "image": "Ooredoo_new.png",
+      "title": "Ooredoo Telecom",
+      "description": "Ooredoo is a leading telecommunications company offering high-speed internet, mobile services, and digital solutions across multiple countries."
+    },
+    {
+      "image": "Turing_Logo1.png",
+      "title": "Turing",
+      "description": "Turing is an AI-driven platform that connects companies with top-tier remote software developers, enabling efficient project execution.enabling faster and more efficient project execution."
+    },
+    {
+      "image": "Axis.png",
+      "title": "Axis Bank",
+      "description":"Axis Bank is one of India's leading private sector banks,offering a wide range of financial services, including retail banking, corporate banking, and digital banking solutions."
+    }
+  ]
+  
