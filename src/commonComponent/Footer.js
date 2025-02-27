@@ -330,7 +330,7 @@ const Footer = () => {
             >
               <Link
                 href="/Career"
-                className="nav-link active c"
+                className="nav-link active cd"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <p
