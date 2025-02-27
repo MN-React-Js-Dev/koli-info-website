@@ -17,11 +17,10 @@ const WhyChooseKOLIinfotech = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-lg-6 mb-4 mb-lg-0 gap-5">
-            <h1 className="whychooseTxt fw-bold text-center">
-              Why Choose <span style={{ color: "#3f689f" }}>KOLI</span> Infotech
-              Pvt. Ltd.
-            </h1>
-            <div className="hr-cst-why-choose mb-3 mx-auto mx-lg-0"></div>
+          <h1 className="text-center fs-3 font-semibold">
+            Why Choose <span style={{ color: "#3f689f" }}>KOLI</span> Infotech Pvt. Ltd.
+          </h1>
+            <div className="cst-hr-for-process mb-5"></div>
             <p className="text-muted text-center text-lg-start">
               {COMMAN_TEXT}
             </p>

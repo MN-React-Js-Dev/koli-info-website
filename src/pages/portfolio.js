@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "@/commonComponent/Header";
 import Image from "next/image";
 import PortfolioImage from "../assets/images/portfolioimage.png";
-import WebDesignImage from "../assets/images/webdesign1.png";
 import { getAllOurProductStart } from "@/Redux/module/getOurProductAction";
 import { getAllOurServicesStart } from "@/Redux/module/getOurServiceAction";
 import { Fragment, useEffect, useState } from "react";
@@ -12,6 +11,7 @@ import "aos/dist/aos.css";
 import Footer from "@/commonComponent/Footer";
 import Head from "next/head";
 import ClientWeServe from "@/commonComponent/ClientWeServe";
+import OurPortfolio from "@/PagesComponent/HomePage/OurPortfolio";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -57,7 +57,9 @@ const Portfolio = () => {
   return (
     <Fragment>
       <Head>
-        <title>Our Portfolio|Creative Design & Expert Development Services.</title>
+        <title>
+          Our Portfolio|Creative Design & Expert Development Services.
+        </title>
         <meta
           name="description"
           content=" Explore KOLI Infotech’s portfolio showcasing innovative design and expert development services. We turn creative concepts into impactful solutions for clients."
@@ -85,8 +87,10 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      <ClientWeServe/>
-      <section className="our-portfolio">
+      <section className="mt-5">
+        <ClientWeServe />
+      </section>
+      {/* <section className="our-portfolio">
         <div className="container" data-aos="fade-down">
           <h2 className="text-center mt-5 bold-font mb-5 fs-2">Our Portfolio</h2>
           <div className="row" style={{ background: "#E4ECFF" }}>
@@ -130,7 +134,6 @@ const Portfolio = () => {
                         </div>
                         <div
                           className="m-3"
-                        // style={{ fontSize: 21, fontWeight: "600" }}
                         >
                           <h3>{title}</h3>
                           <p>{description}</p>
@@ -144,7 +147,12 @@ const Portfolio = () => {
           </div>
           <div className="row mb-2"></div>
         </div>
+      </section> */}
+      {/* our portFolio Section */}
+      <section className="mt-5 mb-5">
+        <OurPortfolio />
       </section>
+
       <section>
         <Footer />
       </section>

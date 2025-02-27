@@ -96,21 +96,18 @@ const OurProcessSection = () => {
     <Fragment>
       <section className="our-process-section mb-5">
         <div className="row">
-          <div>
-            <ul className="cst-our-process">
-              <li data-aos="fade-up">
+            <div className="cst-our-process">
+              <div data-aos="fade-up">
                 <Image
                   style={{
                     height: "auto",
-                    width: "auto",
                     objectFit: "contain",
                   }}
                   alt={"Delivery icon"} 
                   src={delivery}
                   className="img-fluid"
                 />
-              </li>
-            </ul>
+            </div>
           </div>
         </div>
       </section>

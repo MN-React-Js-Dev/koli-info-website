@@ -14,7 +14,7 @@ const WhoWeAreHeroSection = () => {
   return (
     <Fragment>
       <section
-        className="testi-hero-image "
+        className="testi-hero-image mb-5"
         style={{ backgroundColor: "#E3E3FF" }}
       >
         <div className="container ">

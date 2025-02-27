@@ -5,14 +5,24 @@ import store from "@/Redux/store";
 import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   const [canonicalUrl, setCanonicalUrl] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
-    const currentUrl = window.location.origin + window.location.pathname;
-    setCanonicalUrl(currentUrl);
-  }, []);
+    const updateCanonicalUrl = () => {
+      const currentUrl = window.location.origin + window.location.pathname;
+      setCanonicalUrl(currentUrl);
+    };
+    updateCanonicalUrl();
+    
+    router.events.on("routeChangeComplete", updateCanonicalUrl);
+    return () => {
+    router.events.off("routeChangeComplete", updateCanonicalUrl);
+    };
+  }, [router.events]);
 
   return (
     <Fragment>

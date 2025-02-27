@@ -1,11 +1,10 @@
-import React, { Fragment,useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import onDmndHeroImg from "../../assets/images/onDmndHeroImg.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const SolutionOnDemandHeroSection = () => {
-
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
@@ -25,7 +24,8 @@ const SolutionOnDemandHeroSection = () => {
                 On-demand App Development Company
               </h1>
               <p className="para-for-hero">
-              We specialize in on-demand app development, delivering customized solutions to meet your specific business needs.
+                We specialize in on-demand app development, delivering
+                customized solutions to meet your specific business needs.
               </p>
               <a class="btn onDemndbtn m-4 p-3" type="submit">
                 Click Here to Get Your Free Quote
@@ -46,3 +46,6 @@ const SolutionOnDemandHeroSection = () => {
 };
 
 export default SolutionOnDemandHeroSection;
+
+
+

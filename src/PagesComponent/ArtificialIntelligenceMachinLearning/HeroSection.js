@@ -1,10 +1,7 @@
 import React, { Fragment, useEffect } from "react";
-import DataSecure1 from "../../assets/images/DataSecure-1.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import AIML from "../../assets/images/AIML.png";
-import AIAnimation from "../../assets/images/AIAnimation.gif";
 import AIAnimation1 from "../../assets/images/AIAnimation1.gif";
 
 const AiMlHeroSection = () => {
@@ -39,7 +36,6 @@ const AiMlHeroSection = () => {
                 src={AIAnimation1}
                 alt="Image not found"
                 className="img-fluid"
-                style={{ marginLeft: "80px", height: "150%", width: "70%" }}
               />
             </div>
           </div>

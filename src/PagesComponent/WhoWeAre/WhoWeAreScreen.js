@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ABOUT_KOLI_INFOTECH } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import OurServices from "../HomePage/OurServices";
 
 const WhoWeAreScreen = () => {
   const dispatch = useDispatch();
@@ -36,11 +37,19 @@ const WhoWeAreScreen = () => {
     <Fragment>
       <section>
         <div className="container">
-          <div className="p-5" style={{ display: "flex" }}>
-            <div className="row" style={{ alignItems: "center" }} data-aos="fade-down" >
+          <div className="Who-we-are-aboutus">
+            <div
+              className="row"
+              style={{ alignItems: "center" }}
+              data-aos="fade-down"
+            >
               <div className="col-lg-6 mt-5">
                 <h1 className="text-center comman-heading">
-                  About <span style={{color:"#3f689f",fontWeight:'bold'}}>KOLI</span> infotech
+                  About{" "}
+                  <span style={{ color: "#3f689f", fontWeight: "bold" }}>
+                    KOLI
+                  </span>{" "}
+                  infotech
                 </h1>
                 <div className="cst-hr-for-process mb-3" />
                 <p className="para-for-hero">{ABOUT_KOLI_INFOTECH}</p>
@@ -56,14 +65,14 @@ const WhoWeAreScreen = () => {
           </div>
         </div>
       </section>
-      <section className="special-services">
+      {/* <section className="special-services">
         <div className="container">
           <h3 className="text-center text-white pt-5 mt-5 fs-3 comman-heading">
             Services We Specialise In
           </h3>
           <div className="cst-hr-for-process mb-5" />
           <div className="row" data-aos="fade-up">
-            {ourService?.map(({ title, description,icon }, index) => (
+            {ourService?.map(({ title, description, icon }, index) => (
               <>
                 <div className="col-sm-4 mb-4" key={index}>
                   <div className="card p-5 cst-border-cls service-card">
@@ -82,9 +91,9 @@ const WhoWeAreScreen = () => {
             ))}
           </div>
         </div>
-      </section>
-      <section>
-        <div className="container">
+      </section> */}
+      {/* <section>
+        <div className="container" style={{marginTop:'130px'}}>
           <h3 className="text-center pt-5 mt-5 comman-heading">
             Customized Business Solutions
           </h3>
@@ -131,16 +140,20 @@ const WhoWeAreScreen = () => {
             </div>
           </div>
         </div>
+      </section> */}
+      <section className="mt-5">
+        <OurServices />
       </section>
-      <section className="mt-5 mb-5">
-        
-        {/* <div className="row mt-5 mb-5 "> */}
-          <Image src={Image2} alt="Image not found" className="img-fluid whoweareimag" style={{width:'100%',height:'auto'}}/>
-        {/* </div> */}
-       
-      </section>
+      <div className="mt-5 mb-5">
+        <Image
+          src={Image2}
+          alt="Image not found"
+          className="img-fluid whoweareimag"
+          style={{ width: "100%", height: "400px",objectFit:'contain' }}
+        />
+      </div>
     </Fragment>
   );
-}
+};
 
 export default WhoWeAreScreen;

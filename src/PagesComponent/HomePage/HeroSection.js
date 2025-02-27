@@ -13,7 +13,6 @@ const HeroSection = () => {
   const gifs = [maingif1, maingif2, maingif3, maingif4, maingif5];
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Preload GIFs to prevent jerking
   useEffect(() => {
     gifs.forEach((gif) => {
       const img = new window.Image(); 

@@ -19,7 +19,9 @@ const QaTestingServices = () => {
   return (
     <Fragment>
       <Head>
-        <title>QA Testing Services | Reliable Solutions for Digital Success</title>
+        <title>
+          QA Testing Services | Reliable Solutions for Digital Success
+        </title>
         <meta
           name="description"
           content="Ensure precision and quality with our rigorous QA testing services.Transform your ideas into exceptional digital solutions with reliable,future-ready expertise."
@@ -28,8 +30,7 @@ const QaTestingServices = () => {
       {loader === true ? <LoaderComponent /> : console.log("null")}
       <Header />
       <QaTestingHeroSection />
-      {/* <QaandTestingScreen /> */}
-      <ClientWeServe/>
+      <ClientWeServe />
       <QaAndTestingServices />
       <Footer />
     </Fragment>

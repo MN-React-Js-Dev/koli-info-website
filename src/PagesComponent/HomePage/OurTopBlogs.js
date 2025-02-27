@@ -1,22 +1,32 @@
 import React, { useState, useRef, Fragment, useEffect } from "react";
-import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import {
+  AiOutlineDoubleLeft,
+  AiOutlineDoubleRight,
+  AiOutlineLeft,
+  AiOutlineRight,
+} from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllOurBlogStart } from "@/Redux/module/getOurBlogAction";
 import { motion } from "framer-motion";
 import Mobile1 from "../../assets/images/mobile1.png";
-import LeftArrow from '.././../assets/images/leftArrow.png'
-import RightArrow from '.././../assets/images/rightArrow.png'
+import LeftArrow from ".././../assets/images/leftArrow.png";
+import RightArrow from ".././../assets/images/rightArrow.png";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { BsArrowLeftCircleFill, BsArrowRightCircle, BsArrowRightCircleFill, BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
+import {
+  BsArrowLeftCircleFill,
+  BsArrowRightCircle,
+  BsArrowRightCircleFill,
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 
 const OurTopBlogs = () => {
   const carousel = useRef(null);
   const dispatch = useDispatch();
   const [ourBlogs, setOurBlogs] = useState();
   const data = useSelector((state) => state?.getOurBlog);
-  console.log('getOurBlog~~~~~~>', ourBlogs);
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -48,42 +58,63 @@ const OurTopBlogs = () => {
         <div className="container">
           <h1 className=" text-center mt-5 bold-font">Our Top Blogs</h1>
           <div className="cst-hr-for-process mb-5"></div>
-          <div style={{ display: 'flex' }}>
-            <div >
-              <span className="px-3 arrowIcon" ><AiOutlineDoubleLeft style={{ color: "black", marginTop: '17rem' }} onClick={handleLeftClick} /></span>
+          <div style={{ display: "flex" }}>
+            <div>
+              <span className="px-3 arrowIcon">
+                <AiOutlineDoubleLeft
+                  style={{ color: "black", marginTop: "17rem" }}
+                  onClick={handleLeftClick}
+                />
+              </span>
             </div>
-            <div className="img-slide-box" ref={carousel}
+            <div
+              className="img-slide-box"
+              ref={carousel}
               // data-aos="flip-up"
               data-aos="fade-down"
             >
-              {ourBlogs?.rows?.map(
-                ({ created_at, title, description, image }, index) => {
-                  return (
-                    <div className="col-sm-4" key={index}>
-                      <div class="card m-3 topblog-card">
-                        {/* <div class="date-cst">
+              {ourBlogs?.length > 0 ? (
+                ourBlogs?.rows?.map(
+                  ({ created_at, title, description, image }, index) => {
+                    return (
+                      <div className="col-sm-4" key={index}>
+                        <div class="card m-3 topblog-card">
+                          {/* <div class="date-cst">
                           <span class="day">{created_at}</span>
                         </div> */}
-                        <img
-                          src={image}
-                          width={100}
-                          height={100}
-                          alt="Image not found"
-                          className="card-img-top"
-                        />
-                        <div class="card-body">
-                          <h3>{title}</h3>
-                          {/* <p class="card-text">{description}</p> */}
-                          {description?.length > 211 ? description.substring(0, 211) + "..." : ""}
+                          <img
+                            src={image}
+                            width={100}
+                            height={100}
+                            alt="Image not found"
+                            className="card-img-top"
+                          />
+                          <div class="card-body">
+                            <h3>{title}</h3>
+                            {/* <p class="card-text">{description}</p> */}
+                            {description?.length > 211
+                              ? description.substring(0, 211) + "..."
+                              : ""}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                }
+                    );
+                  }
+                )
+              ) : (
+                <div className="text-center mt-5 mx-auto">
+                  <h4 className="text-muted">🚀 No Blogs Available!</h4>
+                  <p>Stay tuned for future updates.</p>
+                </div>
               )}
             </div>
             <div>
-              <span className="px-3 arrowIcon"><AiOutlineDoubleRight style={{ color: "black", marginTop: '17rem' }} onClick={handleRightClick} /></span>
+              <span className="px-3 arrowIcon">
+                <AiOutlineDoubleRight
+                  style={{ color: "black", marginTop: "17rem" }}
+                  onClick={handleRightClick}
+                />
+              </span>
             </div>
           </div>
           {/* <div className="d-flex justify-content-center">

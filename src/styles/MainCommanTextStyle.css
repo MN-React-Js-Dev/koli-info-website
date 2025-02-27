@@ -5,7 +5,6 @@
 }
 .commanFont {
   font-family: "Montserrat";
-  /* color: brown; */
 }
 
 .commanHead2 {
@@ -24,7 +23,6 @@
   line-height: 60px;
   letter-spacing: 0rem;
   text-align: left;
-  width: max-content;
 }
 .subText {
   font-weight: 500 !important;
@@ -205,85 +203,6 @@ hr {
   color: white;
 }
 
-/* ---------- portfolio section css start here -------------------- */
-
-/* 1st way */
-/* .portfolio-item p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
-  color: #333;
-  text-align: center;
-  max-width: 600px; 
-  margin: 0 auto; 
-} */
-/* .portfolio-item p {
-  font-family: "Poppins", sans-serif; 
-  font-size: 1.1rem; 
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.3px; 
-  color: #000;
-  text-align: center;
-  max-width: 600px; 
-  margin: 0 auto;
-  text-rendering: optimizeLegibility; 
-  -webkit-font-smoothing: antialiased; 
-  -moz-osx-font-smoothing: grayscale; 
-}
-
-.portfolio-item {
-  background: #fff;
-  border-radius: 15px; 
-  padding: 20px;
-  transition: all 0.4s ease-in-out; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio-item img {
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-top: 15px;
-  transition: color 0.3s ease-in-out;
-}
-
-.portfolio-item p {
-  font-size: 1rem;
-  color: #555;
-  transition: color 0.3s ease-in-out;
-}
-
-
-.portfolio-item:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
-  background: linear-gradient(135deg, #f8f9fa, #e3e6ec);
-}
-
-.portfolio-item:hover img {
-  transform: scale(1.05); 
-}
-
-.portfolio-item:hover h3 {
-  color: #007bff; 
-}
-
-.portfolio-item:hover p {
-  color: #333;
-} */
-
-/* 2nd way */
-
 .portfolio-item {
   background: #fff;
   border-radius: 20px;
@@ -350,95 +269,118 @@ hr {
 .portfolio-item:hover p {
   color: #333;
 }
+
+.award-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.award-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #2a64f9, #012e4d);
+}
+
+.award-card:hover p {
+  color: white !important;
+}
+
+.Who-we-are-aboutus {
+  margin-top: 150px;
+  display: flex;
+}
+
+/* solution we demand css sction starts here */
+.key-features-section {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-card {
+  /* background: white; */
+  /* background: linear-gradient(to bottom, #416BDF, #10064d); */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  color: whitesmoke;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  max-width: 350px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature-card .feature-image {
+  max-width: 80px;
+  height: auto;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+}
+
+.feature-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* solution we demand css sction Ends here */
+.hero-section {
+  background: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-sec-header {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff9a8b, #ff6a88, #ff99ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-description {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #f5f5f5;
+}
+
+.onDemndbtn {
+  background: linear-gradient(90deg, #ff6a88, #ff99ac);
+  padding: 12px 25px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+.onDemndbtn:hover {
+  background: linear-gradient(90deg, #ff99ac, #ff6a88);
+  transform: scale(1.05);
+}
+
 /* ========================== our services section css starts here ================================= */
 
 .our-services {
   color: #fff;
   text-align: center;
 }
-/* 
-.service-card {
-  text-align: center;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 400px;
-  width: 85%;
-  max-width: 320px;
-  margin: 0 auto;
-}
-
-.service-card:hover {
-  background-color: #87ceeb;
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.image-wrapper {
-  overflow: hidden;
-  border-radius: 12px;
-  height: 120px;
-}
-
-.service-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.service-card:hover .service-image {
-  transform: scale(1.1);
-}
-
-.service-card h2 {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 1rem 0 0.5rem;
-}
-
-.service-card p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin: 0;
-  flex-grow: 1;
-}
-.slick-slide {
-  transition: transform 0.5s ease-in-out;
-}
-
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 50%; 
-  transform: translateY(-50%);
-  z-index: 10;
-  font-size: 24px;
-  color: #000000;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.slick-prev {
-  left: -50px;
-}
-
-.slick-next {
-  right: -50px;
-}
-.slick-prev:hover,
-.slick-next:hover {
-  color: #87ceeb;
-} */
-
 @media (max-width: 768px) {
   .slick-prev {
     left: -30px;
@@ -447,22 +389,6 @@ hr {
   .slick-next {
     right: -30px;
   }
-}
-/* =======================================  our services section css Ends here ============================================ */
-
-/* ======================================= Our Process Section css starts here ==============================================*/
-
-
-
-/* ======================================= Our Process Section css Ends Here ================================================*/
-/* =======================================  portfolio section css ends here  ===============================================*/
-
-@media (max-width: 1920px) {
-  /* .service-card {
-    width: 400px !important;
-    font-size: 15px !important;
-    object-fit: contain !important;
-  } */
 }
 
 @media (max-width: 1400px) {
@@ -473,15 +399,10 @@ hr {
     margin-top: 50px !important;
   }
   .slide-img {
-    width: 150px !important;
+    width: 220px !important;
     height: 120px !important;
     object-fit: contain;
   }
-  /* .service-card {
-    width: 300px !important;
-    font-size: 15px !important;
-    object-fit: contain !important;
-  } */
   .whychooseTxt {
     font-size: 30px !important;
     line-height: 1.4 !important;
@@ -500,15 +421,11 @@ hr {
     margin-top: 40px !important;
   }
   .slide-img {
-    width: 150px !important;
-    height: 100px !important;
+    width: 220px !important;
+    height: 110px !important;
     object-fit: contain;
   }
-  /* .service-card {
-    width: 350px !important;
-    font-size: 15px !important;
-    object-fit: contain !important;
-  } */
+
   .whychooseTxt {
     font-size: 25px !important;
     line-height: 1.4 !important;
@@ -527,8 +444,8 @@ hr {
     margin-top: 28px !important;
   }
   .slide-img {
-    width: 280px !important;
-    height: 120px !important;
+    width: 220px !important;
+    height: 100px !important;
     object-fit: contain;
   }
   .whychooseTxt {
@@ -547,12 +464,6 @@ hr {
     gap: 20px;
     transition: 0.3s ease-in-out;
   }
-
-  /* .service-card {
-    width: 250px !important;
-    font-size: 15px !important;
-    object-fit: contain !important;
-  } */
 }
 
 @media (max-width: 768px) {
@@ -561,7 +472,6 @@ hr {
     line-height: 1.4 !important;
     font-weight: bold !important;
     word-wrap: break-word !important;
-    text-align: left !important;
     padding: 8px !important;
   }
   .leftarrow {
@@ -571,8 +481,8 @@ hr {
     margin-top: 28px !important;
   }
   .slide-img {
-    width: 270px !important;
-    height: 120px !important;
+    width: 230px !important;
+    height: 100px !important;
     object-fit: contain !important;
   }
   .client-we-serve {
@@ -583,11 +493,6 @@ hr {
     gap: 20px;
     transition: 0.3s ease-in-out;
   }
-  /* .service-card {
-    width: 280px !important;
-    font-size: 15px !important;
-    object-fit: contain !important;
-  } */
 }
 
 @media (max-width: 576px) {
@@ -610,7 +515,7 @@ hr {
 
   .hr-cst {
     position: relative;
-    left: 35%;
+    left: 42%;
   }
   .comman-heading {
     text-align: center !important;
@@ -646,11 +551,6 @@ hr {
     width: 290px !important;
     transition: 0.3s ease-in-out;
   }
-  /* .service-card {
-    width: 280px !important;
-    font-size: 15px !important;
-    object-fit: contain !important;
-  } */
 }
 
 @media (max-width: 320px) {
@@ -667,7 +567,6 @@ hr {
     line-height: 1.4 !important;
     font-weight: bold !important;
     word-wrap: break-word !important;
-    text-align: left !important;
     padding: 8px !important;
   }
   .client-we-serve {
@@ -690,9 +589,7 @@ hr {
     align-items: center;
     gap: 10px;
   }
-  /* .service-card {
-    width: 280px !important;
-    font-size: 15px !important;
-    object-fit: contain !important;
-  } */
+  .Who-we-are-aboutus {
+    margin-top: 20px !important;
+  }
 }

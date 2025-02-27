@@ -1,36 +1,15 @@
-import React, { useEffect, useState, useRef, Fragment } from "react";
+import React, { useEffect, useRef, Fragment } from "react";
 import Image from "next/image";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import SODimage1 from "../../assets/images/SODimage1.png";
-import SODimage2 from "../../assets/images/SODimage2.png";
-import SODimage3 from "../../assets/images/SODimage3.png";
-import onDemCrsl1 from "../../assets/images/onDemCrsl-1.png";
-// --------------------------------------------------------------------
-import AppDevelopment from '.././../assets/images/mobile-app-development-trends.png'
-// import AppDevelopment from '.././../assets/images/App-development.jpg'
-import mobileApp from '.././../assets/images/vaival-application.png'
-import AppTesting from '.././../assets/images/mobile-app-testing.jpg'
-import AppSecuriry from '.././../assets/images/mobile-application-security.jpg'
-import AppTestingQa from '.././../assets/images/mobile-app-development-testing-QA.png'
-import BookingModule from '../../assets/images/BookingModule.png'
-import InAppPayments from '../../assets/images/InAppPayments.png'
-import OrderingonTheGo from '../../assets/images/OrderingonTheGo.png'
-import SchedulingabookingOrder from '../../assets/images/SchedulingabookingOrder.png'
-import OrderTracking from '../../assets/images/OrderTracking.png'
-import LiveChat from '../../assets/images/LiveChat.png'
-// - ------------------------ out top project on demand -----------------------------------
-import AmericanExpress from '../../assets/images/AmericanExpress.png'
-import ByjusLogo1 from '../../assets/images/ByjusLogo1.png'
-import HDFC from '../../assets/images/HDFC.png'
-import Axis from '../../assets/images/Axis.png'
-import Onfleek from "../../assets/images/onfleek.png";
-import SetFlow from '../../assets/images/SetFlow.png'
-import jodiBanao from '../../assets/images/jodiBanao.png'
-import { motion } from "framer-motion";
+import BookingModule from "../../assets/images/BookingModule.png";
+import InAppPayments from "../../assets/images/InAppPayments.png";
+import OrderingonTheGo from "../../assets/images/OrderingonTheGo.png";
+import SchedulingabookingOrder from "../../assets/images/SchedulingabookingOrder.png";
+import OrderTracking from "../../assets/images/OrderTracking.png";
+import LiveChat from "../../assets/images/LiveChat.png";
 import { COMMAN_TEXT } from "@/commonComponent/commanText";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
+import ClientWeServe from "@/commonComponent/ClientWeServe";
 
 const SolutionOnDemandScreen = () => {
   const data = [
@@ -68,7 +47,7 @@ const SolutionOnDemandScreen = () => {
       image: LiveChat,
       service: "Real-Time calls and Messages",
       detail:
-        "Our real-time communication feature enables users to make instant voice and video calls, as well as exchange messages in real-time, fostering seamless and efficient communication.",
+        "Our real-time communication feature enables users to make instant voice and video calls, as well as exchange messages in real-time.",
     },
   ];
   const carousel = useRef(null);
@@ -88,9 +67,18 @@ const SolutionOnDemandScreen = () => {
     }, 1500);
   }, []);
 
+  const gradientColors = [
+    "linear-gradient(to bottom, #416BDF, #10064d)",
+    "linear-gradient(to bottom, #B8008F, #922460)",
+    "linear-gradient(to bottom, #01B380, #00A28B)",
+    "linear-gradient(to bottom, #2B2B2B, #040404)",
+    "linear-gradient(to bottom, #3C60CF, #120952)",
+    "linear-gradient(to bottom, #772263, #49072C)",
+  ];
+
   return (
     <Fragment>
-      <section>
+      {/* <section>
         <div
           className="container mt-5"
           style={{
@@ -99,8 +87,8 @@ const SolutionOnDemandScreen = () => {
             borderRadius: "20px",
           }}
         >
-          <div className="row  text-center p-5 m-5" data-aos="fade-down">
-            <div className="col-lg-4">
+          <div className="row  text-center px-3 py-3" data-aos="fade-down">
+            <div className="col-lg-4 col-sm-12">
               <div className="whiteBack m-3">
                 <Image
                   className="SODimage1 img-fluid"
@@ -110,7 +98,7 @@ const SolutionOnDemandScreen = () => {
               </div>
               <p>Developed 40+ On-Demand Mobile Apps and Solutions</p>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 col-sm-12">
               <div className="whiteBack m-3">
                 <Image
                   className="SODimage1 img-fluid"
@@ -120,7 +108,7 @@ const SolutionOnDemandScreen = () => {
               </div>
               <p>A Dedicated Team of On-Demand App Developers</p>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4  col-sm-12">
               <div className="whiteBack m-3">
                 <Image
                   className="SODimage1 img-fluid"
@@ -132,7 +120,7 @@ const SolutionOnDemandScreen = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section>
         <div className="container" data-aos="fade-up">
           <h2 className="text-center pt-5 mt-5 comman-heading">
@@ -141,19 +129,20 @@ const SolutionOnDemandScreen = () => {
           <div className="cst-hr-for-process mb-3" />
           <div className="row m-5 get-consultancy">
             <div className="text-center">
-              <p>{COMMAN_TEXT}</p>
-            </div> 
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+                {COMMAN_TEXT}
+              </p>
+            </div>
             <div className="text-center">
-              <a
-                href="#"
-                className="btn btn-danger m-4"
-                type="submit"
-              >
+              <a href="#" className="btn onDemndbtn mt-3 py-2" type="submit">
                 Get Your Free Consultation
               </a>
             </div>
           </div>
         </div>
+      </section>
+      <section className="mb-5 mt-5">
+        <ClientWeServe />
       </section>
       {/* <section className="onDemandImageCarousal m-3">
         <div className="container">
@@ -233,17 +222,17 @@ const SolutionOnDemandScreen = () => {
         </div>
       </section> */}
 
-      <section>
+      <section className="mt-5">
         <div className="container">
           <h1 className="text-center pt-5 comman-heading fs-2">
             Key Features of On-Demand App Solutions
           </h1>
           <div className="cst-hr-for-process mb-5" />
-          <div className="row" data-aos="fade-up" >
+          {/* <div className="row g-5 pt-5" data-aos="fade-up">
             {data.map(({ image, service, detail }, index) => (
               <>
-                <div className="col-sm-4 mb-4 d-flex" key={index}>
-                  <div className="p-5 bold-p WebDev-dashed-border text-center">
+                <div className="col-lg-4 col-md-6 col-sm-12 g-3 mb-4 d-flex" key={index}>
+                  <div className="bold-p WebDev-dashed-border text-center">
                     <Image
                       src={image}
                       alt="Image not found"
@@ -254,6 +243,34 @@ const SolutionOnDemandScreen = () => {
                   </div>
                 </div>
               </>
+            ))}
+          </div> */}
+          <div className="row g-4 pt-4 mt-4" data-aos="fade-up">
+            {data.map(({ image, service, detail }, index) => (
+              <div
+                className="feature-card col-lg-6 col-md-6 col-sm-12"
+                key={index}
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+              >
+                <div
+                  className="text-center"
+                  style={{
+                    background: gradientColors[index % gradientColors.length],
+                    borderRadius: "12px",
+                    padding: "40px",
+                    minHeight: "280px",
+                  }}
+                >
+                  <Image
+                    src={image}
+                    alt="Feature"
+                    className="mb-3 feature-image"
+                  />
+                  <h5 className="fw-bold">{service}</h5>
+                  <span className="text-white">{detail}</span>
+                </div>
+              </div>
             ))}
           </div>
         </div>

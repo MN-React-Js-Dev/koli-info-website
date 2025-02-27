@@ -6,6 +6,7 @@ import Image from "next/image";
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import Link from "next/link";
 import { color, motion } from "framer-motion";
@@ -23,18 +24,18 @@ const Footer = () => {
   return (
     <Fragment>
       <section>
-        <hr className="row ml-4 mr-4" />
+        <hr className="row ml-4 mr-4 mt-5" />
         <div className="container" data-aos="fade-up">
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div className="row col-12 mt-5 text-center">
               <div
-                className="col-lg-4  cst-footer-logo text-center"
+                className="col-lg-4 cst-footer-logo text-center"
                 style={{ bottom: "70px" }}
               >
-                <Image src={SVGlogo} className="mt-5 cst-footer-logo" />
+                <Image src={SVGlogo} className="mt-4 cst-footer-logo" />
                 <p
                   style={{
-                    marginBottom: "10px",
+                    marginBottom: "20px",
                     fontSize: 15,
                   }}
                 >
@@ -137,6 +138,31 @@ const Footer = () => {
                       </Link>
                     </div>
                   </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    whileTap={{
+                      scale: 0.8,
+                      rotate: 90,
+                      borderRadius: "100%",
+                    }}
+                  >
+                    <div className="px-3" data-aos="fade-up">
+                      <Link
+                        href="https://www.linkedin.com/company/koli-infotech/posts/?feedView=all"
+                        className="nav-link active"
+                        target="_blank"
+                      >
+                        <BsLinkedin
+                          className="icon"
+                          style={{
+                            color: "#3F689F",
+                            fontSize: "25px",
+                            marginLeft: "2%",
+                          }}
+                        />
+                      </Link>
+                    </div>
+                  </motion.div>
                 </div>
               </div>
               <div className="col-lg-4">
@@ -209,12 +235,12 @@ const Footer = () => {
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div className="row col-lg-12  mt-5">
                   <div className="col-lg-4 text-center">
-                    <h2 className="fs-4">Contacts</h2>
+                    <h2 className="fs-4 mb-4">Contacts</h2>
                     <p>info@koliinfotech.com</p>
                     <p>+91-6353131771</p>
                   </div>
-                  <div className="row col-lg-8 text-center">
-                    <h2 className="text-center fs-4">Our Address</h2>
+                  <div className="row col-lg-8 text-center m-auto">
+                    <h2 className="text-center fs-4 mb-4">Our Address</h2>
                     <div className="col-lg-6">
                       <p style={{ fontSize: 15, fontWeight: "bold" }}>
                         HEAD OFFICE - SURAT
@@ -253,8 +279,8 @@ const Footer = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: "1%",
-            marginTop: "3%",
+            // marginBottom: "1%",
+            // marginTop: "3%",
             width: "100%",
           }}
         >
@@ -311,7 +337,7 @@ const Footer = () => {
                   style={{
                     fontWeight: "bold",
                     color: "#0d6efd",
-                    marginRight: 5,
+                    marginRight: 10,
                   }}
                 >
                   Apply Now
@@ -322,7 +348,7 @@ const Footer = () => {
                     height: 40,
                     width: 40,
                     marginBottom: 15,
-                    marginRight: 40,
+                    marginRight: 50,
                   }}
                 />
               </Link>
@@ -335,7 +361,8 @@ const Footer = () => {
         <div
           style={{ textAlign: "center", marginBottom: "1%", marginTop: "1%" }}
         >
-          <span>&copy;</span>
+          <span>Copyright</span>
+          <span> &copy; </span>
           <span>{year} KOLI Infotech Pvt. Ltd. | All rights reserved.</span>
         </div>
       </section>

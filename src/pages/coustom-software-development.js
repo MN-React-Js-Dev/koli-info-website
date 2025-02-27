@@ -31,7 +31,6 @@ const CoustomSoftwareServices = () => {
       <Header />
       <CoustomSoftwareHeroSection />
       <ClientWeServe />
-      {/* <CoustomSoftwareScreen /> */}
       <CoustomSoftwareDServices />
       <Footer />
     </Fragment>

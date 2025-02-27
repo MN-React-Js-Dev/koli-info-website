@@ -24,12 +24,12 @@ const AiMlServices = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6" data-aos="fade-right" >
-                            <h3 className="">AI & ML Development</h3>
+                            <h3 className="whychooseTxt">AI & ML Development</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{AIML_P1}</p>
                             <p>{AIML_P2}</p>
                         </div>
-                        <div className="col-sm-6" data-aos="fade-left" >
+                        <div className="col-sm-6" >
                             <Image
                                 className="img-fluid img-responsive rounded mb-5"
                                 src={AiMlFinal}
@@ -42,15 +42,15 @@ const AiMlServices = () => {
             <section className="mb-5 mt-5 why-choos">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6" data-aos="fade-left" >
+                        <div className="col-sm-6" >
                             <Image
                                 className="img-fluid img-responsive rounded mb-5 "
                                 src={chatboatSmall}
                                 alt="Image not found"
                             />
                         </div>
-                        <div className="col-sm-6" data-aos="fade-right" >
-                            <h3 className="">Chatbot Development</h3>
+                        <div className="col-sm-6"  >
+                            <h3 className="whychooseTxt">Chatbot Development</h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{AIML_P3}</p>
                             <p>{AIML_P4}</p>
@@ -61,19 +61,20 @@ const AiMlServices = () => {
             <section className="mb-5 mt-5 why-choos">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6" data-aos="fade-right" >
-                            <h3 className="fs-2">IOT Development
+                        <div className="col-sm-6"  >
+                            <h3 className="whychooseTxt">IOT Development
                             </h3>
                             <div className="hr-cst mb-3"></div>
                             <p>{AIML_P5}</p>
                             <p>{AIML_P6}</p>
                         </div>
-                        <div className="col-sm-6" data-aos="fade-left" >
-                            <Image
-                                className="img-responsive rounded img-class"
-                                src={IOT_Development}
-                                alt="Image not found"
-                            />
+                        <div className="col-sm-6 d-flex justify-content-center align-items-center">
+                        <Image
+                            className="img-fluid rounded"
+                            style={{ width: "75%", height: "75%" }} 
+                            src={IOT_Development}
+                            alt="Image not found"
+                        />
                         </div>
                     </div>
                 </div>

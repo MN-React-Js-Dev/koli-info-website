@@ -36,12 +36,12 @@ const DataSecureScreen = () => {
             <br />
             <p>{COMMAN_TEXT}</p>
           </div>
-          <div style={{ display: "flex" }} className="text-center row">
+          <div style={{ display: "flex" }} className="text-center row p-3">
             <div className="col-lg-6 data-li">
               <p className="key-clauses comman-heading"  data-aos="flip-up">
                 Key Clauses of an NDA
               </p>
-              <ul class="list-group text-start"  data-aos="fade-right">
+              <ul class="list-group text-start pl-3"  data-aos="fade-right">
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </li>
@@ -82,7 +82,7 @@ const DataSecureScreen = () => {
               <p className="key-clauses" style={{ fontWeight: "bold" }}>
                 General Security
               </p>
-              <ul class="list-group text-start">
+              <ul class="list-group text-start pl-3">
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </li>
@@ -97,7 +97,7 @@ const DataSecureScreen = () => {
               <p className="key-clauses" style={{ fontWeight: "bold" }}>
                 Network Security
               </p>
-              <ul class="list-group text-start">
+              <ul class="list-group text-start pl-3">
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </li>

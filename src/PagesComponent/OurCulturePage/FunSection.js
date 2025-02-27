@@ -8,7 +8,7 @@ import brithday from "../../assets/images/brithday.jpg";
 import Lunch from "../../assets/images/Lunch2.jpg";
 import chris from "../../assets/images/chris.jpg";
 import offSite from "../../assets/images/offSite.jpg";
-import saturday from "../../assets/images/saturday.jpg";
+import saturday from "../../assets/images/saturday.jpg"; // todo: will update image
 import seminar from "../../assets/images/seminar.jpg";
 import "aos/dist/aos.css";
 
@@ -34,11 +34,13 @@ const FunSection = () => {
         {
             Topics: "Outdoor Picnic",
             image: offSite
-        },
-        {
-            Topics: "Friday Fun",
-            image: saturday
-        },
+        }
+        
+        // ,
+        // {
+        //     Topics: "Friday Fun",
+        //     image: saturday
+        // },
     ];
     useEffect(() => {
         setTimeout(() => {

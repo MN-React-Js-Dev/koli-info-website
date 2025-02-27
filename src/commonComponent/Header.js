@@ -80,7 +80,7 @@ const Header = () => {
                               </li>
                               <li>
                                 <Link class="dropdown-item" href="/Testimonial">
-                                  Testimoial
+                                  Testimonial
                                 </Link>
                               </li>
                               <li>

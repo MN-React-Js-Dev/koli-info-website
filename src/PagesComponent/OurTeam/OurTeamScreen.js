@@ -69,7 +69,6 @@ const OurTeamScreen = () => {
                   src={CEOimage}
                   alt='Image not find !'
                   className="lead-image img-fluid"
-                // style={{ height: '300px', width: '260px', borderRadius: '10px' }}
                 />
                 <h2 className="fs-4">Ajay Koli</h2>
                 <p className=" commanFont">Chief Executive Officer</p>
@@ -84,19 +83,18 @@ const OurTeamScreen = () => {
               <p className="text-start ourTeam-quotes">{CTO_QUOTES}</p>
             </div>
             <div className="col-sm-4 mb-4">
-              <div className="p-5" style={{ textAlign: 'center' }} data-aos="fade-left">
+              <div className="p-5" style={{ textAlign: 'center' }} data-aos="fade-right">
                 <Image
                   src={CTOimage}
                   alt='Image not find !'
                   className="lead-image img-fluid"
-                // style={{ height: '300px', borderRadius: '10px' }}
                 />
                 <h2 className="fs-4">Nihal Koli</h2>
                 <p className="commanFont">Chief Technology Officer</p>
               </div>
             </div>
           </div>
-          <h1 class="text-center pt-5 comman-heading">Our Team Leaders</h1>
+          <h1 class="text-center pt-5 comman-heading text-black">Our Team Leaders</h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className=" mb-5" />
           <div style={{ display: 'flex' }}>
@@ -110,7 +108,6 @@ const OurTeamScreen = () => {
             >
               {data?.map((item, index) => {
                 if (item.position == "Team Leader") {
-                  console.log('employeeData~~~~~~~>', item.firstName);
                   return (
                     <div className="col-sm-4 mb-3" key={index}>
                       <div className="card p-1 team-card team-image" >
@@ -165,7 +162,7 @@ const OurTeamScreen = () => {
               <span className="px-3 arrowIcon"><BsFillArrowRightCircleFill style={{ color: "black" }} onClick={handleRightClick} /></span>
             </motion.div>
           </div> */}
-          <h1 class="text-center pt-5 comman-heading fs-1">Our Team Members</h1>
+          <h1 class="text-center pt-5 comman-heading fs-1 text-black">Our Team Members</h1>
           <div className="cst-hr-for-process mb-5"></div>
           <div className=" mb-5" />
           <div style={{ display: 'flex' }}>

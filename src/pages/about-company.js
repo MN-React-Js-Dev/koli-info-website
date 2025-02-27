@@ -99,23 +99,22 @@ const AboutCompany = () => {
         </div>
       </section>
       <section className="qualities-we-take">
-        <div className="container" data-aos="fade-down">
-          <h2 className="comman-heading">Qualities we take pride in</h2>
-          <div className="hr-cst mb-3" />
-          {data.map((item, index) => (
-            <div className="row mb-5" key={index}>
-              <>
-                <div className="col-md-1 col-3 pt-4">
-                  <span className="number-class">{item.SrNo}</span>
-                </div>
-                <div className="col-md-11 col-9 cst-boder-para p-3">
-                  <p className="mb-0">{item.description}</p>
-                </div>
-              </>
+      <div className="container" data-aos="fade-down">
+        <h2 className="comman-heading text-center">Qualities we take pride in</h2>
+        <div className="cst-hr-for-process mb-5"></div>
+        {data.map((item, index) => (
+          <div className="row mb-4 align-items-center pr-2" key={index}>
+            <div className="col-md-1 col-3 text-center">
+              <span className="number-class">{item.SrNo}</span>
             </div>
-          ))}
-        </div>
-      </section>
+            <div className="col-md-11 col-9 cst-boder-para p-3">
+              <p className="mb-0">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
       <section>
         <Footer />
       </section>

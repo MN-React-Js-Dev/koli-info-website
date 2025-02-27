@@ -11,7 +11,6 @@ import SetFlow from "../assets/images/SetFlow.png";
 import jodiBanao from "../assets/images/jodiBanao.png";
 import turing from "../assets/images/Turing_Logo.jpg";
 import aaban from "../assets/images/aabanlogo_new.png";
-import VoiceocLogo from "../assets/images/voiceoc_newest.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,7 +18,7 @@ const ClientWeServe = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 2000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -71,7 +70,7 @@ const ClientWeServe = () => {
     <Fragment>
       <section className="onDemandImageCarousal m-3">
         <div className="container">
-          <h3 className="text-center pt-5 comman-heading">Clients We Served</h3>
+          <h2 className="text-center pt-5 comman-heading">Clients We Served</h2>
           <div className="cst-hr-for-process mb-5"></div>
           <Slider {...settings}>
             <div className="slide-item">
@@ -113,13 +112,6 @@ const ClientWeServe = () => {
             </div>
             <div className="slide-item">
               <Image src={turing} alt="Turing Logo" className="slide-img" />
-            </div>
-            <div className="slide-item">
-              <Image
-                src={VoiceocLogo}
-                alt="Voiceoc Logo"
-                className="slide-img"
-              />
             </div>
             <div className="slide-item">
               <Image src={aaban} alt="Aaban Logo" className="slide-img" />

@@ -7,9 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Footer from "@/commonComponent/Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Link from 'next/link'
+import Link from "next/link";
 import { useRouter } from "next/router";
-
 
 const CareerScreen = () => {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ const CareerScreen = () => {
       setData(Data?.data?.data?.rows);
     }
   }, [Data]);
-  console.log('career page data~~~~~.',data);
+  console.log("career page data~~~~~.", data);
 
   useEffect(() => {
     setTimeout(() => {
@@ -40,61 +39,76 @@ const CareerScreen = () => {
     console.log(" Id ", Id);
     router.push({
       pathname: "/JobDescription",
-      query: Id
+      query: Id,
     });
   };
 
-
   return (
     <Fragment>
-      <section className="testi-hero-image ">
+      <section className="testi-hero-image">
         <div className="container">
-          <h2 className=" text-center mt-5 comman-heading">Current Openings</h2>
+          <h2 className="text-center mt-5 comman-heading">Current Openings</h2>
           <div className="cst-hr-for-process mb-5" />
-          {data?.map(({ job_title, experience, location, id, image }, index) => (
-            <>
-              <div class="card mt-3 mb-4 pt-2 pb-2 px-3 opening-card" key={index} data-aos="fade-down">
-                <div class="card-body">
-                  <div
-                    className="row card-items"
-                    style={{ alignItems: 'center' }}
-                  >
-                    <div className="col-sm-1">
-                      {/* <Image className="card-image img-fluid " src={image} width={100} height={100} /> */}
-                      <img className="card-image img-fluid " src={image} width={100} height={100} />
-                    </div>
+
+          {data?.length > 0 ? (
+            data.map(
+              ({ job_title, experience, location, id, image }, index) => (
+                <div
+                  className="card mt-3 mb-4 pt-2 pb-2 px-3 opening-card"
+                  key={index}
+                  data-aos="fade-down"
+                >
+                  <div className="card-body">
                     <div
-                      className="col-sm-9"
-                      style={{
-                        alignItems: "center",
-                        paddingLeft: "20px",
-                        justifyContent: "center",
-                      }}
+                      className="row card-items"
+                      style={{ alignItems: "center" }}
                     >
-                      <h4 className="bold-font">{job_title}</h4>
-                      <span className="bold-font"> Experience : </span>
-                      <span>{experience} Years</span>
-                      <br />
-                      <span className="bold-font"> Location : </span>
-                      <span>{location}</span>
-                    </div>
-                    <div className="col-sm-1">
-                      <span
-                        onClick={() => handleClick(id)}
-                        class="btn apply-now p-2"
-                        style={{ borderRadius: "170px" }}
+                      <div className="col-sm-1">
+                        <img
+                          className="card-image img-fluid"
+                          src={image}
+                          width={100}
+                          height={100}
+                        />
+                      </div>
+                      <div
+                        className="col-sm-9"
+                        style={{
+                          alignItems: "center",
+                          paddingLeft: "20px",
+                          justifyContent: "center",
+                        }}
                       >
-                        Apply Now
-                      </span>
+                        <h4 className="bold-font">{job_title}</h4>
+                        <span className="bold-font">Experience: </span>
+                        <span>{experience} Years</span>
+                        <br />
+                        <span className="bold-font">Location: </span>
+                        <span>{location}</span>
+                      </div>
+                      <div className="col-sm-1">
+                        <span
+                          onClick={() => handleClick(id)}
+                          className="btn apply-now p-2"
+                          style={{ borderRadius: "170px" }}
+                        >
+                          Apply Now
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div >
-            </>
-          ))}
+              )
+            )
+          ) : (
+            <div className="text-center mt-5">
+              <h4 className="text-muted">🚀 No Current Openings Available!</h4>
+              <p>Stay tuned for future opportunities.</p>
+            </div>
+          )}
         </div>
       </section>
-    </Fragment >
+    </Fragment>
   );
 };
 
